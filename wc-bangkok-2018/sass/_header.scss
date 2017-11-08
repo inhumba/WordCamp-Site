@@ -1,0 +1,51 @@
+/* HEADER
+---------------------------------------*/
+
+.site-header {
+	background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-1920.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: contain;
+	min-height: 840px;
+}
+
+@media only screen and (max-width: 1440px) {
+	.site-header {
+		background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-1440.jpg);
+		min-height: 630px;
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	.site-header {
+		background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-1280.jpg);
+		min-height: 560px;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.site-header {
+		min-height: 448px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.site-header {
+		background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-768.jpg);
+		min-height: 336px;
+	}
+}
+
+@media only screen and (max-width: 419px) {
+	.site-header {
+		background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-420.jpg);
+		min-height: 184px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.site-header {
+		background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-360.jpg);
+		min-height: 158px;
+	}
+}
