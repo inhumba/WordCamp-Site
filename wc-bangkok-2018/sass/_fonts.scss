@@ -10,3 +10,7 @@ body, * {
 b, strong {
 	@include font-weight(semi-bold);
 }
+
+a {
+	text-decoration: none;
+}

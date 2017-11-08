@@ -1,0 +1,26 @@
+/* FOOTER
+---------------------------------------*/
+
+#secondary {
+	background-color: $color-primary;
+	overflow: hidden;
+	padding: 20px 0;
+	.widget {
+		float: left;
+	}
+}
+
+.site-footer {
+	clear: both;
+	.site-info {
+		background-color: $color-primary-darker;
+		padding: 10px 0;
+		text-align: center;
+		a {
+			color: #FFF;
+			display: inline-block;
+			@include font-weight(light);
+			margin: 0 10px;
+		}
+	}
+}

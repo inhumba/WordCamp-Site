@@ -10,6 +10,34 @@ Version: 1.0
 ---------------------------------------*/
 /* FONTS
 ---------------------------------------*/
-body, * { color: #1c1958; font-family: "Kanit", Helvetica, Arial, sans-serif; font-weight: 400; }
+body, * {
+  color: #1c1958;
+  font-family: "Kanit", Helvetica, Arial, sans-serif;
+  font-weight: 400; }
 
-b, strong { font-weight: 600; }
+b, strong {
+  font-weight: 600; }
+
+a {
+  text-decoration: none; }
+
+/* FOOTER
+---------------------------------------*/
+#secondary {
+  background-color: #5e9af9;
+  overflow: hidden;
+  padding: 20px 0; }
+  #secondary .widget {
+    float: left; }
+
+.site-footer {
+  clear: both; }
+  .site-footer .site-info {
+    background-color: #4581e3;
+    padding: 10px 0;
+    text-align: center; }
+    .site-footer .site-info a {
+      color: #FFF;
+      display: inline-block;
+      font-weight: 300;
+      margin: 0 10px; }
