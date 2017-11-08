@@ -1,0 +1,13 @@
+wp-*.php
+license.txt
+index.php
+readme.html
+xmlrpc.php
+.htaccess
+wp-admin
+wp-includes
+wp-content/plugins
+wp-content/uploads
+wp-content/themes/twentyseventeen
+wp-content/themes/twentysixteen
+wp-content/themes/twentyfifteen
