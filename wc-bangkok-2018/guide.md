@@ -31,6 +31,8 @@ Setup your front page.
 This year we use font "Kanit" on Google web fonts.
 @import url('https://fonts.googleapis.com/css?family=Kanit:300,400,500,600&subset=thai');
 
+If you want to use FontAwesome. Enter CDN URL (https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css)
+
 --
 
 ## Start your style ##
