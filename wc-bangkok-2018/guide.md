@@ -2,6 +2,8 @@
 
 Setup guide for the WordCamp Bangkok 2018 theme.
 
+--
+
 ##  Setup on wordcamp.org (https://2018.bangkok.wordcamp.org)
 
 * Themes *
@@ -29,4 +31,12 @@ Setup your front page.
 This year we use font "Kanit" on Google web fonts.
 @import url('https://fonts.googleapis.com/css?family=Kanit:300,400,500,600&subset=thai');
 
-## Then start your style ##
+--
+
+## Start your style ##
+
+Make your style and paste at Additional CSS.
+**Appearance -> Customize -> Additional CSS**
+
+
+
