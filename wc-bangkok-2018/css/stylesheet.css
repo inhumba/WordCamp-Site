@@ -1,0 +1,15 @@
+/*
+Theme Name: WordCamp Bangkok 2018
+Author: WordPress Bangkok Organizer
+Author URI: https://wpth.org/
+Version: 1.0
+*/
+/* VARIABLES
+---------------------------------------*/
+/* MIXINS
+---------------------------------------*/
+/* FONTS
+---------------------------------------*/
+body, * { color: #1c1958; font-family: "Kanit", Helvetica, Arial, sans-serif; font-weight: 400; }
+
+b, strong { font-weight: 600; }

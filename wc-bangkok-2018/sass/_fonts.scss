@@ -1,0 +1,12 @@
+/* FONTS
+---------------------------------------*/
+
+body, * {
+	color: $text-color;
+	font-family: $font;
+	@include font-weight(regular);
+}
+
+b, strong {
+	@include font-weight(semi-bold);
+}
