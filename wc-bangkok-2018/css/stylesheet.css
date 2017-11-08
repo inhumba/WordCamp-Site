@@ -21,6 +21,52 @@ b, strong {
 a {
   text-decoration: none; }
 
+/* NAVIGATION
+---------------------------------------*/
+.main-navigation {
+  background-color: #5e9af9;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+  .admin-bar .main-navigation {
+    top: 32px; }
+  .main-navigation .menu {
+    text-align: center; }
+    .main-navigation .menu li {
+      display: inline-block;
+      float: none;
+      margin: 0 10px; }
+      .main-navigation .menu li > a {
+        color: #FFF;
+        font-size: 1.2em;
+        font-weight: 300;
+        padding: 10px 25px;
+        border-radius: 20px; }
+      .main-navigation .menu li.current-menu-item > a {
+        background-color: #ed3c59; }
+      .main-navigation .menu li.current-menu-item:hover > a, .main-navigation .menu li.current-menu-item:focus > a {
+        background-color: #ed3c59; }
+      .main-navigation .menu li:hover > a, .main-navigation .menu li:focus > a {
+        background-color: #4581e3; }
+      .main-navigation .menu li.menu-item-has-children:hover > a, .main-navigation .menu li.menu-item-has-children:focus > a {
+        border-radius: 20px 20px 0 0; }
+  .main-navigation .sub-menu {
+    background-color: #4581e3;
+    border-radius: 0 20px 20px 20px;
+    padding: 10px 0 15px;
+    top: 90%;
+    text-align: left; }
+    .main-navigation .sub-menu li > a {
+      font-size: 1.1em;
+      padding: 8px 15px 8px 20px; }
+      .main-navigation .sub-menu li > a::before {
+        content: "\f0da";
+        display: inline-block;
+        font-family: FontAwesome;
+        padding-right: 8px; }
+
 /* FOOTER
 ---------------------------------------*/
 #secondary {
@@ -39,5 +85,6 @@ a {
     .site-footer .site-info a {
       color: #FFF;
       display: inline-block;
+      font-size: 1em;
       font-weight: 300;
       margin: 0 10px; }
