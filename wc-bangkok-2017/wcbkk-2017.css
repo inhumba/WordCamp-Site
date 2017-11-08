@@ -1,0 +1,898 @@
+body, * {
+	font-family: 'Kanit', sans-serif;
+}
+
+body, button, input, select, textarea {
+	color: #444;
+	font-family: 'Kanit', sans-serif;
+	font-weight: 300;
+}
+
+b, strong {
+	font-weight: 500;
+}
+
+.post-thumbnail {
+	display: none;
+}
+
+.site-header-menu {
+	background-color: rgba(208,234,221,.9);
+	margin-top: 0;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 37px;
+	text-align: center;
+	padding: 0 30px 10px;
+	z-index: 1000;
+}
+
+.menu-toggle {
+	background-color: #D0EADD;
+	border: none;
+	color: #E26910;
+	font-family: 'Kanit';
+	font-weight: 400;
+	font-size: 1rem;
+	margin: 0;
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	text-align: right;
+	width: 100%;
+	z-index: 1000;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+	background-color: #D0EADD;
+	border: none;
+	color: #D56F29;
+}
+
+.menu-toggle.toggled-on,
+.menu-toggle.toggled-on:hover,
+.menu-toggle.toggled-on:focus {
+	background-color: #D0EADD;
+	border: none;
+	color: #E26910;
+}
+
+.menu-toggle:focus {
+	outline: 0;
+}
+
+.menu-toggle.toggled-on:focus {
+	outline: 0;
+}
+
+.home .site-header {
+	background: url('https://2017.bangkok.wordcamp.org/files/2016/12/cover-800.jpg') no-repeat center top;
+	background-size: cover;
+	padding: 30px 0 150px;
+}
+
+.site-header {
+	background: url('https://2017.bangkok.wordcamp.org/files/2016/12/cover-small-800.jpg') no-repeat center top;
+	background-size: inherit;
+	padding: 20px 0 0;
+}
+
+.home .site-branding {
+	background: url('https://2017.bangkok.wordcamp.org/files/2016/12/logo-600X360.png') no-repeat center top;
+	background-size: 180px 108px;
+	margin: 30px auto;
+	padding-top: 120px;
+	text-align: center;
+	height: auto;
+	width: 100%;
+	text-indent: 0;
+}
+
+.site-branding {
+	background: url('https://2017.bangkok.wordcamp.org/files/2016/12/logo-600X360.png') no-repeat left top;
+	background-size: 100px 60px;
+	margin: 30px auto;
+	padding-top: 0;
+	text-align: left;
+	height: 110px;
+	width: 90%;
+	text-indent: 105px;
+}
+
+.home .site-title {
+	font-family: 'Kanit';
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.site-title {
+	font-family: 'Kanit';
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1;
+	margin-top: 13px;
+}
+
+.site-branding .site-title a {
+	color: #AF541A;
+	text-shadow: 2px 2px 0 #FFF;
+}
+
+.site-branding .site-title a:hover,
+.site-branding .site-title a:focus {
+	color: #F3B03F;
+}
+
+.home .site-description {
+	color: #AF541A;
+	display: block;
+	font-family: 'Kanit';
+	font-size: 1.1rem;
+	font-weight: 300;
+	margin: 10px 0 0;
+}
+
+.site-description {
+	color: #AF541A;
+	display: block;
+	font-family: 'Kanit';
+	font-size: .9rem;
+	font-weight: 300;
+	margin: 5px 0 0;
+}
+
+.site-content {
+	padding: 1.5rem 1rem;
+}
+
+.site-header-menu {
+	top: 36px;
+	padding: 0;
+}
+
+.main-navigation .primary-menu {
+	border-bottom: none;
+}
+
+.main-navigation li {
+	border-top: none;
+}
+
+.main-navigation .primary-menu > li {
+	float: none;
+	display: block;
+}
+
+.main-navigation .primary-menu > li.bubble a::before {
+	border: 5px solid transparent;
+	border-top-color: #E26910;
+	content: '';
+	height: 5px;
+	width: 5px;
+	position: absolute;
+	top: 15px;
+	left: 50%;
+	margin-left: 40px;
+}
+
+.main-navigation .primary-menu > li.bubble a::after {
+	background-color: #E26910;
+	color: #fff;
+	content: 'Oh Yeah!';
+	font-size: .7rem;
+	padding: 0 5px;
+	position: absolute;
+	top: 2px;
+	left: 50%;
+	border-radius: 7px;
+}
+
+.main-navigation a {
+	color: #974710;
+	font-family: 'Kanit';
+	font-size: 1rem;
+	font-weight: 300;
+	padding: .65em 0;
+	transition: background-color 0.1s, color .2s;
+}
+
+.main-navigation a:hover {
+	background: #F3B03F;
+	color: #FFF;
+}
+
+.main-navigation .current-menu-item > a, .main-navigation .current-menu-ancestor > a {
+	font-weight: 400;
+}
+
+.main-navigation ul ul {
+	margin-left: 0;
+	background: #c4e5d5;
+}
+
+.current-menu-item a {
+	background: #D56F29;
+	color: #FFF;
+}
+
+.main-navigation .menu-item-has-children > a {
+	margin-right: 0;
+}
+
+.dropdown-toggle {
+	color: #974710;
+	height: 43px;
+}
+
+.dropdown-toggle:after {
+	border: 0;
+}
+
+.site-inner {
+	max-width: 1920px;
+}
+
+.site {
+	margin: 0;
+}
+
+.page-slug-homepage .entry-header {
+	display: none;
+}
+
+.wcorg-organizer {
+	float: left;
+	width: 33%;
+}
+
+.top {
+	clear: both;
+	display: block;
+	text-align: right;
+}
+
+.site-footer {
+	padding: 1.5rem 1rem;
+	background: #7D7F28;
+}
+
+.site-footer .main-navigation {
+	display: none;
+}
+
+.site-footer .site-info {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.site-footer .site-info a:hover, .site-footer .site-info a:focus {
+	color: #E3ECDE;
+}
+
+.site-footer .site-title, .site-footer .site-title a, .site-footer .site-info, .site-footer .site-info a {
+	color: #fff;
+	font-family: 'Kanit';
+	font-size: .8rem !important;
+	font-weight: 300;
+}
+
+.sticky .posted-on, .byline {
+	display: block;
+}
+
+.entry-title {
+	background: url('https://2017.bangkok.wordcamp.org/files/2016/12/deco-left.png') no-repeat left top;
+	background-size: 33px 25px;
+	font-family: 'Kanit';
+	font-size: 1.5rem;
+	font-weight: 500;
+	padding-left: 45px;
+}
+
+.entry-header, .entry-summary, .entry-content, .entry-footer, .page-content {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+ol {
+	margin-left: 1em;
+}
+
+a, .entry-title, .entry-title a, .entry-footer a, .comment-reply-link {
+	color: #AF551B;
+}
+
+a:hover, a:focus, .entry-title a:hover, .entry-title a:focus,  .entry-footer a:hover, .entry-footer a:focus, .comment-reply-link:hover, .comment-reply-link:focus {
+	color: #F3B03F;
+}
+
+.comments-area {
+	margin: 0;
+}
+
+h2.comments-title, h2.comment-reply-title {
+	font-size: 1rem;
+}
+
+.comment-reply-link {
+	border: 0;
+	padding: 0;
+}
+
+#respond.comment-respond {
+	background: #EDF3E1;
+	padding: 1.5rem;
+}
+
+.comment-reply-title {
+	border-top: 0;
+}
+
+.comment-metadata a, .pingback .comment-edit-link {
+	color: #aaa;
+	font-weight: 300;
+}
+
+button, button[disabled]:hover, button[disabled]:focus, input[type="button"], input[type="button"][disabled]:hover, input[type="button"][disabled]:focus, input[type="reset"], input[type="reset"][disabled]:hover, input[type="reset"][disabled]:focus, input[type="submit"], input[type="submit"][disabled]:hover, input[type="submit"][disabled]:focus {
+	background: #AF551B;
+}
+
+button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+	background: #F3B03F;
+}
+
+button, input {
+	font-size: .85rem;
+}
+
+.post-navigation {
+	margin: 1em 0 0;
+	border-top: 4px solid #CDDDB5;
+	border-bottom: 0;
+}
+
+.post-navigation a {
+	color: #AF551B;
+}
+
+.post-navigation a:hover .post-title, .post-navigation a:focus .post-title {
+	color: #F3B03F;
+}
+
+.content-bottom-widgets {
+	margin: 0;
+}
+
+p#subscribe-email {
+	float: left;
+	margin-right: 1em;
+}
+
+.widget .widget-title {
+	font-size: 1.75em;
+}
+
+.wcb_widget_sponsors {
+	text-align: center;
+}
+
+.widget h4 {
+	font-size: 1.6em;
+	color: #974710;
+}
+
+.widget {
+	font-size: 1em;
+}
+
+.sponsor-level {
+	border-top: 2px solid #974710;
+	margin-top: 2em;
+}
+
+.sponsor-level:first-of-type {
+	border-top: none;
+}
+
+h4.sponsor-level-title {
+	margin-top: 1.6em;
+}
+
+.tix_tickets_table {
+	border-width: 1px 0 0;
+}
+
+th {
+	border-width: 0 0 1px;
+}
+
+td {
+	border-width: 0 0 1px;
+}
+
+th, td {
+	padding: .4375em;
+}
+
+.tix-column-remaining {
+	display: none;
+}
+
+.tix-column-description {
+	width: 45%;
+}
+
+.tix-ticket-excerpt {
+	display: none;
+	font-weight: 300;
+}
+
+select {
+	height: 2.5rem;
+	width: 100%;
+	border: 1px solid #d5d4d5;
+	font-weight: 700;
+	border-radius: .1875rem;
+	cursor: pointer;
+}
+
+.tix-submit input[type="submit"] {
+	margin-top: 1.75em;
+}
+
+table.tix-ticket-form {
+	border-width: 1px 0 0;
+}
+
+#tix-attendees {
+	overflow: hidden;
+}
+
+#tix-attendees .avatar {
+	float: none;
+	display: block;
+	margin: 0 auto .3em;
+	width: 70px;
+	height: 70px;
+}
+
+#tix-attendees .tix-field {
+	margin-left: 0;
+	font-size: 16px;
+}
+
+#tix-attendees .tix-columns-4 li {
+	width: 50%;
+	text-align: center;
+}
+
+#tix-attendees li {
+	height: 115px;
+}
+
+#tix-attendees .tix-field {
+	line-height: 1.2;
+	height: 40px;
+}
+
+.wcorg-organizer {
+	padding-bottom: 4em;
+	width: 50%;
+	text-align: center;
+}
+
+.wcorg-organizer h2 {
+	color: #AF551B;
+}
+
+#post-638 .entry-title {
+	background: url('https://2017.bangkok.wordcamp.org/files/2016/12/deco-left.png') no-repeat left top, url('https://2017.bangkok.wordcamp.org/files/2016/12/deco-left.png') no-repeat right top;
+	background-size: 45px 34px;
+	display: block;
+	margin: 0 auto 1.3em;
+	padding-left: 55px;
+	padding-bottom: 10px;
+	width: 210px;
+}
+
+#post-638 .entry-footer {
+	display: none;
+}
+
+#post-638 .entry-content {
+	float: none;
+	margin-right: 15%;
+	margin-left: 15%;
+	width: auto;
+}
+
+#post-638 .entry-content .wcorg-sponsors {
+	text-align: center;
+}
+
+#post-638 .entry-content .wcorg-sponsors h2,
+#post-601 .entry-content .wcorg-sponsors h2 {
+	color: #974710;
+	text-align: center;
+}
+
+#post-638 .entry-content .wcorg-sponsor h3 {
+	display: none;
+}
+
+#post-638 .entry-content .wcorg-sponsors .wcorg-sponsor-level-premium,
+#post-638 .entry-content .wcorg-sponsors .wcorg-sponsor-level-gold,
+#post-638 .entry-content .wcorg-sponsors .wcorg-sponsor-level-silver,
+#post-638 .entry-content .wcorg-sponsors .wcorg-sponsor-level-micro-sponsors {
+	border-top: 2px solid rgba(151,71,16,.1);
+	margin-top: 1.5em;
+	padding-top: 1.5em;
+	padding-bottom: 1em;
+}
+
+#post-601 .entry-content .wcorg-sponsors .wcorg-sponsor-level-premium,
+#post-601 .entry-content .wcorg-sponsors .wcorg-sponsor-level-gold,
+#post-601 .entry-content .wcorg-sponsors .wcorg-sponsor-level-silver,
+#post-601 .entry-content .wcorg-sponsors .wcorg-sponsor-level-micro-sponsors {
+	border-bottom: 3px solid rgba(151,71,16,.3);
+	margin-top: 1.5em;
+	padding-top: 1.5em;
+	padding-bottom: 1em;
+}
+
+#post-638 .entry-content .wcorg-sponsor .wcorg-sponsor-description p,
+#post-638 .entry-content .wcorg-sponsor .wcorg-sponsor-description ul {
+	display: none;
+}
+
+#post-638 .entry-content .wcorg-sponsor {
+	display: inline-block;
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+#post-601 .entry-content .wcorg-sponsor {
+	border-top: 1px solid rgba(151,71,16,.1);
+	padding-top: 1.5em;
+}
+
+#post-601 .entry-content .wcorg-sponsors img {
+	display: block;
+	margin: 0 auto 30px;
+}
+
+.postid-638 .wcb_widget_sponsors,
+.page-id-601 .wcb_widget_sponsors {
+	display: none;
+}
+
+/* Media Query */
+/* ============================================= */
+@media screen and (min-width: 414px) {
+	/* >= 414px */
+	.site-title {
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (min-width: 601px) {
+	/* >= 601px */
+	body.admin-bar .site-header-menu {
+		margin-top: 46px;
+	}
+
+	body.admin-bar .menu-toggle {
+		top: 46px;
+	}
+
+	#tix-attendees .tix-columns-4 li {
+		width: 25%;
+	}
+
+	#post-638 .entry-content .wcorg-sponsor {
+		width: 49%;
+	}
+}
+
+@media screen and (min-width: 44.375em) {
+	/* >= 710px */
+	body:not(.custom-background-image):before, body:not(.custom-background-image):after {
+		height: 0;
+	}
+
+	.home .site-branding {
+		background-size: 250px 150px;
+		padding-top: 170px;
+	}
+
+	.home .site-title {
+		font-size: 2rem;
+	}
+
+	.entry-content ul {
+		margin: 0 0 1.75em 1.25em;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	/* >= 768px */
+	.site-header {
+		background: url('https://2017.bangkok.wordcamp.org/files/2016/12/cover-small-1920.jpg') no-repeat center top;
+		background-size: inherit;
+		padding: 40px 0 170px;
+	}
+
+	.site-branding {
+		background-size: 200px 120px;
+		padding-top: 0;
+		height: 130px;
+		text-indent: 215px;
+	}
+
+	.site-branding {
+		width: 80%;
+	}
+
+	.site-title {
+		font-size: 2rem;
+		margin-top: 20px;
+	}
+
+	.site-description {
+		font-size: 1.4rem;
+		margin: 10px 0 0;
+	}
+}
+
+@media screen and (min-width: 48.9375em) {
+	/* >= 783px */
+	body.admin-bar .menu-toggle {
+		top: 32px;
+	}
+
+	body.admin-bar .site-header-menu {
+		margin-top: 32px;
+	}
+}
+
+@media screen and (min-width: 56.875em) {
+	/* >= 910px */
+	.site-header-menu {
+		background-color: rgba(217,233,207,.9);
+		margin-top: 0;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		text-align: center;
+		padding: 5px 30px;
+		z-index: 1000;
+	}
+
+	body.admin-bar .site-header-menu {
+		margin-top: 32px;
+	}
+
+	.main-navigation .primary-menu > li {
+		display: inline-block;
+	}
+
+	.main-navigation a {
+		font-size: 1.1rem;
+		padding: 8px 15px;
+	}
+
+	.main-navigation a:hover {
+		background: #F3B03F;
+		color: #fff;
+		border-radius: 5px;
+	}
+
+	.current-menu-item a {
+		border-radius: 5px;
+	}
+
+	.sub-menu .current-menu-item a {
+		border-radius: 0;
+	}
+
+	.current-menu-item a:hover {
+		background: #D56F29;
+		color: #fff;
+		border-radius: 0;
+	}
+
+	.sub-menu a:hover {
+		border-radius: 0;
+	}
+
+	.main-navigation li:hover > a, .main-navigation li.focus > a {
+		color: #fff;
+	}
+
+	.main-navigation li.current-menu-item:hover > a, .main-navigation li.current-menu-item.focus > a {
+		color: #fff;
+	}
+
+	.main-navigation .primary-menu > li.bubble a::before {
+		top: 13px;
+		right: 4px;
+		left: auto;
+	}
+
+	.main-navigation .primary-menu > li.bubble a::after {
+		top: 0;
+		right: 0;
+		left: auto;
+	}
+
+	.home .site-header {
+		background: url('https://2017.bangkok.wordcamp.org/files/2016/12/cover-1920.jpg') no-repeat center top;
+		background-size: inherit;
+		padding: 80px 0 280px;
+	}
+
+	.home .site-branding {
+		background-size: 300px 180px;
+		padding-top: 200px;
+	}
+
+	.site-branding {
+		margin: 50px auto 10px;
+	}
+
+	.home .site-title {
+		font-size: 2.6rem;
+	}
+
+	.home .site-description {
+		font-size: 1.6rem;
+	}
+
+	.site-content {
+		padding: 4rem 1rem 0;
+	}
+
+	.entry-title {
+		background-size: 45px 34px;
+		font-size: 2rem;
+		margin-bottom: 1.3em;
+		padding-left: 55px;
+	}
+
+	.tix-column-remaining {
+		display: table-cell;
+	}
+
+	.tix-ticket-excerpt {
+		display: block;
+	}
+
+	.tix-column-price, .tix-column-remaining, .tix-column-quantity {
+		width: 14%;
+	}
+
+	.tix-column-description {
+		width: auto;
+	}
+
+	th, td {
+		padding: 1em;
+	}
+
+	#post-638 .entry-title {
+		width: 240px;
+	}
+}
+
+@media screen and (min-width: 61.5625em) {
+	/* >= 985px */
+	#post-638 .entry-content .wcorg-sponsor {
+		width: 32%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	/* >= 1200px */
+	#post-638 .entry-content .wcorg-sponsor {
+		width: 24%;
+	}
+}
+
+.menu-tickets a {
+	background: #9c4000;
+	color: #fff;
+	border-radius: 5px;
+}
+
+// Speaker
+.wcb_speaker .speaker-avatar {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.wcb_session .entry-footer, .wcb_speaker .entry-footer {
+	display: none;
+}
+
+@media screen and (min-width: 61.5625em) {
+	/* >= 985px */
+	.wcb_session .entry-content, .wcb_speaker .entry-content {
+		margin-right: 15% !important;
+		margin-left: 15% !important;
+		width: 70% !important;
+	}
+}
+
+.wcorg-organizer h2 {
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+}
+
+.wcorg-organizer-description .avatar {
+	border: 3px solid #AF551B;
+}
+
+.wcorg-organizer {
+	transition: all .3s ease;
+}
+
+.wcorg-organizer:hover {
+	transform: scale(1.25);
+}
+
+.wcorg-organizer:hover .wcorg-organizer-description .avatar {
+	border-color: #F3B03F;
+}
+
+.page-slug-organizers .entry-content .entry-header {
+	clear: both;
+	margin-left: 0;
+}
+
+.page-slug-organizers .entry-content .entry-header .entry-title {
+	margin-bottom: 1.3em;
+}
+
+@media screen and (min-width: 44.375em) {
+	/* >= 710px */
+	.wcorg-organizer {
+		width: 33%;
+	}
+
+	.wcorg-organizer h2 {
+		font-size: 1.4rem;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	/* >= 1200px */
+	.wcorg-organizer {
+		width: 25%;
+	}
+}
+
+.wcorg-speaker h2 {
+	text-align: center;
+}
+
+.wcorg-speaker-description {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+}
+
+.wcorg-speaker-description .avatar {
+	border: 3px solid #AF551B;
+	display: block;
+	margin: 0 auto;
+}
+
+.wcorg-speaker-description .session {
+	margin-top: 10px;
+	text-align: center;
+}
