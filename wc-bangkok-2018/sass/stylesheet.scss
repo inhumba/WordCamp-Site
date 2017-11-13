@@ -13,11 +13,12 @@ Version: 1.0
 @import "fonts";
 
 //== Components
-// @import "";
+@import "animate";
 
 //== Style
 @import "header";
 @import "navigation";
+@import "content";
 @import "footer";
 
 //== Media Query

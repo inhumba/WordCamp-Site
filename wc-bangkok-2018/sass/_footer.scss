@@ -22,6 +22,30 @@
 			font-size: 1em;
 			@include font-weight(light);
 			margin: 0 10px;
+			+ a {
+				&::before {
+					content: "\f19a";
+					font-family: FontAwesome;
+					display: inline-block;
+					padding-right: 23px;
+				}
+			}
 		}
 	}
+}
+
+@media only screen and (max-width: 767px) {
+
+	.site-footer {
+		.site-info {
+			a {
+				+ a {
+					&::before {
+						content: "";
+					}
+				}
+			}
+		}
+	}
+
 }

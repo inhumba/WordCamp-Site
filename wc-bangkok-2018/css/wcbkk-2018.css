@@ -21,6 +21,16 @@ b, strong {
 a {
   text-decoration: none; }
 
+/* ANIMATE
+---------------------------------------*/
+@keyframes float {
+  0% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(5px, -10px); }
+  100% {
+    transform: translate(0, 0); } }
+
 /* HEADER
 ---------------------------------------*/
 .site-header {
@@ -28,36 +38,246 @@ a {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
-  min-height: 840px; }
+  min-height: 840px;
+  position: relative; }
+
+.site-title {
+  background-image: url("https://2018.bangkok.wordcamp.org/files/2017/11/wordcamp-bangkok.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 660px 194px;
+  display: block;
+  height: 194px;
+  width: 660px;
+  text-indent: -9999px;
+  background-size: 660px 194px;
+  transform: translate(420px, 340px); }
+  .site-title > a {
+    display: block;
+    height: 194px;
+    width: 660px; }
+  .site-title::after {
+    background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/wapuu.png);
+    content: "";
+    display: block;
+    height: 592px;
+    width: 426px;
+    transform: translate(700px, -330px);
+    position: absolute;
+    top: -60px;
+    left: 700px;
+    animation: float 6s ease-in-out infinite; }
+
+.site-description {
+  background-image: url("https://2018.bangkok.wordcamp.org/files/2017/11/2018.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 312px 98px;
+  display: block;
+  height: 98px;
+  width: 312px;
+  text-indent: -9999px;
+  font-size: 2.6em;
+  line-height: 1.2;
+  transform: translate(420px, 370px);
+  padding-left: 380px;
+  text-indent: 0; }
+  .site-description::after {
+    content: "|";
+    display: block;
+    font-size: 2.2em;
+    position: relative;
+    top: -108px;
+    left: -35px;
+    width: 10px; }
 
 @media only screen and (max-width: 1440px) {
   .site-header {
     background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-1440.jpg);
-    min-height: 630px; } }
+    min-height: 630px; }
+  .site-title {
+    background-size: 495px 145.5px;
+    height: 145.5px;
+    width: 495px;
+    transform: translate(315px, 255px); }
+    .site-title::after {
+      background-size: 319.5px 444px;
+      height: 444px;
+      width: 319.5px;
+      transform: translate(525px, -247.5px);
+      left: 525px; }
+    .site-title > a {
+      height: 145.5px;
+      width: 495px; }
+  .site-description {
+    background-size: 234px 73.5px;
+    height: 73.5px;
+    width: 234px;
+    transform: translate(315px, 277.5px);
+    font-size: 2em;
+    padding-left: 290px; }
+    .site-description::after {
+      top: -82px; } }
 
 @media only screen and (max-width: 1280px) {
   .site-header {
-    background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-1280.jpg);
-    min-height: 560px; } }
+    background-mage: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-1280.jpg);
+    min-height: 560px; }
+  .site-title {
+    background-size: 440px 129.333333333px;
+    height: 129.333333333px;
+    width: 440px;
+    transform: translate(280px, 226.666666667px); }
+    .site-title::after {
+      background-size: 284px 394.666666667px;
+      height: 394.666666667px;
+      width: 284px;
+      transform: translate(466.666666667px, -220px);
+      left: 466.666666667px; }
+    .site-title > a {
+      height: 129.333333333px;
+      width: 440px; }
+  .site-description {
+    background-size: 208px 65.3333333333px;
+    height: 65.3333333333px;
+    width: 208px;
+    transform: translate(280px, 246.666666667px);
+    font-size: 1.8em;
+    padding-left: 270px; }
+    .site-description::after {
+      top: -74px; } }
 
 @media only screen and (max-width: 1024px) {
   .site-header {
-    min-height: 448px; } }
+    min-height: 448px; }
+  .site-title {
+    background-size: 352px 103.466666667px;
+    height: 103.466666667px;
+    width: 352px;
+    transform: translate(224px, 181.333333333px); }
+    .site-title::after {
+      background-size: 227.2px 315.733333333px;
+      height: 315.733333333px;
+      width: 227.2px;
+      transform: translate(373.333333333px, -176px);
+      left: 373.333333333px; }
+    .site-title > a {
+      height: 103.466666667px;
+      width: 352px; }
+  .site-description {
+    background-size: 166.4px 52.2666666667px;
+    height: 52.2666666667px;
+    width: 166.4px;
+    transform: translate(224px, 197.333333333px);
+    font-size: 1.4em;
+    padding-left: 220px; }
+    .site-description::after {
+      font-size: 2em;
+      top: -53px;
+      left: -30px; } }
+
+@media only screen and (max-width: 768px) {
+  .site-header {
+    background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-768.jpg);
+    min-height: 336px; }
+  .site-title {
+    background-size: 264px 77.6px;
+    height: 77.6px;
+    width: 264px;
+    transform: translate(168px, 136px); }
+    .site-title::after {
+      background-size: 170.4px 236.8px;
+      height: 236.8px;
+      width: 170.4px;
+      transform: translate(280px, -132px);
+      left: 280px;
+      top: -20px; }
+    .site-title > a {
+      height: 77.6px;
+      width: 264px; }
+  .site-description {
+    background-size: 124.8px 39.2px;
+    height: 39.2px;
+    width: 124.8px;
+    transform: translate(168px, 148px);
+    font-size: 1.1em;
+    padding-left: 160px; }
+    .site-description::after {
+      font-size: 2em;
+      top: -43px;
+      left: -20px; } }
 
 @media only screen and (max-width: 767px) {
   .site-header {
     background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-768.jpg);
-    min-height: 336px; } }
+    min-height: 336px; }
+  .site-title {
+    background-size: 263.65625px 77.4989583333px;
+    height: 77.4989583333px;
+    width: 263.65625px;
+    transform: translate(167.78125px, 135.822916667px); }
+    .site-title::after {
+      background-size: 170.178125px 236.491666667px;
+      height: 236.491666667px;
+      width: 170.178125px;
+      transform: translate(279.635416667px, -131.828125px); }
+    .site-title > a {
+      height: 77.4989583333px;
+      width: 263.65625px; }
+  .site-description {
+    background-size: 124.6375px 39.1489583333px;
+    height: 39.1489583333px;
+    width: 124.6375px;
+    transform: translate(167.78125px, 147.807291667px);
+    padding-left: 290px; }
+    .site-description::after {
+      top: -82px; } }
 
 @media only screen and (max-width: 419px) {
   .site-header {
     background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-420.jpg);
-    min-height: 184px; } }
+    min-height: 184px; }
+  .site-title {
+    background-size: 144.03125px 42.3364583333px;
+    height: 42.3364583333px;
+    width: 144.03125px;
+    transform: translate(91.65625px, 74.1979166667px); }
+    .site-title::after {
+      background-size: 92.965625px 129.191666667px;
+      height: 129.191666667px;
+      width: 92.965625px;
+      transform: translate(152.760416667px, -72.015625px); }
+  .site-description {
+    background-size: 68.0875px 21.3864583333px;
+    height: 21.3864583333px;
+    width: 68.0875px;
+    transform: translate(91.65625px, 80.7447916667px);
+    padding-left: 290px; }
+    .site-description::after {
+      top: -82px; } }
 
 @media only screen and (max-width: 320px) {
   .site-header {
     background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-360.jpg);
-    min-height: 158px; } }
+    min-height: 158px; }
+  .site-title {
+    background-size: 110px 32.3333333333px;
+    height: 32.3333333333px;
+    width: 110px;
+    transform: translate(70px, 56.6666666667px); }
+    .site-title::after {
+      background-size: 71px 98.6666666667px;
+      height: 98.6666666667px;
+      width: 71px;
+      transform: translate(116.666666667px, -55px); }
+  .site-description {
+    background-size: 52px 16.3333333333px;
+    height: 16.3333333333px;
+    width: 52px;
+    transform: translate(70px, 61.6666666667px);
+    padding-left: 290px; }
+    .site-description::after {
+      top: -82px; } }
 
 /* NAVIGATION
 ---------------------------------------*/
@@ -106,6 +326,78 @@ a {
         font-family: FontAwesome;
         padding-right: 8px; }
 
+@media only screen and (max-width: 768px) {
+  .main-navigation {
+    padding: 10px 0; }
+    .admin-bar .main-navigation {
+      top: 46px; }
+    .main-navigation .menu li > a {
+      font-size: 1em;
+      border-radius: 15px; }
+    .main-navigation .menu li.menu-item-has-children:hover > a, .main-navigation .menu li.menu-item-has-children:focus > a {
+      border-radius: 15px 15px 0 0; }
+    .main-navigation .sub-menu {
+      border-radius: 0 15px 15px 15px; }
+      .main-navigation .sub-menu li > a {
+        font-size: .9em;
+        padding: 8px 15px 8px 20px; } }
+
+/* CONTENT
+---------------------------------------*/
+.site-content {
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+  margin: 20px auto 50px; }
+
+.entry-title {
+  font-size: 3em; }
+
+.entry-meta {
+  color: #666;
+  margin-top: -10px; }
+
+.entry-meta a time {
+  color: #999; }
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 10px;
+  margin-bottom: 13px;
+  border-radius: 12px;
+  border: 1px solid #ccc; }
+
+.contact-form label {
+  margin-bottom: 10px; }
+
+.contact-form input[type="submit"] {
+  background: #6099F6;
+  color: #fff;
+  border: 0;
+  font-family: "Kanit", Helvetica, Arial, sans-serif; }
+
+/* FOOTER
+---------------------------------------*/
+#primary-sidebar {
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+  margin: 20px auto 50px;
+  display: flex; }
+
+#primary-sidebar aside {
+  flex: 1; }
+
+#primary-sidebar .widget-title {
+  color: #fff; }
+
+#primary-sidebar a {
+  color: #00338D; }
+
+#primary-sidebar a:hover {
+  text-decoration: underline; }
+
 /* FOOTER
 ---------------------------------------*/
 #secondary {
@@ -127,3 +419,12 @@ a {
       font-size: 1em;
       font-weight: 300;
       margin: 0 10px; }
+      .site-footer .site-info a + a::before {
+        content: "\f19a";
+        font-family: FontAwesome;
+        display: inline-block;
+        padding-right: 23px; }
+
+@media only screen and (max-width: 767px) {
+  .site-footer .site-info a + a::before {
+    content: ""; } }

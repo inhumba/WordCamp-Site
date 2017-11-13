@@ -69,3 +69,38 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 768px) {
+
+	.main-navigation {
+		padding: 10px 0;
+		.admin-bar & {
+			top: 46px;
+		}
+		.menu {
+			li {
+				> a {
+					font-size: 1em;
+					border-radius: 15px;
+				}
+				&.menu-item-has-children {
+					&:hover, &:focus {
+						> a {
+							border-radius: 15px 15px 0 0;
+						}
+					}
+				}
+			}
+		}
+		.sub-menu {
+			border-radius: 0 15px 15px 15px;
+			li {
+				> a {
+					font-size: .9em;
+					padding: 8px 15px 8px 20px;
+				}
+			}
+		}
+	}
+
+}
