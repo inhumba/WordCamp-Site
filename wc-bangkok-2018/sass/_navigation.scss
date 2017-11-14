@@ -23,7 +23,7 @@
 				font-size: 1.2em;
 				@include font-weight(light);
 				padding: 10px 25px;
-				border-radius: 20px;
+				border-radius: 15px;
 			}
 			&.current-menu-item {
 				> a {
@@ -43,7 +43,7 @@
 			&.menu-item-has-children {
 				&:hover, &:focus {
 					> a {
-						border-radius: 20px 20px 0 0;
+						border-radius: 15px 15px 0 0;
 					}
 				}
 			}
@@ -51,7 +51,7 @@
 	}
 	.sub-menu {
 		background-color: $color-primary-darker;
-		border-radius: 0 20px 20px 20px;
+		border-radius: 0 15px 15px 15px;
 		padding: 10px 0 15px;
 		top: 90%;
 		text-align: left;
@@ -81,6 +81,7 @@
 			li {
 				> a {
 					font-size: 1em;
+					padding: 5px 20px;
 					border-radius: 15px;
 				}
 				&.menu-item-has-children {
@@ -97,7 +98,7 @@
 			li {
 				> a {
 					font-size: .9em;
-					padding: 8px 15px 8px 20px;
+					padding: 5px 10px;
 				}
 			}
 		}

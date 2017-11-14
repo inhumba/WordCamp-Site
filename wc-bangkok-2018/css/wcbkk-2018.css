@@ -210,74 +210,101 @@ a {
 @media only screen and (max-width: 767px) {
   .site-header {
     background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-768.jpg);
+    background-size: auto;
+    background-position: left top;
     min-height: 336px; }
   .site-title {
-    background-size: 263.65625px 77.4989583333px;
-    height: 77.4989583333px;
-    width: 263.65625px;
-    transform: translate(167.78125px, 135.822916667px); }
+    background-size: 189.0625px 55.5729166667px;
+    height: 55.5729166667px;
+    width: 189.0625px;
+    transform: translate(0, 0);
+    margin-left: -130px;
+    position: absolute;
+    top: 32%;
+    left: 50%; }
     .site-title::after {
-      background-size: 170.178125px 236.491666667px;
-      height: 236.491666667px;
-      width: 170.178125px;
-      transform: translate(279.635416667px, -131.828125px); }
+      background-size: 122.03125px 169.583333333px;
+      height: 169.583333333px;
+      width: 122.03125px;
+      transform: translate(200.520833333px, -94.53125px);
+      left: 200.520833333px;
+      top: -20px; }
     .site-title > a {
-      height: 77.4989583333px;
-      width: 263.65625px; }
+      height: 55.5729166667px;
+      width: 189.0625px; }
   .site-description {
-    background-size: 124.6375px 39.1489583333px;
-    height: 39.1489583333px;
-    width: 124.6375px;
-    transform: translate(167.78125px, 147.807291667px);
-    padding-left: 290px; }
+    background-size: 89.375px 28.0729166667px;
+    height: 28.0729166667px;
+    width: 89.375px;
+    transform: translate(0, 0);
+    background-position: left top;
+    font-size: .8em;
+    margin-left: -130px;
+    padding-top: 30px;
+    padding-left: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px; }
     .site-description::after {
-      top: -82px; } }
+      content: ""; } }
 
 @media only screen and (max-width: 419px) {
   .site-header {
     background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-420.jpg);
+    background-position: center top;
     min-height: 184px; }
   .site-title {
-    background-size: 144.03125px 42.3364583333px;
-    height: 42.3364583333px;
-    width: 144.03125px;
-    transform: translate(91.65625px, 74.1979166667px); }
+    background-size: 171.875px 50.5208333333px;
+    height: 50.5208333333px;
+    width: 171.875px;
+    margin-left: -140px; }
     .site-title::after {
-      background-size: 92.965625px 129.191666667px;
-      height: 129.191666667px;
-      width: 92.965625px;
-      transform: translate(152.760416667px, -72.015625px); }
+      background-size: 110.9375px 154.166666667px;
+      height: 154.166666667px;
+      width: 110.9375px;
+      transform: translate(182.291666667px, -85.9375px);
+      left: 182.291666667px;
+      top: -20px; }
+    .site-title > a {
+      height: 50.5208333333px;
+      width: 171.875px; }
   .site-description {
-    background-size: 68.0875px 21.3864583333px;
-    height: 21.3864583333px;
-    width: 68.0875px;
-    transform: translate(91.65625px, 80.7447916667px);
-    padding-left: 290px; }
-    .site-description::after {
-      top: -82px; } }
+    background-size: 81.25px 25.5208333333px;
+    height: 25.5208333333px;
+    width: 81.25px;
+    margin-left: -140px;
+    padding-top: 28px;
+    top: 62%;
+    width: 120px; } }
 
 @media only screen and (max-width: 320px) {
   .site-header {
     background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-360.jpg);
     min-height: 158px; }
   .site-title {
-    background-size: 110px 32.3333333333px;
-    height: 32.3333333333px;
-    width: 110px;
-    transform: translate(70px, 56.6666666667px); }
+    background-size: 144.375px 42.4375px;
+    height: 42.4375px;
+    width: 144.375px;
+    margin-left: -120px; }
     .site-title::after {
-      background-size: 71px 98.6666666667px;
-      height: 98.6666666667px;
-      width: 71px;
-      transform: translate(116.666666667px, -55px); }
+      background-size: 93.1875px 129.5px;
+      height: 129.5px;
+      width: 93.1875px;
+      transform: translate(153.125px, -72.1875px);
+      left: 153.125px;
+      top: -20px; }
+    .site-title > a {
+      height: 42.4375px;
+      width: 144.375px; }
   .site-description {
-    background-size: 52px 16.3333333333px;
-    height: 16.3333333333px;
-    width: 52px;
-    transform: translate(70px, 61.6666666667px);
-    padding-left: 290px; }
-    .site-description::after {
-      top: -82px; } }
+    background-size: 68.25px 21.4375px;
+    height: 21.4375px;
+    width: 68.25px;
+    margin-left: -120px;
+    padding-top: 21px;
+    top: 62%;
+    width: 120px; } }
 
 /* NAVIGATION
 ---------------------------------------*/
@@ -302,7 +329,7 @@ a {
         font-size: 1.2em;
         font-weight: 300;
         padding: 10px 25px;
-        border-radius: 20px; }
+        border-radius: 15px; }
       .main-navigation .menu li.current-menu-item > a {
         background-color: #ed3c59; }
       .main-navigation .menu li.current-menu-item:hover > a, .main-navigation .menu li.current-menu-item:focus > a {
@@ -310,10 +337,10 @@ a {
       .main-navigation .menu li:hover > a, .main-navigation .menu li:focus > a {
         background-color: #4581e3; }
       .main-navigation .menu li.menu-item-has-children:hover > a, .main-navigation .menu li.menu-item-has-children:focus > a {
-        border-radius: 20px 20px 0 0; }
+        border-radius: 15px 15px 0 0; }
   .main-navigation .sub-menu {
     background-color: #4581e3;
-    border-radius: 0 20px 20px 20px;
+    border-radius: 0 15px 15px 15px;
     padding: 10px 0 15px;
     top: 90%;
     text-align: left; }
@@ -333,6 +360,7 @@ a {
       top: 46px; }
     .main-navigation .menu li > a {
       font-size: 1em;
+      padding: 5px 20px;
       border-radius: 15px; }
     .main-navigation .menu li.menu-item-has-children:hover > a, .main-navigation .menu li.menu-item-has-children:focus > a {
       border-radius: 15px 15px 0 0; }
@@ -340,7 +368,7 @@ a {
       border-radius: 0 15px 15px 15px; }
       .main-navigation .sub-menu li > a {
         font-size: .9em;
-        padding: 8px 15px 8px 20px; } }
+        padding: 5px 10px; } }
 
 /* CONTENT
 ---------------------------------------*/
@@ -425,6 +453,7 @@ a {
         display: inline-block;
         padding-right: 23px; }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 480px) {
   .site-footer .site-info a + a::before {
-    content: ""; } }
+    content: "";
+    padding-right: 0; } }
