@@ -3,7 +3,12 @@
 
 body, * {
 	color: $text-color;
-	font-family: $font;
+	font-family: $font-pridi;
+	@include font-weight(regular);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-mitr;
 	@include font-weight(regular);
 }
 

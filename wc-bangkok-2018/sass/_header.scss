@@ -28,7 +28,7 @@
 
 .site-description {
 	@include replace-text-with-img("https://2018.bangkok.wordcamp.org/files/2017/11/2018.png", left center, 312px, 98px);
-	font-size: 2.6em;
+	font-size: 2.5em;
 	line-height: 1.2;
 	transform: translate(420px, 370px);
 	padding-left: 380px;
@@ -38,7 +38,7 @@
 		display: block;
 		font-size: 2.2em;
 		position: relative;
-		top: -108px;
+		top: -103px;
 		left: -35px;
 		width: 10px;
 	}
@@ -72,10 +72,10 @@
 		background-size: (312px * $size-ratio) (98px * $size-ratio);
 		@include wh(312px * $size-ratio, 98px * $size-ratio);
 		transform: translate(420px * $size-ratio, 370px * $size-ratio);
-		font-size: 2em;
+		font-size: 1.9em;
 		padding-left: 290px;
 		&::after {
-			top: -82px;
+			top: -78px;
 		}
 	}
 
@@ -109,10 +109,10 @@
 		background-size: (312px * $size-ratio) (98px * $size-ratio);
 		@include wh(312px * $size-ratio, 98px * $size-ratio);
 		transform: translate(420px * $size-ratio, 370px * $size-ratio);
-		font-size: 1.8em;
+		font-size: 1.7em;
 		padding-left: 270px;
 		&::after {
-			top: -74px;
+			top: -67px;
 		}
 	}
 
@@ -185,11 +185,11 @@
 		background-size: (312px * $size-ratio) (98px * $size-ratio);
 		@include wh(312px * $size-ratio, 98px * $size-ratio);
 		transform: translate(420px * $size-ratio, 370px * $size-ratio);
-		font-size: 1.1em;
+		font-size: 1em;
 		padding-left: 160px;
 		&::after {
-			font-size: 2em;
-			top: -43px;
+			font-size: 2.2em;
+			top: -40px;
 			left: -20px;
 		}
 	}
