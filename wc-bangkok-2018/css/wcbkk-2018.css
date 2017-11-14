@@ -12,7 +12,11 @@ Version: 1.0
 ---------------------------------------*/
 body, * {
   color: #1c1958;
-  font-family: "Kanit", Helvetica, Arial, sans-serif;
+  font-family: "Pridi", Helvetica, Arial, sans-serif;
+  font-weight: 400; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Mitr", Helvetica, Arial, sans-serif;
   font-weight: 400; }
 
 b, strong {
@@ -77,7 +81,7 @@ a {
   height: 98px;
   width: 312px;
   text-indent: -9999px;
-  font-size: 2.6em;
+  font-size: 2.5em;
   line-height: 1.2;
   transform: translate(420px, 370px);
   padding-left: 380px;
@@ -87,7 +91,7 @@ a {
     display: block;
     font-size: 2.2em;
     position: relative;
-    top: -108px;
+    top: -103px;
     left: -35px;
     width: 10px; }
 
@@ -114,10 +118,10 @@ a {
     height: 73.5px;
     width: 234px;
     transform: translate(315px, 277.5px);
-    font-size: 2em;
+    font-size: 1.9em;
     padding-left: 290px; }
     .site-description::after {
-      top: -82px; } }
+      top: -78px; } }
 
 @media only screen and (max-width: 1280px) {
   .site-header {
@@ -142,10 +146,10 @@ a {
     height: 65.3333333333px;
     width: 208px;
     transform: translate(280px, 246.666666667px);
-    font-size: 1.8em;
+    font-size: 1.7em;
     padding-left: 270px; }
     .site-description::after {
-      top: -74px; } }
+      top: -67px; } }
 
 @media only screen and (max-width: 1024px) {
   .site-header {
@@ -200,11 +204,11 @@ a {
     height: 39.2px;
     width: 124.8px;
     transform: translate(168px, 148px);
-    font-size: 1.1em;
+    font-size: 1em;
     padding-left: 160px; }
     .site-description::after {
-      font-size: 2em;
-      top: -43px;
+      font-size: 2.2em;
+      top: -40px;
       left: -20px; } }
 
 @media only screen and (max-width: 767px) {
@@ -314,8 +318,9 @@ a {
   padding: 15px 0;
   position: fixed;
   top: 0;
+  right: 0;
   left: 0;
-  right: 0; }
+  z-index: 1000; }
   .admin-bar .main-navigation {
     top: 32px; }
   .main-navigation .menu {
@@ -352,6 +357,76 @@ a {
         display: inline-block;
         font-family: FontAwesome;
         padding-right: 8px; }
+
+.menu-toggle {
+  background-color: #5e9af9;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  color: #5e9af9;
+  display: block;
+  font-family: 'Kanit';
+  font-weight: 500;
+  font-size: .5em;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+  z-index: 1000;
+  transition: all .3s; }
+  .admin-bar .menu-toggle {
+    top: 56px; }
+  .menu-toggle::after {
+    content: "\f0c9";
+    color: #FFF;
+    display: block;
+    font-family: FontAwesome;
+    font-size: 2.6em;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    text-align: center; }
+
+.menu-toggle.toggled-on,
+.menu-toggle.toggled-on:hover,
+.menu-toggle.toggled-on:focus {
+  background-color: #ed3c59;
+  color: #ed3c59;
+  top: 20px;
+  right: 20px; }
+  .admin-bar .menu-toggle.toggled-on, .admin-bar
+  .menu-toggle.toggled-on:hover, .admin-bar
+  .menu-toggle.toggled-on:focus {
+    top: 66px; }
+  .menu-toggle.toggled-on::after,
+  .menu-toggle.toggled-on:hover::after,
+  .menu-toggle.toggled-on:focus::after {
+    content: "\f00d";
+    top: 8px; }
+
+.main-small-navigation .menu-main-container {
+  background-color: #5e9af9;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
+.main-small-navigation .menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 25px;
+  min-height: 100vh; }
+  .main-small-navigation .menu li {
+    color: #1c1958; }
+  .main-small-navigation .menu a {
+    color: #FFF;
+    font-size: 1.2em;
+    line-height: 1.8; }
+    .main-small-navigation .menu a:visited {
+      color: #DFDFDF; }
+  .admin-bar .main-small-navigation .menu {
+    padding-top: 50px; }
 
 @media only screen and (max-width: 768px) {
   .main-navigation {
