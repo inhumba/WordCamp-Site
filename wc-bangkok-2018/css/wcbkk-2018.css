@@ -71,6 +71,29 @@ p {
   100% {
     transform: translateX(0); } }
 
+/* ORGANIZER
+---------------------------------------*/
+.wcorg-organizers {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+
+.wcorg-organizer {
+  margin-bottom: 15px; }
+  .wcorg-organizer h2 {
+    font-size: 1.3em;
+    margin-bottom: 5px; }
+
+.wcorg-organizer-description .avatar {
+  border: 2px solid #1c1958;
+  border-radius: 15px; }
+
+@media only screen and (max-width: 1024px) {
+  .wcorg-organizers {
+    justify-content: space-evenly; }
+  .wcorg-organizer h2 {
+    font-size: 1.1em; } }
+
 /* HEADER
 ---------------------------------------*/
 .site-header {
