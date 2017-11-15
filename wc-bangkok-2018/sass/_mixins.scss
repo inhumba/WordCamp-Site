@@ -39,3 +39,10 @@
 	width: $w;
 	border-radius: 50%;
 }
+
+%grid-content {
+	width: 80%;
+	max-width: 1200px;
+	height: auto;
+	margin: 0 auto;
+}

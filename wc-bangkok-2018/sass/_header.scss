@@ -8,6 +8,16 @@
 	background-size: contain;
 	min-height: 840px;
 	position: relative;
+	&::before {
+		background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/cloud.png);
+		content: "";
+		display: block;
+		@include wh(1371px, 332px);
+		position: absolute;
+		top: 260px;
+		left: 210px;
+		animation: cloud 15s ease-in-out infinite;
+	}
 }
 
 .site-title {
@@ -22,7 +32,7 @@
 		position: absolute;
 		top: -60px;
 		left: 700px;
-		animation: float 6s ease-in-out infinite;
+		animation: wapuu 6s ease-in-out infinite;
 	}
 }
 
@@ -51,6 +61,12 @@
 	.site-header {
 		background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-1440.jpg);
 		min-height: 630px;
+		&::before {
+			background-size: (1371px * $size-ratio) (332px * $size-ratio);
+			@include wh(1371px * $size-ratio, 332px * $size-ratio);
+			top: 200px;
+			left: 170px;
+		}
 	}
 
 	.site-title {
@@ -88,6 +104,12 @@
 	.site-header {
 		background-mage: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-1280.jpg);
 		min-height: 560px;
+		&::before {
+			background-size: (1371px * $size-ratio) (332px * $size-ratio);
+			@include wh(1371px * $size-ratio, 332px * $size-ratio);
+			top: 175px;
+			left: 150px;
+		}
 	}
 
 	.site-title {
@@ -124,6 +146,12 @@
 
 	.site-header {
 		min-height: 448px;
+		&::before {
+			background-size: (1371px * $size-ratio) (332px * $size-ratio);
+			@include wh(1371px * $size-ratio, 332px * $size-ratio);
+			top: 140px;
+			left: 120px;
+		}
 	}
 
 	.site-title {
@@ -163,6 +191,12 @@
 	.site-header {
 		background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-768.jpg);
 		min-height: 336px;
+		&::before {
+			background-size: (1371px * $size-ratio) (332px * $size-ratio);
+			@include wh(1371px * $size-ratio, 332px * $size-ratio);
+			top: 100px;
+			left: 80px;
+		}
 	}
 
 	.site-title {
@@ -205,6 +239,9 @@
 		background-size: auto;
 		background-position: left top;
 		min-height: 336px;
+		&::before {
+			display: none;
+		}
 	}
 
 	.site-title {
@@ -291,6 +328,13 @@
 	.site-header {
 		background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-360.jpg);
 		min-height: 158px;
+		&::before {
+			background-size: (1371px * $size-ratio) (332px * $size-ratio);
+			@include wh(1371px * $size-ratio, 332px * $size-ratio);
+			top: 45px;
+			left: 0;
+			animation: cloud-small 10s linear infinite;
+		}
 	}
 
 	.site-title {

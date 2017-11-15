@@ -2,9 +2,7 @@
 ---------------------------------------*/
 
 .site-content {
-	width: 90%;
-	max-width: 1200px;
-	height: auto;
+	@extend %grid-content;
 	margin: 40px auto;
 }
 
@@ -43,7 +41,6 @@
 
 .entry-meta {
 	color: $color-primary-darker;
-	margin-top: 5px;
 	a, time {
 		color: $color-primary;
 	}
@@ -78,29 +75,29 @@
 
 /* FOOTER
 ---------------------------------------*/
-#primary-sidebar {
-	width: 90%;
-	max-width: 1200px;
-	height: auto;
-	margin: 20px auto 50px;
-	display: flex;
-}
+// #primary-sidebar {
+// 	width: 90%;
+// 	max-width: 1200px;
+// 	height: auto;
+// 	margin: 20px auto 50px;
+// 	display: flex;
+// }
 
-#primary-sidebar aside {
-	flex: 1;
-}
+// #primary-sidebar aside {
+// 	flex: 1;
+// }
 
-#primary-sidebar .widget-title {
-	color: #fff;
-}
+// #primary-sidebar .widget-title {
+// 	color: #fff;
+// }
 
-#primary-sidebar a {
-	color: #00338D;
-}
+// #primary-sidebar a {
+// 	color: #00338D;
+// }
 
-#primary-sidebar a:hover {
-	text-decoration: underline;
-}
+// #primary-sidebar a:hover {
+// 	text-decoration: underline;
+// }
 
 
 @media only screen and (max-width: 768px) {
