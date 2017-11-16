@@ -10,6 +10,7 @@
 .wcorg-organizer {
 	margin-bottom: 15px;
 	h2 {
+		color: $color-primary-darker;
 		font-size: 1.3em;
 		margin-bottom: 5px;
 	}
@@ -17,7 +18,7 @@
 
 .wcorg-organizer-description {
 	.avatar {
-		border: 2px solid $color-navy;
+		border: 2px solid $color-primary-darker;
 		border-radius: 15px;
 	}
 }

@@ -53,51 +53,85 @@
 	margin-bottom: 50px;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-	padding: 10px;
-	margin-bottom: 13px;
-	border-radius: 12px;
-	border: 1px solid #ccc;
+// .contact-form input[type="text"],
+// .contact-form input[type="email"],
+// .contact-form textarea {
+// 	padding: 10px;
+// 	margin-bottom: 13px;
+// 	border-radius: 12px;
+// 	border: 1px solid #ccc;
+// }
+
+// .contact-form label {
+// 	margin-bottom: 10px;
+// }
+
+// .contact-form input[type="submit"] {
+// 	background: #6099F6;
+// 	color: #fff;
+// 	border: 0;
+// 	font-family: "Kanit", Helvetica, Arial, sans-serif;
+// }
+
+
+/* FORM
+---------------------------------------*/
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+	background-color: $color-primary;
+	background-image: none;
+	box-shadow: none;
+	border: none;
+	border-radius: 10px;
+	color: #FFF;
+	font-family: $font-mitr;
+	font-size: 1em;
+	@include font-weight(regular);
+	padding: 12px 40px;
+	text-transform: uppercase;
+	text-shadow: none;
+	transition: background-color .3s;
+	&:hover, &:focus {
+		background-color: $color-primary-darker;
+		background-image: none;
+		outline: none;
+	}
 }
 
-.contact-form label {
+label {
 	margin-bottom: 10px;
 }
 
-.contact-form input[type="submit"] {
-	background: #6099F6;
-	color: #fff;
-	border: 0;
-	font-family: "Kanit", Helvetica, Arial, sans-serif;
+input[type=text], input[type=email], textarea {
+	border: 1px solid $color-primary;
+	border-radius: 10px;
+	color: $color-primary-darker;
+	font-family: $font-mitr;
+	font-size: 1em;
+	@include font-weight(regular);
+	padding: 10px 20px;
+	&:focus {
+		color: $color-primary-darker;
+		outline: none;
+	}
 }
 
-/* FOOTER
----------------------------------------*/
-// #primary-sidebar {
-// 	width: 90%;
-// 	max-width: 1200px;
-// 	height: auto;
-// 	margin: 20px auto 50px;
-// 	display: flex;
-// }
-
-// #primary-sidebar aside {
-// 	flex: 1;
-// }
-
-// #primary-sidebar .widget-title {
-// 	color: #fff;
-// }
-
-// #primary-sidebar a {
-// 	color: #00338D;
-// }
-
-// #primary-sidebar a:hover {
-// 	text-decoration: underline;
-// }
+select {
+	border: 1px solid $color-primary;
+	border-radius: 10px;
+	color: $color-primary-darker;
+	cursor: pointer;
+	font-family: $font-mitr;
+	font-size: 1em;
+	@include font-weight(regular);
+	padding: 10px 20px;
+	text-align: center;
+	width: 100%;
+	&:focus {
+		color: $color-primary-darker;
+		outline: none;
+	}
+}
 
 
 @media only screen and (max-width: 768px) {

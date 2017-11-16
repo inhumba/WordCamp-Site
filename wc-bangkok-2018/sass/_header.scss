@@ -15,7 +15,7 @@
 		@include wh(1371px, 332px);
 		position: absolute;
 		top: 260px;
-		left: 210px;
+		left: 230px;
 		animation: cloud 15s ease-in-out infinite;
 	}
 }
@@ -40,7 +40,7 @@
 	@include replace-text-with-img("https://2018.bangkok.wordcamp.org/files/2017/11/2018.png", left center, 312px, 98px);
 	font-size: 2.5em;
 	line-height: 1.2;
-	transform: translate(420px, 370px);
+	transform: translate(420px, 340px);
 	padding-left: 380px;
 	text-indent: 0;
 	&::after {
@@ -54,6 +54,48 @@
 	}
 }
 
+@media only screen and (max-width: 1650px) {
+
+	$size-ratio: (1650 / 1920);
+
+	.site-header {
+		min-height: 722px;
+		&::before {
+			background-size: (1371px * $size-ratio) (332px * $size-ratio);
+			@include wh(1371px * $size-ratio, 332px * $size-ratio);
+			top: 200px;
+			left: 190px;
+		}
+	}
+
+	.site-title {
+		background-size: (660px * $size-ratio) (194px * $size-ratio);
+		@include wh(660px * $size-ratio, 194px * $size-ratio);
+		transform: translate(420px * $size-ratio, 340px * $size-ratio);
+		&::after {
+			background-size: (426px * $size-ratio) (592px * $size-ratio);
+			@include wh(426px * $size-ratio, 592px * $size-ratio);
+			transform: translate(700px * $size-ratio, -330px * $size-ratio);
+			left: 700px * $size-ratio;
+		}
+		> a {
+			@include wh(660px * $size-ratio, 194px * $size-ratio);
+		}
+	}
+
+	.site-description {
+		background-size: (312px * $size-ratio) (98px * $size-ratio);
+		@include wh(312px * $size-ratio, 98px * $size-ratio);
+		transform: translate(420px * $size-ratio, 340px * $size-ratio);
+		font-size: 1.9em;
+		padding-left: 330px;
+		&::after {
+			top: -77px;
+		}
+	}
+
+}
+
 @media only screen and (max-width: 1440px) {
 
 	$size-ratio: (1440 / 1920);
@@ -65,6 +107,49 @@
 			background-size: (1371px * $size-ratio) (332px * $size-ratio);
 			@include wh(1371px * $size-ratio, 332px * $size-ratio);
 			top: 200px;
+			left: 190px;
+		}
+	}
+
+	.site-title {
+		background-size: (660px * $size-ratio) (194px * $size-ratio);
+		@include wh(660px * $size-ratio, 194px * $size-ratio);
+		transform: translate(420px * $size-ratio, 340px * $size-ratio);
+		&::after {
+			background-size: (426px * $size-ratio) (592px * $size-ratio);
+			@include wh(426px * $size-ratio, 592px * $size-ratio);
+			transform: translate(700px * $size-ratio, -330px * $size-ratio);
+			left: 700px * $size-ratio;
+		}
+		> a {
+			@include wh(660px * $size-ratio, 194px * $size-ratio);
+		}
+	}
+
+	.site-description {
+		background-size: (312px * $size-ratio) (98px * $size-ratio);
+		@include wh(312px * $size-ratio, 98px * $size-ratio);
+		transform: translate(420px * $size-ratio, 340px * $size-ratio);
+		font-size: 1.9em;
+		padding-left: 290px;
+		&::after {
+			top: -78px;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+	$size-ratio: (1280 / 1920);
+
+	.site-header {
+		background-mage: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-1280.jpg);
+		min-height: 560px;
+		&::before {
+			background-size: (1371px * $size-ratio) (332px * $size-ratio);
+			@include wh(1371px * $size-ratio, 332px * $size-ratio);
+			top: 175px;
 			left: 170px;
 		}
 	}
@@ -87,27 +172,26 @@
 	.site-description {
 		background-size: (312px * $size-ratio) (98px * $size-ratio);
 		@include wh(312px * $size-ratio, 98px * $size-ratio);
-		transform: translate(420px * $size-ratio, 370px * $size-ratio);
-		font-size: 1.9em;
-		padding-left: 290px;
+		transform: translate(420px * $size-ratio, 340px * $size-ratio);
+		font-size: 1.7em;
+		padding-left: 270px;
 		&::after {
-			top: -78px;
+			top: -67px;
 		}
 	}
 
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1120px) {
 
-	$size-ratio: (1280 / 1920);
+	$size-ratio: (1120 / 1920);
 
 	.site-header {
-		background-mage: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-1280.jpg);
-		min-height: 560px;
+		min-height: 490px;
 		&::before {
 			background-size: (1371px * $size-ratio) (332px * $size-ratio);
 			@include wh(1371px * $size-ratio, 332px * $size-ratio);
-			top: 175px;
+			top: 150px;
 			left: 150px;
 		}
 	}
@@ -130,14 +214,13 @@
 	.site-description {
 		background-size: (312px * $size-ratio) (98px * $size-ratio);
 		@include wh(312px * $size-ratio, 98px * $size-ratio);
-		transform: translate(420px * $size-ratio, 370px * $size-ratio);
-		font-size: 1.7em;
-		padding-left: 270px;
+		transform: translate(420px * $size-ratio, 340px * $size-ratio);
+		font-size: 1.4em;
+		padding-left: 240px;
 		&::after {
-			top: -67px;
+			top: -56px;
 		}
 	}
-
 }
 
 @media only screen and (max-width: 1024px) {
@@ -150,7 +233,7 @@
 			background-size: (1371px * $size-ratio) (332px * $size-ratio);
 			@include wh(1371px * $size-ratio, 332px * $size-ratio);
 			top: 140px;
-			left: 120px;
+			left: 140px;
 		}
 	}
 
@@ -172,7 +255,7 @@
 	.site-description {
 		background-size: (312px * $size-ratio) (98px * $size-ratio);
 		@include wh(312px * $size-ratio, 98px * $size-ratio);
-		transform: translate(420px * $size-ratio, 370px * $size-ratio);
+		transform: translate(420px * $size-ratio, 340px * $size-ratio);
 		font-size: 1.4em;
 		padding-left: 220px;
 		&::after {
@@ -195,7 +278,7 @@
 			background-size: (1371px * $size-ratio) (332px * $size-ratio);
 			@include wh(1371px * $size-ratio, 332px * $size-ratio);
 			top: 100px;
-			left: 80px;
+			left: 100px;
 		}
 	}
 
@@ -218,7 +301,7 @@
 	.site-description {
 		background-size: (312px * $size-ratio) (98px * $size-ratio);
 		@include wh(312px * $size-ratio, 98px * $size-ratio);
-		transform: translate(420px * $size-ratio, 370px * $size-ratio);
+		transform: translate(420px * $size-ratio, 340px * $size-ratio);
 		font-size: 1em;
 		padding-left: 160px;
 		&::after {
