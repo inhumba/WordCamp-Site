@@ -148,6 +148,13 @@
 	}
 }
 
+@media only screen and (max-width: 1024px) {
+
+	.main-navigation .menu li > a {
+		padding: 10px 15px;
+	}
+}
+
 @media only screen and (max-width: 768px) {
 
 	.main-navigation {

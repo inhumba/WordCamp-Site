@@ -1,11 +1,6 @@
 /* FOOTER
 ---------------------------------------*/
 
-// #secondary {
-// 	background-color: $color-primary;
-// 	overflow: hidden;
-// }
-
 .site-footer {
 	background-color: $color-primary;
 	clear: both;
@@ -82,11 +77,107 @@
 	padding: 40px 0 20px;
 	.footer-widgets-block {
 		float: left;
-		width: calc(100% / 3);
+		width: calc(100% / 2);
+		p {
+			color: #FFF;
+			font-size: 1em;
+			@include font-weight(light);
+		}
+	}
+	.widget-title {
+		font-size: 1.5em;
+		color: #FFF;
 	}
 }
 
+#secondary-sidebar {
+	padding: 25px 0;
+	text-align: center;
+	.widget-title {
+		color: $color-navy;
+	}
+}
+
+a.genericon.genericon-facebook, a.genericon.genericon-twitter {
+	font-size: 3em;
+	color: $color-primary;
+}
+
+.widget_wpcom_social_media_icons_widget ul {
+	margin-top: 30px;
+	li {
+		margin: 2em;
+	}
+}
+
+#subscribe-email {
+	display: inline;
+	input {
+		width: 40%;
+	}
+	input[type=email] {
+		background-color: transparent;
+		border: 1px solid #FFF;
+		color: #FFF;
+		&::placeholder {
+			color: #FFF;
+		}
+	}
+}
+
+#subscribe-submit {
+	display: inline;
+	input[type="submit"] {
+		background-color: #FFF;
+		color: $color-primary;
+	}
+}
+
+#footer-widget-2 {
+	text-align: right;
+}
+
+#milestone_widget-3.widget.milestone-widget {
+	float: right;
+}
+
+.milestone-header {
+	background-color: #e8e8e8;
+	border: 1px solid $color-primary;
+	border-radius: 10px 10px 0 0;
+}
+
+.milestone-countdown {
+	border: 1px solid $color-primary;
+	border-radius: 0 0 10px 10px;
+	.difference {
+		color: $color-secondary;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+
+	#subscribe-email, #subscribe-submit {
+		display: block;
+		margin-bottom: 10px;
+		input[type=email] {
+			width: 70%;
+		}
+		input[type=submit] {
+			padding-right: 0;
+			padding-left: 0;
+			width: 150px;
+		}
+	}
+
+}
+
 @media only screen and (max-width: 768px) {
+
+	#custom_html-2 .textwidget, #footer-widgets {
+		width: 80%;
+		max-width: 100%;
+	}
 
 	#custom_html-2 {
 		.wcorg-sponsors {
@@ -97,6 +188,16 @@
 		.wcorg-sponsor {
 			width: 25%;
 		}
+	}
+
+	#secondary-sidebar {
+		.widget-title {
+			font-size: 2em;
+		}
+	}
+
+	.widget_wpcom_social_media_icons_widget ul {
+		margin-top: 20px;
 	}
 
 }
@@ -112,6 +213,34 @@
 		.wcorg-sponsor {
 			width: 40%;
 		}
+	}
+
+	#footer-widgets {
+		.footer-widgets-block {
+			float: none;
+			width: 100%;
+		}
+	}
+
+	#secondary-sidebar {
+		padding: 25px 0 20px;
+		.widget-title {
+			font-size: 1.5em;
+		}
+	}
+
+	#subscribe-email, #subscribe-submit {
+		input[type=email] {
+			width: 80%;
+		}
+		input[type=submit] {
+			margin-left: 0;
+			width: 150px;
+		}
+	}
+
+	#milestone_widget-3.widget.milestone-widget {
+		float: none;
 	}
 
 }
@@ -139,6 +268,16 @@
 		}
 		.wcorg-sponsor {
 			width: 80%;
+		}
+	}
+
+}
+
+@media only screen and (max-width: 375px) {
+
+	#secondary-sidebar {
+		.widget-title {
+			font-size: 1.1em;
 		}
 	}
 

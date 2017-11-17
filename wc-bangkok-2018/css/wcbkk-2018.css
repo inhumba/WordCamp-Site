@@ -9,7 +9,7 @@ Version: 1.0
 /* MIXINS
 ---------------------------------------*/
 .site-content, #custom_html-2 .textwidget, #footer-widgets {
-  width: 80%;
+  width: 60%;
   max-width: 1200px;
   height: auto;
   margin: 0 auto; }
@@ -231,6 +231,61 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
     justify-content: space-evenly; }
   .wcorg-organizer h2 {
     font-size: 1.1em; } }
+
+/* FORM
+---------------------------------------*/
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  background-color: #5e9af9;
+  background-image: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 10px;
+  color: #FFF;
+  font-family: "Mitr", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 12px 40px;
+  text-transform: uppercase;
+  text-shadow: none;
+  transition: background-color .3s; }
+  button:hover, button:focus, html input[type="button"]:hover, html input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+    background-color: #4581e3;
+    background-image: none;
+    outline: none; }
+
+label {
+  margin-bottom: 10px; }
+
+input[type=text], input[type=email], textarea {
+  border: 1px solid #5e9af9;
+  border-radius: 10px;
+  color: #4581e3;
+  font-family: "Mitr", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 10px 20px; }
+  input[type=text]:focus, input[type=email]:focus, textarea:focus {
+    color: #4581e3;
+    outline: none; }
+
+select {
+  border: 1px solid #5e9af9;
+  border-radius: 10px;
+  color: #4581e3;
+  cursor: pointer;
+  font-family: "Mitr", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-align: center;
+  width: 100%; }
+  select:focus {
+    color: #4581e3;
+    outline: none; }
+
+@media only screen and (max-width: 767px) {
+  .contact-form input[type=email], .contact-form input[type=text], .contact-form input[type=url], .contact-form textarea {
+    width: 80%; } }
 
 /* HEADER
 ---------------------------------------*/
@@ -735,6 +790,10 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
   .admin-bar .main-small-navigation .menu {
     padding-top: 50px; }
 
+@media only screen and (max-width: 1024px) {
+  .main-navigation .menu li > a {
+    padding: 10px 15px; } }
+
 @media only screen and (max-width: 768px) {
   .main-navigation {
     padding: 10px 0; }
@@ -793,58 +852,10 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 .hentry {
   margin-bottom: 50px; }
 
-/* FORM
----------------------------------------*/
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-  background-color: #5e9af9;
-  background-image: none;
-  box-shadow: none;
-  border: none;
-  border-radius: 10px;
-  color: #FFF;
-  font-family: "Mitr", Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-  padding: 12px 40px;
-  text-transform: uppercase;
-  text-shadow: none;
-  transition: background-color .3s; }
-  button:hover, button:focus, html input[type="button"]:hover, html input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
-    background-color: #4581e3;
-    background-image: none;
-    outline: none; }
-
-label {
-  margin-bottom: 10px; }
-
-input[type=text], input[type=email], textarea {
-  border: 1px solid #5e9af9;
-  border-radius: 10px;
-  color: #4581e3;
-  font-family: "Mitr", Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-  padding: 10px 20px; }
-  input[type=text]:focus, input[type=email]:focus, textarea:focus {
-    color: #4581e3;
-    outline: none; }
-
-select {
-  border: 1px solid #5e9af9;
-  border-radius: 10px;
-  color: #4581e3;
-  cursor: pointer;
-  font-family: "Mitr", Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-  padding: 10px 20px;
-  text-align: center;
-  width: 100%; }
-  select:focus {
-    color: #4581e3;
-    outline: none; }
-
 @media only screen and (max-width: 768px) {
+  .site-content {
+    width: 80%;
+    max-width: 100%; }
   .entry-title {
     font-size: 2.2em; } }
 
@@ -908,19 +919,107 @@ select {
   padding: 40px 0 20px; }
   #footer-widgets .footer-widgets-block {
     float: left;
-    width: calc(100% / 3); }
+    width: calc(100% / 2); }
+    #footer-widgets .footer-widgets-block p {
+      color: #FFF;
+      font-size: 1em;
+      font-weight: 300; }
+  #footer-widgets .widget-title {
+    font-size: 1.5em;
+    color: #FFF; }
+
+#secondary-sidebar {
+  padding: 25px 0;
+  text-align: center; }
+  #secondary-sidebar .widget-title {
+    color: #1c1958; }
+
+a.genericon.genericon-facebook, a.genericon.genericon-twitter {
+  font-size: 3em;
+  color: #5e9af9; }
+
+.widget_wpcom_social_media_icons_widget ul {
+  margin-top: 30px; }
+  .widget_wpcom_social_media_icons_widget ul li {
+    margin: 2em; }
+
+#subscribe-email {
+  display: inline; }
+  #subscribe-email input {
+    width: 40%; }
+  #subscribe-email input[type=email] {
+    background-color: transparent;
+    border: 1px solid #FFF;
+    color: #FFF; }
+    #subscribe-email input[type=email]::placeholder {
+      color: #FFF; }
+
+#subscribe-submit {
+  display: inline; }
+  #subscribe-submit input[type="submit"] {
+    background-color: #FFF;
+    color: #5e9af9; }
+
+#footer-widget-2 {
+  text-align: right; }
+
+#milestone_widget-3.widget.milestone-widget {
+  float: right; }
+
+.milestone-header {
+  background-color: #e8e8e8;
+  border: 1px solid #5e9af9;
+  border-radius: 10px 10px 0 0; }
+
+.milestone-countdown {
+  border: 1px solid #5e9af9;
+  border-radius: 0 0 10px 10px; }
+  .milestone-countdown .difference {
+    color: #ed3c59; }
+
+@media only screen and (max-width: 1024px) {
+  #subscribe-email, #subscribe-submit {
+    display: block;
+    margin-bottom: 10px; }
+    #subscribe-email input[type=email], #subscribe-submit input[type=email] {
+      width: 70%; }
+    #subscribe-email input[type=submit], #subscribe-submit input[type=submit] {
+      padding-right: 0;
+      padding-left: 0;
+      width: 150px; } }
 
 @media only screen and (max-width: 768px) {
+  #custom_html-2 .textwidget, #footer-widgets {
+    width: 80%;
+    max-width: 100%; }
   #custom_html-2 .wcorg-sponsors h2 {
     font-size: 1.8em; }
   #custom_html-2 .wcorg-sponsor {
-    width: 25%; } }
+    width: 25%; }
+  #secondary-sidebar .widget-title {
+    font-size: 2em; }
+  .widget_wpcom_social_media_icons_widget ul {
+    margin-top: 20px; } }
 
 @media only screen and (max-width: 767px) {
   #custom_html-2 .wcorg-sponsors h2 {
     font-size: 1.4em; }
   #custom_html-2 .wcorg-sponsor {
-    width: 40%; } }
+    width: 40%; }
+  #footer-widgets .footer-widgets-block {
+    float: none;
+    width: 100%; }
+  #secondary-sidebar {
+    padding: 25px 0 20px; }
+    #secondary-sidebar .widget-title {
+      font-size: 1.5em; }
+  #subscribe-email input[type=email], #subscribe-submit input[type=email] {
+    width: 80%; }
+  #subscribe-email input[type=submit], #subscribe-submit input[type=submit] {
+    margin-left: 0;
+    width: 150px; }
+  #milestone_widget-3.widget.milestone-widget {
+    float: none; } }
 
 @media only screen and (max-width: 480px) {
   .site-footer .site-info a + a::before {
@@ -930,3 +1029,7 @@ select {
     font-size: 1.4em; }
   #custom_html-2 .wcorg-sponsor {
     width: 80%; } }
+
+@media only screen and (max-width: 375px) {
+  #secondary-sidebar .widget-title {
+    font-size: 1.1em; } }
