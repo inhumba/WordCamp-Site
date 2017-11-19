@@ -5,13 +5,11 @@ body, * {
 	color: $text-color;
 	font-family: $font-pridi;
 	@include font-weight(regular);
-	letter-spacing: 1px;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-mitr;
 	@include font-weight(regular);
-	letter-spacing: 0;
 	margin-bottom: .5em;
 }
 

@@ -1,0 +1,37 @@
+/* SPONSORS
+---------------------------------------*/
+
+.wcorg-sponsors {
+	padding-top: 40px;
+}
+
+.wcorg-sponsor h3 {
+	display: none;
+}
+
+.entry-content {
+	.wcorg-sponsor-level-gold, .wcorg-sponsor-level-silver, .wcorg-sponsor-level-bronze {
+		.wcorg-sponsor-description {
+			margin-bottom: 50px;
+			img {
+				margin: 30px 0;
+			}
+		}
+		h2 {
+			background-color: $color-primary;
+			border-radius: 15px;
+			color: #FFF;
+			padding: 5px;
+			text-align: center;
+		}
+	}
+	.wcorg-sponsor-level-gold .wcorg-sponsor-description img {
+		max-width: 400px;
+	}
+	.wcorg-sponsor-level-silver .wcorg-sponsor-description img {
+		max-width: 340px;
+	}
+	.wcorg-sponsor-level-bronze .wcorg-sponsor-description img {
+		max-width: 300px;
+	}
+}

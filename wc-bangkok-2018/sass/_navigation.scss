@@ -118,8 +118,8 @@
 	}
 }
 
-.main-small-navigation {
-	.menu-main-container {
+.main-small-navigation{
+	.menu-main-container, .menu-at-launch-container {
 		background-color: $color-primary;
 		position: fixed;
 		top: 0;
@@ -166,7 +166,7 @@
 			li {
 				> a {
 					font-size: 1em;
-					padding: 5px 20px;
+					padding: 5px 14px;
 					border-radius: 15px;
 				}
 				&.menu-item-has-children {
