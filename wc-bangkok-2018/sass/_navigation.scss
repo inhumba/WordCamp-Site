@@ -80,15 +80,15 @@
 	@include font-weight(medium);
 	font-size: .5em;
 	@include circle(50px);
-	position: fixed;
+	position: absolute;
 	top: 10px;
 	right: 10px;
 	text-align: center;
 	z-index: 1000;
 	transition: all .3s;
-	.admin-bar & {
-		top: 56px;
-	}
+	// .admin-bar & {
+	// 	top: 56px;
+	// }
 	&::after {
 		content: "\f0c9";
 		color: #FFF;
@@ -109,9 +109,10 @@
 	color: $color-secondary;
 	top: 20px;
 	right: 20px;
-	.admin-bar & {
-		top: 66px;
-	}
+	transform: rotate(180deg);
+	// .admin-bar & {
+	// 	top: 66px;
+	// }
 	&::after {
 		content: "\f00d";
 		top: 8px;
@@ -121,7 +122,7 @@
 .main-small-navigation{
 	.menu-main-container, .menu-at-launch-container {
 		background-color: $color-primary;
-		position: fixed;
+		position: absolute;
 		top: 0;
 		width: 100%;
 		z-index: 100;
@@ -130,7 +131,7 @@
 		list-style-type: none;
 		margin: 0;
 		padding: 20px 25px;
-		min-height: 100vh;
+		box-shadow: 0 0 100px #000;
 		li {
 			color: $color-navy;
 		}
@@ -142,9 +143,9 @@
 				color: #DFDFDF;
 			}
 		}
-		.admin-bar & {
-			padding-top: 50px;
-		}
+		// .admin-bar & {
+		// 	padding-top: 50px;
+		// }
 	}
 }
 

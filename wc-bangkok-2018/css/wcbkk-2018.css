@@ -785,14 +785,12 @@ select {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
   text-align: center;
   z-index: 1000;
   transition: all .3s; }
-  .admin-bar .menu-toggle {
-    top: 56px; }
   .menu-toggle::after {
     content: "\f0c9";
     color: #FFF;
@@ -811,11 +809,8 @@ select {
   background-color: #ed3c59;
   color: #ed3c59;
   top: 20px;
-  right: 20px; }
-  .admin-bar .menu-toggle.toggled-on, .admin-bar
-  .menu-toggle.toggled-on:hover, .admin-bar
-  .menu-toggle.toggled-on:focus {
-    top: 66px; }
+  right: 20px;
+  transform: rotate(180deg); }
   .menu-toggle.toggled-on::after,
   .menu-toggle.toggled-on:hover::after,
   .menu-toggle.toggled-on:focus::after {
@@ -824,7 +819,7 @@ select {
 
 .main-small-navigation .menu-main-container, .main-small-navigation .menu-at-launch-container {
   background-color: #5e9af9;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 100; }
@@ -833,7 +828,7 @@ select {
   list-style-type: none;
   margin: 0;
   padding: 20px 25px;
-  min-height: 100vh; }
+  box-shadow: 0 0 100px #000; }
   .main-small-navigation .menu li {
     color: #1c1958; }
   .main-small-navigation .menu a {
@@ -842,8 +837,6 @@ select {
     line-height: 1.8; }
     .main-small-navigation .menu a:visited {
       color: #DFDFDF; }
-  .admin-bar .main-small-navigation .menu {
-    padding-top: 50px; }
 
 @media only screen and (max-width: 1024px) {
   .main-navigation .menu li > a {
