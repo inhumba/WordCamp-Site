@@ -5,16 +5,32 @@
 	padding-top: 40px;
 }
 
-.wcorg-sponsor h3 {
-	display: none;
+.wcorg-sponsor {
+	margin-bottom: 70px;
+	padding-bottom: 10px;
+	position: relative;
+	&::after {
+		background-color: #ddd;
+		content: "";
+		display: block;
+		height: 2px;
+		width: 50%;
+		position: absolute;
+		bottom: 0;
+		left: 25%;
+	}
+	h3 {
+		display: none;
+	}
 }
 
 .entry-content {
-	.wcorg-sponsor-level-gold, .wcorg-sponsor-level-silver, .wcorg-sponsor-level-bronze {
+	.wcorg-sponsor-level-gold, .wcorg-sponsor-level-silver, .wcorg-sponsor-level-bronze, .wcorg-sponsor-level-in-kind {
 		.wcorg-sponsor-description {
 			margin-bottom: 50px;
 			img {
-				margin: 30px 0;
+				display: block;
+				margin: 50px auto 30px;
 			}
 		}
 		h2 {
@@ -29,9 +45,54 @@
 		max-width: 400px;
 	}
 	.wcorg-sponsor-level-silver .wcorg-sponsor-description img {
-		max-width: 340px;
+		max-width: 350px;
 	}
 	.wcorg-sponsor-level-bronze .wcorg-sponsor-description img {
 		max-width: 300px;
+	}
+	.wcorg-sponsor-level-in-kind .wcorg-sponsor-description img {
+		max-width: 250px;
+	}
+}
+
+
+@media only screen and (max-width: 767px) {
+
+	.wcorg-sponsors {
+		padding-top: 0;
+	}
+
+	.entry-content {
+		.wcorg-sponsor-level-gold .wcorg-sponsor-description img {
+			max-width: 300px;
+		}
+		.wcorg-sponsor-level-silver .wcorg-sponsor-description img {
+			max-width: 280px;
+		}
+		.wcorg-sponsor-level-bronze .wcorg-sponsor-description img {
+			max-width: 250px;
+		}
+		.wcorg-sponsor-level-in-kind .wcorg-sponsor-description img {
+			max-width: 220px;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 425px) {
+
+	.entry-content {
+		.wcorg-sponsor-level-gold .wcorg-sponsor-description img {
+			max-width: 250px;
+		}
+		.wcorg-sponsor-level-silver .wcorg-sponsor-description img {
+			max-width: 240px;
+		}
+		.wcorg-sponsor-level-bronze .wcorg-sponsor-description img {
+			max-width: 230px;
+		}
+		.wcorg-sponsor-level-in-kind .wcorg-sponsor-description img {
+			max-width: 220px;
+		}
 	}
 }

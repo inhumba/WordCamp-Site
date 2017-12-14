@@ -263,15 +263,29 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 .wcorg-sponsors {
   padding-top: 40px; }
 
-.wcorg-sponsor h3 {
-  display: none; }
+.wcorg-sponsor {
+  margin-bottom: 70px;
+  padding-bottom: 10px;
+  position: relative; }
+  .wcorg-sponsor::after {
+    background-color: #ddd;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 25%; }
+  .wcorg-sponsor h3 {
+    display: none; }
 
-.entry-content .wcorg-sponsor-level-gold .wcorg-sponsor-description, .entry-content .wcorg-sponsor-level-silver .wcorg-sponsor-description, .entry-content .wcorg-sponsor-level-bronze .wcorg-sponsor-description {
+.entry-content .wcorg-sponsor-level-gold .wcorg-sponsor-description, .entry-content .wcorg-sponsor-level-silver .wcorg-sponsor-description, .entry-content .wcorg-sponsor-level-bronze .wcorg-sponsor-description, .entry-content .wcorg-sponsor-level-in-kind .wcorg-sponsor-description {
   margin-bottom: 50px; }
-  .entry-content .wcorg-sponsor-level-gold .wcorg-sponsor-description img, .entry-content .wcorg-sponsor-level-silver .wcorg-sponsor-description img, .entry-content .wcorg-sponsor-level-bronze .wcorg-sponsor-description img {
-    margin: 30px 0; }
+  .entry-content .wcorg-sponsor-level-gold .wcorg-sponsor-description img, .entry-content .wcorg-sponsor-level-silver .wcorg-sponsor-description img, .entry-content .wcorg-sponsor-level-bronze .wcorg-sponsor-description img, .entry-content .wcorg-sponsor-level-in-kind .wcorg-sponsor-description img {
+    display: block;
+    margin: 50px auto 30px; }
 
-.entry-content .wcorg-sponsor-level-gold h2, .entry-content .wcorg-sponsor-level-silver h2, .entry-content .wcorg-sponsor-level-bronze h2 {
+.entry-content .wcorg-sponsor-level-gold h2, .entry-content .wcorg-sponsor-level-silver h2, .entry-content .wcorg-sponsor-level-bronze h2, .entry-content .wcorg-sponsor-level-in-kind h2 {
   background-color: #5e9af9;
   border-radius: 15px;
   color: #FFF;
@@ -282,10 +296,35 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
   max-width: 400px; }
 
 .entry-content .wcorg-sponsor-level-silver .wcorg-sponsor-description img {
-  max-width: 340px; }
+  max-width: 350px; }
 
 .entry-content .wcorg-sponsor-level-bronze .wcorg-sponsor-description img {
   max-width: 300px; }
+
+.entry-content .wcorg-sponsor-level-in-kind .wcorg-sponsor-description img {
+  max-width: 250px; }
+
+@media only screen and (max-width: 767px) {
+  .wcorg-sponsors {
+    padding-top: 0; }
+  .entry-content .wcorg-sponsor-level-gold .wcorg-sponsor-description img {
+    max-width: 300px; }
+  .entry-content .wcorg-sponsor-level-silver .wcorg-sponsor-description img {
+    max-width: 280px; }
+  .entry-content .wcorg-sponsor-level-bronze .wcorg-sponsor-description img {
+    max-width: 250px; }
+  .entry-content .wcorg-sponsor-level-in-kind .wcorg-sponsor-description img {
+    max-width: 220px; } }
+
+@media only screen and (max-width: 425px) {
+  .entry-content .wcorg-sponsor-level-gold .wcorg-sponsor-description img {
+    max-width: 250px; }
+  .entry-content .wcorg-sponsor-level-silver .wcorg-sponsor-description img {
+    max-width: 240px; }
+  .entry-content .wcorg-sponsor-level-bronze .wcorg-sponsor-description img {
+    max-width: 230px; }
+  .entry-content .wcorg-sponsor-level-in-kind .wcorg-sponsor-description img {
+    max-width: 220px; } }
 
 /* FORM
 ---------------------------------------*/
@@ -992,7 +1031,11 @@ select {
         position: absolute;
         bottom: -5px;
         left: 50%; }
-  #custom_html-2 .wcorg-sponsor-level-bronze, #custom_html-2 .wcorg-sponsor-level-gold, #custom_html-2 .wcorg-sponsor-level-silver {
+  #custom_html-2 .wcorg-sponsor {
+    margin-bottom: 0; }
+    #custom_html-2 .wcorg-sponsor::after {
+      display: none; }
+  #custom_html-2 .wcorg-sponsor-level-bronze, #custom_html-2 .wcorg-sponsor-level-gold, #custom_html-2 .wcorg-sponsor-level-silver, #custom_html-2 .wcorg-sponsor-level-in-kind {
     margin-bottom: 50px; }
   #custom_html-2 .wcorg-sponsor-description {
     margin: 0 10px 10px; }
@@ -1007,6 +1050,8 @@ select {
     width: 35%; }
   #custom_html-2 .wcorg-sponsor-level-bronze .wcorg-sponsor {
     width: 30%; }
+  #custom_html-2 .wcorg-sponsor-level-in-kind .wcorg-sponsor {
+    width: 25%; }
 
 #footer-widgets {
   overflow: hidden;
@@ -1088,8 +1133,6 @@ a.genericon.genericon-facebook, a.genericon.genericon-twitter {
     max-width: 100%; }
   #custom_html-2 .wcorg-sponsors h2 {
     font-size: 1.8em; }
-  #custom_html-2 .wcorg-sponsor {
-    width: 25%; }
   #secondary-sidebar .widget-title {
     font-size: 2em; }
   .widget_wpcom_social_media_icons_widget ul {
@@ -1098,8 +1141,14 @@ a.genericon.genericon-facebook, a.genericon.genericon-twitter {
 @media only screen and (max-width: 767px) {
   #custom_html-2 .wcorg-sponsors h2 {
     font-size: 1.4em; }
-  #custom_html-2 .wcorg-sponsor {
-    width: 40%; }
+  #custom_html-2 .wcorg-sponsor-level-gold .wcorg-sponsor {
+    width: 80%; }
+  #custom_html-2 .wcorg-sponsor-level-silver .wcorg-sponsor {
+    width: 70%; }
+  #custom_html-2 .wcorg-sponsor-level-bronze .wcorg-sponsor {
+    width: 60%; }
+  #custom_html-2 .wcorg-sponsor-level-in-kind .wcorg-sponsor {
+    width: 60%; }
   #footer-widgets .footer-widgets-block {
     float: none;
     width: 100%; }
