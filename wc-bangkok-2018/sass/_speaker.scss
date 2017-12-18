@@ -1,0 +1,47 @@
+/* SPEAKER
+---------------------------------------*/
+
+.wcorg-speaker {
+	h2 {
+		color: $color-primary;
+		text-align: center;
+	}
+	h4 {
+		font-size: 1.4em;
+		text-align: center;
+	}
+	.avatar {
+		display: block;
+		margin: 0 auto 30px;
+	}
+}
+
+.wcorg-speaker-description {
+	margin-bottom: 70px;
+	padding-bottom: 10px;
+	position: relative;
+	&::after {
+		background-color: #ddd;
+		content: "";
+		display: block;
+		height: 2px;
+		width: 50%;
+		position: absolute;
+		bottom: 0;
+		left: 25%;
+	}
+}
+
+
+@media only screen and (max-width: 767px) {
+
+	.wcorg-speaker {
+		h2 {
+			font-size: 1.4em;
+		}
+		h4 {
+			font-size: 1.2em;
+		}
+	}
+
+}
