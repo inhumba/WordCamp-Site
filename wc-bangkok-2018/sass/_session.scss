@@ -1,0 +1,158 @@
+/* SESSION
+---------------------------------------*/
+
+.page-id-7 {
+	.site-content {
+		width: 80%;
+	}
+}
+
+.session-date {
+	background-color: $color-primary;
+	border-radius: 15px;
+	color: #FFF;
+	font-size: 1.8em;
+	padding: 5px;
+	text-align: center;
+}
+
+.wcpt-schedule {
+	th, td {
+		padding: 15px 10px;
+		position: relative;
+		&::after {
+			content: '';
+			background-color: #eee;
+			display: block;
+			height: 20px;
+			width: 1px;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+	th {
+		background-color: #eee;
+		font-size: 1.2em;
+		text-align: center;
+	}
+	td {
+		border-bottom: 1px solid #eee;
+	}
+	.global-session {
+		background-color: $color-secondary-lighten;
+		.wcpt-time {
+			background-color: $color-secondary-lighten;
+			color: #FFF;
+		}
+		.wcpt-session-title {
+			color: #FFF;
+			font-weight: bold;
+			font-size: 1.1em;
+			letter-spacing: 1px;
+		}
+		td {
+			&::after {
+				display: none;
+			}
+		}
+	}
+	.wcpt-time {
+		background-color: #eee;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.wcpt-session-type-session {
+		width: 33%;
+	}
+}
+
+.wcb-session-cell-content {
+	.wcpt-session-speakers {
+		color: $color-secondary;
+		display: block;
+		font-size: 0.9em;
+		padding-top: 10px;
+		&::before {
+			content: 'by';
+			display: inline-block;
+			margin-right: 5px;
+		}
+		a {
+			color: $color-secondary;
+			text-decoration: underline;
+		}
+	}
+}
+
+.dashicons-star-filled {
+	color: #eee;
+	.global-session & {
+		display: none;
+	}
+}
+
+.wcb-session-cell-content {
+	line-height: 1.3;
+	.wcpt-session-title {
+		color: $color-navy;
+	}
+	a.wcpt-session-title {
+		color: $color-primary;
+	}
+	.global-session & {
+		text-align: center;
+	}
+}
+
+.wcb-favourite-session {
+	.dashicons-star-filled {
+		color: $color-primary-darker;
+	}
+	a.wcpt-session-title {
+		color: $color-primary-darker;
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
+
+	.page-id-7 {
+		.site-content {
+			width: 90%;
+		}
+	}
+
+	.session-date {
+		font-size: 1.3em;
+	}
+
+}
+
+
+@media only screen and (max-width: 700px) {
+
+	.wcpt-schedule {
+		tr {
+			border: 1px solid #eee;
+		}
+		td {
+			border-bottom: none;
+			&::after {
+				display: none;
+			}
+		}
+		.wcpt-session-type-session {
+			margin-bottom: 10px;
+			width: auto;
+		}
+		.global-session td {
+			padding: 5px;
+		}
+	}
+
+	.wcb-session-cell-content .wcpt-session-speakers {
+		padding-top: 0;
+	}
+
+}
