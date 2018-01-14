@@ -50,7 +50,7 @@ b, strong {
 a {
   text-decoration: none; }
 
-p {
+p, li {
   font-size: 1.1em; }
 
 /* ANIMATE
@@ -279,18 +279,21 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
   .wcorg-sponsor h3 {
     display: none; }
 
-.entry-content .wcorg-sponsor-level-gold .wcorg-sponsor-description, .entry-content .wcorg-sponsor-level-silver .wcorg-sponsor-description, .entry-content .wcorg-sponsor-level-bronze .wcorg-sponsor-description, .entry-content .wcorg-sponsor-level-in-kind .wcorg-sponsor-description {
+.entry-content .wcorg-sponsor-level-premium .wcorg-sponsor-description, .entry-content .wcorg-sponsor-level-gold .wcorg-sponsor-description, .entry-content .wcorg-sponsor-level-silver .wcorg-sponsor-description, .entry-content .wcorg-sponsor-level-bronze .wcorg-sponsor-description, .entry-content .wcorg-sponsor-level-in-kind .wcorg-sponsor-description {
   margin-bottom: 50px; }
-  .entry-content .wcorg-sponsor-level-gold .wcorg-sponsor-description img, .entry-content .wcorg-sponsor-level-silver .wcorg-sponsor-description img, .entry-content .wcorg-sponsor-level-bronze .wcorg-sponsor-description img, .entry-content .wcorg-sponsor-level-in-kind .wcorg-sponsor-description img {
+  .entry-content .wcorg-sponsor-level-premium .wcorg-sponsor-description img, .entry-content .wcorg-sponsor-level-gold .wcorg-sponsor-description img, .entry-content .wcorg-sponsor-level-silver .wcorg-sponsor-description img, .entry-content .wcorg-sponsor-level-bronze .wcorg-sponsor-description img, .entry-content .wcorg-sponsor-level-in-kind .wcorg-sponsor-description img {
     display: block;
     margin: 50px auto 30px; }
 
-.entry-content .wcorg-sponsor-level-gold h2, .entry-content .wcorg-sponsor-level-silver h2, .entry-content .wcorg-sponsor-level-bronze h2, .entry-content .wcorg-sponsor-level-in-kind h2 {
+.entry-content .wcorg-sponsor-level-premium h2, .entry-content .wcorg-sponsor-level-gold h2, .entry-content .wcorg-sponsor-level-silver h2, .entry-content .wcorg-sponsor-level-bronze h2, .entry-content .wcorg-sponsor-level-in-kind h2 {
   background-color: #5e9af9;
   border-radius: 15px;
   color: #FFF;
   padding: 5px;
   text-align: center; }
+
+.entry-content .wcorg-sponsor-level-premium .wcorg-sponsor-description img {
+  max-width: 450px; }
 
 .entry-content .wcorg-sponsor-level-gold .wcorg-sponsor-description img {
   max-width: 400px; }
@@ -307,6 +310,8 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 @media only screen and (max-width: 767px) {
   .wcorg-sponsors {
     padding-top: 0; }
+  .entry-content .wcorg-sponsor-level-premium .wcorg-sponsor-description img {
+    max-width: 350px; }
   .entry-content .wcorg-sponsor-level-gold .wcorg-sponsor-description img {
     max-width: 300px; }
   .entry-content .wcorg-sponsor-level-silver .wcorg-sponsor-description img {
@@ -317,6 +322,8 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
     max-width: 220px; } }
 
 @media only screen and (max-width: 425px) {
+  .entry-content .wcorg-sponsor-level-premium .wcorg-sponsor-description img {
+    max-width: 260px; }
   .entry-content .wcorg-sponsor-level-gold .wcorg-sponsor-description img {
     max-width: 250px; }
   .entry-content .wcorg-sponsor-level-silver .wcorg-sponsor-description img {
@@ -948,8 +955,9 @@ select {
     top: 90%;
     text-align: left; }
     .main-navigation .sub-menu li > a {
-      font-size: 1.1em;
-      padding: 8px 15px 8px 20px; }
+      font-size: .9em;
+      padding: 8px 15px 8px 20px;
+      width: 220px; }
       .main-navigation .sub-menu li > a::before {
         content: "\f0da";
         display: inline-block;
@@ -1178,7 +1186,7 @@ select {
     margin-bottom: 0; }
     #custom_html-2 .wcorg-sponsor::after {
       display: none; }
-  #custom_html-2 .wcorg-sponsor-level-bronze, #custom_html-2 .wcorg-sponsor-level-gold, #custom_html-2 .wcorg-sponsor-level-silver, #custom_html-2 .wcorg-sponsor-level-in-kind {
+  #custom_html-2 .wcorg-sponsor-level-premium, #custom_html-2 .wcorg-sponsor-level-bronze, #custom_html-2 .wcorg-sponsor-level-gold, #custom_html-2 .wcorg-sponsor-level-silver, #custom_html-2 .wcorg-sponsor-level-in-kind {
     margin-bottom: 50px; }
   #custom_html-2 .wcorg-sponsor-description {
     margin: 0 10px 10px; }
@@ -1187,6 +1195,8 @@ select {
     width: 20%; }
     #custom_html-2 .wcorg-sponsor h3 {
       display: none; }
+  #custom_html-2 .wcorg-sponsor-level-premium .wcorg-sponsor {
+    width: 55%; }
   #custom_html-2 .wcorg-sponsor-level-gold .wcorg-sponsor {
     width: 45%; }
   #custom_html-2 .wcorg-sponsor-level-silver .wcorg-sponsor {
@@ -1216,7 +1226,7 @@ select {
   #secondary-sidebar .widget-title {
     color: #1c1958; }
 
-a.genericon.genericon-facebook, a.genericon.genericon-twitter {
+a.genericon.genericon-facebook, a.genericon.genericon-twitter, a.genericon.genericon-instagram {
   font-size: 3em;
   color: #5e9af9; }
 
@@ -1284,6 +1294,8 @@ a.genericon.genericon-facebook, a.genericon.genericon-twitter {
 @media only screen and (max-width: 767px) {
   #custom_html-2 .wcorg-sponsors h2 {
     font-size: 1.4em; }
+  #custom_html-2 .wcorg-sponsor-level-premium .wcorg-sponsor {
+    width: 90%; }
   #custom_html-2 .wcorg-sponsor-level-gold .wcorg-sponsor {
     width: 80%; }
   #custom_html-2 .wcorg-sponsor-level-silver .wcorg-sponsor {

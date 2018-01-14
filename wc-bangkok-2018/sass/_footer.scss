@@ -62,7 +62,7 @@
 			display: none;
 		}
 	}
-	.wcorg-sponsor-level-bronze, .wcorg-sponsor-level-gold, .wcorg-sponsor-level-silver, .wcorg-sponsor-level-in-kind {
+	.wcorg-sponsor-level-premium, .wcorg-sponsor-level-bronze, .wcorg-sponsor-level-gold, .wcorg-sponsor-level-silver, .wcorg-sponsor-level-in-kind {
 		margin-bottom: 50px;
 	}
 	.wcorg-sponsor-description {
@@ -74,6 +74,9 @@
 		h3 {
 			display: none;
 		}
+	}
+	.wcorg-sponsor-level-premium .wcorg-sponsor {
+		width: 55%;
 	}
 	.wcorg-sponsor-level-gold .wcorg-sponsor {
 		width: 45%;
@@ -117,7 +120,7 @@
 	}
 }
 
-a.genericon.genericon-facebook, a.genericon.genericon-twitter {
+a.genericon.genericon-facebook, a.genericon.genericon-twitter, a.genericon.genericon-instagram {
 	font-size: 3em;
 	color: $color-primary;
 }
@@ -225,6 +228,9 @@ a.genericon.genericon-facebook, a.genericon.genericon-twitter {
 			h2 {
 				font-size: 1.4em;
 			}
+		}
+		.wcorg-sponsor-level-premium .wcorg-sponsor {
+			width: 90%;
 		}
 		.wcorg-sponsor-level-gold .wcorg-sponsor {
 			width: 80%;
