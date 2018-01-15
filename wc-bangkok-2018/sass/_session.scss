@@ -22,7 +22,7 @@
 		position: relative;
 		&::after {
 			content: '';
-			background-color: #eee;
+			background-color: #EEE;
 			display: block;
 			height: 20px;
 			width: 1px;
@@ -32,12 +32,12 @@
 		}
 	}
 	th {
-		background-color: #eee;
+		background-color: #EEE;
 		font-size: 1.2em;
 		text-align: center;
 	}
 	td {
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid #EEE;
 	}
 	.global-session {
 		background-color: $color-secondary-lighten;
@@ -58,9 +58,26 @@
 		}
 	}
 	.wcpt-time {
-		background-color: #eee;
+		color: $color-navy;
+		background-color: #EEE;
 		text-align: center;
 		text-transform: uppercase;
+	}
+	.wcpt-time-915am, .wcpt-time-1000am, .wcpt-time-100pm {
+		.wcpt-time {
+			color: $color-navy;
+			background-color: #EEE;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		.wcpt-session-type-custom {
+			background-color: #FFF;
+		}
+		&.global-session {
+			.wcpt-session-title {
+				color: $color-primary;
+			}
+		}
 	}
 	.wcpt-session-type-session {
 		width: 33%;
@@ -86,7 +103,7 @@
 }
 
 .dashicons-star-filled {
-	color: #eee;
+	color: #EEE;
 	.global-session & {
 		display: none;
 	}
@@ -134,7 +151,7 @@
 
 	.wcpt-schedule {
 		tr {
-			border: 1px solid #eee;
+			border: 1px solid #EEE;
 		}
 		td {
 			border-bottom: none;

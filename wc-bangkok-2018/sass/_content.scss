@@ -124,4 +124,9 @@
 }
 
 
-
+/* SHARE
+---------------------------------------*/
+.sharedaddy .sd-title {
+	font-size: .9em;
+	@include font-weight(regular);
+}

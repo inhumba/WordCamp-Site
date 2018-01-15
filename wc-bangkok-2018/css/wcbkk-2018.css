@@ -53,6 +53,11 @@ a {
 p, li {
   font-size: 1.1em; }
 
+blockquote {
+  background-color: #eee;
+  margin: 0 10px;
+  padding: 15px 15px 5px; }
+
 /* ANIMATE
 ---------------------------------------*/
 @keyframes wapuu {
@@ -385,7 +390,7 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
   position: relative; }
   .wcpt-schedule th::after, .wcpt-schedule td::after {
     content: '';
-    background-color: #eee;
+    background-color: #EEE;
     display: block;
     height: 20px;
     width: 1px;
@@ -394,12 +399,12 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
     right: 0; }
 
 .wcpt-schedule th {
-  background-color: #eee;
+  background-color: #EEE;
   font-size: 1.2em;
   text-align: center; }
 
 .wcpt-schedule td {
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #EEE; }
 
 .wcpt-schedule .global-session {
   background-color: #f16b81; }
@@ -415,9 +420,22 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
     display: none; }
 
 .wcpt-schedule .wcpt-time {
-  background-color: #eee;
+  color: #1c1958;
+  background-color: #EEE;
   text-align: center;
   text-transform: uppercase; }
+
+.wcpt-schedule .wcpt-time-915am .wcpt-time, .wcpt-schedule .wcpt-time-1000am .wcpt-time, .wcpt-schedule .wcpt-time-100pm .wcpt-time {
+  color: #1c1958;
+  background-color: #EEE;
+  text-align: center;
+  text-transform: uppercase; }
+
+.wcpt-schedule .wcpt-time-915am .wcpt-session-type-custom, .wcpt-schedule .wcpt-time-1000am .wcpt-session-type-custom, .wcpt-schedule .wcpt-time-100pm .wcpt-session-type-custom {
+  background-color: #FFF; }
+
+.wcpt-schedule .wcpt-time-915am.global-session .wcpt-session-title, .wcpt-schedule .wcpt-time-1000am.global-session .wcpt-session-title, .wcpt-schedule .wcpt-time-100pm.global-session .wcpt-session-title {
+  color: #5e9af9; }
 
 .wcpt-schedule .wcpt-session-type-session {
   width: 33%; }
@@ -436,7 +454,7 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
     text-decoration: underline; }
 
 .dashicons-star-filled {
-  color: #eee; }
+  color: #EEE; }
   .global-session .dashicons-star-filled {
     display: none; }
 
@@ -463,7 +481,7 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 
 @media only screen and (max-width: 700px) {
   .wcpt-schedule tr {
-    border: 1px solid #eee; }
+    border: 1px solid #EEE; }
   .wcpt-schedule td {
     border-bottom: none; }
     .wcpt-schedule td::after {
@@ -955,7 +973,7 @@ select {
     top: 90%;
     text-align: left; }
     .main-navigation .sub-menu li > a {
-      font-size: .9em;
+      font-size: .85em;
       padding: 8px 15px 8px 20px;
       width: 220px; }
       .main-navigation .sub-menu li > a::before {
@@ -1136,6 +1154,12 @@ select {
     padding: 5px 10px; }
   .tshirt-table td {
     font-size: 1em; } }
+
+/* SHARE
+---------------------------------------*/
+.sharedaddy .sd-title {
+  font-size: .9em;
+  font-weight: 400; }
 
 /* FOOTER
 ---------------------------------------*/
