@@ -1157,7 +1157,7 @@ select {
 
 /* SHARE
 ---------------------------------------*/
-.sharedaddy .sd-title {
+div.sharedaddy h3.sd-title {
   font-size: .9em;
   font-weight: 400; }
 
