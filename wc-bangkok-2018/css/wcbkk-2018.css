@@ -1041,8 +1041,9 @@ select {
     color: #1c1958; }
   .main-small-navigation .menu a {
     color: #FFF;
-    font-size: 1.2em;
-    line-height: 1.8; }
+    font-size: 1em;
+    line-height: 1.8;
+    letter-spacing: 0.03em; }
     .main-small-navigation .menu a:visited {
       color: #DFDFDF; }
 
