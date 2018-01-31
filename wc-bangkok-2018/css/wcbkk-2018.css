@@ -1356,3 +1356,26 @@ a.genericon.genericon-facebook, a.genericon.genericon-twitter, a.genericon.gener
 @media only screen and (max-width: 375px) {
   #secondary-sidebar .widget-title {
     font-size: 1.1em; } }
+
+/* DISCUSSION
+---------------------------------------*/
+ol.commentlist {
+  list-style: none;
+}
+
+article.comment {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1.5em;
+}
+
+.comment-content p {
+  margin-top: 1.5em;
+}
+
+ul.children {
+  margin-top: 1.5em;
+}
+
+ul.children li {
+  list-style: none;
+}
