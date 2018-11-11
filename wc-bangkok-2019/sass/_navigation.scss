@@ -1,0 +1,194 @@
+/* NAVIGATION
+---------------------------------------*/
+
+.main-navigation {
+	background-color: $color-orange;
+	opacity: .9;
+	padding: 15px 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1000;
+	.admin-bar & {
+		top: 32px;
+	}
+	.menu {
+		text-align: center;
+		li {
+			display: inline-block;
+			float: none;
+			margin: 0 10px;
+			> a {
+				color: #FFF;
+				font-size: 1.2em;
+				@include font-weight(light);
+				padding: 10px 25px;
+				border-radius: 15px;
+			}
+			&.current-menu-item {
+				> a {
+					background-color: $color-yellow;
+				}
+				&:hover, &:focus {
+					> a {
+						background-color: $color-yellow;
+					}
+				}
+			}
+			&:hover, &:focus {
+				> a {
+					background-color: $color-orange;
+				}
+			}
+			&.menu-item-has-children {
+				&:hover, &:focus {
+					> a {
+						border-radius: 15px 15px 0 0;
+					}
+				}
+			}
+		}
+	}
+	.sub-menu {
+		background-color: $color-orange;
+		border-radius: 0 15px 15px 15px;
+		padding: 10px 0 15px;
+		top: 90%;
+		text-align: left;
+		li {
+			> a {
+				font-size: .85em;
+				padding: 8px 15px 8px 20px;
+				width: 220px;
+				&::before {
+					content: "\f0da";
+					display: inline-block;
+					font-family: FontAwesome;
+					padding-right: 8px;
+				}
+			}
+		}
+	}
+}
+
+.menu-toggle {
+	background-color: $color-orange;
+	box-shadow: 0 0 8px rgba(0,0,0,.3);
+	color: $color-orange;
+	display: block;
+	font-family: $font-jamjuree;
+	@include font-weight(medium);
+	font-size: .5em;
+	@include circle(50px);
+	position: absolute;
+	top: 50px;
+	right: 10px;
+	text-align: center;
+	z-index: 1000;
+	transition: all .3s;
+	// .admin-bar & {
+	// 	top: 56px;
+	// }
+	&::after {
+		content: "\f0c9";
+		color: #FFF;
+		display: block;
+		font-family: FontAwesome;
+		font-size: 2.6em;
+		@include wh(50px, 50px);
+		position: absolute;
+		top: 10px;
+		text-align: center;
+	}
+}
+
+.menu-toggle.toggled-on,
+.menu-toggle.toggled-on:hover,
+.menu-toggle.toggled-on:focus {
+	background-color: $color-yellow;
+	color: $color-yellow;
+	top: 60px;
+	right: 20px;
+	transform: rotate(180deg);
+	// .admin-bar & {
+	// 	top: 66px;
+	// }
+	&::after {
+		content: "\f00d";
+		top: 8px;
+	}
+}
+
+.main-small-navigation {
+	.menu-main-container, .menu-at-launch-container {
+		background-color: $color-orange;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+	}
+	.menu {
+		list-style-type: none;
+		margin: 0;
+		padding: 20px 25px;
+		box-shadow: 0 0 100px #000;
+		li {
+			color: $color-navy;
+		}
+		a {
+			color: #FFF;
+			font-size: 1.2em;
+			line-height: 1.8;
+			&:visited {
+				color: #DFDFDF;
+			}
+		}
+		// .admin-bar & {
+		// 	padding-top: 50px;
+		// }
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+
+	.main-navigation .menu li > a {
+		padding: 10px 15px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+	.main-navigation {
+		padding: 10px 0;
+		.admin-bar & {
+			top: 46px;
+		}
+		.menu {
+			li {
+				> a {
+					font-size: 1em;
+					padding: 5px 14px;
+					border-radius: 15px;
+				}
+				&.menu-item-has-children {
+					&:hover, &:focus {
+						> a {
+							border-radius: 15px 15px 0 0;
+						}
+					}
+				}
+			}
+		}
+		.sub-menu {
+			border-radius: 0 15px 15px 15px;
+			li {
+				> a {
+					font-size: .9em;
+					padding: 5px 10px;
+				}
+			}
+		}
+	}
+
+}

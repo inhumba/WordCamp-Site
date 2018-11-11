@@ -1,0 +1,67 @@
+/* FORM
+---------------------------------------*/
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+	background-color: $color-orange;
+	background-image: none;
+	box-shadow: none;
+	border: none;
+	border-radius: 10px;
+	color: #FFF;
+	font-family: $font-jamjuree;
+	font-size: 1em;
+	@include font-weight(regular);
+	padding: 12px 40px;
+	text-transform: uppercase;
+	text-shadow: none;
+	transition: background-color .3s;
+	&:hover, &:focus {
+		background-color: $color-orange;
+		background-image: none;
+		outline: none;
+	}
+}
+
+label {
+	margin-bottom: 10px;
+}
+
+input[type=text], input[type=email], textarea {
+	border: 1px solid $color-orange;
+	border-radius: 10px;
+	color: $color-orange;
+	font-family: $font-jamjuree;
+	font-size: 1em;
+	@include font-weight(regular);
+	padding: 10px 20px;
+	&:focus {
+		color: $color-orange;
+		outline: none;
+	}
+}
+
+select {
+	border: 1px solid $color-orange;
+	border-radius: 10px;
+	color: $color-orange;
+	cursor: pointer;
+	font-family: $font-jamjuree;
+	font-size: 1em;
+	@include font-weight(regular);
+	padding: 10px 20px;
+	text-align: center;
+	width: 100%;
+	&:focus {
+		color: $color-orange;
+		outline: none;
+	}
+}
+
+
+@media only screen and (max-width: 767px) {
+
+	.contact-form input[type=email], .contact-form input[type=text], .contact-form input[type=url], .contact-form textarea {
+		width: 80%;
+	}
+
+}
