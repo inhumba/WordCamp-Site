@@ -1,0 +1,31 @@
+/* SPONSORS
+---------------------------------------*/
+
+.wcb_widget_sponsors {
+	background-color: #e8e8e8;
+	padding: 80px 0 50px;
+	text-align: center;
+	.sponsor-logo {
+		display: inline-block !important;
+		margin: 0 10px;
+	}
+}
+
+.sponsor-level {
+	margin-bottom: 50px;
+	.sponsor-level-title {
+		color: $color-orange;
+		font-size: 3em;
+		margin-bottom: 30px;
+	}
+	&.gold {
+		img {
+			max-height: 80px !important;
+		}
+	}
+	&.silver {
+		img {
+			max-height: 50px !important;
+		}
+	}
+}

@@ -71,6 +71,37 @@ blockquote {
   padding: 15px 15px 5px;
 }
 
+/* SPONSORS
+---------------------------------------*/
+.wcb_widget_sponsors {
+  background-color: #e8e8e8;
+  padding: 80px 0 50px;
+  text-align: center;
+}
+
+.wcb_widget_sponsors .sponsor-logo {
+  display: inline-block !important;
+  margin: 0 10px;
+}
+
+.sponsor-level {
+  margin-bottom: 50px;
+}
+
+.sponsor-level .sponsor-level-title {
+  color: #ea8c70;
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+.sponsor-level.gold img {
+  max-height: 80px !important;
+}
+
+.sponsor-level.silver img {
+  max-height: 50px !important;
+}
+
 /* FORM
 ---------------------------------------*/
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
