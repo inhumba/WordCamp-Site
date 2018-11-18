@@ -2,9 +2,10 @@
 ---------------------------------------*/
 
 .main-navigation {
-	background-color: $color-orange;
-	opacity: .9;
-	padding: 15px 0;
+	background: $color-navy;
+	box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+	opacity: .95;
+	padding: 0;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -18,17 +19,15 @@
 		li {
 			display: inline-block;
 			float: none;
-			margin: 0 10px;
 			> a {
 				color: #FFF;
 				font-size: 1.2em;
 				@include font-weight(light);
-				padding: 10px 25px;
-				border-radius: 15px;
+				padding: .8em 1.5em;
 			}
 			&.current-menu-item {
 				> a {
-					background-color: $color-yellow;
+					background: linear-gradient(180deg,#d43e38 0%,#ea8c70 100%);
 				}
 				&:hover, &:focus {
 					> a {
@@ -38,7 +37,7 @@
 			}
 			&:hover, &:focus {
 				> a {
-					background-color: $color-orange;
+					background: linear-gradient(180deg,rgba(16,75,140,1) 0%,rgba(45,124,159,1) 100%);
 				}
 			}
 			&.menu-item-has-children {
@@ -73,17 +72,17 @@
 }
 
 .menu-toggle {
-	background-color: $color-orange;
+	background-color: $color-navy;
 	box-shadow: 0 0 8px rgba(0,0,0,.3);
-	color: $color-orange;
+	color: $color-navy;
 	display: block;
 	font-family: $font-jamjuree;
 	@include font-weight(medium);
 	font-size: .5em;
 	@include circle(50px);
 	position: absolute;
-	top: 50px;
-	right: 10px;
+	top: 20px;
+	right: 20px;
 	text-align: center;
 	z-index: 1000;
 	transition: all .3s;
@@ -98,7 +97,6 @@
 		font-size: 2.6em;
 		@include wh(50px, 50px);
 		position: absolute;
-		top: 10px;
 		text-align: center;
 	}
 }
@@ -131,7 +129,7 @@
 	.menu {
 		list-style-type: none;
 		margin: 0;
-		padding: 20px 25px;
+		padding: 2em 25px;
 		box-shadow: 0 0 100px #000;
 		li {
 			color: $color-navy;

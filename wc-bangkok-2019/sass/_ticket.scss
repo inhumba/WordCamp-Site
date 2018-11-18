@@ -1,0 +1,240 @@
+/* TICKETS
+---------------------------------------*/
+
+#tix {
+	overflow-x: scroll;
+	body.admin-bar & {
+		padding-top: 20px;
+	}
+}
+
+.tix-error {
+	background-color: $color-navy;
+	border-color: $color-navy;
+	color: #FFF;
+	padding: 10px 20px;
+}
+
+.tix_tickets_table {
+	border: 1px solid $color-orange-darker;
+	th {
+		background-color: $color-orange-darker;
+		color: #FFF;
+		font-size: 1.3em;
+		@include font-weight(regular);
+	}
+	th, td {
+		padding: 15px 20px;
+	}
+	a {
+		color: $color-orange-darker;
+		&:hover, &:focus {
+			color: $color-navy;
+		}
+		&:visited {
+			color: $color-orange-darker;
+		}
+	}
+}
+
+.tix-ticket-title {
+	display: inline-block;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+.tix-column-price, .tix-column-remaining, .tix-column-quantity, .tix-column-per-ticket {
+	border-left: 1px solid #f2f2f2;
+	color: $color-orange-darker;
+	@include font-weight(medium);
+	text-align: center;
+}
+
+th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-column-per-ticket {
+	border-left-color: $color-orange-darker;
+}
+
+.tix-row-total {
+	td {
+		border-top: 1px solid #f2f2f2;
+	}
+}
+
+.tix-attendee-form {
+	td {
+		border-top: 1px solid #f2f2f2;
+		select {
+			width: 80%;
+		}
+	}
+	.tix-row-first-name {
+		td {
+			border-top: none;
+		}
+	}
+}
+
+.tix-row-total {
+	td {
+		font-size: 1.4em;
+		text-align: center;
+		strong {
+			color: $color-navy;
+		}
+	}
+}
+
+.tix-submit {
+	select {
+		width: 150px;
+	}
+}
+
+
+@media only screen and (max-width: 768px) {
+
+	.tix_tickets_table {
+ 		th {
+			font-size: 1.1em;
+		}
+	}
+
+	.tix-ticket-title {
+		font-size: 1em;
+	}
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+	.tix_tickets_table {
+ 		th {
+			font-size: 1.3em;
+		}
+		th, td {
+			display: block;
+			padding: 15px;
+		}
+	}
+
+	.tix-row-total {
+		background-color: #f2f2f2;
+		td {
+			padding-top: 0;
+		}
+	}
+
+	.tix-column-description {
+		text-align: center;
+		.tix-order-summary & {
+			width: auto;
+		}
+	}
+
+	.tix-ticket-title {
+		font-size: 1.1em;
+	}
+
+	.tix-column-price, .tix-column-remaining, .tix-column-quantity, .tix-column-per-ticket {
+		border-top: 1px solid #f2f2f2;
+		border-left: none;
+		font-size: 1.1em;
+	}
+
+	th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-column-per-ticket {
+		display: none;
+	}
+
+	td.tix-column-price::before {
+		content: "Price : ";
+	}
+
+	td.tix-column-remaining::before {
+		content: "Remaining : ";
+	}
+
+	td.tix-column-quantity {
+		&::before {
+			content: "Quantity : ";
+			display: block;
+			margin-bottom: 10px;
+		}
+		select {
+			width: 80%;
+		}
+	}
+
+	.tix-order-summary {
+		td.tix-column-quantity {
+			&::before {
+				display: inline;
+			}
+		}
+	}
+
+	td.tix-column-per-ticket::before {
+		content: "Per Ticket : ";
+	}
+
+	#tix-coupon-input {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		width: 80%;
+	}
+
+	input[type="submit"] {
+		float: none !important;
+		display: block;
+		margin: 10px auto;
+	}
+
+	.tix-row-total {
+		td {
+			border-top: none;
+		}
+	}
+
+	.tix-has-dynamic-receipts {
+		h2 {
+			font-size: 1.4em;
+		}
+	}
+
+	.tix-ticket-form td.tix-left, .tix-private-form td.tix-left, .tix-attendee-form td.tix-left, .tix-receipt-form td.tix-left {
+		width: auto;
+	}
+
+	.tix-ticket-form td.tix-right, .tix-private-form td.tix-right, .tix-attendee-form td.tix-right, .tix-receipt-form td.tix-right {
+		border: none;
+		padding-top: 0;
+		width: auto;
+	}
+
+	td.tix-column-quantity {
+		&::before {
+			content: "Quantity : ";
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+
+	.tix-submit {
+		select {
+			display: block;
+			margin: 0 auto;
+			width: 170px;
+		}
+	}
+
+	.tix-attendee-form {
+		tr {
+			td.tix-right, td.tix-left {
+				text-align: left;
+			}
+		}
+	}
+
+}
+

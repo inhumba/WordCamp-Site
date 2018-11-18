@@ -2,459 +2,61 @@
 ---------------------------------------*/
 
 .site-header {
-	// background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-1920.jpg);
-	// background-repeat: no-repeat;
-	// background-position: center top;
-	// background-size: contain;
-	// min-height: 840px;
-	// position: relative;
-	// &::before {
-	// 	background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/cloud.png);
-	// 	content: "";
-	// 	display: block;
-	// 	@include wh(1371px, 332px);
-	// 	position: absolute;
-	// 	top: 260px;
-	// 	left: 230px;
-	// 	animation: cloud 15s ease-in-out infinite;
-	// }
-	background-color: $color-orange;
-	min-height: 250px;
-	padding-top: 150px;
+	background-color: #FFF;
+	padding: 200px 0 80px;
 	text-align: center;
 }
 
 .site-title {
-	// @include logo("https://2018.bangkok.wordcamp.org/files/2017/11/wordcamp-bangkok.png", 660px, 194px);
-	// transform: translate(420px, 340px);
-	// &::after {
-	// 	background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/wapuu.png);
-	// 	content: "";
-	// 	display: block;
-	// 	@include wh(426px, 592px);
-	// 	transform: translate(700px, -330px);
-	// 	position: absolute;
-	// 	top: -60px;
-	// 	left: 700px;
-	// 	animation: wapuu 6s ease-in-out infinite;
-	// }
-	color: $color-navy;
+	margin-bottom: 0;
 	a {
-		color: $color-navy;
+		background: linear-gradient(180deg, rgba(16,75,140,1) 0%, rgba(45,124,159,1) 70%, #d43e38 70%, #ea8c70 90%);
+		-webkit-background-clip: text;
+		color: transparent;
+		font-size: 3em;
+		line-height: 1;
+		display: inline-block;
+		width: 7em;
+		text-align: center;
 	}
 }
 
 .site-description {
-	// @include replace-text-with-img("https://2018.bangkok.wordcamp.org/files/2017/11/2018.png", left center, 312px, 98px);
-	// font-size: 2.5em;
-	// line-height: 1.2;
-	// transform: translate(420px, 340px);
-	// padding-left: 380px;
-	// text-indent: 0;
-	// &::after {
-	// 	content: "|";
-	// 	display: block;
-	// 	font-size: 2.2em;
-	// 	position: relative;
-	// 	top: -103px;
-	// 	left: -35px;
-	// 	width: 10px;
-	// }
-	color: $color-navy;
+	background: linear-gradient(180deg,#d43e38 0%,#ea8c70 100%);
+	-webkit-background-clip: text;
+	color: transparent;
+	font-family: $font-jamjuree;
+	font-size: 1.8em;
+	font-weight: 500;
+	text-align: center;
 }
 
-// @media only screen and (max-width: 1650px) {
+@media only screen and (max-width: 767px) {
+	
+	.site-header {
+		padding-top: 150px;
+		padding-bottom: 0;
+	}
+  
+	.site-title a {
+		font-size: 2em;
+	}
 
-// 	$size-ratio: (1650 / 1920);
+}
 
-// 	.site-header {
-// 		min-height: 722px;
-// 		&::before {
-// 			background-size: (1371px * $size-ratio) (332px * $size-ratio);
-// 			@include wh(1371px * $size-ratio, 332px * $size-ratio);
-// 			top: 200px;
-// 			left: 190px;
-// 		}
-// 	}
+@media only screen and (max-width: 480px) {
 
-// 	.site-title {
-// 		background-size: (660px * $size-ratio) (194px * $size-ratio);
-// 		@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		transform: translate(420px * $size-ratio, 340px * $size-ratio);
-// 		&::after {
-// 			background-size: (426px * $size-ratio) (592px * $size-ratio);
-// 			@include wh(426px * $size-ratio, 592px * $size-ratio);
-// 			transform: translate(700px * $size-ratio, -330px * $size-ratio);
-// 			left: 700px * $size-ratio;
-// 		}
-// 		> a {
-// 			@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		}
-// 	}
+	.site-header {
+		padding-top: 40%;
+		padding-bottom: 20%;
+		background-color: #f7f8f4;
+	}
+  
+	.site-title a {
+		font-size: 1em;
+	}
 
-// 	.site-description {
-// 		background-size: (312px * $size-ratio) (98px * $size-ratio);
-// 		@include wh(312px * $size-ratio, 98px * $size-ratio);
-// 		transform: translate(420px * $size-ratio, 340px * $size-ratio);
-// 		font-size: 1.9em;
-// 		padding-left: 330px;
-// 		&::after {
-// 			top: -77px;
-// 		}
-// 	}
-
-// }
-
-// @media only screen and (max-width: 1440px) {
-
-// 	$size-ratio: (1440 / 1920);
-
-// 	.site-header {
-// 		background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-1440.jpg);
-// 		min-height: 630px;
-// 		&::before {
-// 			background-size: (1371px * $size-ratio) (332px * $size-ratio);
-// 			@include wh(1371px * $size-ratio, 332px * $size-ratio);
-// 			top: 200px;
-// 			left: 190px;
-// 		}
-// 	}
-
-// 	.site-title {
-// 		background-size: (660px * $size-ratio) (194px * $size-ratio);
-// 		@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		transform: translate(420px * $size-ratio, 340px * $size-ratio);
-// 		&::after {
-// 			background-size: (426px * $size-ratio) (592px * $size-ratio);
-// 			@include wh(426px * $size-ratio, 592px * $size-ratio);
-// 			transform: translate(700px * $size-ratio, -330px * $size-ratio);
-// 			left: 700px * $size-ratio;
-// 		}
-// 		> a {
-// 			@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		}
-// 	}
-
-// 	.site-description {
-// 		background-size: (312px * $size-ratio) (98px * $size-ratio);
-// 		@include wh(312px * $size-ratio, 98px * $size-ratio);
-// 		transform: translate(420px * $size-ratio, 340px * $size-ratio);
-// 		font-size: 1.9em;
-// 		padding-left: 290px;
-// 		&::after {
-// 			top: -78px;
-// 		}
-// 	}
-
-// }
-
-// @media only screen and (max-width: 1280px) {
-
-// 	$size-ratio: (1280 / 1920);
-
-// 	.site-header {
-// 		background-mage: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-1280.jpg);
-// 		min-height: 560px;
-// 		&::before {
-// 			background-size: (1371px * $size-ratio) (332px * $size-ratio);
-// 			@include wh(1371px * $size-ratio, 332px * $size-ratio);
-// 			top: 175px;
-// 			left: 170px;
-// 		}
-// 	}
-
-// 	.site-title {
-// 		background-size: (660px * $size-ratio) (194px * $size-ratio);
-// 		@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		transform: translate(420px * $size-ratio, 340px * $size-ratio);
-// 		&::after {
-// 			background-size: (426px * $size-ratio) (592px * $size-ratio);
-// 			@include wh(426px * $size-ratio, 592px * $size-ratio);
-// 			transform: translate(700px * $size-ratio, -330px * $size-ratio);
-// 			left: 700px * $size-ratio;
-// 		}
-// 		> a {
-// 			@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		}
-// 	}
-
-// 	.site-description {
-// 		background-size: (312px * $size-ratio) (98px * $size-ratio);
-// 		@include wh(312px * $size-ratio, 98px * $size-ratio);
-// 		transform: translate(420px * $size-ratio, 340px * $size-ratio);
-// 		font-size: 1.7em;
-// 		padding-left: 270px;
-// 		&::after {
-// 			top: -67px;
-// 		}
-// 	}
-
-// }
-
-// @media only screen and (max-width: 1120px) {
-
-// 	$size-ratio: (1120 / 1920);
-
-// 	.site-header {
-// 		min-height: 490px;
-// 		&::before {
-// 			background-size: (1371px * $size-ratio) (332px * $size-ratio);
-// 			@include wh(1371px * $size-ratio, 332px * $size-ratio);
-// 			top: 150px;
-// 			left: 150px;
-// 		}
-// 	}
-
-// 	.site-title {
-// 		background-size: (660px * $size-ratio) (194px * $size-ratio);
-// 		@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		transform: translate(420px * $size-ratio, 340px * $size-ratio);
-// 		&::after {
-// 			background-size: (426px * $size-ratio) (592px * $size-ratio);
-// 			@include wh(426px * $size-ratio, 592px * $size-ratio);
-// 			transform: translate(700px * $size-ratio, -330px * $size-ratio);
-// 			left: 700px * $size-ratio;
-// 		}
-// 		> a {
-// 			@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		}
-// 	}
-
-// 	.site-description {
-// 		background-size: (312px * $size-ratio) (98px * $size-ratio);
-// 		@include wh(312px * $size-ratio, 98px * $size-ratio);
-// 		transform: translate(420px * $size-ratio, 340px * $size-ratio);
-// 		font-size: 1.4em;
-// 		padding-left: 240px;
-// 		&::after {
-// 			top: -56px;
-// 		}
-// 	}
-// }
-
-// @media only screen and (max-width: 1024px) {
-
-// 	$size-ratio: (1024 / 1920);
-
-// 	.site-header {
-// 		min-height: 448px;
-// 		&::before {
-// 			background-size: (1371px * $size-ratio) (332px * $size-ratio);
-// 			@include wh(1371px * $size-ratio, 332px * $size-ratio);
-// 			top: 140px;
-// 			left: 140px;
-// 		}
-// 	}
-
-// 	.site-title {
-// 		background-size: (660px * $size-ratio) (194px * $size-ratio);
-// 		@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		transform: translate(420px * $size-ratio, 340px * $size-ratio);
-// 		&::after {
-// 			background-size: (426px * $size-ratio) (592px * $size-ratio);
-// 			@include wh(426px * $size-ratio, 592px * $size-ratio);
-// 			transform: translate(700px * $size-ratio, -330px * $size-ratio);
-// 			left: 700px * $size-ratio;
-// 		}
-// 		> a {
-// 			@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		}
-// 	}
-
-// 	.site-description {
-// 		background-size: (312px * $size-ratio) (98px * $size-ratio);
-// 		@include wh(312px * $size-ratio, 98px * $size-ratio);
-// 		transform: translate(420px * $size-ratio, 340px * $size-ratio);
-// 		font-size: 1.4em;
-// 		padding-left: 220px;
-// 		&::after {
-// 			font-size: 2em;
-// 			top: -53px;
-// 			left: -30px;
-// 		}
-// 	}
-
-// }
-
-// @media only screen and (max-width: 768px) {
-
-// 	$size-ratio: (768 / 1920);
-
-// 	.site-header {
-// 		background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-768.jpg);
-// 		min-height: 336px;
-// 		&::before {
-// 			background-size: (1371px * $size-ratio) (332px * $size-ratio);
-// 			@include wh(1371px * $size-ratio, 332px * $size-ratio);
-// 			top: 100px;
-// 			left: 100px;
-// 		}
-// 	}
-
-// 	.site-title {
-// 		background-size: (660px * $size-ratio) (194px * $size-ratio);
-// 		@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		transform: translate(420px * $size-ratio, 340px * $size-ratio);
-// 		&::after {
-// 			background-size: (426px * $size-ratio) (592px * $size-ratio);
-// 			@include wh(426px * $size-ratio, 592px * $size-ratio);
-// 			transform: translate(700px * $size-ratio, -330px * $size-ratio);
-// 			left: 700px * $size-ratio;
-// 			top: -20px;
-// 		}
-// 		> a {
-// 			@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		}
-// 	}
-
-// 	.site-description {
-// 		background-size: (312px * $size-ratio) (98px * $size-ratio);
-// 		@include wh(312px * $size-ratio, 98px * $size-ratio);
-// 		transform: translate(420px * $size-ratio, 340px * $size-ratio);
-// 		font-size: 1em;
-// 		padding-left: 160px;
-// 		&::after {
-// 			font-size: 2.2em;
-// 			top: -40px;
-// 			left: -20px;
-// 		}
-// 	}
-
-// }
-
-// @media only screen and (max-width: 767px) {
-
-// 	$size-ratio: (550 / 1920);
-
-// 	.site-header {
-// 		background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-768.jpg);
-// 		background-size: auto;
-// 		background-position: left top;
-// 		min-height: 336px;
-// 		&::before {
-// 			display: none;
-// 		}
-// 	}
-
-// 	.site-title {
-// 		background-size: (660px * $size-ratio) (194px * $size-ratio);
-// 		@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		transform: translate(0, 0);
-// 		margin-left: -130px;
-// 		position: absolute;
-// 		top: 32%;
-// 		left: 50%;
-// 		&::after {
-// 			background-size: (426px * $size-ratio) (592px * $size-ratio);
-// 			@include wh(426px * $size-ratio, 592px * $size-ratio);
-// 			transform: translate(700px * $size-ratio, -330px * $size-ratio);
-// 			left: 700px * $size-ratio;
-// 			top: -20px;
-// 		}
-// 		> a {
-// 			@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		}
-// 	}
-
-// 	.site-description {
-// 		background-size: (312px * $size-ratio) (98px * $size-ratio);
-// 		@include wh(312px * $size-ratio, 98px * $size-ratio);
-// 		transform: translate(0, 0);
-// 		background-position: left top;
-// 		font-size: .8em;
-// 		margin-left: -130px;
-// 		padding-top: 30px;
-// 		padding-left: 0;
-// 		position: absolute;
-// 		top: 50%;
-// 		left: 50%;
-// 		width: 120px;
-// 		&::after {
-// 			content: "";
-// 		}
-// 	}
-
-// }
-
-// @media only screen and (max-width: 419px) {
-
-// 	$size-ratio: (500 / 1920);
-
-// 	.site-header {
-// 		background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-420.jpg);
-// 		background-position: center top;
-// 		min-height: 184px;
-// 	}
-
-// 	.site-title {
-// 		background-size: (660px * $size-ratio) (194px * $size-ratio);
-// 		@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		margin-left: -140px;
-// 		&::after {
-// 			background-size: (426px * $size-ratio) (592px * $size-ratio);
-// 			@include wh(426px * $size-ratio, 592px * $size-ratio);
-// 			transform: translate(700px * $size-ratio, -330px * $size-ratio);
-// 			left: 700px * $size-ratio;
-// 			top: -20px;
-// 		}
-// 		> a {
-// 			@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		}
-// 	}
-
-// 	.site-description {
-// 		background-size: (312px * $size-ratio) (98px * $size-ratio);
-// 		@include wh(312px * $size-ratio, 98px * $size-ratio);
-// 		margin-left: -140px;
-// 		padding-top: 28px;
-// 		top: 62%;
-// 		width: 120px;
-// 	}
-
-// }
-
-// @media only screen and (max-width: 320px) {
-
-// 	$size-ratio: (420 / 1920);
-
-// 	.site-header {
-// 		background-image: url(https://2018.bangkok.wordcamp.org/files/2017/11/header-home-360.jpg);
-// 		min-height: 158px;
-// 		&::before {
-// 			background-size: (1371px * $size-ratio) (332px * $size-ratio);
-// 			@include wh(1371px * $size-ratio, 332px * $size-ratio);
-// 			top: 45px;
-// 			left: 0;
-// 			animation: cloud-small 10s linear infinite;
-// 		}
-// 	}
-
-// 	.site-title {
-// 		background-size: (660px * $size-ratio) (194px * $size-ratio);
-// 		@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		margin-left: -120px;
-// 		&::after {
-// 			background-size: (426px * $size-ratio) (592px * $size-ratio);
-// 			@include wh(426px * $size-ratio, 592px * $size-ratio);
-// 			transform: translate(700px * $size-ratio, -330px * $size-ratio);
-// 			left: 700px * $size-ratio;
-// 			top: -20px;
-// 		}
-// 		> a {
-// 			@include wh(660px * $size-ratio, 194px * $size-ratio);
-// 		}
-// 	}
-
-// 	.site-description {
-// 		background-size: (312px * $size-ratio) (98px * $size-ratio);
-// 		@include wh(312px * $size-ratio, 98px * $size-ratio);
-// 		margin-left: -120px;
-// 		padding-top: 21px;
-// 		top: 62%;
-// 		width: 120px;
-// 	}
-
-// }
+}
 
 
 

@@ -4,9 +4,9 @@
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
 	background-color: $color-orange;
 	background-image: none;
+	box-sizing: border-box;
 	box-shadow: none;
 	border: none;
-	border-radius: 10px;
 	color: #FFF;
 	font-family: $font-jamjuree;
 	font-size: 1em;
@@ -28,7 +28,8 @@ label {
 
 input[type=text], input[type=email], textarea {
 	border: 1px solid $color-orange;
-	border-radius: 10px;
+	border-radius: 4px;
+	box-sizing: border-box;
 	color: $color-orange;
 	font-family: $font-jamjuree;
 	font-size: 1em;

@@ -71,26 +71,214 @@ blockquote {
   padding: 15px 15px 5px;
 }
 
+/* TICKETS
+---------------------------------------*/
+#tix {
+  overflow-x: scroll;
+}
+
+body.admin-bar #tix {
+  padding-top: 20px;
+}
+
+.tix-error {
+  background-color: #104b8c;
+  border-color: #104b8c;
+  color: #FFF;
+  padding: 10px 20px;
+}
+
+.tix_tickets_table {
+  border: 1px solid #c6441d;
+}
+
+.tix_tickets_table th {
+  background-color: #c6441d;
+  color: #FFF;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+.tix_tickets_table th, .tix_tickets_table td {
+  padding: 15px 20px;
+}
+
+.tix_tickets_table a {
+  color: #c6441d;
+}
+
+.tix_tickets_table a:hover, .tix_tickets_table a:focus {
+  color: #104b8c;
+}
+
+.tix_tickets_table a:visited {
+  color: #c6441d;
+}
+
+.tix-ticket-title {
+  display: inline-block;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.tix-column-price, .tix-column-remaining, .tix-column-quantity, .tix-column-per-ticket {
+  border-left: 1px solid #f2f2f2;
+  color: #c6441d;
+  font-weight: 500;
+  text-align: center;
+}
+
+th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-column-per-ticket {
+  border-left-color: #c6441d;
+}
+
+.tix-row-total td {
+  border-top: 1px solid #f2f2f2;
+}
+
+.tix-attendee-form td {
+  border-top: 1px solid #f2f2f2;
+}
+
+.tix-attendee-form td select {
+  width: 80%;
+}
+
+.tix-attendee-form .tix-row-first-name td {
+  border-top: none;
+}
+
+.tix-row-total td {
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.tix-row-total td strong {
+  color: #104b8c;
+}
+
+.tix-submit select {
+  width: 150px;
+}
+
+@media only screen and (max-width: 768px) {
+  .tix_tickets_table th {
+    font-size: 1.1em;
+  }
+  .tix-ticket-title {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tix_tickets_table th {
+    font-size: 1.3em;
+  }
+  .tix_tickets_table th, .tix_tickets_table td {
+    display: block;
+    padding: 15px;
+  }
+  .tix-row-total {
+    background-color: #f2f2f2;
+  }
+  .tix-row-total td {
+    padding-top: 0;
+  }
+  .tix-column-description {
+    text-align: center;
+  }
+  .tix-order-summary .tix-column-description {
+    width: auto;
+  }
+  .tix-ticket-title {
+    font-size: 1.1em;
+  }
+  .tix-column-price, .tix-column-remaining, .tix-column-quantity, .tix-column-per-ticket {
+    border-top: 1px solid #f2f2f2;
+    border-left: none;
+    font-size: 1.1em;
+  }
+  th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-column-per-ticket {
+    display: none;
+  }
+  td.tix-column-price::before {
+    content: "Price : ";
+  }
+  td.tix-column-remaining::before {
+    content: "Remaining : ";
+  }
+  td.tix-column-quantity::before {
+    content: "Quantity : ";
+    display: block;
+    margin-bottom: 10px;
+  }
+  td.tix-column-quantity select {
+    width: 80%;
+  }
+  .tix-order-summary td.tix-column-quantity::before {
+    display: inline;
+  }
+  td.tix-column-per-ticket::before {
+    content: "Per Ticket : ";
+  }
+  #tix-coupon-input {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+  }
+  input[type="submit"] {
+    float: none !important;
+    display: block;
+    margin: 10px auto;
+  }
+  .tix-row-total td {
+    border-top: none;
+  }
+  .tix-has-dynamic-receipts h2 {
+    font-size: 1.4em;
+  }
+  .tix-ticket-form td.tix-left, .tix-private-form td.tix-left, .tix-attendee-form td.tix-left, .tix-receipt-form td.tix-left {
+    width: auto;
+  }
+  .tix-ticket-form td.tix-right, .tix-private-form td.tix-right, .tix-attendee-form td.tix-right, .tix-receipt-form td.tix-right {
+    border: none;
+    padding-top: 0;
+    width: auto;
+  }
+  td.tix-column-quantity::before {
+    content: "Quantity : ";
+    display: block;
+    margin-bottom: 10px;
+  }
+  .tix-submit select {
+    display: block;
+    margin: 0 auto;
+    width: 170px;
+  }
+  .tix-attendee-form tr td.tix-right, .tix-attendee-form tr td.tix-left {
+    text-align: left;
+  }
+}
+
 /* SPONSORS
 ---------------------------------------*/
 .wcb_widget_sponsors {
-  background-color: #e8e8e8;
-  padding: 80px 0 50px;
   text-align: center;
 }
 
 .wcb_widget_sponsors .sponsor-logo {
   display: inline-block !important;
-  margin: 0 10px;
+  margin: 0 2em;
 }
 
 .sponsor-level {
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .sponsor-level .sponsor-level-title {
   color: #ea8c70;
-  font-size: 3em;
+  font-size: 2.4em;
   margin-bottom: 30px;
 }
 
@@ -107,9 +295,9 @@ blockquote {
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
   background-color: #ea8c70;
   background-image: none;
+  box-sizing: border-box;
   box-shadow: none;
   border: none;
-  border-radius: 10px;
   color: #FFF;
   font-family: "Bai Jamjuree", Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -132,7 +320,8 @@ label {
 
 input[type=text], input[type=email], textarea {
   border: 1px solid #ea8c70;
-  border-radius: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
   color: #ea8c70;
   font-family: "Bai Jamjuree", Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -172,30 +361,64 @@ select:focus {
 /* HEADER
 ---------------------------------------*/
 .site-header {
-  background-color: #ea8c70;
-  min-height: 250px;
-  padding-top: 150px;
+  background-color: #FFF;
+  padding: 200px 0 80px;
   text-align: center;
 }
 
 .site-title {
-  color: #104b8c;
+  margin-bottom: 0;
 }
 
 .site-title a {
-  color: #104b8c;
+  background: linear-gradient(180deg, #104b8c 0%, #2d7c9f 70%, #d43e38 70%, #ea8c70 90%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 3em;
+  line-height: 1;
+  display: inline-block;
+  width: 7em;
+  text-align: center;
 }
 
 .site-description {
-  color: #104b8c;
+  background: linear-gradient(180deg, #d43e38 0%, #ea8c70 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: "Bai Jamjuree", Helvetica, Arial, sans-serif;
+  font-size: 1.8em;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .site-header {
+    padding-top: 150px;
+    padding-bottom: 0;
+  }
+  .site-title a {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .site-header {
+    padding-top: 40%;
+    padding-bottom: 20%;
+    background-color: #f7f8f4;
+  }
+  .site-title a {
+    font-size: 1em;
+  }
 }
 
 /* NAVIGATION
 ---------------------------------------*/
 .main-navigation {
-  background-color: #ea8c70;
-  opacity: .9;
-  padding: 15px 0;
+  background: #104b8c;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  opacity: .95;
+  padding: 0;
   position: fixed;
   top: 0;
   right: 0;
@@ -214,19 +437,17 @@ select:focus {
 .main-navigation .menu li {
   display: inline-block;
   float: none;
-  margin: 0 10px;
 }
 
 .main-navigation .menu li > a {
   color: #FFF;
   font-size: 1.2em;
   font-weight: 300;
-  padding: 10px 25px;
-  border-radius: 15px;
+  padding: .8em 1.5em;
 }
 
 .main-navigation .menu li.current-menu-item > a {
-  background-color: #edb959;
+  background: linear-gradient(180deg, #d43e38 0%, #ea8c70 100%);
 }
 
 .main-navigation .menu li.current-menu-item:hover > a, .main-navigation .menu li.current-menu-item:focus > a {
@@ -234,7 +455,7 @@ select:focus {
 }
 
 .main-navigation .menu li:hover > a, .main-navigation .menu li:focus > a {
-  background-color: #ea8c70;
+  background: linear-gradient(180deg, #104b8c 0%, #2d7c9f 100%);
 }
 
 .main-navigation .menu li.menu-item-has-children:hover > a, .main-navigation .menu li.menu-item-has-children:focus > a {
@@ -263,9 +484,9 @@ select:focus {
 }
 
 .menu-toggle {
-  background-color: #ea8c70;
+  background-color: #104b8c;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-  color: #ea8c70;
+  color: #104b8c;
   display: block;
   font-family: "Bai Jamjuree", Helvetica, Arial, sans-serif;
   font-weight: 500;
@@ -274,8 +495,8 @@ select:focus {
   width: 50px;
   border-radius: 50%;
   position: absolute;
-  top: 50px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   text-align: center;
   z-index: 1000;
   transition: all .3s;
@@ -290,7 +511,6 @@ select:focus {
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 10px;
   text-align: center;
 }
 
@@ -322,7 +542,7 @@ select:focus {
 .main-small-navigation .menu {
   list-style-type: none;
   margin: 0;
-  padding: 20px 25px;
+  padding: 2em 25px;
   box-shadow: 0 0 100px #000;
 }
 
@@ -373,7 +593,7 @@ select:focus {
 /* CONTENT
 ---------------------------------------*/
 .site-content {
-  margin: 40px auto;
+  margin: 80px auto;
 }
 
 .entry-header {
@@ -489,18 +709,17 @@ select:focus {
 /* FOOTER
 ---------------------------------------*/
 .site-footer {
-  background-color: #edb959;
+  background-color: #ea8c70;
   clear: both;
 }
 
 .site-footer .site-info {
-  background-color: #ea8c70;
-  padding: 10px 0;
+  padding: 1em 0;
   text-align: center;
 }
 
 .site-footer .site-info a {
-  color: #FFF;
+  color: #fff;
   display: inline-block;
   font-size: 1em;
   font-weight: 300;
@@ -511,12 +730,12 @@ select:focus {
   content: "\f19a";
   font-family: FontAwesome;
   display: inline-block;
-  padding-right: 23px;
+  padding-right: 16px;
 }
 
 #footer-widgets {
   overflow: hidden;
-  padding: 40px 0 20px;
+  padding: 80px 0 40px;
 }
 
 #footer-widgets .footer-widgets-block {
@@ -525,7 +744,7 @@ select:focus {
 }
 
 #footer-widgets .footer-widgets-block p {
-  color: #FFF;
+  color: #f7f8f4;
   font-size: 1em;
   font-weight: 300;
 }
@@ -536,12 +755,14 @@ select:focus {
 }
 
 #secondary-sidebar {
-  padding: 25px 0;
+  background-color: #f8f8f8;
+  padding: 50px 0 20px;
   text-align: center;
 }
 
 #secondary-sidebar .widget-title {
   color: #104b8c;
+  font-size: 1.5em;
 }
 
 .jetpack_widget_social_icons ul {
@@ -596,19 +817,33 @@ select:focus {
   float: right;
 }
 
+.milestone-content {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
 .milestone-header {
-  background-color: #e8e8e8;
-  border: 1px solid #edb959;
-  border-radius: 10px 10px 0 0;
+  background-color: #104b8c;
+}
+
+.milestone-header strong {
+  color: #fff;
+}
+
+.milestone-header span.date {
+  color: #f9cf9f;
 }
 
 .milestone-countdown {
-  border: 1px solid #edb959;
-  border-radius: 0 0 10px 10px;
+  border: none;
+  padding: 1em;
 }
 
 .milestone-countdown .difference {
-  color: #ea8c70;
+  color: transparent;
+  background: linear-gradient(180deg, #d43e38 0%, #ea8c70 100%);
+  -webkit-background-clip: text;
+  font-family: "Chonburi", cursive;
+  line-height: 1;
 }
 
 @media only screen and (max-width: 1024px) {
