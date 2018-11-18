@@ -50,15 +50,14 @@
 		}
 	}
 	.sub-menu {
-		background-color: $color-orange;
-		border-radius: 0 15px 15px 15px;
-		padding: 10px 0 15px;
-		top: 90%;
+		background-color: $color-navy;
+		padding: 10px 0 5px;
+		top: 100%;
 		text-align: left;
 		li {
 			> a {
 				font-size: .85em;
-				padding: 8px 15px 8px 20px;
+				padding: 8px 15px 10px 20px;
 				width: 220px;
 				&::before {
 					content: "\f0da";

@@ -463,16 +463,15 @@ select:focus {
 }
 
 .main-navigation .sub-menu {
-  background-color: #ea8c70;
-  border-radius: 0 15px 15px 15px;
-  padding: 10px 0 15px;
-  top: 90%;
+  background-color: #104b8c;
+  padding: 10px 0 5px;
+  top: 100%;
   text-align: left;
 }
 
 .main-navigation .sub-menu li > a {
   font-size: .85em;
-  padding: 8px 15px 8px 20px;
+  padding: 8px 15px 10px 20px;
   width: 220px;
 }
 
