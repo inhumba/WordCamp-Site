@@ -23,7 +23,7 @@
 				color: #FFF;
 				font-size: .9em;
 				@include font-weight(light);
-				padding: .8em 0;
+				padding: .8em 1em;
 			}
 			&.current-menu-item {
 				> a {
@@ -103,10 +103,6 @@
 .menu-toggle.toggled-on,
 .menu-toggle.toggled-on:hover,
 .menu-toggle.toggled-on:focus {
-	background-color: $color-yellow;
-	color: $color-yellow;
-	top: 60px;
-	right: 20px;
 	transform: rotate(180deg);
 	// .admin-bar & {
 	// 	top: 66px;
@@ -131,11 +127,11 @@
 		padding: 2em 25px;
 		box-shadow: 0 0 100px #000;
 		li {
-			color: $color-navy;
+			color: $body-color;
 		}
 		a {
 			color: #FFF;
-			font-size: 1.2em;
+			font-size: 1.1em;
 			line-height: 1.8;
 			&:visited {
 				color: #DFDFDF;
@@ -144,13 +140,11 @@
 		// .admin-bar & {
 		// 	padding-top: 50px;
 		// }
-	}
-}
-
-@media only screen and (max-width: 1024px) {
-
-	.main-navigation .menu li > a {
-		padding: 10px 15px;
+		.sub-menu {
+			li a {
+				font-size: .9em;
+			}
+		}
 	}
 }
 
@@ -165,7 +159,6 @@
 			li {
 				> a {
 					font-size: .9em;
-					padding: 15px;
 				}
 				&.menu-item-has-children {
 					&:hover, &:focus {

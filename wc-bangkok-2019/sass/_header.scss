@@ -5,7 +5,7 @@
 	position: relative;
 	background: url('https://2019.bangkok.wordcamp.org/files/2018/11/illustration-bg-4.png') center bottom no-repeat transparent;
 	background-size: cover;
-	padding-top: 56.25%;
+	padding-top: calc(56.25% + 48px);
 	hgroup {
 		position: absolute;
 		top: 45%;
@@ -40,10 +40,6 @@
 }
 
 @media only screen and (max-width: 767px) {
-
-	.site-header {
-		padding-top: 60%;
-	}
 
   .site-description {
   	font-size: 1.4em;
