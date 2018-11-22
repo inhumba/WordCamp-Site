@@ -2,22 +2,29 @@
 ---------------------------------------*/
 
 .site-header {
-	background-color: #FFF;
-	padding: 200px 0 80px;
-	text-align: center;
+	position: relative;
+	background: url('https://2019.bangkok.wordcamp.org/files/2018/11/illustration-bg-4.png') center bottom no-repeat transparent;
+	background-size: cover;
+	padding-top: 56.25%;
+	hgroup {
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 35%;
+	}
 }
 
 .site-title {
 	margin-bottom: 0;
 	a {
-		background: linear-gradient(180deg, rgba(16,75,140,1) 0%, rgba(45,124,159,1) 70%, #d43e38 70%, #ea8c70 90%);
-		-webkit-background-clip: text;
-		color: transparent;
-		font-size: 3em;
-		line-height: 1;
-		display: inline-block;
-		width: 7em;
-		text-align: center;
+		display: block;
+		background: url('https://2019.bangkok.wordcamp.org/files/2018/11/wc2019-logo-trans@2x.png') top center no-repeat transparent;
+		background-size: cover;
+		padding-top: 74.758842%;
+		width: 100%;
+		height: 0;
+		text-indent: -9999px;
 	}
 }
 
@@ -26,35 +33,38 @@
 	-webkit-background-clip: text;
 	color: transparent;
 	font-family: $font-jamjuree;
-	font-size: 1.8em;
+	font-size: 1.5em;
 	font-weight: 500;
 	text-align: center;
+	padding-top: .5em;
 }
 
 @media only screen and (max-width: 767px) {
-	
+
 	.site-header {
-		padding-top: 150px;
-		padding-bottom: 0;
+		padding-top: 60%;
 	}
-  
-	.site-title a {
-		font-size: 2em;
-	}
+
+  .site-description {
+  	font-size: 1.4em;
+  }
 
 }
 
 @media only screen and (max-width: 480px) {
 
 	.site-header {
-		padding-top: 40%;
-		padding-bottom: 20%;
-		background-color: #f7f8f4;
+		padding-top: 100%;
+		hgroup {
+			top: 48%;
+			width: 75%;
+		}
 	}
-  
-	.site-title a {
-		font-size: 1em;
-	}
+
+  .site-description {
+  	font-size: 1em;
+  	padding-top: 5px;
+  }
 
 }
 
