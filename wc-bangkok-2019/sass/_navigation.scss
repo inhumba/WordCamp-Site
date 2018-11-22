@@ -21,9 +21,9 @@
 			float: none;
 			> a {
 				color: #FFF;
-				font-size: 1.2em;
+				font-size: .9em;
 				@include font-weight(light);
-				padding: .8em 1.5em;
+				padding: .8em 0;
 			}
 			&.current-menu-item {
 				> a {
@@ -43,27 +43,27 @@
 			&.menu-item-has-children {
 				&:hover, &:focus {
 					> a {
-						border-radius: 15px 15px 0 0;
+						border-radius: 0;
 					}
 				}
 			}
 		}
-	}
-	.sub-menu {
-		background-color: $color-navy;
-		padding: 10px 0 5px;
-		top: 100%;
-		text-align: left;
-		li {
-			> a {
-				font-size: .85em;
-				padding: 8px 15px 10px 20px;
-				width: 220px;
-				&::before {
-					content: "\f0da";
-					display: inline-block;
-					font-family: FontAwesome;
-					padding-right: 8px;
+		.sub-menu {
+			background-color: $color-navy;
+			padding: 10px 0 5px;
+			top: 100%;
+			text-align: left;
+			li {
+				> a {
+					font-size: .85em;
+					padding: 8px 15px 10px 20px;
+					width: 220px;
+					&::before {
+						content: "\f0da";
+						display: inline-block;
+						font-family: FontAwesome;
+						padding-right: 8px;
+					}
 				}
 			}
 		}
@@ -157,31 +157,30 @@
 @media only screen and (max-width: 768px) {
 
 	.main-navigation {
-		padding: 10px 0;
+		padding: 0;
 		.admin-bar & {
 			top: 46px;
 		}
 		.menu {
 			li {
 				> a {
-					font-size: 1em;
-					padding: 5px 14px;
-					border-radius: 15px;
+					font-size: .9em;
+					padding: 15px;
 				}
 				&.menu-item-has-children {
 					&:hover, &:focus {
 						> a {
-							border-radius: 15px 15px 0 0;
+							border-radius: 0;
 						}
 					}
 				}
 			}
 		}
 		.sub-menu {
-			border-radius: 0 15px 15px 15px;
+			border-radius: 0;
 			li {
 				> a {
-					font-size: .9em;
+					font-size: .5em;
 					padding: 5px 10px;
 				}
 			}

@@ -341,9 +341,9 @@ select {
       float: none; }
       .main-navigation .menu li > a {
         color: #FFF;
-        font-size: 1.2em;
+        font-size: .9em;
         font-weight: 300;
-        padding: .8em 1.5em; }
+        padding: .8em 0; }
       .main-navigation .menu li.current-menu-item > a {
         background: linear-gradient(180deg, #d43e38 0%, #ea8c70 100%); }
       .main-navigation .menu li.current-menu-item:hover > a, .main-navigation .menu li.current-menu-item:focus > a {
@@ -351,21 +351,21 @@ select {
       .main-navigation .menu li:hover > a, .main-navigation .menu li:focus > a {
         background: linear-gradient(180deg, #104b8c 0%, #2d7c9f 100%); }
       .main-navigation .menu li.menu-item-has-children:hover > a, .main-navigation .menu li.menu-item-has-children:focus > a {
-        border-radius: 15px 15px 0 0; }
-  .main-navigation .sub-menu {
-    background-color: #104b8c;
-    padding: 10px 0 5px;
-    top: 100%;
-    text-align: left; }
-    .main-navigation .sub-menu li > a {
-      font-size: .85em;
-      padding: 8px 15px 10px 20px;
-      width: 220px; }
-      .main-navigation .sub-menu li > a::before {
-        content: "\f0da";
-        display: inline-block;
-        font-family: FontAwesome;
-        padding-right: 8px; }
+        border-radius: 0; }
+    .main-navigation .menu .sub-menu {
+      background-color: #104b8c;
+      padding: 10px 0 5px;
+      top: 100%;
+      text-align: left; }
+      .main-navigation .menu .sub-menu li > a {
+        font-size: .85em;
+        padding: 8px 15px 10px 20px;
+        width: 220px; }
+        .main-navigation .menu .sub-menu li > a::before {
+          content: "\f0da";
+          display: inline-block;
+          font-family: FontAwesome;
+          padding-right: 8px; }
 
 .menu-toggle {
   background-color: #104b8c;
@@ -437,19 +437,18 @@ select {
 
 @media only screen and (max-width: 768px) {
   .main-navigation {
-    padding: 10px 0; }
+    padding: 0; }
     .admin-bar .main-navigation {
       top: 46px; }
     .main-navigation .menu li > a {
-      font-size: 1em;
-      padding: 5px 14px;
-      border-radius: 15px; }
+      font-size: .9em;
+      padding: 15px; }
     .main-navigation .menu li.menu-item-has-children:hover > a, .main-navigation .menu li.menu-item-has-children:focus > a {
-      border-radius: 15px 15px 0 0; }
+      border-radius: 0; }
     .main-navigation .sub-menu {
-      border-radius: 0 15px 15px 15px; }
+      border-radius: 0; }
       .main-navigation .sub-menu li > a {
-        font-size: .9em;
+        font-size: .5em;
         padding: 5px 10px; } }
 
 /* CONTENT
