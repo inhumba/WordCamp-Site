@@ -361,9 +361,19 @@ select:focus {
 /* HEADER
 ---------------------------------------*/
 .site-header {
-  background-color: #FFF;
-  padding: 200px 0 80px;
-  text-align: center;
+  position: relative;
+  background: url("https://2019.bangkok.wordcamp.org/files/2018/11/illustration-bg-4.png") center bottom no-repeat transparent;
+  background-size: cover;
+  padding-top: calc(56.25% + 48px);
+}
+
+.site-header hgroup {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 35%;
 }
 
 .site-title {
@@ -371,14 +381,13 @@ select:focus {
 }
 
 .site-title a {
-  background: linear-gradient(180deg, #104b8c 0%, #2d7c9f 70%, #d43e38 70%, #ea8c70 90%);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 3em;
-  line-height: 1;
-  display: inline-block;
-  width: 7em;
-  text-align: center;
+  display: block;
+  background: url("https://2019.bangkok.wordcamp.org/files/2018/11/wc2019-logo-trans@2x.png") top center no-repeat transparent;
+  background-size: cover;
+  padding-top: 74.758842%;
+  width: 100%;
+  height: 0;
+  text-indent: -9999px;
 }
 
 .site-description {
@@ -386,29 +395,29 @@ select:focus {
   -webkit-background-clip: text;
   color: transparent;
   font-family: "Bai Jamjuree", Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: 500;
   text-align: center;
+  padding-top: .5em;
 }
 
 @media only screen and (max-width: 767px) {
-  .site-header {
-    padding-top: 150px;
-    padding-bottom: 0;
-  }
-  .site-title a {
-    font-size: 2em;
+  .site-description {
+    font-size: 1.4em;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .site-header {
-    padding-top: 40%;
-    padding-bottom: 20%;
-    background-color: #f7f8f4;
+    padding-top: 100%;
   }
-  .site-title a {
+  .site-header hgroup {
+    top: 48%;
+    width: 75%;
+  }
+  .site-description {
     font-size: 1em;
+    padding-top: 5px;
   }
 }
 
@@ -441,9 +450,9 @@ select:focus {
 
 .main-navigation .menu li > a {
   color: #FFF;
-  font-size: 1.2em;
+  font-size: .9em;
   font-weight: 300;
-  padding: .8em 1.5em;
+  padding: .8em 1em;
 }
 
 .main-navigation .menu li.current-menu-item > a {
@@ -459,23 +468,23 @@ select:focus {
 }
 
 .main-navigation .menu li.menu-item-has-children:hover > a, .main-navigation .menu li.menu-item-has-children:focus > a {
-  border-radius: 15px 15px 0 0;
+  border-radius: 0;
 }
 
-.main-navigation .sub-menu {
+.main-navigation .menu .sub-menu {
   background-color: #104b8c;
   padding: 10px 0 5px;
   top: 100%;
   text-align: left;
 }
 
-.main-navigation .sub-menu li > a {
+.main-navigation .menu .sub-menu li > a {
   font-size: .85em;
   padding: 8px 15px 10px 20px;
   width: 220px;
 }
 
-.main-navigation .sub-menu li > a::before {
+.main-navigation .menu .sub-menu li > a::before {
   content: "\f0da";
   display: inline-block;
   font-family: FontAwesome;
@@ -516,11 +525,8 @@ select:focus {
 .menu-toggle.toggled-on,
 .menu-toggle.toggled-on:hover,
 .menu-toggle.toggled-on:focus {
-  background-color: #edb959;
-  color: #edb959;
-  top: 60px;
-  right: 20px;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .menu-toggle.toggled-on::after,
@@ -546,12 +552,12 @@ select:focus {
 }
 
 .main-small-navigation .menu li {
-  color: #104b8c;
+  color: #fff;
 }
 
 .main-small-navigation .menu a {
   color: #FFF;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.8;
 }
 
@@ -559,32 +565,28 @@ select:focus {
   color: #DFDFDF;
 }
 
-@media only screen and (max-width: 1024px) {
-  .main-navigation .menu li > a {
-    padding: 10px 15px;
-  }
+.main-small-navigation .menu .sub-menu li a {
+  font-size: .9em;
 }
 
 @media only screen and (max-width: 768px) {
   .main-navigation {
-    padding: 10px 0;
+    padding: 0;
   }
   .admin-bar .main-navigation {
     top: 46px;
   }
   .main-navigation .menu li > a {
-    font-size: 1em;
-    padding: 5px 14px;
-    border-radius: 15px;
+    font-size: .9em;
   }
   .main-navigation .menu li.menu-item-has-children:hover > a, .main-navigation .menu li.menu-item-has-children:focus > a {
-    border-radius: 15px 15px 0 0;
+    border-radius: 0;
   }
   .main-navigation .sub-menu {
-    border-radius: 0 15px 15px 15px;
+    border-radius: 0;
   }
   .main-navigation .sub-menu li > a {
-    font-size: .9em;
+    font-size: .5em;
     padding: 5px 10px;
   }
 }
@@ -792,6 +794,18 @@ select:focus {
 #subscribe-email input[type=email] {
   background-color: transparent;
   border: 1px solid #FFF;
+  color: #FFF;
+}
+
+#subscribe-email input[type=email]::-webkit-input-placeholder {
+  color: #FFF;
+}
+
+#subscribe-email input[type=email]:-ms-input-placeholder {
+  color: #FFF;
+}
+
+#subscribe-email input[type=email]::-ms-input-placeholder {
   color: #FFF;
 }
 
