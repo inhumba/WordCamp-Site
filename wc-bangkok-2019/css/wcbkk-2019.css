@@ -10,7 +10,7 @@ Version: 1.0
 ---------------------------------------*/
 .site-content, #footer-widgets {
   width: 60%;
-  max-width: 1200px;
+  max-width: 640px;
   height: auto;
   margin: 0 auto;
 }
@@ -310,6 +310,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 
 button:hover, button:focus, html input[type="button"]:hover, html input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
   background-color: #ea8c70;
+  color: #FFF;
   background-image: none;
   outline: none;
 }
@@ -632,12 +633,13 @@ select:focus {
 /* CONTENT
 ---------------------------------------*/
 .site-content {
-  margin: 80px auto;
+  margin: 60px auto;
 }
 
 .entry-header {
   margin-bottom: 20px;
   position: relative;
+  text-align: center;
 }
 
 .entry-title {
@@ -660,19 +662,39 @@ select:focus {
 }
 
 .entry-meta {
-  color: #ea8c70;
+  color: #2d7c9f;
 }
 
-.entry-meta a, .entry-meta time {
-  color: #ea8c70;
+.entry-meta a > time {
+  color: #2d7c9f;
 }
 
-.entry-meta .byline {
+.entry-meta .byline a {
   color: #ea8c70;
 }
 
 .entry-content {
   margin: 60px 0 0;
+}
+
+.entry-content a, .entry-content a:visited {
+  color: #ea8c70;
+}
+
+.entry-content .alignfull {
+  margin-left: calc( -100vw / 2 + 100% / 2);
+  margin-right: calc( -100vw / 2 + 100% / 2);
+  max-width: 100vw;
+}
+
+.entry-content .alignwide {
+  margin-left: -100px;
+  margin-right: -100px;
+  max-width: 1024px;
+}
+
+.entry-content .wp-block-button.aligncenter {
+  margin-bottom: 1.5em;
 }
 
 .hentry {
