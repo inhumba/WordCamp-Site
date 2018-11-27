@@ -10,7 +10,7 @@ Version: 1.0
 ---------------------------------------*/
 .site-content, #footer-widgets {
   width: 60%;
-  max-width: 1200px;
+  max-width: 640px;
   height: auto;
   margin: 0 auto;
 }
@@ -310,6 +310,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 
 button:hover, button:focus, html input[type="button"]:hover, html input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
   background-color: #ea8c70;
+  color: #FFF;
   background-image: none;
   outline: none;
 }
@@ -362,18 +363,18 @@ select:focus {
 ---------------------------------------*/
 .site-header {
   position: relative;
-  background: url("https://2019.bangkok.wordcamp.org/files/2018/11/illustration-bg-4.png") center bottom no-repeat transparent;
+  background: url("https://2019.bangkok.wordcamp.org/files/2018/11/illustration-bg-5.png") center bottom no-repeat transparent;
   background-size: cover;
-  padding-top: calc(56.25% + 48px);
+  padding-top: calc(28.125% + 48px);
 }
 
 .site-header hgroup {
   position: absolute;
-  top: 45%;
+  top: 60%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 35%;
+  width: 25%;
 }
 
 .site-title {
@@ -393,31 +394,69 @@ select:focus {
 .site-description {
   background: linear-gradient(180deg, #d43e38 0%, #ea8c70 100%);
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
   font-family: "Bai Jamjuree", Helvetica, Arial, sans-serif;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 500;
   text-align: center;
   padding-top: .5em;
 }
 
-@media only screen and (max-width: 767px) {
+.home .site-header {
+  background: url("https://2019.bangkok.wordcamp.org/files/2018/11/illustration-bg-4.png") center bottom no-repeat transparent;
+  background-size: cover;
+  padding-top: calc(45% + 48px);
+}
+
+.home .site-header hgroup {
+  top: 45%;
+  width: 30%;
+}
+
+.home .site-description {
+  font-size: 1.4em;
+}
+
+@media only screen and (max-width: 768px) {
   .site-description {
-    font-size: 1.4em;
+    font-size: .9em;
+  }
+  .home .site-header {
+    padding-top: 56.25%;
+  }
+  .home .site-description {
+    font-size: 1em;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .site-header {
-    padding-top: 100%;
+    padding-top: 52%;
   }
   .site-header hgroup {
-    top: 48%;
-    width: 75%;
+    left: 50%;
+    top: 30px;
+    width: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
   .site-description {
     font-size: 1em;
     padding-top: 5px;
+  }
+  .home .site-header {
+    padding-top: 100%;
+    background-size: 150%;
+  }
+  .home .site-header hgroup {
+    top: 46%;
+    width: 65%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .home .site-description {
+    font-size: .8em;
   }
 }
 
@@ -594,12 +633,13 @@ select:focus {
 /* CONTENT
 ---------------------------------------*/
 .site-content {
-  margin: 80px auto;
+  margin: 60px auto;
 }
 
 .entry-header {
   margin-bottom: 20px;
   position: relative;
+  text-align: center;
 }
 
 .entry-title {
@@ -622,19 +662,39 @@ select:focus {
 }
 
 .entry-meta {
-  color: #ea8c70;
+  color: #2d7c9f;
 }
 
-.entry-meta a, .entry-meta time {
-  color: #ea8c70;
+.entry-meta a > time {
+  color: #2d7c9f;
 }
 
-.entry-meta .byline {
+.entry-meta .byline a {
   color: #ea8c70;
 }
 
 .entry-content {
   margin: 60px 0 0;
+}
+
+.entry-content a, .entry-content a:visited {
+  color: #ea8c70;
+}
+
+.entry-content .alignfull {
+  margin-left: calc( -100vw / 2 + 100% / 2);
+  margin-right: calc( -100vw / 2 + 100% / 2);
+  max-width: 100vw;
+}
+
+.entry-content .alignwide {
+  margin-left: -100px;
+  margin-right: -100px;
+  max-width: 1024px;
+}
+
+.entry-content .wp-block-button.aligncenter {
+  margin-bottom: 1.5em;
 }
 
 .hentry {
