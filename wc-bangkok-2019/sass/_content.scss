@@ -65,13 +65,19 @@
 	}
 
 	.alignwide {
-		margin-left: -100px;
-		margin-right: -100px;
+		margin-left: -5%;
+		margin-right: -5%;
 		max-width: 1024px;
 	}
 
 	.wp-block-button.aligncenter {
 		margin-bottom: 1.5em;
+	}
+
+	.wp-block-button__link {
+		font-size: 2em;
+		font-weight: 600;
+		padding: 15px 35px;
 	}
 
 }
@@ -117,7 +123,7 @@
 @media only screen and (max-width: 768px) {
 
 	.site-content {
-		width: 80%;
+		width: 90%;
 		max-width: 100%;
 	}
 

@@ -1,0 +1,46 @@
+/* ORGANIZER
+---------------------------------------*/
+
+#tix-attendees {
+	padding-top: 30px;
+	.avatar {
+		border: 1px solid $color-navy;
+		border-radius: 3px;
+	}
+	.tix-field {
+		margin-left: 60px;
+	}
+	.tix-attendee-name > * {
+		color: $color-navy;
+		font-size: .9em;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+
+	#tix-attendees {
+		padding-top: 20px;
+	}
+
+}
+
+@media only screen and (max-width: 640px) {
+
+	#tix-attendees {
+		padding-top: 10px;
+		.tix-columns-3 {
+			text-align: center;
+			li {
+				height: 120px;
+				width: 50%;
+			}
+			.avatar {
+				float: none;
+			}
+			.tix-field {
+				margin-left: 0;
+			}
+		}
+	}
+
+}
