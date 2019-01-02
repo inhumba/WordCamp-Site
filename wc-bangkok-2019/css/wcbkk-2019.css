@@ -263,6 +263,62 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 
 /* ORGANIZER
 ---------------------------------------*/
+.org-group {
+  margin-bottom: 70px;
+  position: relative;
+  text-align: center;
+}
+
+.org-group::after {
+  background-color: #104b8c;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100px;
+  margin-left: -50px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+}
+
+.wcorg-organizer {
+  margin-bottom: 50px;
+  text-align: right;
+}
+
+.wcorg-organizer h2 {
+  color: #104b8c;
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+
+.wcorg-organizer-description .avatar {
+  border: 2px solid #104b8c;
+  border-radius: 15px;
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+@media only screen and (max-width: 640px) {
+  .org-group {
+    margin-bottom: 50px;
+  }
+  .wcorg-organizer {
+    text-align: left;
+  }
+  .wcorg-organizer h2 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+  .wcorg-organizer-description .avatar {
+    display: block;
+    float: none;
+    margin: 20px auto;
+  }
+}
+
+/* ORGANIZER
+---------------------------------------*/
 #tix-attendees {
   padding-top: 30px;
 }
@@ -400,6 +456,7 @@ select {
   font-weight: 400;
   padding: 10px 20px;
   text-align: center;
+  height: 42px;
   width: 100%;
 }
 
