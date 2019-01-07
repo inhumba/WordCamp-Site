@@ -1,0 +1,33 @@
+/* SPEAKER
+---------------------------------------*/
+
+.wcorg-speaker {
+	h2 {
+		color: $color-navy;
+		font-size: 1.3em;
+		text-align: center;
+	}
+}
+
+.wcorg-speaker-description {
+	margin-bottom: 70px;
+	padding-bottom: 10px;
+	position: relative;
+	&::after {
+		background-color: #ddd;
+		content: "";
+		display: block;
+		height: 2px;
+		width: 50%;
+		position: absolute;
+		bottom: 0;
+		left: 25%;
+	}
+	.avatar {
+		border: 2px solid $color-navy;
+		border-radius: 15px;
+		display: block;
+		margin: 0 auto 30px;
+	}
+}
+

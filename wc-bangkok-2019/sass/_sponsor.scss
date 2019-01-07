@@ -27,3 +27,35 @@
 		}
 	}
 }
+
+.wcorg-sponsor {
+	margin-bottom: 50px;
+	h3 {
+		color: $color-navy;
+		font-size: 1.6em;
+		margin-bottom: 45px;
+		text-align: center;
+		display: none;
+	}
+}
+
+.wcorg-sponsor-description {
+	img {
+		display: block;
+		margin: 0 auto 30px;
+		max-width: 320px
+	}
+}
+
+.wcorg-sponsor-level-gold, .wcorg-sponsor-level-silver, .wcorg-sponsor-level-bronze {
+	h2 {
+		background-color: $color-orange;
+		border-radius: 15px;
+		color: #FFF;
+		font-size: 3em;
+		max-width: 80%;
+		padding: 20px 40px;
+		margin: 0 auto 60px;
+		text-align: center;
+	}
+}
