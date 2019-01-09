@@ -18,12 +18,22 @@
 	}
 	&.gold {
 		img {
-			max-height: 80px !important;
+			max-height: 200px !important;
 		}
 	}
 	&.silver {
 		img {
-			max-height: 50px !important;
+			max-height: 170px !important;
+		}
+	}
+	&.bronze {
+		img {
+			max-height: 130px !important;
+		}
+	}
+	&.in-kind {
+		img {
+			max-height: 100px !important;
 		}
 	}
 }
@@ -43,7 +53,8 @@
 	img {
 		display: block;
 		margin: 0 auto 30px;
-		max-width: 320px
+		max-width: 700px;
+		max-height: 280px;
 	}
 }
 
@@ -58,4 +69,45 @@
 		margin: 0 auto 60px;
 		text-align: center;
 	}
+}
+
+.single-wcb_sponsor {
+	.attachment-post-thumbnail {
+		display: block;
+		margin: 0 auto 50px;
+		max-width: 600px;
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+
+	.single-wcb_sponsor {
+		.attachment-post-thumbnail {
+			max-width: 320px;
+		}
+	}
+
+	.wcorg-sponsor-description {
+		img {
+			max-width: 320px
+		}
+	}
+
+}
+
+@media only screen and (max-width: 320px) {
+
+	.single-wcb_sponsor {
+		.attachment-post-thumbnail {
+			max-width: 280px;
+		}
+	}
+
+	.wcorg-sponsor-description {
+		img {
+			max-width: 280px
+		}
+	}
+
 }

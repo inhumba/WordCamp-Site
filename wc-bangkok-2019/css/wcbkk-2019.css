@@ -384,11 +384,19 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 }
 
 .sponsor-level.gold img {
-  max-height: 80px !important;
+  max-height: 200px !important;
 }
 
 .sponsor-level.silver img {
-  max-height: 50px !important;
+  max-height: 170px !important;
+}
+
+.sponsor-level.bronze img {
+  max-height: 130px !important;
+}
+
+.sponsor-level.in-kind img {
+  max-height: 100px !important;
 }
 
 .wcorg-sponsor {
@@ -406,7 +414,8 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 .wcorg-sponsor-description img {
   display: block;
   margin: 0 auto 30px;
-  max-width: 320px;
+  max-width: 700px;
+  max-height: 280px;
 }
 
 .wcorg-sponsor-level-gold h2, .wcorg-sponsor-level-silver h2, .wcorg-sponsor-level-bronze h2, .wcorg-sponsor-level-in-kind h2 {
@@ -418,6 +427,31 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
   padding: 20px 40px;
   margin: 0 auto 60px;
   text-align: center;
+}
+
+.single-wcb_sponsor .attachment-post-thumbnail {
+  display: block;
+  margin: 0 auto 50px;
+  max-width: 600px;
+  height: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .single-wcb_sponsor .attachment-post-thumbnail {
+    max-width: 320px;
+  }
+  .wcorg-sponsor-description img {
+    max-width: 320px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .single-wcb_sponsor .attachment-post-thumbnail {
+    max-width: 280px;
+  }
+  .wcorg-sponsor-description img {
+    max-width: 280px;
+  }
 }
 
 /* SPEAKER
