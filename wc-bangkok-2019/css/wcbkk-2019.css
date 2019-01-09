@@ -409,7 +409,7 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
   max-width: 320px;
 }
 
-.wcorg-sponsor-level-gold h2, .wcorg-sponsor-level-silver h2, .wcorg-sponsor-level-bronze h2 {
+.wcorg-sponsor-level-gold h2, .wcorg-sponsor-level-silver h2, .wcorg-sponsor-level-bronze h2, .wcorg-sponsor-level-in-kind h2 {
   background-color: #ea8c70;
   border-radius: 15px;
   color: #FFF;
