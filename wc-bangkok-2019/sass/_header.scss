@@ -112,7 +112,37 @@
 
 }
 
+.cta-button {
+	border: 1px solid $color-red;
+	display: table;
+	margin: 30px auto;
+	width: 700px;
+	p, a {
+		display: table-cell;
+		margin: 0;
+		padding: 10px 20px;
+		font-size: 1.2em;
+		vertical-align: middle;
+	}
+	a {
+		background-color: $color-red;
+		color: #FFF !important;
+		font-size: 1.6em;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
 
+@media only screen and (max-width: 767px) {
 
+	.cta-button {
+		text-align: center;
+		width: 80%;
+		p, a {
+			display: block;
+		}
+	}
+
+}
 
 

@@ -837,6 +837,39 @@ select:focus {
   }
 }
 
+.cta-button {
+  border: 1px solid #d43e38;
+  display: table;
+  margin: 30px auto;
+  width: 700px;
+}
+
+.cta-button p, .cta-button a {
+  display: table-cell;
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.cta-button a {
+  background-color: #d43e38;
+  color: #FFF !important;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .cta-button {
+    text-align: center;
+    width: 80%;
+  }
+  .cta-button p, .cta-button a {
+    display: block;
+  }
+}
+
 /* NAVIGATION
 ---------------------------------------*/
 .main-navigation {
