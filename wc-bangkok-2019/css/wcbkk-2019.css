@@ -694,6 +694,30 @@ button:hover, button:focus, html input[type="button"]:hover, html input[type="bu
   outline: none;
 }
 
+.wp-block-button {
+  background-color: #d43e38;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.wp-block-button .wp-block-button__link {
+  background-color: #d43e38;
+  color: #FFF;
+  font-size: 1.6em !important;
+}
+
+.wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus, .wp-block-button .wp-block-button__link:visited {
+  color: #FFF;
+}
+
+.wp-block-button._float {
+  margin-bottom: 0;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100;
+}
+
 label {
   margin-bottom: 10px;
 }
@@ -736,6 +760,13 @@ select:focus {
 @media only screen and (max-width: 767px) {
   .contact-form input[type=email], .contact-form input[type=text], .contact-form input[type=url], .contact-form textarea {
     width: 80%;
+  }
+  .wp-block-button .wp-block-button__link {
+    font-size: 1.3em !important;
+  }
+  .wp-block-button._float {
+    left: 10px;
+    width: calc(100% - 20px);
   }
 }
 
