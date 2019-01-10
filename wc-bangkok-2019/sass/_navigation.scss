@@ -47,6 +47,12 @@
 					}
 				}
 			}
+			&.call-to-action > a {
+				background: #d43e38;
+				font-weight: 500;
+				letter-spacing: .25px;
+				text-transform: uppercase;
+			}
 		}
 		.sub-menu {
 			background-color: $color-navy;
@@ -69,6 +75,7 @@
 		}
 	}
 }
+
 
 .menu-toggle {
 	background-color: $color-navy;

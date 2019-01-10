@@ -488,7 +488,7 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 
 /* SESSION
 ---------------------------------------*/
-.page-slug-schedule .site-content {
+.page-slug-schedule-conference-day .site-content {
   width: 80%;
   max-width: 80%;
 }
@@ -885,6 +885,13 @@ select:focus {
 
 .main-navigation .menu li.menu-item-has-children:hover > a, .main-navigation .menu li.menu-item-has-children:focus > a {
   border-radius: 0;
+}
+
+.main-navigation .menu li.call-to-action > a {
+  background: #d43e38;
+  font-weight: 500;
+  letter-spacing: .25px;
+  text-transform: uppercase;
 }
 
 .main-navigation .menu .sub-menu {
