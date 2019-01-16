@@ -7,38 +7,15 @@
 }
 
 .entry-header {
-	margin-bottom: 20px;
-	position: relative;
+	margin-left: -15%;
+	margin-right: -15%;
+	max-width: 1024px;
 	text-align: center;
-	// &::after {
-	// 	background-color: lighten($color-orange, 20%);
-	// 	content: "";
-	// 	display: block;
-	// 	height: 2px;
-	// 	width: 60px;
-	// 	position: absolute;
-	// 	bottom: -5px;
-	// 	left: 0;
-	// 	.page & {
-	// 		bottom: -10px;
-	// 	}
-	// }
 }
 
 .entry-title {
-	color: $color-orange;
-	font-size: 2.6em;
-	line-height: 1.3;
-	margin-bottom: 10px;
-	> a {
-		color: $color-navy;
-		&:hover, &:focus {
-			color: $color-navy;
-		}
-		&:visited {
-			color: $color-navy;
-		}
-	}
+	color: $color-rose-pink;
+	margin-bottom: 1rem;
 }
 
 .entry-meta {
@@ -47,7 +24,7 @@
 		color: $color-blue;
 	}
 	.byline a {
-		color: $color-orange;
+		color: $color-rose-pink;
 	}
 }
 
@@ -55,7 +32,23 @@
 	margin: 60px 0 0;
 
 	a, a:visited {
-		color: $color-orange;
+		color: $color-rose-pink;
+	}
+
+	h2 {
+		font-size: 1.953em;
+	}
+
+	h3 {
+		font-size: 1.563em;
+	}
+
+	h4 {
+		font-size: 1.25em;
+	}
+
+	h2, h3, h4 {
+		margin-bottom: 1.5rem;
 	}
 
 	.alignfull {
@@ -65,9 +58,13 @@
 	}
 
 	.alignwide {
-		margin-left: -5%;
-		margin-right: -5%;
+		margin-left: -15%;
+		margin-right: -15%;
 		max-width: 1024px;
+	}
+
+	.wp-block-image {
+		margin-bottom: 1.5rem;
 	}
 
 	.wp-block-button.aligncenter {
@@ -99,10 +96,10 @@
 }
 
 .tshirt-table {
-	border: 1px solid $color-orange;
+	border: 1px solid $color-rose-pink;
 	th {
-		background-color: $color-orange;
-		border: 1px solid $color-orange;
+		background-color: $color-rose-pink;
+		border: 1px solid $color-rose-pink;
 		color: #FFF;
 		font-size: 1.3em;
 		@include font-weight(regular);
@@ -120,22 +117,24 @@
 }
 
 
-@media only screen and (max-width: 768px) {
-
+@media only screen and (max-width: 1023px) {
 	.site-content {
 		width: 90%;
 		max-width: 100%;
 	}
-
-	.entry-title {
-		font-size: 2.2em;
+	.entry-header {
+		margin-left: 0;
+		margin-right: 0;
 	}
-
-
+	.entry-content {
+		.alignwide {
+			margin-left: -5%;
+			margin-right: -5%;
+		}
+	}
 }
 
 @media only screen and (max-width: 767px) {
-
 	.tshirt-table {
 		th {
 			font-size: 1.1em;
@@ -147,8 +146,6 @@
 			font-size: 1em;
 		}
 	}
-
-
 }
 
 

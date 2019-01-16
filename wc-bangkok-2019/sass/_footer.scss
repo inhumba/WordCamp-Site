@@ -2,7 +2,7 @@
 ---------------------------------------*/
 
 .site-footer {
-	background-color: $color-orange;
+	background-color: $color-rose-pink;
 	clear: both;
 	.site-info {
 		padding: 1em 0;
@@ -94,7 +94,7 @@
 	display: inline;
 	input[type="submit"] {
 		background-color: #FFF;
-		color: $color-orange;
+		color: $color-rose-pink;
 	}
 }
 
@@ -127,7 +127,7 @@
 		color: transparent;
 		background: linear-gradient(180deg,#d43e38 0%,#ea8c70 100%);
 		-webkit-background-clip: text;
-		font-family: $font-chonburi;
+		font-family: $font-primary;
 		line-height: 1;
 	}
 }

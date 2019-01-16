@@ -16,9 +16,9 @@
 }
 
 .tix_tickets_table {
-	border: 1px solid $color-orange-darker;
+	border: 1px solid $color-red;
 	th {
-		background-color: $color-orange-darker;
+		background-color: $color-red;
 		color: #FFF;
 		font-size: 1.3em;
 		@include font-weight(regular);
@@ -27,12 +27,12 @@
 		padding: 15px 20px;
 	}
 	a {
-		color: $color-orange-darker;
+		color: $color-red;
 		&:hover, &:focus {
 			color: $color-navy;
 		}
 		&:visited {
-			color: $color-orange-darker;
+			color: $color-red;
 		}
 	}
 }
@@ -45,13 +45,13 @@
 
 .tix-column-price, .tix-column-remaining, .tix-column-quantity, .tix-column-per-ticket {
 	border-left: 1px solid #f2f2f2;
-	color: $color-orange-darker;
+	color: $color-red;
 	@include font-weight(medium);
 	text-align: center;
 }
 
 th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-column-per-ticket {
-	border-left-color: $color-orange-darker;
+	border-left-color: $color-red;
 }
 
 .tix-row-total {

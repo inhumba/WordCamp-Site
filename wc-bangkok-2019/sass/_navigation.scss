@@ -1,191 +1,210 @@
 /* NAVIGATION
 ---------------------------------------*/
 
-.main-navigation {
-	background: $color-navy;
-	box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-	opacity: .95;
-	padding: 0;
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 1000;
-	.admin-bar & {
-		top: 32px;
-	}
-	.menu {
-		text-align: center;
-		li {
-			display: inline-block;
-			float: none;
-			> a {
-				color: #FFF;
-				font-size: .9em;
-				@include font-weight(light);
-				padding: .8em 1em;
-			}
-			&.current-menu-item {
-				> a {
-					background: linear-gradient(180deg,#d43e38 0%,#ea8c70 100%);
-				}
-				&:hover, &:focus {
-					> a {
-						background-color: $color-yellow;
-					}
-				}
-			}
-			&:hover, &:focus {
-				> a {
-					background: linear-gradient(180deg,rgba(16,75,140,1) 0%,rgba(45,124,159,1) 100%);
-				}
-			}
-			&.menu-item-has-children {
-				&:hover, &:focus {
-					> a {
-						border-radius: 0;
-					}
-				}
-			}
-			&.call-to-action > a {
-				background: $color-red;
-				font-weight: 500;
-				letter-spacing: .25px;
-				text-transform: uppercase;
-			}
-		}
-		.sub-menu {
-			background-color: $color-navy;
-			padding: 10px 0 5px;
-			top: 100%;
-			text-align: left;
-			li {
-				> a {
-					font-size: .85em;
-					padding: 8px 15px 10px 20px;
-					width: 220px;
-					&::before {
-						content: "\f0da";
-						display: inline-block;
-						font-family: FontAwesome;
-						padding-right: 8px;
-					}
-				}
-			}
-		}
-	}
+.secondary-navigation {
+	min-height: 44px;
 }
-
+.main-navigation {
+	display: none;
+}
 
 .menu-toggle {
 	background-color: $color-navy;
-	box-shadow: 0 0 8px rgba(0,0,0,.3);
-	color: $color-navy;
+	color: $color-white;
 	display: block;
-	font-family: $font-jamjuree;
-	@include font-weight(medium);
-	font-size: .5em;
-	@include circle(50px);
-	position: absolute;
-	top: 20px;
-	right: 20px;
+	width: 100%;
+	height: 44px;
+	font-size: 0;
+	border: none;
+	border-radius: 0;
 	text-align: center;
 	z-index: 1000;
 	transition: all .3s;
-	// .admin-bar & {
-	// 	top: 56px;
-	// }
-	&::after {
+	&:before {
 		content: "\f0c9";
-		color: #FFF;
-		display: block;
+		color: $color-white;
+		display: inline-block;
 		font-family: FontAwesome;
-		font-size: 2.6em;
-		@include wh(50px, 50px);
-		position: absolute;
-		top: 10px;
-		text-align: center;
+		font-size: 1rem;
+		font-weight: 300;
+		margin-right: .5em;
+	}
+	&:after {
+		font-size: 1rem;
+		content: "MENU";
+	}
+	&:before, &:after {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&:hover, &:active, &:focus {
+		background-color: $color-navy;
 	}
 }
 
-.menu-toggle.toggled-on,
-.menu-toggle.toggled-on:hover,
-.menu-toggle.toggled-on:focus {
-	transform: rotate(180deg);
-	// .admin-bar & {
-	// 	top: 66px;
-	// }
-	&::after {
-		content: "\f00d";
-		top: 8px;
+.toggled-on {
+	.menu-toggle:before {
+		content: "\f0d7";
+	}
+	ul.menu {
+		display: flex;
+		flex-direction: column;
 	}
 }
 
-.main-small-navigation {
-	.menu-main-container, .menu-at-launch-container {
-		background-color: $color-orange;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		z-index: 100;
+.menu {
+	background: $color-navy;
+	&:before, &:after {
+		content: " ";
+		display: table;
 	}
-	.menu {
-		list-style-type: none;
-		margin: 0;
-		padding: 2em 25px;
-		box-shadow: 0 0 100px #000;
-		li {
-			color: $body-color;
+	&:after {
+		clear: both;
+	}
+	li {
+		float: none;
+	}
+}
+
+.menu-item {
+	position: relative;
+	margin: 0;
+	font-size: 1.125em;
+	a {
+		font-weight: 400;
+		color: $color-white;
+		padding: .75rem 2rem;
+		&.focus, &:active, &:focus, &:hover {
+			background: $color-rose-pink;
 		}
+	}
+	& > a {
+		border-top: 1px dotted $color-blue;
+	}
+	&.call-to-action {
+		order: -1;
 		a {
-			color: #FFF;
-			font-size: 1.1em;
-			line-height: 1.8;
-			&:visited {
-				color: #DFDFDF;
-			}
+			background: $color-red;
+			text-transform: uppercase;
+			font-weight: bold;
 		}
-		// .admin-bar & {
-		// 	padding-top: 50px;
-		// }
-		.sub-menu {
+	}		
+}
+
+.current-menu-item > a {
+	background: $color-rose-pink;
+}
+
+.menu-item-has-children .dropdown-toggle {
+	display: none;
+}
+
+.page-navigation-container ul {
+	display: none;
+	ul {
+		box-shadow: none;
+		float: none;
+		position: relative;
+		top: 0;
+		left: 0;
+		a {
+			width: 100%;
+		}
+	}
+}
+
+.sub-menu {
+	background: linear-gradient(180deg, $color-navy 0%, $color-blue 100%);
+	padding-bottom: 1rem;
+	a {
+		font-size: .75em;
+		font-weight: 300;
+		padding: .25rem 2rem .25rem 3.25rem ;
+		border: none;
+		&:before {
+			position: absolute;
+			left: 2rem;
+			font-size: 10px;
+			color: $color-rose-pink;
+			transform: rotate(45deg);
+			color: $color-white;
+			content: "\f0c8";
+		}
+	}
+	.current-menu-item a:before {
+		color: $color-cream;
+	}
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		min-height: 56px;
+	}
+	.js .menu-toggle {
+		display: block;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.js .menu-toggle, .js .dropdown-toggle, .menu-toggle {
+		display: none;
+	}
+	.page-navigation-container ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		a {
+			border: none;
+		}
+		ul.sub-menu {
+			display: none;
+		}
+	}
+	.current-menu-ancestor > a {
+		background: $color-rose-pink;
+	}
+	.menu-item {
+		a {
+			font-size: 1.125rem;
+			padding: .75rem 1rem;
+		}
+		&.call-to-action {
+			order: 0;
+		}
+	}
+	.menu-item-has-children {
+		a:after {
+			content: "\f107";
+			margin-left: .5em;
+			color: $color-white;
+			display: inline-block;
+			font-family: FontAwesome;
+			font-size: 1rem;
+			font-weight: 300;
+		}
+		&:hover > .sub-menu {
+			display: block;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			min-width: 16.25rem;
+			background: $color-navy;
+			padding: 0;
 			li a {
-				font-size: .9em;
+				font-size: 1rem;
+				font-weight: 400;
+				padding: .5rem 1rem .5rem 2.5rem;
+				&:before {
+					left: 1.25rem;
+				}
+				&:after {
+					display: none;
+				}
+			}
+			.current-menu-item a:after {
+				color: $color-cream;
 			}
 		}
 	}
 }
 
-@media only screen and (max-width: 768px) {
-
-	.main-navigation {
-		padding: 0;
-		.admin-bar & {
-			top: 46px;
-		}
-		.menu {
-			li {
-				> a {
-					font-size: .9em;
-				}
-				&.menu-item-has-children {
-					&:hover, &:focus {
-						> a {
-							border-radius: 0;
-						}
-					}
-				}
-			}
-		}
-		.sub-menu {
-			border-radius: 0;
-			li {
-				> a {
-					font-size: .5em;
-					padding: 5px 10px;
-				}
-			}
-		}
-	}
-
-}
