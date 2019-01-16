@@ -7,11 +7,11 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 	box-sizing: border-box;
 	box-shadow: none;
 	border: none;
+	border-radius: 0;
 	color: #fff;
-	font-family: $font-secondary;
-	font-size: 1em;
-	@include font-weight(regular);
-	padding: 12px 40px;
+	font-family: $font-primary;
+	font-size: 1rem;
+	padding: 1rem 2rem;
 	text-transform: uppercase;
 	text-shadow: none;
 	transition: background-color .3s;
@@ -23,42 +23,21 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 	}
 }
 
-.wp-block-button {
-	background-color: $color-red;
-	border-radius: 6px;
-	text-align: center;
-	.wp-block-button__link {
-		background-color: $color-red;
-		color: #FFF;
-		font-size: 1.6em !important;
-		&:hover, &:focus, &:visited {
-			color: #FFF;
-		}
-	}
-	&._float {
-		margin-bottom: 0;
-		position: fixed;
-		bottom: 10px;
-		right: 10px;
-		z-index: 90;
-	}
-}
-
-label {
-	margin-bottom: 10px;
-}
-
-input[type=text], input[type=email], input[type=url], textarea {
-	border: 1px solid $color-rose-pink;
-	border-radius: 4px;
+input:not([type]), input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], textarea {
+	display: block;
+	width: 100%;
+	padding: .25rem .5rem;
+	margin: 0;
+	border: 1px solid #eee;
+	border-radius: 0;
 	box-sizing: border-box;
-	color: $color-rose-pink;
+	background-color: $color-white;
+	color: $color-navy;
 	font-family: $font-secondary;
 	font-size: 1em;
 	@include font-weight(regular);
-	padding: 10px 20px;
 	&:focus {
-		color: $color-rose-pink;
+		color: $color-navy;
 		outline: none;
 	}
 }
@@ -81,21 +60,8 @@ select {
 	}
 }
 
-
 @media only screen and (max-width: 767px) {
-
 	.contact-form input[type=email], .contact-form input[type=text], .contact-form input[type=url], .contact-form textarea {
 		width: 80%;
 	}
-
-	.wp-block-button {
-		.wp-block-button__link {
-			font-size: 1.3em !important;
-		}
-		&._float {
-			left: 10px;
-			width: calc(100% - 20px);
-		}
-	}
-
 }

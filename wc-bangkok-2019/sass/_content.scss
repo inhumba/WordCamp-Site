@@ -170,6 +170,112 @@
 	}
 }
 
+.comments-area {
+	margin-top: 2.5rem;
+}
+.comments-title {
+	font-size: 1em;
+	margin-bottom: 1rem;
+}
+ol.comment-list {
+	margin: 0 0 1.5em 0;
+	padding: 0;
+	list-style: none;
+	& > .comment {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+		border-bottom: 1px solid #eee;
+	}
+	.pingback {
+		font-size: .9375rem;
+		line-height: 1.5;
+	}
+}
+ol.children {
+	margin-left: 1rem;
+	padding-left: 0;
+	list-style: none;
+}
+article.comment-body {
+	position: relative;
+	padding-left: 0;
+	margin-bottom: 1.5rem;
+	.comment-author {
+		display: block;
+		font-size: .8em;
+		line-height: 1.5;
+		.avatar {
+			position: absolute;
+			top: 0;
+			left: 0;
+			// width: 2.625rem;
+			margin-bottom: 0;
+		}
+		b.fn {
+			@include font-weight(semi-bold);
+			margin-left: 3rem;
+			a {
+				color: $color-blue;
+			}
+		}
+		.says {
+			display: none;
+		}
+	}
+	.comment-metadata {
+		font-size: .64em;
+		line-height: 1.4;
+		margin-left: 3.25rem;
+		a {
+			color: $color-blue;
+		}
+	}
+	.comment-content {
+		margin-top: .5rem;
+		padding: 1.5rem;
+		background: #fafafa;
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.reply {
+		margin-top: .5rem;
+		font-size: .8em;
+	}
+}
+.comment-respond {
+	padding: 1.5rem;
+	background: #f8f8f8;
+	.comment-reply-title {
+		font-size: 1.25em;
+	}
+	.comment-notes {
+		font-size: .875rem;
+		line-height: 1.4;
+		color: $color-blue;
+	}
+	.required {
+		color: $color-red;
+	}
+	.comment-form {
+		label {
+			font-size: .875rem;
+			color: $color-blue;
+			text-transform: uppercase;
+			@include font-weight(medium);
+		}
+		p {
+			margin-bottom: 1rem;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.form-submit {
+			padding-top: .5rem;
+		}
+	}
+}
+
 .tshirt-table {
 	border: 1px solid $color-rose-pink;
 	th {
@@ -212,4 +318,37 @@
 .sharedaddy .sd-title {
 	font-size: .9em;
 	@include font-weight(regular);
+}
+
+
+
+.wp-block-button {
+	text-align: center;
+	.wp-block-button__link {
+		background-color: $color-red;
+		color: $color-white;
+		font-size: 1.25em;
+		&:hover, &:focus, &:visited {
+			color: $color-white;
+		}
+	}
+	&._float {
+		margin-bottom: 0;
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		z-index: 90;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.wp-block-button {
+		.wp-block-button__link {
+			font-size: 1.3em !important;
+		}
+		&._float {
+			left: 10px;
+			width: calc(100% - 20px);
+		}
+	}
 }
