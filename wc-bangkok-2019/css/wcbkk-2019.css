@@ -1782,7 +1782,7 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 .wcpt-schedule {
   margin-left: calc( -100vw / 2 + 100% / 2);
   margin-right: calc( -100vw / 2 + 100% / 2);
-  max-width: 100vw;
+  max-width: 80vw;
 }
 
 .wcpt-schedule th, .wcpt-schedule td {
