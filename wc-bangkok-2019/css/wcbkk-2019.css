@@ -1625,6 +1625,22 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
   text-align: center;
 }
 
+.wcb_widget_sponsors h2 {
+  font-size: 1.25em;
+}
+
+.wcb_widget_sponsors h2:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-top: 1px solid #ea8c70;
+  content: "";
+  z-index: -1;
+}
+
 .wcb_widget_sponsors .sponsor-logo {
   display: inline-block !important;
   margin: 0 2em;
