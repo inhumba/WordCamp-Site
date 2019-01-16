@@ -2,32 +2,36 @@
 ---------------------------------------*/
 
 .org-group {
-	margin-bottom: 5rem;
+	display: table;
+	white-space: nowrap;
 	position: relative;
-	text-align: center;
-	&::after {
-		background-color: $color-blue;
+	&:before, &:after {
+		border-top: 1px solid $color-rose-pink;
 		content: "";
-		display: block;
-		height: 1px;
-		width: 50%;
-		position: absolute;
-		top: 0;
-		left: 50%;
+		display: table-cell;
+		position: relative;
+		width: 45%;
+		top: 0.5em;
+	}
+	&:before {
+		right: 100%;
+		margin-right: 15px;
+	}
+	&:after {
+		left: 100%;
+		margin-left: 15px;
 	}
 }
 
 .wcorg-organizer {
 	h2 {
 		color: $color-navy;
-		font-size: 1.563em;
+		font-size: 1.25em;
 	}
 }
 
 .wcorg-organizer-description {
 	.avatar {
-		border: none;
-		border-radius: 0;
 		float: left;
 		margin: 0 20px 20px 0;
 	}
