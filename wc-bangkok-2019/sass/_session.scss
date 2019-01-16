@@ -1,7 +1,7 @@
 /* SESSION
 ---------------------------------------*/
 
-.page-slug-schedule-conference-day {
+.page-slug-schedule-conference-day, .page-slug-contributor-day {
 	.site-content {
 		width: 80%;
 		max-width: 80%;
@@ -90,6 +90,12 @@
 	}
 }
 
+.page-slug-contributor-day {
+	.wcpt-col-time {
+		width: 20%;
+	}
+}
+
 .wcb-session-cell-content {
 	.wcpt-session-speakers {
 		color: $color-blue;
@@ -140,7 +146,7 @@
 
 @media only screen and (max-width: 768px) {
 
-	.page-id-7 {
+	.page-slug-schedule-conference-day, .page-slug-contributor-day {
 		.site-content {
 			width: 90%;
 		}

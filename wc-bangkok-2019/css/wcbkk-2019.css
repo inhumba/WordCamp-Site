@@ -488,7 +488,7 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 
 /* SESSION
 ---------------------------------------*/
-.page-slug-schedule-conference-day .site-content {
+.page-slug-schedule-conference-day .site-content, .page-slug-contributor-day .site-content {
   width: 80%;
   max-width: 80%;
 }
@@ -578,6 +578,10 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
   background-color: #c3e1ee;
 }
 
+.page-slug-contributor-day .wcpt-col-time {
+  width: 20%;
+}
+
 .wcb-session-cell-content .wcpt-session-speakers {
   color: #2d7c9f;
   display: block;
@@ -629,7 +633,7 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 }
 
 @media only screen and (max-width: 768px) {
-  .page-id-7 .site-content {
+  .page-slug-schedule-conference-day .site-content, .page-slug-contributor-day .site-content {
     width: 90%;
   }
   .session-date {
@@ -715,7 +719,7 @@ button:hover, button:focus, html input[type="button"]:hover, html input[type="bu
   position: fixed;
   bottom: 10px;
   right: 10px;
-  z-index: 100;
+  z-index: 90;
 }
 
 label {
