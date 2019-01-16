@@ -1565,57 +1565,32 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 /* ORGANIZER
 ---------------------------------------*/
 .org-group {
-  margin-bottom: 70px;
+  margin-bottom: 5rem;
   position: relative;
   text-align: center;
 }
 
 .org-group::after {
-  background-color: #104b8c;
+  background-color: #2d7c9f;
   content: "";
   display: block;
-  height: 2px;
-  width: 100px;
-  margin-left: -50px;
+  height: 1px;
+  width: 50%;
   position: absolute;
-  bottom: -10px;
+  top: 0;
   left: 50%;
-}
-
-.wcorg-organizer {
-  margin-bottom: 50px;
-  text-align: right;
 }
 
 .wcorg-organizer h2 {
   color: #104b8c;
-  font-size: 1.3em;
-  margin-bottom: 5px;
+  font-size: 1.563em;
 }
 
 .wcorg-organizer-description .avatar {
-  border: 2px solid #104b8c;
-  border-radius: 15px;
+  border: none;
+  border-radius: 0;
   float: left;
   margin: 0 20px 20px 0;
-}
-
-@media only screen and (max-width: 640px) {
-  .org-group {
-    margin-bottom: 50px;
-  }
-  .wcorg-organizer {
-    text-align: left;
-  }
-  .wcorg-organizer h2 {
-    font-size: 1.2em;
-    text-align: center;
-  }
-  .wcorg-organizer-description .avatar {
-    display: block;
-    float: none;
-    margin: 20px auto;
-  }
 }
 
 /* ORGANIZER
