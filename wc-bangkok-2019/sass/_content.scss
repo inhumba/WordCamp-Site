@@ -321,7 +321,8 @@ article.comment-body {
 }
 
 
-
+/* BUTTON
+---------------------------------------*/
 .wp-block-button {
 	text-align: center;
 	.wp-block-button__link {
@@ -349,6 +350,27 @@ article.comment-body {
 		&._float {
 			left: 10px;
 			width: calc(100% - 20px);
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.entry-title {
+		font-size: 2.441rem;
+	}
+	.entry-content {
+		.alignwide {
+			margin-left: -2.5rem;
+			margin-right: -2.5rem;
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.entry-content {
+		.alignwide {
+			margin-left: -5.5rem;
+			margin-right: -5.5rem;
 		}
 	}
 }
