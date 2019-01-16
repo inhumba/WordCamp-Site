@@ -9,7 +9,6 @@
 .entry-header {
 	margin-left: -15%;
 	margin-right: -15%;
-	max-width: 1024px;
 	text-align: center;
 }
 
@@ -51,6 +50,10 @@
 		margin-bottom: 1.5rem;
 	}
 
+	ul, ol {
+		margin: 0 0 1.5em 0;
+	}
+
 	.alignfull {
 		margin-left: calc( -100vw / 2 + 100% / 2 );
 		margin-right: calc( -100vw / 2 + 100% / 2 );
@@ -64,7 +67,12 @@
 	}
 
 	.wp-block-image {
-		margin-bottom: 1.5rem;
+		margin-bottom: 2.5rem;
+	}
+
+	.wp-block-separator {
+		margin-top: 2.5rem;
+		margin-bottom: 2.5rem;
 	}
 
 	.wp-block-button.aligncenter {

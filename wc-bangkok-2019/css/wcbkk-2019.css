@@ -8,6 +8,7 @@ Version: 2.0
 ---------------------------------------*/
 /* MIXINS
 ---------------------------------------*/
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 .site-content, #footer-widgets {
   width: 60%;
   max-width: 640px;
@@ -160,7 +161,6 @@ em {
 a, a:link, a:visited {
   text-decoration: none;
   color: #ea8c70;
-  transition: all .15s ease;
   word-break: break-word;
 }
 
@@ -170,7 +170,7 @@ a:active, a:hover {
 }
 
 a:focus {
-  color: #fff;
+  color: #d43e38;
 }
 
 p {
@@ -734,7 +734,6 @@ select:focus {
 .entry-header {
   margin-left: -15%;
   margin-right: -15%;
-  max-width: 1024px;
   text-align: center;
 }
 
@@ -779,6 +778,10 @@ select:focus {
   margin-bottom: 1.5rem;
 }
 
+.entry-content ul, .entry-content ol {
+  margin: 0 0 1.5em 0;
+}
+
 .entry-content .alignfull {
   margin-left: calc( -100vw / 2 + 100% / 2);
   margin-right: calc( -100vw / 2 + 100% / 2);
@@ -792,7 +795,12 @@ select:focus {
 }
 
 .entry-content .wp-block-image {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.entry-content .wp-block-separator {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .entry-content .wp-block-button.aligncenter {
