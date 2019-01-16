@@ -1770,11 +1770,6 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 
 /* SESSION
 ---------------------------------------*/
-.page-slug-schedule-conference-day .site-content, .page-slug-contributor-day .site-content {
-  width: 80%;
-  max-width: 80%;
-}
-
 .session-date {
   background-color: #104b8c;
   border-radius: 15px;
@@ -1915,9 +1910,6 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 }
 
 @media only screen and (max-width: 768px) {
-  .page-slug-schedule-conference-day .site-content, .page-slug-contributor-day .site-content {
-    width: 90%;
-  }
   .session-date {
     font-size: 1.3em;
   }

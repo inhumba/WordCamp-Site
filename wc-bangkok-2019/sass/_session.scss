@@ -1,13 +1,6 @@
 /* SESSION
 ---------------------------------------*/
 
-.page-slug-schedule-conference-day, .page-slug-contributor-day {
-	.site-content {
-		width: 80%;
-		max-width: 80%;
-	}
-}
-
 .session-date {
 	background-color: $color-navy;
 	border-radius: 15px;
@@ -145,17 +138,9 @@
 
 
 @media only screen and (max-width: 768px) {
-
-	.page-slug-schedule-conference-day, .page-slug-contributor-day {
-		.site-content {
-			width: 90%;
-		}
-	}
-
 	.session-date {
 		font-size: 1.3em;
 	}
-
 }
 
 
