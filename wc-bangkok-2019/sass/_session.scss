@@ -11,9 +11,10 @@
 }
 
 .wcpt-schedule {
-	margin-left: calc( -100vw / 2 + 100% / 2 );
-	margin-right: calc( -100vw / 2 + 100% / 2 );
-	max-width: 80vw;
+	margin-left: calc( -90vw / 2 + 100% / 2 );
+	margin-right: calc( -90vw / 2 + 100% / 2 );
+	max-width: 90vw;
+	width: auto;
 	th, td {
 		padding: 15px 10px;
 		position: relative;
