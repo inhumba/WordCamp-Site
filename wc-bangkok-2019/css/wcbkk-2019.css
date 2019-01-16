@@ -1779,6 +1779,12 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
   text-align: center;
 }
 
+.wcpt-schedule {
+  margin-left: calc( -100vw / 2 + 100% / 2);
+  margin-right: calc( -100vw / 2 + 100% / 2);
+  max-width: 100vw;
+}
+
 .wcpt-schedule th, .wcpt-schedule td {
   padding: 15px 10px;
   position: relative;
