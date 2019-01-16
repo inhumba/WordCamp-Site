@@ -1564,31 +1564,6 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 
 /* ORGANIZER
 ---------------------------------------*/
-.org-group {
-  display: table;
-  white-space: nowrap;
-  position: relative;
-}
-
-.org-group:before, .org-group:after {
-  border-top: 1px solid #ea8c70;
-  content: "";
-  display: table-cell;
-  position: relative;
-  width: 45%;
-  top: 0.5em;
-}
-
-.org-group:before {
-  right: 100%;
-  margin-right: 15px;
-}
-
-.org-group:after {
-  left: 100%;
-  margin-left: 15px;
-}
-
 .wcorg-organizer h2 {
   color: #104b8c;
   font-size: 1.25em;

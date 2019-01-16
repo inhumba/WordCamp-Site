@@ -1,28 +1,6 @@
 /* ORGANIZER
 ---------------------------------------*/
 
-.org-group {
-	display: table;
-	white-space: nowrap;
-	position: relative;
-	&:before, &:after {
-		border-top: 1px solid $color-rose-pink;
-		content: "";
-		display: table-cell;
-		position: relative;
-		width: 45%;
-		top: 0.5em;
-	}
-	&:before {
-		right: 100%;
-		margin-right: 15px;
-	}
-	&:after {
-		left: 100%;
-		margin-left: 15px;
-	}
-}
-
 .wcorg-organizer {
 	h2 {
 		color: $color-navy;
