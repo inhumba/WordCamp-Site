@@ -4,7 +4,7 @@
 body {
 	font-family: $font-secondary;
 	@include font-weight(regular);
-	font-size: 1em;
+	font-size: 18px;
 	line-height: 1.5625em;
 	color: $text-color;
 }

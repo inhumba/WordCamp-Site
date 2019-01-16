@@ -8,7 +8,7 @@ Version: 2.0
 ---------------------------------------*/
 /* MIXINS
 ---------------------------------------*/
-.site-content, #footer-widgets {
+#footer-widgets {
   width: 60%;
   max-width: 640px;
   height: auto;
@@ -98,7 +98,7 @@ td, th {
 body {
   font-family: "Bai Jamjuree", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 1em;
+  font-size: 18px;
   line-height: 1.5625em;
   color: #104b8c;
 }
@@ -261,6 +261,77 @@ pre code {
   border: 0;
   padding: 0;
   background: 0;
+}
+
+/* LAYOUT
+---------------------------------------*/
+#content {
+  padding: 2.5rem 1.5rem;
+}
+
+@media (min-width: 48em) {
+  #content {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 62em) {
+  #content {
+    padding: 4.5rem 3rem;
+  }
+}
+
+#primary {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+#secondary {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 48em) {
+  #secondary {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 62em) {
+  #secondary {
+    margin-top: 4.5rem;
+  }
+}
+
+#after-header-widgets, #before-content-widgets {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+#content-widgets {
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 48em) {
+  #content-widgets {
+    margin-top: -3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 62em) {
+  #content-widgets {
+    margin-top: -4.5rem;
+    margin-bottom: 4.5rem;
+  }
 }
 
 /* FORM
@@ -726,22 +797,18 @@ select:focus {
 
 /* CONTENT
 ---------------------------------------*/
-.site-content {
-  margin: 60px auto;
-}
-
 .entry-header {
-  margin-left: -15%;
-  margin-right: -15%;
   text-align: center;
 }
 
 .entry-title {
   color: #ea8c70;
   margin-bottom: 1rem;
+  font-size: 1.953em;
 }
 
 .entry-meta {
+  font-size: 0.875em;
   color: #2d7c9f;
 }
 
@@ -754,7 +821,7 @@ select:focus {
 }
 
 .entry-content {
-  margin: 60px 0 0;
+  margin: 1.5rem 0;
 }
 
 .entry-content a, .entry-content a:visited {
@@ -762,15 +829,15 @@ select:focus {
 }
 
 .entry-content h2 {
-  font-size: 1.953em;
-}
-
-.entry-content h3 {
   font-size: 1.563em;
 }
 
-.entry-content h4 {
+.entry-content h3 {
   font-size: 1.25em;
+}
+
+.entry-content h4 {
+  font-size: 1em;
 }
 
 .entry-content h2, .entry-content h3, .entry-content h4 {
@@ -781,6 +848,17 @@ select:focus {
   margin: 0 0 1.5em 0;
 }
 
+.entry-content a.more-link {
+  padding: .5rem 1rem;
+  background: #ea8c70;
+  color: #fff;
+}
+
+.entry-content .has-medium-font-size {
+  font-size: 1.25em;
+  line-height: 1.6;
+}
+
 .entry-content .alignfull {
   margin-left: calc( -100vw / 2 + 100% / 2);
   margin-right: calc( -100vw / 2 + 100% / 2);
@@ -788,8 +866,8 @@ select:focus {
 }
 
 .entry-content .alignwide {
-  margin-left: -15%;
-  margin-right: -15%;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
   max-width: 1024px;
 }
 
@@ -798,8 +876,8 @@ select:focus {
 }
 
 .entry-content .wp-block-separator {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .entry-content .wp-block-button.aligncenter {
@@ -813,20 +891,83 @@ select:focus {
 }
 
 .hentry {
-  margin-bottom: 70px;
-  padding-bottom: 70px;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
   position: relative;
 }
 
 .hentry::after {
-  background-color: #ddd;
+  background-color: #eee;
   content: "";
   display: block;
-  height: 2px;
-  width: 70%;
+  height: 1px;
+  width: 100%;
   position: absolute;
   bottom: 0;
-  left: 15%;
+}
+
+.entry-footer .comments-link {
+  margin-right: 1rem;
+}
+
+.entry-footer .comments-link a {
+  padding-bottom: 0.25em;
+  border-bottom: 1px dotted #ea8c70;
+}
+
+.entry-footer .edit-link a {
+  padding-bottom: 0.25em;
+  border-bottom: 1px dotted #ea8c70;
+}
+
+.site-main .post-navigation .nav-previous, .site-main .posts-navigation .nav-previous {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  width: calc(50% - 1rem);
+}
+
+.site-main .post-navigation .nav-previous a, .site-main .posts-navigation .nav-previous a {
+  position: relative;
+  padding-top: 1.5rem;
+  display: block;
+}
+
+.site-main .post-navigation .nav-previous a:before, .site-main .posts-navigation .nav-previous a:before {
+  content: "\f104";
+  margin-right: .5em;
+  color: #ea8c70;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 1rem;
+  font-weight: 300;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.site-main .post-navigation .nav-next, .site-main .posts-navigation .nav-next {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  width: calc(50% - 1rem);
+}
+
+.site-main .post-navigation .nav-next a, .site-main .posts-navigation .nav-next a {
+  position: relative;
+  padding-top: 1.5rem;
+  display: block;
+}
+
+.site-main .post-navigation .nav-next a:after, .site-main .posts-navigation .nav-next a:after {
+  content: "\f105";
+  margin-left: .5em;
+  color: #ea8c70;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 1rem;
+  font-weight: 300;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .tshirt-table {
@@ -851,21 +992,6 @@ select:focus {
   border-top: 1px solid #f2f2f2;
   border-left: 1px solid #f2f2f2;
   font-size: 1.2em;
-}
-
-@media only screen and (max-width: 1023px) {
-  .site-content {
-    width: 90%;
-    max-width: 100%;
-  }
-  .entry-header {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .entry-content .alignwide {
-    margin-left: -5%;
-    margin-right: -5%;
-  }
 }
 
 @media only screen and (max-width: 767px) {
