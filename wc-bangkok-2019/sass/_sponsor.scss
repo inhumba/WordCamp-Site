@@ -5,16 +5,6 @@
 	text-align: center;
 	h2 {
 		font-size: 1.25em;
-		&:before {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 100%;
-			transform: translateX(-50%);
-			border-top: 1px solid $color-rose-pink;
-			content: "";
-			z-index: -1;
-		}
 	}
 	.sponsor-logo {
 		display: inline-block !important;
@@ -52,6 +42,10 @@
 }
 
 .wcorg-sponsor {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
 	margin-bottom: 50px;
 	h3 {
 		color: $color-navy;
@@ -59,6 +53,21 @@
 		margin-bottom: 45px;
 		text-align: center;
 		display: none;
+	}
+}
+
+.wcorg-sponsors > div h2 {
+	width: 100%;
+	position: relative;
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		transform: translateX(-50%);
+		border-top: 1px solid $color-rose-pink;
+		content: "";
+		z-index: -1;
 	}
 }
 
