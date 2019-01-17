@@ -863,6 +863,11 @@ select:focus {
   color: #fff;
 }
 
+.entry-content .has-small-font-size {
+  font-size: .8125em;
+  line-height: 1.5;
+}
+
 .entry-content .has-medium-font-size {
   font-size: 1.25em;
   line-height: 1.6;
@@ -2094,6 +2099,10 @@ article.comment-body .reply {
 }
 
 @media only screen and (max-width: 700px) {
+  .wcpt-schedule {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .wcpt-schedule tr {
     border: 1px solid #EEE;
   }
