@@ -1361,8 +1361,13 @@ article.comment-body .reply {
   #footer-widgets {
     flex-direction: row;
   }
-  .footer-widgets-block {
-    width: 50%;
+  #footer-widget-1 {
+    width: 60%;
+    padding-right: 1.5rem;
+  }
+  #footer-widget-2 {
+    width: 40%;
+    padding-left: 1.5rem;
   }
 }
 
@@ -1386,7 +1391,7 @@ article.comment-body .reply {
 }
 
 .jetpack_subscription_widget #subscribe-email input[type=email]::placeholder {
-  color: rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .jetpack_subscription_widget #subscribe-submit {
