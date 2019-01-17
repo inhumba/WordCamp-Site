@@ -1380,7 +1380,8 @@ article.comment-body .reply {
 }
 
 .jetpack_subscription_widget #subscribe-text p {
-  font-size: .875rem;
+  font-size: .9375em;
+  line-height: 1.4;
 }
 
 .jetpack_subscription_widget #subscribe-email {
@@ -1392,8 +1393,8 @@ article.comment-body .reply {
   background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
-  width: 65%;
-  height: 48px;
+  width: 60%;
+  height: 40px;
 }
 
 .jetpack_subscription_widget #subscribe-email input[type=email]::placeholder {
@@ -1406,8 +1407,9 @@ article.comment-body .reply {
 
 .jetpack_subscription_widget #subscribe-submit input[type="submit"] {
   font-family: "Bai Jamjuree", Helvetica, Arial, sans-serif;
-  width: 35%;
-  height: 48px;
+  font-weight: 600;
+  width: 40%;
+  height: 40px;
   padding: 0;
   border: 1px solid #fff;
   background-color: #fff;
@@ -1424,7 +1426,9 @@ article.comment-body .reply {
   background-color: #104b8c;
 }
 
-.milestone-widget .milestone-header strong {
+.milestone-widget .milestone-header strong.event {
+  font-size: 1em;
+  font-weight: 600;
   color: #fff;
 }
 
@@ -1443,6 +1447,10 @@ article.comment-body .reply {
   -webkit-background-clip: text;
   font-family: "Chonburi", cursive;
   line-height: 1;
+}
+
+.milestone-widget .milestone-countdown .label {
+  color: #ea8c70;
 }
 
 /* TICKETS

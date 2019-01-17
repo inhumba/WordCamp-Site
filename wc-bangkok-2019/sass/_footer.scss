@@ -190,7 +190,8 @@
 		margin-bottom: 1.5rem;
 	}
 	#subscribe-text p {
-		font-size: .875rem;
+		font-size: .9375em;
+		line-height: 1.4;
 	}
 	#subscribe-email {
 		display: inline;
@@ -199,8 +200,8 @@
 			background-color: transparent;
 			border: 1px solid $color-white;
 			color: $color-white;
-			width: 65%;
-			height: 48px;
+			width: 60%;
+			height: 40px;
 			&::placeholder {
 				color: rgba(255,255,255,.8);
 			}
@@ -210,8 +211,9 @@
 		display: inline;
 		input[type="submit"] {
 			font-family: $font-secondary;
-			width: 35%;
-			height: 48px;
+			@include font-weight(semi-bold);
+			width: 40%;
+			height: 40px;
 			padding: 0;
 			border: 1px solid $color-white;
 			background-color: $color-white;
@@ -230,7 +232,9 @@
 	}
 	.milestone-header {
 		background-color: $color-navy;
-		strong {
+		strong.event {
+			font-size: 1em;
+			@include font-weight(semi-bold);
 			color: #fff;
 		}
 		span.date {
@@ -246,6 +250,9 @@
 			-webkit-background-clip: text;
 			font-family: $font-primary;
 			line-height: 1;
+		}
+		.label {
+			color: $color-rose-pink;
 		}
 	}
 }
