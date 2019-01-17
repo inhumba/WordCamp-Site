@@ -2,7 +2,7 @@
 ---------------------------------------*/
 
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
-	background-color: $color-rose-pink;
+	background-color: $color-red;
 	background-image: none;
 	box-sizing: border-box;
 	box-shadow: none;
@@ -16,7 +16,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 	text-shadow: none;
 	transition: background-color .3s;
 	&:hover, &:focus {
-		background-color: $color-red;
+		background-color: $color-rose-pink;
 		background-image: none;
 		border: none;
 		outline: none;
