@@ -189,13 +189,18 @@
 		color: $color-white;
 		margin-bottom: 1.5rem;
 	}
+	#subscribe-text p {
+		font-size: .875rem;
+	}
 	#subscribe-email {
 		display: inline;
 		input[type=email] {
+			float: left;
 			background-color: transparent;
 			border: 1px solid $color-white;
 			color: $color-white;
-			width: 100%;
+			width: 65%;
+			height: 48px;
 			&::placeholder {
 				color: rgba(255,255,255,.8);
 			}
@@ -204,6 +209,11 @@
 	#subscribe-submit {
 		display: inline;
 		input[type="submit"] {
+			font-family: $font-secondary;
+			width: 35%;
+			height: 48px;
+			padding: 0;
+			border: 1px solid $color-white;
 			background-color: $color-white;
 			color: $color-rose-pink;
 		}
