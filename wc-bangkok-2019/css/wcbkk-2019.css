@@ -8,6 +8,13 @@ Version: 2.0
 ---------------------------------------*/
 /* MIXINS
 ---------------------------------------*/
+#footer-widgets {
+  width: 60%;
+  max-width: 640px;
+  height: auto;
+  margin: 0 auto;
+}
+
 /* GLOBAL
 ---------------------------------------*/
 .site {
@@ -1208,6 +1215,11 @@ article.comment-body .reply {
   font-family: FontAwesome;
   display: inline-block;
   padding-right: 16px;
+}
+
+#footer-widgets {
+  overflow: hidden;
+  padding: 80px 0 40px;
 }
 
 #footer-widgets .footer-widgets-block {

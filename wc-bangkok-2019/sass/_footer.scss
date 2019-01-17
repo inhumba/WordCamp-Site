@@ -26,9 +26,9 @@
 }
 
 #footer-widgets {
-	// @extend %grid-content;
-	// overflow: hidden;
-	// padding: 80px 0 40px;
+	@extend %grid-content;
+	overflow: hidden;
+	padding: 80px 0 40px;
 	.footer-widgets-block {
 		float: left;
 		width: calc(100% / 2);
