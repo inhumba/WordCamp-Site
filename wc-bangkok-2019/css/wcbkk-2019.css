@@ -208,20 +208,23 @@ li:first-child {
 }
 
 blockquote {
-  margin: 0;
-  margin-bottom: 1.5rem;
-  padding: 2em 0;
-  border-top: 1px solid #f8f8f8;
-  border-bottom: 1px solid #f8f8f8;
+  margin: 0 -1.5rem 1.5rem -1.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
 }
 
 blockquote p {
   font-family: "Chonburi", cursive;
   font-size: 1.25em;
-  font-style: normal;
+  line-height: 1.4;
   background: -webkit-linear-gradient(#104b8c, #2d7c9f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+blockquote p em {
+  font-style: normal;
 }
 
 blockquote p:last-child {
