@@ -29,6 +29,7 @@
 	}
 	td {
 		padding: 1.5rem;
+		border-top: 1px dashed #ddd;
 	}
 }
 
@@ -59,7 +60,6 @@
 
 .tix-row-coupon, .tix-row-total {
 	td {
-		border-top: 1px solid #f2f2f2;
 		background: #f8f8f8;
 	}
 }
@@ -135,35 +135,16 @@
 }
 
 
-@media only screen and (max-width: 768px) {
-
-	.tix_tickets_table {
- 		th {
-			font-size: 1.1em;
-		}
-	}
-
-	.tix-ticket-title {
-		font-size: 1em;
-	}
-
-}
-
-
 @media only screen and (max-width: 767px) {
 
 	.tix_tickets_table {
- 		th {
-			font-size: 1.3em;
-		}
 		th, td {
 			display: block;
-			padding: 15px;
+			padding: 1.5rem;
 		}
 	}
 
 	.tix-row-total {
-		background-color: #f2f2f2;
 		td {
 			padding-top: 0;
 		}
@@ -176,36 +157,41 @@
 		}
 	}
 
-	.tix-ticket-title {
-		font-size: 1.1em;
-	}
-
-	.tix-column-price, .tix-column-remaining, .tix-column-quantity, .tix-column-per-ticket {
-		border-top: 1px solid #f2f2f2;
+	td.tix-column-price, td.tix-column-remaining, td.tix-column-quantity, td.tix-column-per-ticket {
+		border-top: none;
 		border-left: none;
-		font-size: 1.1em;
 	}
 
-	th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-column-per-ticket {
+	th.tix-column-description, th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-column-per-ticket {
 		display: none;
 	}
 
-	td.tix-column-price::before {
-		content: "Price : ";
+	td.tix-column-price {
+		font-size: 1.25em;
+		padding-top: .5rem;
+		padding-bottom: .5rem;
+		color: $color-red;
+		:before {
+			content: "Price : ";
+		}
 	}
 
-	td.tix-column-remaining::before {
+	td.tix-column-remaining {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	td.tix-column-remaining:before {
 		content: "Remaining : ";
 	}
 
 	td.tix-column-quantity {
+		padding-bottom: 2.5rem;
 		&::before {
 			content: "Quantity : ";
-			display: block;
-			margin-bottom: 10px;
+			display: inline-block;
 		}
 		select {
-			width: 80%;
+			width: auto;
 		}
 	}
 

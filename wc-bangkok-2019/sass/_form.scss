@@ -48,16 +48,13 @@ input:not([type]), input[type=color], input[type=date], input[type=datetime-loca
 
 select {
 	border: 1px solid $color-rose-pink;
-	border-radius: 0;
+	border-radius: 2px;
 	color: $color-rose-pink;
 	cursor: pointer;
 	font-family: $font-secondary;
 	font-size: 1em;
 	@include font-weight(regular);
-	padding: 10px 20px;
-	text-align: center;
-	height: 42px;
-	width: 100%;
+	height: 40px;
     box-shadow: none;
     background: transparent;
     background-image: none;
