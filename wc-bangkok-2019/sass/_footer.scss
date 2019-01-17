@@ -153,8 +153,9 @@
 	}
 }
 
-.footer-widgets {
+#footer-widgets {
 	display: flex;
+	flex-direction: column;
 }
 .footer-widgets-block {
 	p {
@@ -164,6 +165,11 @@
 	}
 }
 
+@media screen and (min-width: 768px) {
+	#footer-widgets {
+		flex-direction: row;
+	}
+}
 
 /* JETPACK SUBSCRIPTION WIDGET
 ---------------------------------------*/

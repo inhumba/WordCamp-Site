@@ -295,7 +295,7 @@ pre code {
   text-align: left;
 }
 
-#secondary, #footer-widgets {
+#secondary {
   max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
@@ -303,14 +303,20 @@ pre code {
   margin-top: 1.5rem;
 }
 
+#footer-widgets {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (min-width: 48em) {
-  #secondary, #footer-widgets {
+  #secondary {
     margin-top: 3rem;
   }
 }
 
 @media (min-width: 62em) {
-  #secondary, #footer-widgets {
+  #secondary {
     margin-top: 4.5rem;
   }
 }
@@ -1336,14 +1342,21 @@ article.comment-body .reply {
   padding-right: 16px;
 }
 
-.footer-widgets {
+#footer-widgets {
   display: flex;
+  flex-direction: column;
 }
 
 .footer-widgets-block p {
   color: #f7f8f4;
   font-size: 1em;
   font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  #footer-widgets {
+    flex-direction: row;
+  }
 }
 
 /* JETPACK SUBSCRIPTION WIDGET
