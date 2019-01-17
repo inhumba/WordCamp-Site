@@ -685,8 +685,7 @@ select:focus {
   left: 2rem;
   font-size: 10px;
   color: #ea8c70;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   color: #fff;
   content: "\f0c8";
 }
@@ -1250,18 +1249,6 @@ article.comment-body .reply {
   color: #FFF;
 }
 
-#subscribe-email input[type=email]::-webkit-input-placeholder {
-  color: #FFF;
-}
-
-#subscribe-email input[type=email]:-ms-input-placeholder {
-  color: #FFF;
-}
-
-#subscribe-email input[type=email]::-ms-input-placeholder {
-  color: #FFF;
-}
-
 #subscribe-email input[type=email]::placeholder {
   color: #FFF;
 }
@@ -1686,8 +1673,7 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
   top: 50%;
   left: 50%;
   width: 100%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   border-top: 1px solid #ea8c70;
   content: "";
   z-index: -1;
@@ -1783,6 +1769,7 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
   margin-left: calc( -90vw / 2 + 100% / 2);
   margin-right: calc( -90vw / 2 + 100% / 2);
   max-width: 90vw;
+  min-width: 90vw;
   width: auto;
 }
 
