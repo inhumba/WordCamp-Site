@@ -200,6 +200,7 @@
 			color: $color-white;
 			width: 60%;
 			height: 40px;
+			box-shadow: none;
 			&::placeholder {
 				color: rgba(255,255,255,.8);
 			}

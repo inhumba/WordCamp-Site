@@ -1430,6 +1430,7 @@ article.comment-body .reply {
   color: #fff;
   width: 60%;
   height: 40px;
+  box-shadow: none;
 }
 
 .jetpack_subscription_widget #subscribe-email input[type=email]::placeholder {
