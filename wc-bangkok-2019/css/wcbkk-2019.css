@@ -8,13 +8,6 @@ Version: 2.0
 ---------------------------------------*/
 /* MIXINS
 ---------------------------------------*/
-#footer-widgets {
-  width: 60%;
-  max-width: 640px;
-  height: auto;
-  margin: 0 auto;
-}
-
 /* GLOBAL
 ---------------------------------------*/
 .site {
@@ -302,7 +295,7 @@ pre code {
   text-align: left;
 }
 
-#secondary {
+#secondary, #footer-widgets {
   max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
@@ -311,13 +304,13 @@ pre code {
 }
 
 @media (min-width: 48em) {
-  #secondary {
+  #secondary, #footer-widgets {
     margin-top: 3rem;
   }
 }
 
 @media (min-width: 62em) {
-  #secondary {
+  #secondary, #footer-widgets {
     margin-top: 4.5rem;
   }
 }
@@ -1190,183 +1183,6 @@ article.comment-body .reply {
   }
 }
 
-/* FOOTER
----------------------------------------*/
-.site-footer {
-  background-color: #ea8c70;
-  clear: both;
-}
-
-.site-footer .site-info {
-  padding: 1em 0;
-  text-align: center;
-}
-
-.site-footer .site-info a {
-  color: #fff;
-  display: inline-block;
-  font-size: 1em;
-  font-weight: 300;
-  margin: 0 10px;
-}
-
-.site-footer .site-info a + a::before {
-  content: "\f19a";
-  font-family: FontAwesome;
-  display: inline-block;
-  padding-right: 16px;
-}
-
-#footer-widgets {
-  overflow: hidden;
-  padding: 80px 0 40px;
-}
-
-#footer-widgets .footer-widgets-block {
-  float: left;
-  width: calc(100% / 2);
-}
-
-#footer-widgets .footer-widgets-block p {
-  color: #f7f8f4;
-  font-size: 1em;
-  font-weight: 300;
-}
-
-#footer-widgets .widget-title {
-  font-size: 1.5em;
-  color: #FFF;
-}
-
-.jetpack_widget_social_icons ul {
-  margin-top: 30px;
-}
-
-.jetpack_widget_social_icons ul li {
-  margin: .5em 1em;
-}
-
-.jetpack_widget_social_icons ul.size-large a {
-  height: 60px;
-  width: 60px;
-}
-
-.jetpack_widget_social_icons svg {
-  fill: #104b8c;
-}
-
-#subscribe-email {
-  display: inline;
-}
-
-#subscribe-email input {
-  width: 40%;
-}
-
-#subscribe-email input[type=email] {
-  background-color: transparent;
-  border: 1px solid #FFF;
-  color: #FFF;
-}
-
-#subscribe-email input[type=email]::placeholder {
-  color: #FFF;
-}
-
-#subscribe-submit {
-  display: inline;
-}
-
-#subscribe-submit input[type="submit"] {
-  background-color: #FFF;
-  color: #ea8c70;
-}
-
-#footer-widget-2 {
-  text-align: right;
-}
-
-#milestone_widget-3.widget.milestone-widget {
-  float: right;
-}
-
-.milestone-content {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.milestone-header {
-  background-color: #104b8c;
-}
-
-.milestone-header strong {
-  color: #fff;
-}
-
-.milestone-header span.date {
-  color: #f9cf9f;
-}
-
-.milestone-countdown {
-  border: none;
-  padding: 1em;
-}
-
-.milestone-countdown .difference {
-  color: transparent;
-  background: linear-gradient(180deg, #d43e38 0%, #ea8c70 100%);
-  -webkit-background-clip: text;
-  font-family: "Chonburi", cursive;
-  line-height: 1;
-}
-
-@media only screen and (max-width: 1024px) {
-  #subscribe-email, #subscribe-submit {
-    display: block;
-    margin-bottom: 10px;
-  }
-  #subscribe-email input[type=email], #subscribe-submit input[type=email] {
-    width: 70%;
-  }
-  #subscribe-email input[type=submit], #subscribe-submit input[type=submit] {
-    padding-right: 0;
-    padding-left: 0;
-    width: 150px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  #secondary-sidebar .widget-title {
-    font-size: 2em;
-  }
-  .jetpack_widget_social_icons ul {
-    margin-top: 20px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  #footer-widgets .footer-widgets-block {
-    float: none;
-    width: 100%;
-  }
-  #subscribe-email input[type=email], #subscribe-submit input[type=email] {
-    width: 80%;
-  }
-  #subscribe-email input[type=submit], #subscribe-submit input[type=submit] {
-    margin-left: 0;
-    width: 150px;
-  }
-  #milestone_widget-3.widget.milestone-widget {
-    float: none;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .site-footer .site-info a + a::before {
-    content: "";
-    padding-right: 0;
-  }
-}
-
 /* SIDEBAR WIDGET
 ---------------------------------------*/
 #secondary-sidebar .widget {
@@ -1397,6 +1213,8 @@ article.comment-body .reply {
   content: "";
 }
 
+/* SOCIAL WIDGET (TEXT WIDGET)
+---------------------------------------*/
 .list-social {
   list-style: none;
   margin: 0;
@@ -1489,6 +1307,108 @@ article.comment-body .reply {
 
 .list-social .social-instagram a:after {
   content: "\f16d";
+}
+
+/* SITE FOOTER
+---------------------------------------*/
+.site-footer {
+  background-color: #ea8c70;
+  clear: both;
+}
+
+.site-footer .site-info {
+  padding: 1em 0;
+  text-align: center;
+}
+
+.site-footer .site-info a {
+  color: #fff;
+  display: inline-block;
+  font-size: 0.8125em;
+  font-weight: 300;
+  margin: 0 10px;
+}
+
+.site-footer .site-info a + a::before {
+  content: "\f19a";
+  font-family: FontAwesome;
+  display: inline-block;
+  padding-right: 16px;
+}
+
+.footer-widgets {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-widgets-block p {
+  color: #f7f8f4;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+/* JETPACK SUBSCRIPTION WIDGET
+---------------------------------------*/
+#subscribe-email {
+  display: inline;
+}
+
+#subscribe-email input {
+  width: 40%;
+}
+
+#subscribe-email input[type=email] {
+  background-color: transparent;
+  border: 1px solid #FFF;
+  color: #FFF;
+}
+
+#subscribe-email input[type=email]::placeholder {
+  color: #FFF;
+}
+
+#subscribe-submit {
+  display: inline;
+}
+
+#subscribe-submit input[type="submit"] {
+  background-color: #FFF;
+  color: #ea8c70;
+}
+
+/* MILESTONE WIDGET
+---------------------------------------*/
+#milestone_widget-3.widget.milestone-widget {
+  float: right;
+}
+
+.milestone-content {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.milestone-header {
+  background-color: #104b8c;
+}
+
+.milestone-header strong {
+  color: #fff;
+}
+
+.milestone-header span.date {
+  color: #f9cf9f;
+}
+
+.milestone-countdown {
+  border: none;
+  padding: 1em;
+}
+
+.milestone-countdown .difference {
+  color: transparent;
+  background: linear-gradient(180deg, #d43e38 0%, #ea8c70 100%);
+  -webkit-background-clip: text;
+  font-family: "Chonburi", cursive;
+  line-height: 1;
 }
 
 /* TICKETS

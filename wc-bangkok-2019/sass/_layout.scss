@@ -24,7 +24,7 @@
     text-align: left;
 }
 
-#secondary {
+#secondary, #footer-widgets {
 	max-width: 50rem;
 	margin-left: auto;
 	margin-right: auto;
@@ -33,18 +33,18 @@
 }
 
 @media (min-width:48em) {
-	#secondary {
+	#secondary, #footer-widgets {
 		margin-top: 3rem;
 	}
 }
 
 @media (min-width:62em) {
-	#secondary {
+	#secondary, #footer-widgets {
 		margin-top: 4.5rem;
 	}
 }
 
-#after-header-widgets,#before-content-widgets {
+#after-header-widgets, #before-content-widgets {
 	max-width: 50rem;
 	margin-left: auto;
 	margin-right: auto;

@@ -1,235 +1,3 @@
-/* FOOTER
----------------------------------------*/
-
-.site-footer {
-	background-color: $color-rose-pink;
-	clear: both;
-	.site-info {
-		padding: 1em 0;
-		text-align: center;
-		a {
-			color: #fff;
-			display: inline-block;
-			font-size: 1em;
-			@include font-weight(light);
-			margin: 0 10px;
-			+ a {
-				&::before {
-					content: "\f19a";
-					font-family: FontAwesome;
-					display: inline-block;
-					padding-right: 16px;
-				}
-			}
-		}
-	}
-}
-
-#footer-widgets {
-	@extend %grid-content;
-	overflow: hidden;
-	padding: 80px 0 40px;
-	.footer-widgets-block {
-		float: left;
-		width: calc(100% / 2);
-		p {
-			color: #f7f8f4;
-			font-size: 1em;
-			@include font-weight(light);
-		}
-	}
-	.widget-title {
-		font-size: 1.5em;
-		color: #FFF;
-	}
-}
-
-// a.genericon.genericon-facebook, a.genericon.genericon-twitter, a.genericon.genericon-instagram {
-// 	font-size: 3em;
-// 	color: $color-primary;
-// }
-
-.jetpack_widget_social_icons ul {
-	margin-top: 30px;
-	li {
-		margin: .5em 1em;
-	}
-}
-
-.jetpack_widget_social_icons ul.size-large a {
-	height: 60px;
-	width: 60px;
-}
-
-.jetpack_widget_social_icons svg {
-	fill: $color-navy;
-}
-
-#subscribe-email {
-	display: inline;
-	input {
-		width: 40%;
-	}
-	input[type=email] {
-		background-color: transparent;
-		border: 1px solid #FFF;
-		color: #FFF;
-		&::placeholder {
-			color: #FFF;
-		}
-	}
-}
-
-#subscribe-submit {
-	display: inline;
-	input[type="submit"] {
-		background-color: #FFF;
-		color: $color-rose-pink;
-	}
-}
-
-#footer-widget-2 {
-	text-align: right;
-}
-
-#milestone_widget-3.widget.milestone-widget {
-	float: right;
-}
-
-.milestone-content {
-	box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-.milestone-header {
-	background-color: $color-navy;
-	strong {
-		color: #fff;
-	}
-	span.date {
-		color: #f9cf9f;
-	}
-}
-
-.milestone-countdown {
-	border: none;
-	padding: 1em;
-	.difference {
-		color: transparent;
-		background: linear-gradient(180deg,#d43e38 0%,#ea8c70 100%);
-		-webkit-background-clip: text;
-		font-family: $font-primary;
-		line-height: 1;
-	}
-}
-
-@media only screen and (max-width: 1024px) {
-
-	#subscribe-email, #subscribe-submit {
-		display: block;
-		margin-bottom: 10px;
-		input[type=email] {
-			width: 70%;
-		}
-		input[type=submit] {
-			padding-right: 0;
-			padding-left: 0;
-			width: 150px;
-		}
-	}
-
-}
-
-@media only screen and (max-width: 768px) {
-
-// 	#custom_html-2 .textwidget, #footer-widgets {
-// 		width: 80%;
-// 		max-width: 100%;
-// 	}
-
-// 	#custom_html-2 {
-// 		.wcorg-sponsors {
-// 			h2 {
-// 				font-size: 1.8em;
-// 			}
-// 		}
-// 	}
-
-	#secondary-sidebar {
-		.widget-title {
-			font-size: 2em;
-		}
-	}
-
-	.jetpack_widget_social_icons ul {
-		margin-top: 20px;
-	}
-
-}
-
-@media only screen and (max-width: 767px) {
-
-// 	#custom_html-2 {
-// 		.wcorg-sponsors {
-// 			h2 {
-// 				font-size: 1.4em;
-// 			}
-// 		}
-// 		.wcorg-sponsor-level-premium .wcorg-sponsor {
-// 			width: 90%;
-// 		}
-// 		.wcorg-sponsor-level-gold .wcorg-sponsor {
-// 			width: 80%;
-// 		}
-// 		.wcorg-sponsor-level-silver .wcorg-sponsor {
-// 			width: 70%;
-// 		}
-// 		.wcorg-sponsor-level-bronze .wcorg-sponsor {
-// 			width: 60%;
-// 		}
-// 		.wcorg-sponsor-level-in-kind .wcorg-sponsor {
-// 			width: 60%;
-// 		}
-// 	}
-
-	#footer-widgets {
-		.footer-widgets-block {
-			float: none;
-			width: 100%;
-		}
-	}
-
-	#subscribe-email, #subscribe-submit {
-		input[type=email] {
-			width: 80%;
-		}
-		input[type=submit] {
-			margin-left: 0;
-			width: 150px;
-		}
-	}
-
-	#milestone_widget-3.widget.milestone-widget {
-		float: none;
-	}
-}
-
-@media only screen and (max-width: 480px) {
-	.site-footer {
-		.site-info {
-			a {
-				+ a {
-					&::before {
-						content: "";
-						padding-right: 0;
-					}
-				}
-			}
-		}
-	}
-}
-
-
-
 /* SIDEBAR WIDGET
 ---------------------------------------*/
 
@@ -258,6 +26,10 @@
 	background-color: inherit;
 	content: "";
 }
+
+
+/* SOCIAL WIDGET (TEXT WIDGET)
+---------------------------------------*/
 
 .list-social {
 	list-style: none;
@@ -351,4 +123,105 @@
 
 .list-social .social-instagram a:after {
 	content: "\f16d";
+}
+
+
+/* SITE FOOTER
+---------------------------------------*/
+
+.site-footer {
+	background-color: $color-rose-pink;
+	clear: both;
+	.site-info {
+		padding: 1em 0;
+		text-align: center;
+		a {
+			color: $color-white;
+			display: inline-block;
+			font-size: 0.8125em;
+			@include font-weight(light);
+			margin: 0 10px;
+			+ a {
+				&::before {
+					content: "\f19a";
+					font-family: FontAwesome;
+					display: inline-block;
+					padding-right: 16px;
+				}
+			}
+		}
+	}
+}
+
+.footer-widgets {
+	display: flex;
+	flex-direction: row;
+}
+.footer-widgets-block {
+	p {
+		color: #f7f8f4;
+		font-size: 1em;
+		@include font-weight(light);
+	}
+}
+
+
+/* JETPACK SUBSCRIPTION WIDGET
+---------------------------------------*/
+
+#subscribe-email {
+	display: inline;
+	input {
+		width: 40%;
+	}
+	input[type=email] {
+		background-color: transparent;
+		border: 1px solid #FFF;
+		color: #FFF;
+		&::placeholder {
+			color: #FFF;
+		}
+	}
+}
+
+#subscribe-submit {
+	display: inline;
+	input[type="submit"] {
+		background-color: #FFF;
+		color: $color-rose-pink;
+	}
+}
+
+
+/* MILESTONE WIDGET
+---------------------------------------*/
+
+#milestone_widget-3.widget.milestone-widget {
+	float: right;
+}
+
+.milestone-content {
+	box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.milestone-header {
+	background-color: $color-navy;
+	strong {
+		color: #fff;
+	}
+	span.date {
+		color: #f9cf9f;
+	}
+}
+
+.milestone-countdown {
+	border: none;
+	padding: 1em;
+	.difference {
+		color: transparent;
+		background: linear-gradient(180deg,#d43e38 0%,#ea8c70 100%);
+		-webkit-background-clip: text;
+		font-family: $font-primary;
+		line-height: 1;
+	}
 }
