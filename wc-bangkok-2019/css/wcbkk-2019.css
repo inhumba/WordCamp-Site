@@ -272,18 +272,18 @@ pre code {
 
 /* LAYOUT
 ---------------------------------------*/
-#content {
+#content, #footer-widgets {
   padding: 2.5rem 1.5rem 0 1.5rem;
 }
 
 @media (min-width: 48em) {
-  #content {
+  #content, #footer-widgets {
     padding: 3rem 2rem 0 2rem;
   }
 }
 
 @media (min-width: 62em) {
-  #content {
+  #content, #footer-widgets {
     padding: 4.5rem 3rem 0 3rem;
   }
 }
@@ -1329,7 +1329,7 @@ article.comment-body .reply {
   margin: 0 10px;
 }
 
-.site-footer .site-info a + a::before {
+.site-footer .site-info a + a:before {
   content: "\f19a";
   font-family: FontAwesome;
   display: inline-block;
@@ -1338,7 +1338,6 @@ article.comment-body .reply {
 
 .footer-widgets {
   display: flex;
-  flex-direction: row;
 }
 
 .footer-widgets-block p {
@@ -1349,30 +1348,37 @@ article.comment-body .reply {
 
 /* JETPACK SUBSCRIPTION WIDGET
 ---------------------------------------*/
-#subscribe-email {
+.jetpack_subscription_widget h2.widget-title {
+  font-size: 1.25em;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.jetpack_subscription_widget #subscribe-email {
   display: inline;
 }
 
-#subscribe-email input {
+.jetpack_subscription_widget #subscribe-email input {
   width: 40%;
 }
 
-#subscribe-email input[type=email] {
+.jetpack_subscription_widget #subscribe-email input[type=email] {
   background-color: transparent;
-  border: 1px solid #FFF;
-  color: #FFF;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 100%;
 }
 
-#subscribe-email input[type=email]::placeholder {
-  color: #FFF;
+.jetpack_subscription_widget #subscribe-email input[type=email]::placeholder {
+  color: #f9cf9f;
 }
 
-#subscribe-submit {
+.jetpack_subscription_widget #subscribe-submit {
   display: inline;
 }
 
-#subscribe-submit input[type="submit"] {
-  background-color: #FFF;
+.jetpack_subscription_widget #subscribe-submit input[type="submit"] {
+  background-color: #fff;
   color: #ea8c70;
 }
 

@@ -1,18 +1,18 @@
 /* LAYOUT
 ---------------------------------------*/
 
-#content {
+#content, #footer-widgets {
 	padding: 2.5rem 1.5rem 0 1.5rem;
 }
 
 @media (min-width:48em) {
-	#content {
+	#content, #footer-widgets {
 		padding: 3rem 2rem 0 2rem;
 	}
 }
 
 @media (min-width:62em) {
-	#content {
+	#content, #footer-widgets {
 		padding: 4.5rem 3rem 0 3rem;
 	}
 }

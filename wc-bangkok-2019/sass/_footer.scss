@@ -142,7 +142,7 @@
 			@include font-weight(light);
 			margin: 0 10px;
 			+ a {
-				&::before {
+				&:before {
 					content: "\f19a";
 					font-family: FontAwesome;
 					display: inline-block;
@@ -155,7 +155,6 @@
 
 .footer-widgets {
 	display: flex;
-	flex-direction: row;
 }
 .footer-widgets-block {
 	p {
@@ -169,26 +168,33 @@
 /* JETPACK SUBSCRIPTION WIDGET
 ---------------------------------------*/
 
-#subscribe-email {
-	display: inline;
-	input {
-		width: 40%;
+.jetpack_subscription_widget {
+	h2.widget-title {
+		font-size: 1.25em;
+		color: $color-white;
+		margin-bottom: 1.5rem;
 	}
-	input[type=email] {
-		background-color: transparent;
-		border: 1px solid #FFF;
-		color: #FFF;
-		&::placeholder {
-			color: #FFF;
+	#subscribe-email {
+		display: inline;
+		input {
+			width: 40%;
+		}
+		input[type=email] {
+			background-color: transparent;
+			border: 1px solid $color-white;
+			color: $color-white;
+			width: 100%;
+			&::placeholder {
+				color: $color-cream;
+			}
 		}
 	}
-}
-
-#subscribe-submit {
-	display: inline;
-	input[type="submit"] {
-		background-color: #FFF;
-		color: $color-rose-pink;
+	#subscribe-submit {
+		display: inline;
+		input[type="submit"] {
+			background-color: $color-white;
+			color: $color-rose-pink;
+		}
 	}
 }
 
