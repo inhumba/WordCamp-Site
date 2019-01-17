@@ -1433,6 +1433,7 @@ article.comment-body .reply {
 }
 
 .milestone-widget .milestone-header span.date {
+  font-size: .8125em;
   color: #f9cf9f;
 }
 
@@ -1445,6 +1446,7 @@ article.comment-body .reply {
   color: transparent;
   background: linear-gradient(180deg, #d43e38 0%, #ea8c70 100%);
   -webkit-background-clip: text;
+  font-size: 4.768em;
   font-family: "Chonburi", cursive;
   line-height: 1;
 }

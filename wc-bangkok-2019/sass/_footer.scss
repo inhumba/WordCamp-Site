@@ -141,13 +141,11 @@
 			font-size: 0.8125em;
 			@include font-weight(light);
 			margin: 0 10px;
-			+ a {
-				&:before {
-					content: "\f19a";
-					font-family: FontAwesome;
-					display: inline-block;
-					padding-right: 16px;
-				}
+			+ a:before {
+				content: "\f19a";
+				font-family: FontAwesome;
+				display: inline-block;
+				padding-right: 16px;
 			}
 		}
 	}
@@ -238,6 +236,7 @@
 			color: #fff;
 		}
 		span.date {
+			font-size: .8125em;
 			color: #f9cf9f;
 		}
 	}
@@ -248,6 +247,7 @@
 			color: transparent;
 			background: linear-gradient(180deg,#d43e38 0%,#ea8c70 100%);
 			-webkit-background-clip: text;
+			font-size: 4.768em;
 			font-family: $font-primary;
 			line-height: 1;
 		}
