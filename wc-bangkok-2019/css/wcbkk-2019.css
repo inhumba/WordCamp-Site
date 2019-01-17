@@ -350,14 +350,14 @@ pre code {
 /* ALIGNWIDE
 ---------------------------------------*/
 @media screen and (min-width: 768px) {
-  #tix, .tggr-media-item-container {
+  #tix, #tggr-media-item-container {
     margin-left: -2.5rem;
     margin-right: -2.5rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  #tix, .tggr-media-item-container {
+  #tix, #tggr-media-item-container {
     margin-left: -10rem;
     margin-right: -10rem;
   }
