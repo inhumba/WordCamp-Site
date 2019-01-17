@@ -1,13 +1,6 @@
 /* SESSION
 ---------------------------------------*/
 
-.page-slug-schedule-conference-day, .page-slug-contributor-day {
-	.site-content {
-		width: 80%;
-		max-width: 80%;
-	}
-}
-
 .session-date {
 	background-color: $color-navy;
 	border-radius: 15px;
@@ -18,6 +11,10 @@
 }
 
 .wcpt-schedule {
+	margin-left: calc( -90vw / 2 + 100% / 2 );
+	margin-right: calc( -90vw / 2 + 100% / 2 );
+	max-width: 90vw;
+	width: auto;
 	th, td {
 		padding: 15px 10px;
 		position: relative;
@@ -136,26 +133,18 @@
 
 .wcb-favourite-session {
 	.dashicons-star-filled {
-		color: $color-orange;
+		color: $color-rose-pink;
 	}
 	a.wcpt-session-title {
-		color: $color-orange;
+		color: $color-rose-pink;
 	}
 }
 
 
 @media only screen and (max-width: 768px) {
-
-	.page-slug-schedule-conference-day, .page-slug-contributor-day {
-		.site-content {
-			width: 90%;
-		}
-	}
-
 	.session-date {
 		font-size: 1.3em;
 	}
-
 }
 
 

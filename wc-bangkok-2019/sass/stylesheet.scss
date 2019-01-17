@@ -2,15 +2,24 @@
 Theme Name: WordCamp Bangkok 2019
 Author: WordPress Bangkok Organizer
 Author URI: https://wpth.org/
-Version: 1.0
+Version: 2.0
 */
 
 //== Variables & Mixins
 @import "variables";
 @import "mixins";
 
-//== Fonts
-@import "fonts";
+//== General
+@import "global";
+@import "typography";
+@import "layout";
+@import "form";
+
+//== Elements
+@import "header";
+@import "navigation";
+@import "content";
+@import "footer";
 
 //== Components
 // @import "animate";
@@ -21,13 +30,6 @@ Version: 1.0
 @import "speaker";
 @import "session";
 @import "socialmediastreaming";
-@import "form";
-
-//== Style
-@import "header";
-@import "navigation";
-@import "content";
-@import "footer";
 
 //== Media Query
 // @import "mq";
