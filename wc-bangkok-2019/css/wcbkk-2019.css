@@ -1335,7 +1335,7 @@ article.comment-body .reply {
   margin: 0 10px;
 }
 
-.site-footer .site-info a + a:before {
+.site-footer .site-info a.site-info-network:before {
   content: "\f19a";
   font-family: FontAwesome;
   display: inline-block;

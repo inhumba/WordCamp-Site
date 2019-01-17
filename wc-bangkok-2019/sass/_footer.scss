@@ -141,7 +141,7 @@
 			font-size: 0.8125em;
 			@include font-weight(light);
 			margin: 0 10px;
-			+ a:before {
+			&.site-info-network:before {
 				content: "\f19a";
 				font-family: FontAwesome;
 				display: inline-block;
