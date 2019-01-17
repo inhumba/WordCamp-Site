@@ -1960,66 +1960,45 @@ article.comment-body .reply {
   margin-left: -10rem;
   margin-right: -10rem;
   min-width: calc(100% + 20rem);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .wcpt-schedule th, .wcpt-schedule td {
-  padding: 15px 10px;
-  position: relative;
-}
-
-.wcpt-schedule th::after, .wcpt-schedule td::after {
-  content: '';
-  background-color: #EEE;
-  display: block;
-  height: 20px;
-  width: 1px;
-  position: absolute;
-  top: 0;
-  right: 0;
+  padding: 1rem 1.5rem;
 }
 
 .wcpt-schedule th {
-  background-color: #EEE;
-  font-size: 1.2em;
+  background-color: #2d7c9f;
+  font-size: 1.125em;
   text-align: center;
 }
 
 .wcpt-schedule td {
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px dotted #eee;
 }
 
 .wcpt-schedule .global-session {
-  background-color: #2d7c9f;
-}
-
-.wcpt-schedule .global-session .wcpt-time {
-  background-color: #2d7c9f;
-  color: #FFF;
+  background-color: #ea8c70;
 }
 
 .wcpt-schedule .global-session .wcpt-session-title {
-  color: #FFF;
-  font-weight: bold;
-  font-size: 1.1em;
+  color: #fff;
+  font-size: 1.125em;
   letter-spacing: 1px;
 }
 
-.wcpt-schedule .global-session td::after {
+.wcpt-schedule .global-session td:after {
   display: none;
 }
 
 .wcpt-schedule .wcpt-time {
   color: #104b8c;
-  background-color: #EEE;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .wcpt-schedule .wcpt-time-915am .wcpt-time, .wcpt-schedule .wcpt-time-1000am .wcpt-time, .wcpt-schedule .wcpt-time-100pm .wcpt-time {
   color: #104b8c;
-  background-color: #EEE;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .wcpt-schedule .wcpt-time-915am .wcpt-session-type-custom, .wcpt-schedule .wcpt-time-1000am .wcpt-session-type-custom, .wcpt-schedule .wcpt-time-100pm .wcpt-session-type-custom {
@@ -2039,7 +2018,7 @@ article.comment-body .reply {
 }
 
 .page-slug-contributor-day .wcpt-col-time {
-  width: 20%;
+  width: 10%;
 }
 
 .wcb-session-cell-content .wcpt-session-speakers {
@@ -2090,12 +2069,6 @@ article.comment-body .reply {
 
 .wcb-favourite-session a.wcpt-session-title {
   color: #ea8c70;
-}
-
-@media only screen and (max-width: 768px) {
-  .session-date {
-    font-size: 1.3em;
-  }
 }
 
 @media only screen and (max-width: 700px) {

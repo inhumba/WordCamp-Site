@@ -14,58 +14,50 @@
 	margin-left: -10rem;
 	margin-right: -10rem;
 	min-width: calc(100% + 20rem);
+	box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 	th, td {
-		padding: 15px 10px;
-		position: relative;
-		&::after {
-			content: '';
-			background-color: #EEE;
-			display: block;
-			height: 20px;
-			width: 1px;
-			position: absolute;
-			top: 0;
-			right: 0;
+		padding: 1rem 1.5rem;
+		// position: relative;
+		&:after {
+			// content: '';
+			// background-color: #EEE;
+			// display: block;
+			// height: 20px;
+			// width: 1px;
+			// position: absolute;
+			// top: 0;
+			// right: 0;
 		}
 	}
 	th {
-		background-color: #EEE;
-		font-size: 1.2em;
+		background-color: $color-blue;
+		font-size: 1.125em;
 		text-align: center;
 	}
 	td {
-		border-bottom: 1px solid #EEE;
+		border-bottom: 1px dotted #eee;
 	}
 	.global-session {
-		background-color: $color-blue;
-		.wcpt-time {
-			background-color: $color-blue;
-			color: #FFF;
-		}
+		background-color: $color-rose-pink;
 		.wcpt-session-title {
-			color: #FFF;
-			font-weight: bold;
-			font-size: 1.1em;
+			color: $color-white;
+			font-size: 1.125em;
 			letter-spacing: 1px;
 		}
 		td {
-			&::after {
+			&:after {
 				display: none;
 			}
 		}
 	}
 	.wcpt-time {
 		color: $color-navy;
-		background-color: #EEE;
 		text-align: center;
-		text-transform: uppercase;
 	}
 	.wcpt-time-915am, .wcpt-time-1000am, .wcpt-time-100pm {
 		.wcpt-time {
 			color: $color-navy;
-			background-color: #EEE;
 			text-align: center;
-			text-transform: uppercase;
 		}
 		.wcpt-session-type-custom {
 			background-color: #FFF;
@@ -88,7 +80,7 @@
 
 .page-slug-contributor-day {
 	.wcpt-col-time {
-		width: 20%;
+		width: 10%;
 	}
 }
 
@@ -138,14 +130,6 @@
 		color: $color-rose-pink;
 	}
 }
-
-
-@media only screen and (max-width: 768px) {
-	.session-date {
-		font-size: 1.3em;
-	}
-}
-
 
 @media only screen and (max-width: 700px) {
 
