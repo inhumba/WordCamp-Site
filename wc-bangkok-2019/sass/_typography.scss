@@ -115,7 +115,7 @@ li:first-child {
 
 blockquote {
 	margin: 0 -1.5rem 1.5rem -1.5rem;
-	padding: 1.5rem 0;
+	padding: 1.5rem;
 	border-top: 1px solid #f2f2f2;
 	border-bottom: 1px solid #f2f2f2;
 }
@@ -124,6 +124,7 @@ blockquote p {
 	font-family: $font-primary;
 	font-size: 1.25em;
 	line-height: 1.4;
+	color: $color-blue;
 	background: -webkit-linear-gradient($color-navy, $color-blue);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
