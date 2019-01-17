@@ -2102,6 +2102,7 @@ article.comment-body .reply {
   .wcpt-schedule {
     margin-left: 0;
     margin-right: 0;
+    min-width: 100%;
   }
   .wcpt-schedule tr {
     border: 1px solid #EEE;
