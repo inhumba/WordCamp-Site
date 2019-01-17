@@ -1588,6 +1588,7 @@ article.comment-body .reply {
 
 .tix-submit {
   float: none !important;
+  text-align: center;
 }
 
 .tix-submit select {
@@ -1599,11 +1600,15 @@ article.comment-body .reply {
   width: auto;
   float: none;
   font-family: "Bai Jamjuree", Helvetica, Arial, sans-serif;
+  font-weight: 500;
   color: #104b8c;
+  border-bottom: none;
 }
 
 .tix-payment-method .tix-payment-tab.tix-tab-selected {
   border-bottom: 2px solid #d43e38;
+  padding-bottom: 8px;
+  font-weight: 700;
 }
 
 #tix .tix-submit .tix-checkout-button {

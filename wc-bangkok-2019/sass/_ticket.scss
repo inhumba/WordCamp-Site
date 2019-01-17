@@ -103,6 +103,7 @@
 
 .tix-submit {
 	float: none !important;
+	text-align: center;
 	select {
 		width: 150px;
 	}
@@ -114,9 +115,13 @@
 		width: auto;
 		float: none;
 		font-family: $font-secondary;
+		font-weight: 500;
 		color: $color-navy;
+		border-bottom: none;
 		&.tix-tab-selected {
 			border-bottom: 2px solid $color-red;
+			padding-bottom: 8px;
+			font-weight: 700;
 		}
 	}		
 }
