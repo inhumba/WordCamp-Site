@@ -211,14 +211,19 @@ blockquote {
   margin: 0;
   margin-bottom: 1.5rem;
   padding: 2em;
-  background-color: #f9cf9f;
 }
 
 blockquote p {
-  font-style: italic;
+  font-family: "Chonburi", cursive;
+  font-size: 1.25em;
+  background: -webkit-linear-gradient(#104b8c, #2d7c9f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 blockquote p:last-child {
+  font-size: 1em;
+  color: #2d7c9f;
   margin-bottom: 0;
 }
 
