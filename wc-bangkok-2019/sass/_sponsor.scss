@@ -10,10 +10,15 @@
 	.sponsor-logo {
 		display: inline-block !important;
 		margin: 0 auto;
+		padding-bottom: 0;
+		img {
+			margin-bottom: 0;
+		}
 	}
 }
 
 .sponsor-level {
+	margin-bottom: 1.5rem;
 	.sponsor-level-title {
 		display: flex;
 		width: 100%;
@@ -21,10 +26,11 @@
 		align-items: center;
 		text-align: center;
 		color: $color-rose-pink;
-		font-size: 1.953em;
+		font-size: 1.25em;
+		margin-bottom: 1.5rem;
 		&:before, &:after {
 			content: '';
-			border-top: 1px solid;
+			border-top: 1px dotted $color-cream;
 			margin: 0 1.5rem 0 0;
 			flex: 1 0 1.5rem;
 		}
