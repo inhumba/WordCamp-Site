@@ -1347,6 +1347,10 @@ article.comment-body .reply {
   flex-direction: column;
 }
 
+.footer-widgets-block {
+  width: 100%;
+}
+
 .footer-widgets-block p {
   color: #f7f8f4;
   font-size: 1em;
@@ -1356,6 +1360,9 @@ article.comment-body .reply {
 @media screen and (min-width: 768px) {
   #footer-widgets {
     flex-direction: row;
+  }
+  .footer-widgets-block {
+    width: 50%;
   }
 }
 
@@ -1371,10 +1378,6 @@ article.comment-body .reply {
   display: inline;
 }
 
-.jetpack_subscription_widget #subscribe-email input {
-  width: 40%;
-}
-
 .jetpack_subscription_widget #subscribe-email input[type=email] {
   background-color: transparent;
   border: 1px solid #fff;
@@ -1383,7 +1386,7 @@ article.comment-body .reply {
 }
 
 .jetpack_subscription_widget #subscribe-email input[type=email]::placeholder {
-  color: #f9cf9f;
+  color: rgba(0, 0, 0, 0.1);
 }
 
 .jetpack_subscription_widget #subscribe-submit {
@@ -1397,32 +1400,28 @@ article.comment-body .reply {
 
 /* MILESTONE WIDGET
 ---------------------------------------*/
-#milestone_widget-3.widget.milestone-widget {
-  float: right;
-}
-
-.milestone-content {
+.milestone-widget .milestone-content {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-.milestone-header {
+.milestone-widget .milestone-header {
   background-color: #104b8c;
 }
 
-.milestone-header strong {
+.milestone-widget .milestone-header strong {
   color: #fff;
 }
 
-.milestone-header span.date {
+.milestone-widget .milestone-header span.date {
   color: #f9cf9f;
 }
 
-.milestone-countdown {
+.milestone-widget .milestone-countdown {
   border: none;
   padding: 1em;
 }
 
-.milestone-countdown .difference {
+.milestone-widget .milestone-countdown .difference {
   color: transparent;
   background: linear-gradient(180deg, #d43e38 0%, #ea8c70 100%);
   -webkit-background-clip: text;
