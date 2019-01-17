@@ -2,59 +2,76 @@
 ---------------------------------------*/
 
 #tix {
-
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
+	h2 {
+		font-size: 1.563em;
+	}
 }
-
 .tix-error {
-	background-color: $color-navy;
-	border-color: $color-navy;
-	color: #FFF;
-	padding: 10px 20px;
+	background-color: $color-red;
+	border-color: $color-red;
+	color: $color-white;
+	padding: 1rem 1.5rem;
 }
 
 .tix_tickets_table {
-	border: 1px solid $color-red;
+	box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+	// border: 1px solid $color-rose-pink;
 	th {
-		background-color: $color-red;
-		color: #FFF;
-		font-size: 1.3em;
+		background-color: $color-navy;
+		color: $color-white;
+		font-size: .9375rem;
 		@include font-weight(regular);
 	}
-	th, td {
-		padding: 15px 20px;
+	th {
+		padding: 1rem 1.5rem;
 	}
-	a {
-		color: $color-red;
-		&:hover, &:focus {
-			color: $color-navy;
-		}
-		&:visited {
-			color: $color-red;
-		}
+	td {
+		padding: 1.5rem;
 	}
 }
 
 .tix-ticket-title {
 	display: inline-block;
-	font-size: 1.2em;
-	margin-bottom: 10px;
+	font-size: 1.25em;
+	margin-bottom: .75rem;
+}
+
+.tix-ticket-excerpt {
+	color: $color-blue;
 }
 
 .tix-column-price, .tix-column-remaining, .tix-column-quantity, .tix-column-per-ticket {
-	border-left: 1px solid #f2f2f2;
-	color: $color-red;
+	color: $color-navy;
+	font-size: 1em;
 	@include font-weight(medium);
 	text-align: center;
 }
 
-th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-column-per-ticket {
-	border-left-color: $color-red;
+.tix-column-price {
+	@include font-weight(semi-bold);
 }
 
-.tix-row-total {
+.tix-column-remaining {
+	color: $color-blue;
+}
+
+.tix-row-coupon, .tix-row-total {
 	td {
 		border-top: 1px solid #f2f2f2;
+		background: #f8f8f8;
 	}
+}
+
+#tix p:last-child {
+	text-align: right;
+}
+
+#tix input[type="submit"] {
+	float: none !important;
+	display: inline-block;
+	font-size: 1.125em;
 }
 
 .tix-attendee-form {
@@ -62,6 +79,9 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 		border-top: 1px solid #f2f2f2;
 		select {
 			width: 80%;
+		}
+		input[type="text"] {
+			width: 100%;
 		}
 	}
 	.tix-row-first-name {
@@ -73,7 +93,7 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 
 .tix-row-total {
 	td {
-		font-size: 1.4em;
+		font-size: 1.25em;
 		text-align: center;
 		strong {
 			color: $color-navy;
@@ -82,9 +102,31 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 }
 
 .tix-submit {
+	float: none !important;
 	select {
 		width: 150px;
 	}
+}
+
+.tix-payment-method {
+	.tix-payment-tab {
+		display: inline-block;
+		width: auto;
+		float: none;
+		font-family: $font-secondary;
+		color: $color-navy;
+		&.tix-tab-selected {
+			border-bottom: 2px solid $color-red;
+		}
+	}		
+}
+
+#tix .tix-submit .tix-checkout-button {
+	border-radius: 0;
+	padding: 1rem 2rem;
+	float: none;
+	margin-top: 1.5rem;
+	margin-left: auto;
 }
 
 
@@ -179,12 +221,6 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
 		margin: 0 auto;
 		text-align: center;
 		width: 80%;
-	}
-
-	input[type="submit"] {
-		float: none !important;
-		display: block;
-		margin: 10px auto;
 	}
 
 	.tix-row-total {

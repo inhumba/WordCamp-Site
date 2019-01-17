@@ -68,6 +68,7 @@
 		font-size: 1.25em;
 		line-height: 1.6;
 	}
+
 	.alignfull {
 		margin-left: calc( -100vw / 2 + 100% / 2 );
 		margin-right: calc( -100vw / 2 + 100% / 2 );
@@ -77,7 +78,7 @@
 	.alignwide {
 		margin-left: -1.5rem;
 		margin-right: -1.5rem;
-		max-width: 1024px;
+		max-width: 960px;
 	}
 
 	.wp-block-image {
@@ -132,6 +133,10 @@
 	}
 }
 
+
+/* POST NAVIGATION
+---------------------------------------*/
+
 .site-main .post-navigation, .site-main .posts-navigation {
 	.nav-previous {
 		font-size: 0.875rem;
@@ -178,6 +183,10 @@
 		}
 	}
 }
+
+
+/* COMMENTS
+---------------------------------------*/
 
 .comments-area {
 	margin-top: 2.5rem;
@@ -285,6 +294,40 @@ article.comment-body {
 	}
 }
 
+
+/* SHARE
+---------------------------------------*/
+.sharedaddy .sd-title {
+	font-size: .9em;
+	@include font-weight(regular);
+}
+
+
+/* BUTTON
+---------------------------------------*/
+.wp-block-button {
+	text-align: center;
+	.wp-block-button__link {
+		background-color: $color-red;
+		color: $color-white;
+		font-size: 1.25em;
+		&:hover, &:focus, &:visited {
+			color: $color-white;
+		}
+	}
+	&._float {
+		margin-bottom: 0;
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		z-index: 90;
+	}
+}
+
+
+/* T-SHIRT TABLE
+---------------------------------------*/
+
 .tshirt-table {
 	border: 1px solid $color-rose-pink;
 	th {
@@ -320,37 +363,6 @@ article.comment-body {
 		}
 	}
 }
-
-
-/* SHARE
----------------------------------------*/
-.sharedaddy .sd-title {
-	font-size: .9em;
-	@include font-weight(regular);
-}
-
-
-/* BUTTON
----------------------------------------*/
-.wp-block-button {
-	text-align: center;
-	.wp-block-button__link {
-		background-color: $color-red;
-		color: $color-white;
-		font-size: 1.25em;
-		&:hover, &:focus, &:visited {
-			color: $color-white;
-		}
-	}
-	&._float {
-		margin-bottom: 0;
-		position: fixed;
-		bottom: 10px;
-		right: 10px;
-		z-index: 90;
-	}
-}
-
 @media only screen and (max-width: 767px) {
 	.wp-block-button {
 		.wp-block-button__link {
@@ -386,13 +398,13 @@ article.comment-body {
 @media screen and (min-width: 1024px) {
 	.page, .single {
 		.entry-header {
-			margin: 0 -5.5rem 5.5rem -5.5rem;
+			margin: 0 -6rem 6rem -6rem;
 		}
 	}
 	.entry-content {
 		.alignwide {
-			margin-left: -5.5rem;
-			margin-right: -5.5rem;
+			margin-left: -10rem;
+			margin-right: -10rem;
 		}
 	}
 }
