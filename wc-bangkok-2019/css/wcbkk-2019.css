@@ -1664,8 +1664,24 @@ article.comment-body .reply {
   td.tix-column-quantity select {
     width: auto;
   }
+  .tix-order-summary td.tix-column-description strong {
+    font-size: 1.25em;
+  }
+  .tix-order-summary td.tix-column-per-ticket {
+    padding-bottom: .5rem;
+  }
+  .tix-order-summary td.tix-column-quantity {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
   .tix-order-summary td.tix-column-quantity::before {
     display: inline;
+  }
+  .tix-order-summary td.tix-column-price {
+    color: #104b8c;
+  }
+  .tix-order-summary .tix-row-total td strong {
+    color: #d43e38;
   }
   td.tix-column-per-ticket::before {
     content: "Per Ticket : ";
@@ -1679,9 +1695,6 @@ article.comment-body .reply {
   .tix-row-total td {
     border-top: none;
   }
-  .tix-has-dynamic-receipts h2 {
-    font-size: 1.4em;
-  }
   .tix-ticket-form td.tix-left, .tix-private-form td.tix-left, .tix-attendee-form td.tix-left, .tix-receipt-form td.tix-left {
     width: auto;
   }
@@ -1689,11 +1702,6 @@ article.comment-body .reply {
     border: none;
     padding-top: 0;
     width: auto;
-  }
-  td.tix-column-quantity::before {
-    content: "Quantity : ";
-    display: block;
-    margin-bottom: 10px;
   }
   .tix-submit select {
     display: block;

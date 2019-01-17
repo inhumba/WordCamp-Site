@@ -196,10 +196,24 @@
 	}
 
 	.tix-order-summary {
+		td.tix-column-description strong {
+			font-size: 1.25em;
+		}
+		td.tix-column-per-ticket {
+			padding-bottom: .5rem;
+		}
 		td.tix-column-quantity {
+			padding-top: .5rem;
+			padding-bottom: .5rem;
 			&::before {
 				display: inline;
 			}
+		}
+		td.tix-column-price {
+			color: $color-navy;
+		}
+		.tix-row-total td strong {
+			color: $color-red;
 		}
 	}
 
@@ -220,12 +234,6 @@
 		}
 	}
 
-	.tix-has-dynamic-receipts {
-		h2 {
-			font-size: 1.4em;
-		}
-	}
-
 	.tix-ticket-form td.tix-left, .tix-private-form td.tix-left, .tix-attendee-form td.tix-left, .tix-receipt-form td.tix-left {
 		width: auto;
 	}
@@ -234,14 +242,6 @@
 		border: none;
 		padding-top: 0;
 		width: auto;
-	}
-
-	td.tix-column-quantity {
-		&::before {
-			content: "Quantity : ";
-			display: block;
-			margin-bottom: 10px;
-		}
 	}
 
 	.tix-submit {
