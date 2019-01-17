@@ -776,7 +776,11 @@ select:focus {
   font-size: 1.953em;
 }
 
-.page h1.entry-title, .single h1.entry-title {
+.page .entry-header, .single .entry-header {
+  margin: 0 -1.5rem 2.5rem -1.5rem;
+}
+
+.page .entry-title, .single .entry-title {
   font-size: 2.441em;
 }
 
@@ -1151,7 +1155,10 @@ article.comment-body .reply {
   .entry-title {
     font-size: 2.441rem;
   }
-  .page h1.entry-title, .single h1.entry-title {
+  .page .entry-header, .single .entry-header {
+    margin: 0 -2.5rem 4rem -2.5rem;
+  }
+  .page .entry-title, .single .entry-title {
     font-size: 3.052em;
   }
   .entry-content .alignwide {
@@ -1161,6 +1168,9 @@ article.comment-body .reply {
 }
 
 @media screen and (min-width: 1024px) {
+  .page .entry-header, .single .entry-header {
+    margin: 0 -5.5rem 5.5rem -5.5rem;
+  }
   .entry-content .alignwide {
     margin-left: -5.5rem;
     margin-right: -5.5rem;
