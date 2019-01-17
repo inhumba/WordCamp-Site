@@ -116,19 +116,24 @@ li:first-child {
 blockquote {
 	margin: 0;
 	margin-bottom: 1.5rem;
-	padding: 2em;
+	padding: 2em 0;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid #f8f8f8;
 }
 
 blockquote p {
 	font-family: $font-primary;
 	font-size: 1.25em;
+	font-style: normal;
 	background: -webkit-linear-gradient($color-navy, $color-blue);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
 blockquote p:last-child {
+	font-family: $font-secondary;
 	font-size: 1em;
+	font-style: italic;
 	color: $color-blue;
 	margin-bottom: 0;
 }

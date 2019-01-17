@@ -210,19 +210,24 @@ li:first-child {
 blockquote {
   margin: 0;
   margin-bottom: 1.5rem;
-  padding: 2em;
+  padding: 2em 0;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid #f8f8f8;
 }
 
 blockquote p {
   font-family: "Chonburi", cursive;
   font-size: 1.25em;
+  font-style: normal;
   background: -webkit-linear-gradient(#104b8c, #2d7c9f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 blockquote p:last-child {
+  font-family: "Bai Jamjuree", Helvetica, Arial, sans-serif;
   font-size: 1em;
+  font-style: italic;
   color: #2d7c9f;
   margin-bottom: 0;
 }
@@ -690,8 +695,7 @@ select:focus {
   left: 2rem;
   font-size: 10px;
   color: #ea8c70;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   color: #fff;
   content: "\f0c8";
 }
@@ -1272,18 +1276,6 @@ article.comment-body .reply {
   color: #FFF;
 }
 
-#subscribe-email input[type=email]::-webkit-input-placeholder {
-  color: #FFF;
-}
-
-#subscribe-email input[type=email]:-ms-input-placeholder {
-  color: #FFF;
-}
-
-#subscribe-email input[type=email]::-ms-input-placeholder {
-  color: #FFF;
-}
-
 #subscribe-email input[type=email]::placeholder {
   color: #FFF;
 }
@@ -1730,8 +1722,7 @@ th.tix-column-price, th.tix-column-remaining, th.tix-column-quantity, th.tix-col
   top: 50%;
   left: 50%;
   width: 100%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   border-top: 1px solid #ea8c70;
   content: "";
   z-index: -1;
