@@ -1844,6 +1844,10 @@ h3.org-group:after {
   margin: 0 0 0 1.5rem;
 }
 
+.sponsor-level.venue img {
+  max-height: 220px !important;
+}
+
 .sponsor-level.gold img {
   max-height: 200px !important;
 }
