@@ -1726,14 +1726,14 @@ article.comment-body .reply {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #2d7c9f;
+  color: #d43e38;
   font-size: 1.563em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .org-group:before, .org-group:after {
   content: '';
-  border-top: 1px dotted #f9cf9f;
+  border-top: 1px dotted #ea8c70;
   margin: 0 1.5rem 0 0;
   flex: 1 0 1.5rem;
 }
