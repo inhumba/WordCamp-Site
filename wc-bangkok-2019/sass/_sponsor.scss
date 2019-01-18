@@ -101,14 +101,22 @@
 
 .wcorg-sponsor-level-venue, .wcorg-sponsor-level-gold, .wcorg-sponsor-level-silver, .wcorg-sponsor-level-bronze, .wcorg-sponsor-level-in-kind {
 	h2 {
-		background-color: $color-rose-pink;
-		color: $color-white;
-		font-size: 1.25em;
-		margin-bottom: 2.5rem;
-		padding: 1rem 2rem;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
 		text-align: center;
+		color: $color-rose-pink;
+		font-size: 1.25em;
+		margin-bottom: 1.5rem;
+		&:before, &:after {
+			content: '';
+			border-top: 1px dotted $color-cream;
+			margin: 0 1.5rem 0 0;
+			flex: 1 0 1.5rem;
+		}
 		&:after {
-			content: " Sponsor";
+			margin: 0 0 0 1.5rem;
 		}
 	}
 }

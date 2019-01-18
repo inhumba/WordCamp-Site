@@ -1906,16 +1906,25 @@ h3.org-group:after {
 }
 
 .wcorg-sponsor-level-venue h2, .wcorg-sponsor-level-gold h2, .wcorg-sponsor-level-silver h2, .wcorg-sponsor-level-bronze h2, .wcorg-sponsor-level-in-kind h2 {
-  background-color: #ea8c70;
-  color: #fff;
-  font-size: 1.25em;
-  margin-bottom: 2.5rem;
-  padding: 1rem 2rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  color: #ea8c70;
+  font-size: 1.25em;
+  margin-bottom: 1.5rem;
+}
+
+.wcorg-sponsor-level-venue h2:before, .wcorg-sponsor-level-venue h2:after, .wcorg-sponsor-level-gold h2:before, .wcorg-sponsor-level-gold h2:after, .wcorg-sponsor-level-silver h2:before, .wcorg-sponsor-level-silver h2:after, .wcorg-sponsor-level-bronze h2:before, .wcorg-sponsor-level-bronze h2:after, .wcorg-sponsor-level-in-kind h2:before, .wcorg-sponsor-level-in-kind h2:after {
+  content: '';
+  border-top: 1px dotted #f9cf9f;
+  margin: 0 1.5rem 0 0;
+  flex: 1 0 1.5rem;
 }
 
 .wcorg-sponsor-level-venue h2:after, .wcorg-sponsor-level-gold h2:after, .wcorg-sponsor-level-silver h2:after, .wcorg-sponsor-level-bronze h2:after, .wcorg-sponsor-level-in-kind h2:after {
-  content: " Sponsor";
+  margin: 0 0 0 1.5rem;
 }
 
 @media only screen and (max-width: 767px) {
