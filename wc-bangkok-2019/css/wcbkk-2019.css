@@ -1885,6 +1885,11 @@ h3.org-group:after {
   display: none;
 }
 
+.wcorg-sponsor-description img {
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
 .wcorg-sponsor-level-venue img {
   max-height: 220px !important;
 }
@@ -1928,18 +1933,6 @@ h3.org-group:after {
 
 .wcorg-sponsor-level-venue h2:after, .wcorg-sponsor-level-gold h2:after, .wcorg-sponsor-level-silver h2:after, .wcorg-sponsor-level-bronze h2:after, .wcorg-sponsor-level-in-kind h2:after {
   margin: 0 0 0 1.5rem;
-}
-
-@media only screen and (max-width: 767px) {
-  .wcorg-sponsor-description img {
-    max-width: 320px;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  .wcorg-sponsor-description img {
-    max-width: 280px;
-  }
 }
 
 @media screen and (min-width: 768px) {
