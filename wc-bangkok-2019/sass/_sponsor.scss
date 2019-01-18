@@ -70,12 +70,13 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	margin-bottom: 1.5rem;
-	margin-left: -1.5rem;
-	margin-right: -1.5rem;
 	padding: 1.5rem;
 	box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 	h3 {
 		display: none;
+	}
+	img {
+		margin: 0 auto;
 	}
 	.wp-block-image {
 		display: none;
@@ -125,5 +126,11 @@
 		img {
 			max-width: 280px
 		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.wcorg-sponsor {
+		padding: 2.5rem;
 	}
 }
