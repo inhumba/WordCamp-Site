@@ -1,4 +1,132 @@
-/* FOOTER
+/* SIDEBAR WIDGET
+---------------------------------------*/
+
+#secondary-sidebar .widget {
+	position: relative;
+	background-color: #f8f8f8;
+	margin: 0;
+	padding: 2.5rem 0 1.5rem 0;
+	&:before {
+		background-color: #f2f2f2;
+	}
+	.widget-title {
+		font-size: 1.25em;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+}
+
+#secondary-sidebar .widget:before {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	left: -1000px;
+	right: -1000px;
+	background-color: inherit;
+	content: "";
+}
+
+
+/* SOCIAL WIDGET (TEXT WIDGET)
+---------------------------------------*/
+
+.list-social {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.list-social:after,.list-social:before {
+	content: "";
+	display: table;
+}
+
+.list-social:after {
+	clear: both;
+}
+
+.list-social li {
+	font-size: 1em;
+	line-height: 1.25em;
+	display: block;
+	margin-top: 0;
+	text-align: center;
+}
+
+@media (min-width:24em) {
+	.list-social li {
+		width: 46%;
+		display: inline-block;
+	}
+}
+
+@media (min-width:37.5em) {
+	.list-social li {
+		width: 30%;
+		min-width: 12.5rem;
+	}
+}
+
+.list-social strong {
+	display: block;
+	color: inherit;
+}
+
+.list-social a {
+	position: relative;
+	display: block;
+	padding: 1rem;
+	padding-top: 4.25rem;
+	color: $color-navy;
+	border-radius: 0;
+	text-decoration: none;
+}
+
+.list-social a:empty {
+	display: none;
+}
+
+.list-social a:after,.list-social a:before {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	content: "";
+}
+
+.list-social a:after {
+	font-family: FontAwesome;
+	font-size: 2rem;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: 3rem;
+	height: 3rem;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 36px;
+}
+
+.list-social a:active,.list-social a:focus,.list-social a:hover {
+	text-decoration: none;
+	color: $color-rose-pink;
+	background: $color-white;
+}
+
+.list-social .social-twitter a:after {
+	content: "\f099";
+}
+
+.list-social .social-facebook a:after {
+	content: "\f09a";
+}
+
+.list-social .social-instagram a:after {
+	content: "\f16d";
+}
+
+
+/* SITE FOOTER
 ---------------------------------------*/
 
 .site-footer {
@@ -8,263 +136,124 @@
 		padding: 1em 0;
 		text-align: center;
 		a {
-			color: #fff;
+			color: $color-white;
 			display: inline-block;
-			font-size: 1em;
+			font-size: 0.8125em;
 			@include font-weight(light);
 			margin: 0 10px;
-			+ a {
-				&::before {
-					content: "\f19a";
-					font-family: FontAwesome;
-					display: inline-block;
-					padding-right: 16px;
-				}
+			&.site-info-network:before {
+				content: "\f19a";
+				font-family: FontAwesome;
+				display: inline-block;
+				padding-right: 16px;
 			}
 		}
 	}
 }
 
 #footer-widgets {
-	@extend %grid-content;
-	overflow: hidden;
-	padding: 80px 0 40px;
-	.footer-widgets-block {
-		float: left;
-		width: calc(100% / 2);
-		p {
-			color: #f7f8f4;
-			font-size: 1em;
-			@include font-weight(light);
-		}
-	}
-	.widget-title {
-		font-size: 1.5em;
-		color: #FFF;
+	display: flex;
+	flex-direction: column;
+}
+.footer-widgets-block {
+	width: 100%;
+	p {
+		color: #f7f8f4;
+		font-size: 1em;
+		@include font-weight(light);
 	}
 }
 
-#secondary-sidebar {
-	background-color: #f8f8f8;
-	padding: 50px 0 20px;
-	text-align: center;
-	.widget-title {
-		color: $color-navy;
-		font-size: 1.5em;
-	}
-}
-
-// a.genericon.genericon-facebook, a.genericon.genericon-twitter, a.genericon.genericon-instagram {
-// 	font-size: 3em;
-// 	color: $color-primary;
-// }
-
-.jetpack_widget_social_icons ul {
-	margin-top: 30px;
-	li {
-		margin: .5em 1em;
-	}
-}
-
-.jetpack_widget_social_icons ul.size-large a {
-	height: 60px;
-	width: 60px;
-}
-
-.jetpack_widget_social_icons svg {
-	fill: $color-navy;
-}
-
-#subscribe-email {
-	display: inline;
-	input {
-		width: 40%;
-	}
-	input[type=email] {
-		background-color: transparent;
-		border: 1px solid #FFF;
-		color: #FFF;
-		&::placeholder {
-			color: #FFF;
-		}
-	}
-}
-
-#subscribe-submit {
-	display: inline;
-	input[type="submit"] {
-		background-color: #FFF;
-		color: $color-rose-pink;
-	}
-}
-
-#footer-widget-2 {
-	text-align: right;
-}
-
-#milestone_widget-3.widget.milestone-widget {
-	float: right;
-}
-
-.milestone-content {
-	box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-.milestone-header {
-	background-color: $color-navy;
-	strong {
-		color: #fff;
-	}
-	span.date {
-		color: #f9cf9f;
-	}
-}
-
-.milestone-countdown {
-	border: none;
-	padding: 1em;
-	.difference {
-		color: transparent;
-		background: linear-gradient(180deg,#d43e38 0%,#ea8c70 100%);
-		-webkit-background-clip: text;
-		font-family: $font-primary;
-		line-height: 1;
-	}
-}
-
-@media only screen and (max-width: 1024px) {
-
-	#subscribe-email, #subscribe-submit {
-		display: block;
-		margin-bottom: 10px;
-		input[type=email] {
-			width: 70%;
-		}
-		input[type=submit] {
-			padding-right: 0;
-			padding-left: 0;
-			width: 150px;
-		}
-	}
-
-}
-
-@media only screen and (max-width: 768px) {
-
-// 	#custom_html-2 .textwidget, #footer-widgets {
-// 		width: 80%;
-// 		max-width: 100%;
-// 	}
-
-// 	#custom_html-2 {
-// 		.wcorg-sponsors {
-// 			h2 {
-// 				font-size: 1.8em;
-// 			}
-// 		}
-// 	}
-
-	#secondary-sidebar {
-		.widget-title {
-			font-size: 2em;
-		}
-	}
-
-	.jetpack_widget_social_icons ul {
-		margin-top: 20px;
-	}
-
-}
-
-@media only screen and (max-width: 767px) {
-
-// 	#custom_html-2 {
-// 		.wcorg-sponsors {
-// 			h2 {
-// 				font-size: 1.4em;
-// 			}
-// 		}
-// 		.wcorg-sponsor-level-premium .wcorg-sponsor {
-// 			width: 90%;
-// 		}
-// 		.wcorg-sponsor-level-gold .wcorg-sponsor {
-// 			width: 80%;
-// 		}
-// 		.wcorg-sponsor-level-silver .wcorg-sponsor {
-// 			width: 70%;
-// 		}
-// 		.wcorg-sponsor-level-bronze .wcorg-sponsor {
-// 			width: 60%;
-// 		}
-// 		.wcorg-sponsor-level-in-kind .wcorg-sponsor {
-// 			width: 60%;
-// 		}
-// 	}
-
+@media screen and (min-width: 768px) {
 	#footer-widgets {
-		.footer-widgets-block {
-			float: none;
-			width: 100%;
-		}
+		flex-direction: row;
 	}
-
-	#secondary-sidebar {
-		padding: 25px 0 20px;
-		.widget-title {
-			font-size: 1.5em;
-		}
+	#footer-widget-1 {
+		width: 60%;
+		padding-right: 1.5rem;
 	}
-
-	#subscribe-email, #subscribe-submit {
-		input[type=email] {
-			width: 80%;
-		}
-		input[type=submit] {
-			margin-left: 0;
-			width: 150px;
-		}
+	#footer-widget-2 {
+		width: 40%;
+		padding-left: 1.5rem;
 	}
-
-	#milestone_widget-3.widget.milestone-widget {
-		float: none;
-	}
-
 }
 
-@media only screen and (max-width: 480px) {
+/* JETPACK SUBSCRIPTION WIDGET
+---------------------------------------*/
 
-	.site-footer {
-		.site-info {
-			a {
-				+ a {
-					&::before {
-						content: "";
-						padding-right: 0;
-					}
-				}
+.jetpack_subscription_widget {
+	h2.widget-title {
+		font-size: 1.25em;
+		color: $color-white;
+		margin-bottom: 1.5rem;
+	}
+	#subscribe-text p {
+		font-size: .9375em;
+		line-height: 1.4;
+	}
+	#subscribe-email {
+		display: inline;
+		input[type=email] {
+			float: left;
+			background-color: transparent;
+			border: 1px solid $color-white;
+			color: $color-white;
+			width: 60%;
+			height: 40px;
+			box-shadow: none;
+			&::placeholder {
+				color: rgba(255,255,255,.8);
 			}
 		}
 	}
-
-// 	#custom_html-2 {
-// 		.wcorg-sponsors {
-// 			h2 {
-// 				font-size: 1.4em;
-// 			}
-// 		}
-// 		.wcorg-sponsor {
-// 			width: 80%;
-// 		}
-// 	}
-
-}
-
-@media only screen and (max-width: 375px) {
-
-	#secondary-sidebar {
-		.widget-title {
-			font-size: 1.1em;
+	#subscribe-submit {
+		display: inline;
+		input[type="submit"] {
+			font-family: $font-secondary;
+			@include font-weight(semi-bold);
+			width: 40%;
+			height: 40px;
+			padding: 0;
+			border: 1px solid $color-white;
+			background-color: $color-white;
+			color: $color-rose-pink;
 		}
 	}
+}
 
+
+/* MILESTONE WIDGET
+---------------------------------------*/
+
+.milestone-widget {
+	.milestone-content {
+		box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+	}
+	.milestone-header {
+		background-color: $color-navy;
+		strong.event {
+			font-size: 1em;
+			@include font-weight(semi-bold);
+			color: #fff;
+		}
+		span.date {
+			font-size: .8125em;
+			color: #f9cf9f;
+		}
+	}
+	.milestone-countdown {
+		border: none;
+		padding: 1em;
+		.difference {
+			color: transparent;
+			background: linear-gradient(180deg,#d43e38 0%,#ea8c70 100%);
+			-webkit-background-clip: text;
+			font-size: 4.768em;
+			font-family: $font-primary;
+			line-height: 1;
+		}
+		.label {
+			color: $color-rose-pink;
+		}
+	}
 }
