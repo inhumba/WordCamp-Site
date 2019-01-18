@@ -1720,7 +1720,7 @@ article.comment-body .reply {
 
 /* ORGANIZER
 ---------------------------------------*/
-.org-group {
+h3.org-group {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -1731,14 +1731,14 @@ article.comment-body .reply {
   margin-bottom: 2.5rem;
 }
 
-.org-group:before, .org-group:after {
+h3.org-group:before, h3.org-group:after {
   content: '';
   border-top: 1px dotted #ea8c70;
   margin: 0 1.5rem 0 0;
   flex: 1 0 1.5rem;
 }
 
-.org-group:after {
+h3.org-group:after {
   margin: 0 0 0 1.5rem;
 }
 
