@@ -1880,6 +1880,10 @@ h3.org-group:after {
   display: none;
 }
 
+.wcorg-sponsor .wp-block-image {
+  display: none;
+}
+
 .wcorg-sponsors > div h2 {
   width: 100%;
   position: relative;
@@ -1903,14 +1907,12 @@ h3.org-group:after {
   max-height: 280px;
 }
 
-.wcorg-sponsor-level-gold h2, .wcorg-sponsor-level-silver h2, .wcorg-sponsor-level-bronze h2, .wcorg-sponsor-level-in-kind h2 {
+.wcorg-sponsor-level-venue h2, .wcorg-sponsor-level-gold h2, .wcorg-sponsor-level-silver h2, .wcorg-sponsor-level-bronze h2, .wcorg-sponsor-level-in-kind h2 {
   background-color: #ea8c70;
-  border-radius: 15px;
+  border-radius: 0;
   color: #FFF;
-  font-size: 3em;
-  max-width: 80%;
-  padding: 20px 40px;
-  margin: 0 auto 60px;
+  font-size: 1.953em;
+  padding: 1rem 2rem;
   text-align: center;
 }
 

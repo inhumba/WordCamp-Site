@@ -78,6 +78,9 @@
 		text-align: center;
 		display: none;
 	}
+	.wp-block-image {
+		display: none;
+	}
 }
 
 .wcorg-sponsors > div h2 {
@@ -104,15 +107,13 @@
 	}
 }
 
-.wcorg-sponsor-level-gold, .wcorg-sponsor-level-silver, .wcorg-sponsor-level-bronze, .wcorg-sponsor-level-in-kind {
+.wcorg-sponsor-level-venue, .wcorg-sponsor-level-gold, .wcorg-sponsor-level-silver, .wcorg-sponsor-level-bronze, .wcorg-sponsor-level-in-kind {
 	h2 {
 		background-color: $color-rose-pink;
-		border-radius: 15px;
+		border-radius: 0;
 		color: #FFF;
-		font-size: 3em;
-		max-width: 80%;
-		padding: 20px 40px;
-		margin: 0 auto 60px;
+		font-size: 1.953em;
+		padding: 1rem 2rem;
 		text-align: center;
 	}
 }
