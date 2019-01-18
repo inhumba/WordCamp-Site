@@ -1797,7 +1797,7 @@ h3.org-group:after {
 #tix-attendees li {
   position: relative;
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   height: auto;
   min-height: 3rem;
   padding-left: 4rem;
@@ -1824,7 +1824,7 @@ h3.org-group:after {
 }
 
 #tix-attendees .tix-field {
-  display: inline-block;
+  display: block;
   margin: 0;
   margin-right: .5rem;
   font-size: 14px;
@@ -1838,7 +1838,7 @@ h3.org-group:after {
   margin-right: 0;
   margin-bottom: .125rem;
   color: #104b8c;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 18px;
   line-height: 1.25em;
   background: none;
