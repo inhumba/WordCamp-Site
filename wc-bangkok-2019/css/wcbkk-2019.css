@@ -1937,50 +1937,6 @@ h3.org-group:after {
 
 /* SPEAKER
 ---------------------------------------*/
-.wcorg-speackers {
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.wcorg-speaker, .wcorg-speakers {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.wcorg-speaker {
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding: 0;
-  border: 1px solid #eae9e6;
-  margin-bottom: 1.5rem;
-  border-radius: .1875rem;
-}
-
-@media (max-width: 37.4375em) {
-  .wcorg-speaker {
-    width: 48%;
-    margin-left: 4%;
-  }
-  .wcorg-speaker:nth-child(odd) {
-    margin-left: 0;
-  }
-}
-
-@media (min-width: 37.5em) {
-  .wcorg-speaker {
-    width: 32%;
-    margin-left: 2%;
-  }
-  .wcorg-speaker:nth-child(3n+1) {
-    margin-left: 0;
-  }
-}
-
 .wcorg-speaker h2 {
   position: relative;
   margin: 0;
