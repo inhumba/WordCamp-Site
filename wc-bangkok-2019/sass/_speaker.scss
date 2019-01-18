@@ -27,10 +27,12 @@
 		left: 25%;
 	}
 	.avatar {
-		border: 2px solid $color-navy;
-		border-radius: 15px;
+		// border: 2px solid $color-navy;
+		// border-radius: 15px;
 		display: block;
-		margin: 0 auto 30px;
+		// margin: 0 auto 30px;
+		float: left;
+		margin-right: 1.5rem;
 	}
 }
 
