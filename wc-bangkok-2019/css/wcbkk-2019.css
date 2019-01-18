@@ -1913,6 +1913,9 @@ h3.org-group:after {
   text-align: center;
   color: #ea8c70;
   font-size: 1.25em;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-top: 2.5rem;
   margin-bottom: 1.5rem;
 }
 
