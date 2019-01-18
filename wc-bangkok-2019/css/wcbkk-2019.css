@@ -1907,12 +1907,12 @@ h3.org-group:after {
 
 .wcorg-sponsor-level-venue h2, .wcorg-sponsor-level-gold h2, .wcorg-sponsor-level-silver h2, .wcorg-sponsor-level-bronze h2, .wcorg-sponsor-level-in-kind h2 {
   display: flex;
-  width: 100%;
+  width: calc(100% + 3rem);
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #ea8c70;
-  font-size: 1.25em;
+  font-size: 1.563em;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
   margin-top: 2.5rem;

@@ -102,12 +102,12 @@
 .wcorg-sponsor-level-venue, .wcorg-sponsor-level-gold, .wcorg-sponsor-level-silver, .wcorg-sponsor-level-bronze, .wcorg-sponsor-level-in-kind {
 	h2 {
 		display: flex;
-		width: 100%;
+		width: calc(100% + 3rem);
 		justify-content: center;
 		align-items: center;
 		text-align: center;
 		color: $color-rose-pink;
-		font-size: 1.25em;
+		font-size: 1.563em;
 		margin-left: -1.5rem;
 		margin-right: -1.5rem;
 		margin-top: 2.5rem;
