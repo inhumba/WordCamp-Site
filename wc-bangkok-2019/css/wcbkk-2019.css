@@ -350,14 +350,14 @@ pre code {
 /* ALIGNWIDE
 ---------------------------------------*/
 @media screen and (min-width: 768px) {
-  #tix, #tggr-media-item-container {
+  #tix, #tggr-media-item-container, #tix-attendees {
     margin-left: -2.5rem;
     margin-right: -2.5rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  #tix, #tggr-media-item-container {
+  #tix, #tggr-media-item-container, #tix-attendees {
     margin-left: -10rem;
     margin-right: -10rem;
   }
@@ -1752,49 +1752,122 @@ h3.org-group:after {
   margin: 0 20px 20px 0;
 }
 
-/* ORGANIZER
+/* ATTENDEES
 ---------------------------------------*/
-#tix-attendees {
-  padding-top: 30px;
+.tix-attendee-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#tix-attendees .tix-columns-3 li {
+  width: 100%;
+}
+
+@media (min-width: 37.5em) {
+  #tix-attendees .tix-columns-3 li {
+    width: 50%;
+  }
+  #tix-attendees .tix-columns-3 li:nth-child(odd) {
+    clear: left;
+  }
+}
+
+@media (min-width: 62em) {
+  #tix-attendees .tix-columns-3 li {
+    width: 33.33333%;
+  }
+  #tix-attendees .tix-columns-3 li:nth-child(odd) {
+    clear: none;
+  }
+  #tix-attendees .tix-columns-3 li:nth-child(3n+1) {
+    clear: left;
+  }
+}
+
+#tix-attendees:after, #tix-attendees:before {
+  content: "";
+  display: table;
+}
+
+#tix-attendees:after {
+  clear: both;
+}
+
+#tix-attendees li {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  height: auto;
+  min-height: 3rem;
+  padding-left: 4rem;
+  padding-right: .5rem;
+  font-size: .8em;
+  line-height: 1.25em;
+  text-align: left;
 }
 
 #tix-attendees .avatar {
-  border: 1px solid #104b8c;
-  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  transition: all .15s ease;
+}
+
+#tix-attendees a {
+  display: block;
 }
 
 #tix-attendees .tix-field {
-  margin-left: 60px;
+  display: block;
+  margin: 0;
+  margin-right: .5rem;
+  font-size: 14px;
+  line-height: 1.5625em;
+  vertical-align: middle;
 }
 
-#tix-attendees .tix-attendee-name > * {
+#tix-attendees .tix-attendee-name {
+  display: block;
+  padding-right: 0;
+  margin-right: 0;
+  margin-bottom: .125rem;
   color: #104b8c;
-  font-size: .9em;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.25em;
+  background: none;
 }
 
-@media only screen and (max-width: 1024px) {
-  #tix-attendees {
-    padding-top: 20px;
-  }
+#tix-attendees li:hover .avatar {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-@media only screen and (max-width: 640px) {
-  #tix-attendees {
-    padding-top: 10px;
-  }
-  #tix-attendees .tix-columns-3 {
-    text-align: center;
-  }
-  #tix-attendees .tix-columns-3 li {
-    height: 120px;
-    width: 50%;
-  }
-  #tix-attendees .tix-columns-3 .avatar {
-    float: none;
-  }
-  #tix-attendees .tix-columns-3 .tix-field {
-    margin-left: 0;
-  }
+#tix-attendees .tix-attendee-url {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 11.25rem;
+}
+
+#tix-attendees .tix-attendee-twitter:after {
+  display: inline-block;
+  width: .875rem;
+  height: .875rem;
+  margin-left: .5rem;
+  vertical-align: middle;
+  opacity: .5;
+  content: "";
+}
+
+#tix-attendees .tix-attendee-twitter:last-child:after {
+  display: none;
 }
 
 /* SPONSORS
@@ -1868,74 +1941,76 @@ h3.org-group:after {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .wcorg-sponsor h3 {
-  color: #104b8c;
-  font-size: 1.6em;
-  margin-bottom: 45px;
-  text-align: center;
   display: none;
 }
 
-.wcorg-sponsors > div h2 {
-  width: 100%;
-  position: relative;
+.wcorg-sponsor img {
+  margin: 0 auto;
 }
 
-.wcorg-sponsors > div h2:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translateX(-50%);
-  border-top: 1px solid #ea8c70;
-  content: "";
-  z-index: -1;
+.wcorg-sponsor .wp-block-image {
+  display: none;
 }
 
 .wcorg-sponsor-description img {
-  display: block;
-  margin: 0 auto 30px;
-  max-width: 700px;
-  max-height: 280px;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
 }
 
-.wcorg-sponsor-level-gold h2, .wcorg-sponsor-level-silver h2, .wcorg-sponsor-level-bronze h2, .wcorg-sponsor-level-in-kind h2 {
-  background-color: #ea8c70;
-  border-radius: 15px;
-  color: #FFF;
-  font-size: 3em;
-  max-width: 80%;
-  padding: 20px 40px;
-  margin: 0 auto 60px;
+.wcorg-sponsor-level-venue img {
+  max-height: 220px !important;
+}
+
+.wcorg-sponsor-level-gold img {
+  max-height: 200px !important;
+}
+
+.wcorg-sponsor-level-silver img {
+  max-height: 170px !important;
+}
+
+.wcorg-sponsor-level-bronze img {
+  max-height: 130px !important;
+}
+
+.wcorg-sponsor-level-in-kind img {
+  max-height: 100px !important;
+}
+
+.wcorg-sponsor-level-venue h2, .wcorg-sponsor-level-gold h2, .wcorg-sponsor-level-silver h2, .wcorg-sponsor-level-bronze h2, .wcorg-sponsor-level-in-kind h2 {
+  display: flex;
+  width: calc(100% + 3rem);
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  color: #ea8c70;
+  font-size: 1.563em;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
-.single-wcb_sponsor .attachment-post-thumbnail {
-  display: block;
-  margin: 0 auto 50px;
-  max-width: 600px;
-  height: auto;
+.wcorg-sponsor-level-venue h2:before, .wcorg-sponsor-level-venue h2:after, .wcorg-sponsor-level-gold h2:before, .wcorg-sponsor-level-gold h2:after, .wcorg-sponsor-level-silver h2:before, .wcorg-sponsor-level-silver h2:after, .wcorg-sponsor-level-bronze h2:before, .wcorg-sponsor-level-bronze h2:after, .wcorg-sponsor-level-in-kind h2:before, .wcorg-sponsor-level-in-kind h2:after {
+  content: '';
+  border-top: 1px dotted #f9cf9f;
+  margin: 0 1.5rem 0 0;
+  flex: 1 0 1.5rem;
 }
 
-@media only screen and (max-width: 767px) {
-  .single-wcb_sponsor .attachment-post-thumbnail {
-    max-width: 320px;
-  }
-  .wcorg-sponsor-description img {
-    max-width: 320px;
-  }
+.wcorg-sponsor-level-venue h2:after, .wcorg-sponsor-level-gold h2:after, .wcorg-sponsor-level-silver h2:after, .wcorg-sponsor-level-bronze h2:after, .wcorg-sponsor-level-in-kind h2:after {
+  margin: 0 0 0 1.5rem;
 }
 
-@media only screen and (max-width: 320px) {
-  .single-wcb_sponsor .attachment-post-thumbnail {
-    max-width: 280px;
-  }
-  .wcorg-sponsor-description img {
-    max-width: 280px;
+@media screen and (min-width: 768px) {
+  .wcorg-sponsor {
+    padding: 2.5rem;
   }
 }
 
