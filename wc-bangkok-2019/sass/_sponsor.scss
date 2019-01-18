@@ -69,13 +69,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-bottom: 2.5rem;
+	margin-bottom: 1.5rem;
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
+	padding: 1.5rem;
 	box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 	h3 {
-		color: $color-navy;
-		font-size: 1.6em;
-		margin-bottom: 45px;
-		text-align: center;
 		display: none;
 	}
 	.wp-block-image {
@@ -83,27 +82,28 @@
 	}
 }
 
-.wcorg-sponsors > div h2 {
-	width: 100%;
-	position: relative;
-	&:before {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 100%;
-		transform: translateX(-50%);
-		border-top: 1px solid $color-rose-pink;
-		content: "";
-		z-index: -1;
-	}
+.wcorg-sponsor-level-venue img {
+	max-height: 220px !important;
+}
+.wcorg-sponsor-level-gold img {
+	max-height: 200px !important;
+}
+.wcorg-sponsor-level-silver img {
+	max-height: 170px !important;
+}
+.wcorg-sponsor-level-bronze img {
+	max-height: 130px !important;
+}
+.wcorg-sponsor-level-in-kind img {
+	max-height: 100px !important;
 }
 
 .wcorg-sponsor-level-venue, .wcorg-sponsor-level-gold, .wcorg-sponsor-level-silver, .wcorg-sponsor-level-bronze, .wcorg-sponsor-level-in-kind {
 	h2 {
 		background-color: $color-rose-pink;
-		border-radius: 0;
 		color: $color-white;
 		font-size: 1.25em;
+		margin-bottom: 2.5rem;
 		padding: 1rem 2rem;
 		text-align: center;
 		&:after {
@@ -112,43 +112,18 @@
 	}
 }
 
-.single-wcb_sponsor {
-	.attachment-post-thumbnail {
-		display: block;
-		margin: 0 auto 50px;
-		max-width: 600px;
-		height: auto;
-	}
-}
-
 @media only screen and (max-width: 767px) {
-
-	.single-wcb_sponsor {
-		.attachment-post-thumbnail {
-			max-width: 320px;
-		}
-	}
-
 	.wcorg-sponsor-description {
 		img {
 			max-width: 320px
 		}
 	}
-
 }
 
 @media only screen and (max-width: 320px) {
-
-	.single-wcb_sponsor {
-		.attachment-post-thumbnail {
-			max-width: 280px;
-		}
-	}
-
 	.wcorg-sponsor-description {
 		img {
 			max-width: 280px
 		}
 	}
-
 }
