@@ -1,122 +1,25 @@
 /* SPEAKER
 ---------------------------------------*/
 
-.wcorg-speaker {
-	h2 {
-		position: relative;
-		margin: 0;
-		padding: 1rem;
-		margin-top: .5rem;
-		color: $color-navy;
-		font-size: 1.25em;
+.wcorg-speaker-description {
+	margin-bottom: 4rem;
+	padding-bottom: 1.5rem;
+	position: relative;
+	&:after {
+		background-color: #eee;
+		content: "";
+		display: block;
+		height: 1px;
+		width: 50%;
+		position: absolute;
+		bottom: 0;
+		left: 25%;
+	}
+	.avatar {
+		border: 2px solid $color-navy;
+		border-radius: 15px;
+		display: block;
+		margin: 0 auto 30px;
 	}
 }
-
-.wcorg-speaker .wcorg-speaker-description h2,.wcorg-speaker .wcorg-speaker-description p {
-	position: absolute;
-	left: -10000px;
-	top: auto;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-}
-
-.wcorg-speaker .avatar {
-	float: left;
-	width: 100%;
-	height: auto;
-	margin: 0;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-}
-
-.wcorg-speaker p {
-	margin-bottom: .5rem;
-	font-size: 16px;
-}
-
-.wcorg-speaker p:last-child {
-	margin-bottom: 0;
-}
-
-.wcorg-speaker h3 {
-	text-transform: none;
-}
-
-.wcb_speaker {
-	margin-bottom: 1.5rem;
-	padding-bottom: 4rem;
-	background: url('https://2018.europe.wordcamp.org/files/2017/12/divider.png') no-repeat 50% 100%;
-}
-
-.wcb_speaker .entry-title {
-	margin-bottom: .5rem;
-}
-
-@media (min-width:37.5em) {
-	.wcb_speaker .entry-content {
-		padding-left: 7.5rem;
-	}
-}
-
-.wcb_speaker .entry-content p {
-	margin-bottom: .5rem;
-}
-
-.wcb_speaker .entry-content p:last-child {
-	margin-bottom: 0;
-}
-
-.wcb_speaker .speaker-avatar {
-	float: left;
-	width: 6.25rem;
-	margin: .5rem 1rem .5rem 0;
-}
-
-.wcb_speaker .speaker-avatar img {
-	margin: 0;
-}
-
-@media (min-width:37.5em) {
-	.wcb_speaker .speaker-avatar {
-		margin-right: 0;
-		margin-left: -7.5rem;
-		box-shadow: -8px 10px 0 0 #f4df27;
-	}
-}
-
-.wcb_speaker .speaker-sessions {
-	margin-top: 1.5rem;
-	font-size: 1em;
-	letter-spacing: .05em;
-	text-transform: uppercase;
-}
-
-.wcb_speaker #speaker-session-names {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-// .wcorg-speaker-description {
-// 	margin-bottom: 4rem;
-// 	padding-bottom: 1.5rem;
-// 	position: relative;
-// 	&:after {
-// 		background-color: #eee;
-// 		content: "";
-// 		display: block;
-// 		height: 1px;
-// 		width: 50%;
-// 		position: absolute;
-// 		bottom: 0;
-// 		left: 25%;
-// 	}
-// 	.avatar {
-// 		border: 2px solid $color-navy;
-// 		border-radius: 15px;
-// 		display: block;
-// 		margin: 0 auto 30px;
-// 	}
-// }
 
