@@ -1910,10 +1910,14 @@ h3.org-group:after {
 .wcorg-sponsor-level-venue h2, .wcorg-sponsor-level-gold h2, .wcorg-sponsor-level-silver h2, .wcorg-sponsor-level-bronze h2, .wcorg-sponsor-level-in-kind h2 {
   background-color: #ea8c70;
   border-radius: 0;
-  color: #FFF;
-  font-size: 1.953em;
+  color: #fff;
+  font-size: 1.563em;
   padding: 1rem 2rem;
   text-align: center;
+}
+
+.wcorg-sponsor-level-venue h2:after, .wcorg-sponsor-level-gold h2:after, .wcorg-sponsor-level-silver h2:after, .wcorg-sponsor-level-bronze h2:after, .wcorg-sponsor-level-in-kind h2:after {
+  content: " Sponsor";
 }
 
 .single-wcb_sponsor .attachment-post-thumbnail {

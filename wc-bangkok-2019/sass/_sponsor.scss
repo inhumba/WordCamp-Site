@@ -111,10 +111,13 @@
 	h2 {
 		background-color: $color-rose-pink;
 		border-radius: 0;
-		color: #FFF;
-		font-size: 1.953em;
+		color: $color-white;
+		font-size: 1.563em;
 		padding: 1rem 2rem;
 		text-align: center;
+		&:after {
+			content: " Sponsor";
+		}
 	}
 }
 
