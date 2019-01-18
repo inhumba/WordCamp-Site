@@ -69,8 +69,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 2.5rem;
+	box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 	h3 {
 		color: $color-navy;
 		font-size: 1.6em;
@@ -98,21 +98,12 @@
 	}
 }
 
-.wcorg-sponsor-description {
-	img {
-		display: block;
-		margin: 0 auto 30px;
-		max-width: 700px;
-		max-height: 280px;
-	}
-}
-
 .wcorg-sponsor-level-venue, .wcorg-sponsor-level-gold, .wcorg-sponsor-level-silver, .wcorg-sponsor-level-bronze, .wcorg-sponsor-level-in-kind {
 	h2 {
 		background-color: $color-rose-pink;
 		border-radius: 0;
 		color: $color-white;
-		font-size: 1.563em;
+		font-size: 1.25em;
 		padding: 1rem 2rem;
 		text-align: center;
 		&:after {

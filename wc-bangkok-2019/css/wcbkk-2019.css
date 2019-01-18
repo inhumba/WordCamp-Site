@@ -1868,8 +1868,8 @@ h3.org-group:after {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .wcorg-sponsor h3 {
@@ -1900,18 +1900,11 @@ h3.org-group:after {
   z-index: -1;
 }
 
-.wcorg-sponsor-description img {
-  display: block;
-  margin: 0 auto 30px;
-  max-width: 700px;
-  max-height: 280px;
-}
-
 .wcorg-sponsor-level-venue h2, .wcorg-sponsor-level-gold h2, .wcorg-sponsor-level-silver h2, .wcorg-sponsor-level-bronze h2, .wcorg-sponsor-level-in-kind h2 {
   background-color: #ea8c70;
   border-radius: 0;
   color: #fff;
-  font-size: 1.563em;
+  font-size: 1.25em;
   padding: 1rem 2rem;
   text-align: center;
 }
