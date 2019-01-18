@@ -1720,6 +1720,28 @@ article.comment-body .reply {
 
 /* ORGANIZER
 ---------------------------------------*/
+.org-group {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #2d7c9f;
+  font-size: 1.563em;
+  margin-bottom: 1.5rem;
+}
+
+.org-group:before, .org-group:after {
+  content: '';
+  border-top: 1px dotted #f9cf9f;
+  margin: 0 1.5rem 0 0;
+  flex: 1 0 1.5rem;
+}
+
+.org-group:after {
+  margin: 0 0 0 1.5rem;
+}
+
 .wcorg-organizer h2 {
   color: #104b8c;
   font-size: 1.25em;
