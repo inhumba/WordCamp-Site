@@ -11,6 +11,8 @@
 }
 
 .wcpt-schedule {
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
 	margin-left: -10rem;
 	margin-right: -10rem;
 	min-width: calc(100% + 20rem);
@@ -18,30 +20,32 @@
 	th, td {
 		padding: 1rem 1.5rem;
 		// position: relative;
-		&:after {
-			// content: '';
-			// background-color: #EEE;
-			// display: block;
-			// height: 20px;
-			// width: 1px;
-			// position: absolute;
-			// top: 0;
-			// right: 0;
-		}
+		// &:after {
+		// 	content: '';
+		// 	background-color: #f8f8f8;
+		// 	display: block;
+		// 	height: 20px;
+		// 	width: 1px;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	right: 0;
+		// }
 	}
 	th {
-		background-color: $color-blue;
-		font-size: 1.125em;
 		text-align: center;
+		border-top: none;
+		background-color: $color-navy;
+		color: $color-white;
 	}
 	td {
-		border-bottom: 1px dotted #eee;
+		border-bottom: 1px solid #f2f2f2;
 	}
 	.global-session {
-		background-color: $color-rose-pink;
+		background-color: lighten($color-rose-pink, 30%);
 		.wcpt-session-title {
-			color: $color-white;
+			color: darken($color-rose-pink, 5%);
 			font-size: 1.125em;
+			@include font-weight(medium);
 			letter-spacing: 1px;
 		}
 		td {
@@ -51,6 +55,7 @@
 		}
 	}
 	.wcpt-time {
+		background-color: #f8f8f8;
 		color: $color-navy;
 		text-align: center;
 	}
@@ -73,7 +78,7 @@
 	}
 	.wcpt-time-300pm {
 		.wcpt-session-type-session {
-			background-color: lighten($color-blue, 45%);
+			background-color: lighten($color-blue, 55%);
 		}
 	}
 }
@@ -88,13 +93,13 @@
 	.wcpt-session-speakers {
 		color: $color-blue;
 		display: block;
-		font-size: 0.9em;
+		font-size: 0.875em;
 		padding-top: 10px;
-		&::before {
-			content: 'by';
-			display: inline-block;
-			margin-right: 5px;
-		}
+		// &::before {
+		// 	content: 'by';
+		// 	display: inline-block;
+		// 	margin-right: 5px;
+		// }
 		a {
 			color: $color-blue;
 			text-decoration: underline;
@@ -103,7 +108,7 @@
 }
 
 .dashicons-star-filled {
-	color: #EEE;
+	color: $color-cream;
 	.global-session & {
 		display: none;
 	}
@@ -116,6 +121,9 @@
 	}
 	a.wcpt-session-title {
 		color: $color-navy;
+		&:hover {
+			color: $color-red;
+		}
 	}
 	.global-session & {
 		text-align: center;

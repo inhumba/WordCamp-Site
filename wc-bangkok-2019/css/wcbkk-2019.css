@@ -1957,6 +1957,8 @@ article.comment-body .reply {
 }
 
 .wcpt-schedule {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   margin-left: -10rem;
   margin-right: -10rem;
   min-width: calc(100% + 20rem);
@@ -1968,22 +1970,24 @@ article.comment-body .reply {
 }
 
 .wcpt-schedule th {
-  background-color: #2d7c9f;
-  font-size: 1.125em;
   text-align: center;
+  border-top: none;
+  background-color: #104b8c;
+  color: #fff;
 }
 
 .wcpt-schedule td {
-  border-bottom: 1px dotted #eee;
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .wcpt-schedule .global-session {
-  background-color: #ea8c70;
+  background-color: #fef7f5;
 }
 
 .wcpt-schedule .global-session .wcpt-session-title {
-  color: #fff;
+  color: #e77a5a;
   font-size: 1.125em;
+  font-weight: 500;
   letter-spacing: 1px;
 }
 
@@ -1992,6 +1996,7 @@ article.comment-body .reply {
 }
 
 .wcpt-schedule .wcpt-time {
+  background-color: #f8f8f8;
   color: #104b8c;
   text-align: center;
 }
@@ -2014,7 +2019,7 @@ article.comment-body .reply {
 }
 
 .wcpt-schedule .wcpt-time-300pm .wcpt-session-type-session {
-  background-color: #c3e1ee;
+  background-color: #ebf5f9;
 }
 
 .page-slug-contributor-day .wcpt-col-time {
@@ -2024,14 +2029,8 @@ article.comment-body .reply {
 .wcb-session-cell-content .wcpt-session-speakers {
   color: #2d7c9f;
   display: block;
-  font-size: 0.9em;
+  font-size: 0.875em;
   padding-top: 10px;
-}
-
-.wcb-session-cell-content .wcpt-session-speakers::before {
-  content: 'by';
-  display: inline-block;
-  margin-right: 5px;
 }
 
 .wcb-session-cell-content .wcpt-session-speakers a {
@@ -2040,7 +2039,7 @@ article.comment-body .reply {
 }
 
 .dashicons-star-filled {
-  color: #EEE;
+  color: #f9cf9f;
 }
 
 .global-session .dashicons-star-filled {
@@ -2057,6 +2056,10 @@ article.comment-body .reply {
 
 .wcb-session-cell-content a.wcpt-session-title {
   color: #104b8c;
+}
+
+.wcb-session-cell-content a.wcpt-session-title:hover {
+  color: #d43e38;
 }
 
 .global-session .wcb-session-cell-content {
