@@ -1939,9 +1939,6 @@ h3.org-group:after {
 ---------------------------------------*/
 .wcorg-speaker h2 {
   position: relative;
-  margin: 0;
-  padding: 1rem;
-  margin-top: .5rem;
   color: #104b8c;
   font-size: 1.25em;
 }
