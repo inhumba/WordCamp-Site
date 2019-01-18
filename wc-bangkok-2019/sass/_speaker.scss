@@ -1,6 +1,17 @@
 /* SPEAKER
 ---------------------------------------*/
 
+.wcorg-speaker {
+	h2 {
+		position: relative;
+		margin: 0;
+		padding: 1rem;
+		margin-top: .5rem;
+		color: $color-navy;
+		font-size: 1.25em;
+	}
+}
+
 .wcorg-speaker-description {
 	margin-bottom: 4rem;
 	padding-bottom: 1.5rem;
