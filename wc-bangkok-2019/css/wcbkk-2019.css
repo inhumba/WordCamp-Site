@@ -2050,6 +2050,10 @@ h3.org-group:after {
   margin-right: 1.5rem;
 }
 
+#speaker-session-names {
+  padding-left: 0;
+}
+
 /* SESSION
 ---------------------------------------*/
 .session-date {
