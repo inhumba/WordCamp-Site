@@ -904,6 +904,11 @@ select:focus {
   padding: 15px 35px;
 }
 
+.entry-content .wp-block-quote.is-large p, .entry-content .wp-block-quote.is-style-large p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .hentry {
   margin-bottom: 2.5rem;
   padding-bottom: 2.5rem;
@@ -2043,6 +2048,10 @@ h3.org-group:after {
   display: block;
   float: left;
   margin-right: 1.5rem;
+}
+
+#speaker-session-names {
+  padding-left: 0;
 }
 
 /* SESSION
