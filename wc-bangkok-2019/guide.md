@@ -7,7 +7,7 @@ Setup guide for the WordCamp Bangkok 2019 theme.
 ##  Setup on wordcamp.org (https://2019.bangkok.wordcamp.org)
 
 **Themes | _Appearance -> Themes_**
-* Use WordCamp Base Redux theme.
+* Use CampSite 2017 theme.
 
 **Site Identity | _Appearance -> Customize -> Site Identity_**
 * Input Site Title, Tagline and Site Icon.
