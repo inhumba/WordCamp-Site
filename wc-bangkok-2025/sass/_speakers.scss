@@ -1,0 +1,181 @@
+// WordCamp Bangkok 2025 - Speakers Styles
+// =======================================
+
+@use "colors";
+@use "typography";
+
+.speakers-section {
+  padding: 3rem 0;
+  background-color: colors.$bg-secondary;
+  
+  .speakers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    h2 {
+      font-size: typography.$font-size-3xl;
+      color: colors.$primary-color;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      font-size: typography.$font-size-lg;
+      color: colors.$text-secondary;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  
+  .speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .speaker-card {
+    background-color: colors.$white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(colors.$black, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(colors.$black, 0.15);
+    }
+    
+    .speaker-avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      overflow: hidden;
+      border: 4px solid colors.$primary-color;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    
+    .speaker-name {
+      font-size: typography.$font-size-xl;
+      font-weight: typography.$font-weight-semibold;
+      color: colors.$text-primary;
+      margin-bottom: 0.5rem;
+    }
+    
+    .speaker-title {
+      font-size: typography.$font-size-base;
+      color: colors.$primary-color;
+      font-weight: typography.$font-weight-medium;
+      margin-bottom: 1rem;
+    }
+    
+    .speaker-company {
+      font-size: typography.$font-size-sm;
+      color: colors.$text-secondary;
+      margin-bottom: 1rem;
+    }
+    
+    .speaker-bio {
+      color: colors.$text-secondary;
+      line-height: typography.$line-height-relaxed;
+      margin-bottom: 1.5rem;
+      font-size: typography.$font-size-sm;
+    }
+    
+    .speaker-session {
+      background-color: colors.$bg-secondary;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      
+      .session-title {
+        font-size: typography.$font-size-base;
+        font-weight: typography.$font-weight-semibold;
+        color: colors.$text-primary;
+        margin-bottom: 0.5rem;
+      }
+      
+      .session-time {
+        font-size: typography.$font-size-sm;
+        color: colors.$text-secondary;
+      }
+    }
+    
+    .speaker-social {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      
+      a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: colors.$primary-color;
+        color: colors.$white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        
+        &:hover {
+          background-color: colors.$secondary-color;
+        }
+      }
+    }
+  }
+  
+  .speakers-cta {
+    text-align: center;
+    margin-top: 3rem;
+    
+    .cta-button {
+      display: inline-block;
+      background-color: colors.$primary-color;
+      color: colors.$white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: typography.$font-weight-semibold;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+        background-color: colors.$secondary-color;
+        color: colors.$white;
+      }
+    }
+  }
+}
+
+// Responsive Speakers
+@media (max-width: 768px) {
+  .speakers-section {
+    padding: 2rem 0;
+    
+    .speakers-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .speaker-card {
+      padding: 1.5rem;
+      
+      .speaker-avatar {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+}

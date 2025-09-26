@@ -1,0 +1,159 @@
+// WordCamp Bangkok 2025 - Tickets Styles
+// ======================================
+
+@use "colors";
+@use "typography";
+
+.tickets-section {
+  padding: 3rem 0;
+  background-color: colors.$bg-secondary;
+  
+  .tickets-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    h2 {
+      font-size: typography.$font-size-3xl;
+      color: colors.$primary-color;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      font-size: typography.$font-size-lg;
+      color: colors.$text-secondary;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  
+  .tickets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .ticket-card {
+    background-color: colors.$white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(colors.$black, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(colors.$black, 0.15);
+    }
+    
+    &.featured {
+      border-color: colors.$primary-color;
+      position: relative;
+      
+      &::before {
+        content: "Most Popular";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: colors.$primary-color;
+        color: colors.$white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: typography.$font-size-sm;
+        font-weight: typography.$font-weight-semibold;
+      }
+    }
+    
+    .ticket-type {
+      font-size: typography.$font-size-lg;
+      font-weight: typography.$font-weight-semibold;
+      color: colors.$primary-color;
+      margin-bottom: 1rem;
+    }
+    
+    .ticket-price {
+      font-size: typography.$font-size-4xl;
+      font-weight: typography.$font-weight-bold;
+      color: colors.$text-primary;
+      margin-bottom: 0.5rem;
+      
+      .currency {
+        font-size: typography.$font-size-lg;
+        vertical-align: top;
+      }
+    }
+    
+    .ticket-description {
+      color: colors.$text-secondary;
+      margin-bottom: 2rem;
+      line-height: typography.$line-height-relaxed;
+    }
+    
+    .ticket-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem 0;
+      
+      li {
+        padding: 0.5rem 0;
+        color: colors.$text-primary;
+        
+        &::before {
+          content: "✓";
+          color: colors.$success;
+          font-weight: typography.$font-weight-bold;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    
+    .ticket-button {
+      display: inline-block;
+      background-color: colors.$primary-color;
+      color: colors.$white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: typography.$font-weight-semibold;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+        background-color: colors.$secondary-color;
+        color: colors.$white;
+      }
+      
+      &.sold-out {
+        background-color: colors.$gray-medium;
+        cursor: not-allowed;
+        
+        &:hover {
+          background-color: colors.$gray-medium;
+        }
+      }
+    }
+  }
+}
+
+// Responsive Tickets
+@media (max-width: 768px) {
+  .tickets-section {
+    padding: 2rem 0;
+    
+    .tickets-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .ticket-card {
+      padding: 1.5rem;
+    }
+  }
+}

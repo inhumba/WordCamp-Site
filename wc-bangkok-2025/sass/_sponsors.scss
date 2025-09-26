@@ -1,0 +1,195 @@
+// WordCamp Bangkok 2025 - Sponsors Styles
+// =======================================
+
+@use "colors";
+@use "typography";
+
+.sponsors-section {
+  padding: 3rem 0;
+  
+  .sponsors-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    h2 {
+      font-size: typography.$font-size-3xl;
+      color: colors.$primary-color;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      font-size: typography.$font-size-lg;
+      color: colors.$text-secondary;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  
+  .sponsor-tier {
+    margin-bottom: 3rem;
+    
+    .tier-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      
+      h3 {
+        font-size: typography.$font-size-2xl;
+        color: colors.$text-primary;
+        margin-bottom: 0.5rem;
+      }
+      
+      p {
+        color: colors.$text-secondary;
+        font-size: typography.$font-size-base;
+      }
+    }
+    
+    .sponsors-grid {
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+      
+      &.platinum {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+      
+      &.gold {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+      
+      &.silver {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+      
+      &.bronze {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+    }
+    
+    .sponsor-card {
+      background-color: colors.$white;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(colors.$black, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid transparent;
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(colors.$black, 0.15);
+      }
+      
+      &.platinum {
+        border-color: #e5e4e2;
+      }
+      
+      &.gold {
+        border-color: #ffd700;
+      }
+      
+      &.silver {
+        border-color: #c0c0c0;
+      }
+      
+      &.bronze {
+        border-color: #cd7f32;
+      }
+      
+      .sponsor-logo {
+        max-width: 100%;
+        max-height: 120px;
+        object-fit: contain;
+        margin-bottom: 1rem;
+      }
+      
+      .sponsor-name {
+        font-size: typography.$font-size-lg;
+        font-weight: typography.$font-weight-semibold;
+        color: colors.$text-primary;
+        margin-bottom: 0.5rem;
+      }
+      
+      .sponsor-description {
+        color: colors.$text-secondary;
+        font-size: typography.$font-size-sm;
+        line-height: typography.$line-height-relaxed;
+      }
+      
+      .sponsor-link {
+        display: inline-block;
+        margin-top: 1rem;
+        color: colors.$primary-color;
+        text-decoration: none;
+        font-weight: typography.$font-weight-medium;
+        
+        &:hover {
+          color: colors.$secondary-color;
+        }
+      }
+    }
+  }
+  
+  .sponsor-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: colors.$bg-secondary;
+    border-radius: 12px;
+    
+    h3 {
+      font-size: typography.$font-size-xl;
+      color: colors.$primary-color;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      color: colors.$text-secondary;
+      margin-bottom: 1.5rem;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: colors.$primary-color;
+      color: colors.$white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: typography.$font-weight-semibold;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+        background-color: colors.$secondary-color;
+        color: colors.$white;
+      }
+    }
+  }
+}
+
+// Responsive Sponsors
+@media (max-width: 768px) {
+  .sponsors-section {
+    padding: 2rem 0;
+    
+    .sponsor-tier {
+      .sponsors-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      
+      .sponsor-card {
+        padding: 1.5rem;
+        
+        .sponsor-logo {
+          max-height: 80px;
+        }
+      }
+    }
+  }
+}

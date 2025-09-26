@@ -1,0 +1,74 @@
+// WordCamp Bangkok 2025 - Typography
+// ==================================
+
+@use "colors";
+
+// Font Families
+$font-display: 'Luktao', 'Optic', sans-serif;
+$font-body: 'Noto Sans Thai Looped', sans-serif;
+$font-mono: 'Courier New', monospace;
+
+// Font Sizes
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.875rem;   // 14px
+$font-size-base: 1rem;     // 16px
+$font-size-lg: 1.125rem;   // 18px
+$font-size-xl: 1.25rem;    // 20px
+$font-size-2xl: 1.5rem;    // 24px
+$font-size-3xl: 1.875rem;  // 30px
+$font-size-4xl: 2.25rem;   // 36px
+$font-size-5xl: 3rem;      // 48px
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line Heights
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// Typography Base Styles
+body {
+  font-family: $font-body;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  color: colors.$text-primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: $font-size-4xl; }
+h2 { font-size: $font-size-3xl; }
+h3 { font-size: $font-size-2xl; }
+h4 { font-size: $font-size-xl; }
+h5 { font-size: $font-size-lg; }
+h6 { font-size: $font-size-base; }
+
+p {
+  margin-bottom: 1rem;
+  line-height: $line-height-relaxed;
+}
+
+a {
+  color: colors.$primary-color;
+  text-decoration: none;
+  
+  &:hover {
+    color: colors.$secondary-color;
+    text-decoration: underline;
+  }
+}
+
+:root {
+  --font-display: 'Luktao', 'Optic', sans-serif;
+  --font-body: 'Noto Sans Thai Looped', sans-serif;
+}

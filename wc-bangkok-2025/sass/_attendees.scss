@@ -1,0 +1,141 @@
+// WordCamp Bangkok 2025 - Attendees Styles
+// ========================================
+
+@use "colors";
+@use "typography";
+
+.attendees-section {
+  padding: 3rem 0;
+  background-color: colors.$bg-secondary;
+  
+  .attendees-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    
+    h2 {
+      font-size: typography.$font-size-3xl;
+      color: colors.$primary-color;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      font-size: typography.$font-size-lg;
+      color: colors.$text-secondary;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  
+  .attendees-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    
+    .stat-item {
+      background-color: colors.$white;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(colors.$black, 0.1);
+      
+      .stat-number {
+        font-size: typography.$font-size-4xl;
+        font-weight: typography.$font-weight-bold;
+        color: colors.$primary-color;
+        margin-bottom: 0.5rem;
+      }
+      
+      .stat-label {
+        font-size: typography.$font-size-base;
+        color: colors.$text-secondary;
+        font-weight: typography.$font-weight-medium;
+      }
+    }
+  }
+  
+  .attendees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 1rem;
+    
+    .attendee-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid colors.$white;
+      box-shadow: 0 2px 8px rgba(colors.$black, 0.1);
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.1);
+        z-index: 10;
+        position: relative;
+      }
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  .attendees-cta {
+    text-align: center;
+    margin-top: 3rem;
+    
+    .cta-button {
+      display: inline-block;
+      background-color: colors.$primary-color;
+      color: colors.$white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: typography.$font-weight-semibold;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+        background-color: colors.$secondary-color;
+        color: colors.$white;
+      }
+    }
+  }
+}
+
+// Responsive Attendees
+@media (max-width: 768px) {
+  .attendees-section {
+    padding: 2rem 0;
+    
+    .attendees-stats {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      
+      .stat-item {
+        padding: 1.5rem;
+        
+        .stat-number {
+          font-size: typography.$font-size-3xl;
+        }
+      }
+    }
+    
+    .attendees-grid {
+      grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+      gap: 0.5rem;
+      
+      .attendee-avatar {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}

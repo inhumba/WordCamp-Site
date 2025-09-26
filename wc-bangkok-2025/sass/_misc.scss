@@ -1,0 +1,225 @@
+// WordCamp Bangkok 2025 - Miscellaneous Styles
+// =============================================
+
+@use "colors";
+@use "typography";
+@use "sass:color";
+
+// Utility Classes
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+.mt-5 { margin-top: 3rem; }
+
+.p-0 { padding: 0; }
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
+.p-5 { padding: 3rem; }
+
+// Button Styles
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: typography.$font-weight-medium;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  
+  &.btn-primary {
+    background-color: colors.$primary-color;
+    color: colors.$white;
+    border-color: colors.$primary-color;
+    
+    &:hover {
+      background-color: colors.$secondary-color;
+      border-color: colors.$secondary-color;
+      color: colors.$white;
+    }
+  }
+  
+  &.btn-secondary {
+    background-color: transparent;
+    color: colors.$primary-color;
+    border-color: colors.$primary-color;
+    
+    &:hover {
+      background-color: colors.$primary-color;
+      color: colors.$white;
+    }
+  }
+  
+  &.btn-outline {
+    background-color: transparent;
+    color: colors.$white;
+    border-color: colors.$white;
+    
+    &:hover {
+      background-color: colors.$white;
+      color: colors.$primary-color;
+    }
+  }
+  
+  &.btn-large {
+    padding: 1rem 2rem;
+    font-size: typography.$font-size-lg;
+  }
+  
+  &.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: typography.$font-size-sm;
+  }
+}
+
+// Card Styles
+.card {
+  background-color: colors.$white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(colors.$black, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(colors.$black, 0.15);
+  }
+  
+  .card-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid colors.$border-light;
+    
+    h3 {
+      margin: 0;
+      color: colors.$primary-color;
+    }
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-footer {
+    padding: 1rem 1.5rem;
+    background-color: colors.$bg-secondary;
+    border-top: 1px solid colors.$border-light;
+  }
+}
+
+// Alert Styles
+.alert {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 4px solid;
+  
+  &.alert-success {
+    background-color: rgba(colors.$success, 0.1);
+    border-left-color: colors.$success;
+    color: color.scale(colors.$success, $lightness: -20%);
+  }
+  
+  &.alert-warning {
+    background-color: rgba(colors.$warning, 0.1);
+    border-left-color: colors.$warning;
+    color: color.scale(colors.$warning, $lightness: -20%);
+  }
+  
+  &.alert-error {
+    background-color: rgba(colors.$error, 0.1);
+    border-left-color: colors.$error;
+    color: color.scale(colors.$error, $lightness: -20%);
+  }
+  
+  &.alert-info {
+    background-color: rgba(colors.$info, 0.1);
+    border-left-color: colors.$info;
+    color: color.scale(colors.$info, $lightness: -20%);
+  }
+}
+
+// Loading Spinner
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(colors.$primary-color, 0.3);
+  border-radius: 50%;
+  border-top-color: colors.$primary-color;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+// Responsive Images
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-rounded {
+  border-radius: 8px;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+// Visibility Classes
+.hidden { display: none; }
+.visible { display: block; }
+
+@media (max-width: 768px) {
+  .hidden-mobile { display: none; }
+}
+
+@media (min-width: 769px) {
+  .hidden-desktop { display: none; }
+}
+
+// WordPress Specific
+.wp-caption {
+  max-width: 100%;
+  
+  .wp-caption-text {
+    font-size: typography.$font-size-sm;
+    color: colors.$text-secondary;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
+
+.alignleft {
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.alignright {
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto 1rem;
+}

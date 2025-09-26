@@ -1,0 +1,60 @@
+// WordCamp Bangkok 2025 - Header Styles
+// =====================================
+
+@use "colors";
+@use "typography";
+
+.site-header {
+  background-color: colors.$bg-primary;
+  border-bottom: 1px solid colors.$border-light;
+  padding: 1rem 0;
+  
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .site-logo {
+    img {
+      max-height: 60px;
+      width: auto;
+    }
+  }
+  
+  .site-title {
+    font-family: typography.$font-display;
+    font-size: typography.$font-size-2xl;
+    font-weight: typography.$font-weight-bold;
+    color: colors.$primary-color;
+    margin: 0;
+  }
+  
+  .site-tagline {
+    font-size: typography.$font-size-sm;
+    color: colors.$text-secondary;
+    margin: 0;
+  }
+}
+
+// Responsive Header
+@media (max-width: 768px) {
+  .site-header {
+    .header-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .site-logo img {
+      max-height: 50px;
+    }
+    
+    .site-title {
+      font-size: typography.$font-size-xl;
+      text-align: center;
+    }
+  }
+}

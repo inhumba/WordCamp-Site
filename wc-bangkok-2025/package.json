@@ -1,0 +1,30 @@
+{
+  "name": "wordcamp-bangkok-2025",
+  "version": "1.0.0",
+  "description": "WordCamp Bangkok 2025 website styles",
+  "main": "css/wcbkk-2025.css",
+  "scripts": {
+    "build": "sass sass/stylesheet.scss css/wcbkk-2025.css --style=compressed --source-map",
+    "build:dev": "sass sass/stylesheet.scss css/wcbkk-2025.css --style=expanded --source-map",
+    "watch": "sass sass/stylesheet.scss css/wcbkk-2025.css --style=expanded --source-map --watch",
+    "watch:compressed": "sass sass/stylesheet.scss css/wcbkk-2025.css --style=compressed --source-map --watch",
+    "clean": "rm -f css/wcbkk-2025.css css/wcbkk-2025.css.map"
+  },
+  "keywords": [
+    "wordcamp",
+    "bangkok",
+    "wordpress",
+    "sass",
+    "css"
+  ],
+  "author": "WordPress Bangkok Organizer",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wordpress-bangkok/wc-bangkok-2025.git"
+  },
+  "homepage": "https://bangkok.wordcamp.org/2025"
+}
