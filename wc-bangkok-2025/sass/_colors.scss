@@ -33,3 +33,19 @@ $success: #28a745;
 $warning: #ffc107;
 $error: #dc3545;
 $info: #17a2b8;
+
+:root {
+  --clr-white: hsla(0, 0%, 100%, 1);      // #FFFFFF
+  --clr-snow: hsla(33, 44%, 95%, 1);      // #F7F2EC
+  --clr-pink: hsla(335, 68%, 80%, 1);     // #F5A5C9
+  --clr-black: hsla(0, 0%, 7%, 1);        // #111111
+  --clr-dark: hsla(336, 69%, 10%, 1);     // #2B0A1A
+  --clr-mahogany: hsla(34, 41%, 10%, 1);  // #291B0F
+  --clr-yellow: hsla(57, 69%, 58%, 1);    // #E4E54B
+  --clr-orange: hsla(14, 88%, 54%, 1);    // #F44712
+  --clr-red: hsla(7, 76%, 52%, 1);        // #E63B23
+  --clr-brick: hsla(7, 76%, 25%, 1);      // #6E1C11
+  --clr-ochre: hsla(8, 76%, 10%, 1);      // #2D0E0A
+  --clr-green: hsla(150, 78%, 25%, 1);    // #0E7339
+  --clr-forest: hsla(151, 76%, 10%, 1);   // #062D16
+}
