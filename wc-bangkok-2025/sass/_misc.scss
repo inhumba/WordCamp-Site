@@ -226,4 +226,5 @@
 
 :where(.wp-site-blocks *:focus) {
   outline-style: dotted;
+  outline-offset: 2px;
 }
