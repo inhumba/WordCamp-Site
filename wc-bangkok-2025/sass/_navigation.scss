@@ -69,3 +69,13 @@
     display: none !important;
   }
 }
+
+.wp-block-navigation__responsive-container .wp-block-navigation__responsive-container-content {
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .wp-block-navigation__responsive-container .wp-block-navigation__responsive-container-content {
+    display: block;
+  }
+}

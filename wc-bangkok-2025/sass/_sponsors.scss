@@ -4,6 +4,11 @@
 @use "colors";
 @use "typography";
 
+// Sponsors section
+.sponsors-section {
+  margin-block-start: 0;
+}
+
 // Sponsors list
 .sponsors-list .wcb_sponsor figure {
   margin-block: 0;
