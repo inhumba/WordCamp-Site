@@ -104,7 +104,7 @@ select {
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin: 3rem auto 2rem !important;
-  padding-inline-start: 0;
+  padding-inline-start: 0 !important;
   width: min(100%, 1200px);
 
   li {
@@ -127,15 +127,17 @@ select {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .latest-posts {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 
 @media screen and (max-width: 600px) {
   .latest-posts {
     grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 }
 
