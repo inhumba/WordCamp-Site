@@ -35,22 +35,34 @@ $error: #dc3545;
 $info: #17a2b8;
 
 :root {
-  --clr-white: hsla(0, 0%, 100%, 1);      // #FFFFFF
-  --clr-snow: hsla(33, 44%, 95%, 1);      // #F7F2EC
-  --clr-pink: hsla(335, 68%, 80%, 1);     // #F5A5C9
-  --clr-black: hsla(0, 0%, 7%, 1);        // #111111
-  --clr-dark: hsla(336, 69%, 10%, 1);     // #2B0A1A
-  --clr-mahogany: hsla(34, 41%, 10%, 1);  // #291B0F
-  --clr-mahogany-hover: hsla(34, 41%, 5%, 1);  // #140D07
-  --clr-yellow: hsla(57, 69%, 58%, 1);    // #E4E54B
-  --clr-orange: hsla(14, 88%, 54%, 1);    // #F44712
-  --clr-red: hsla(7, 76%, 52%, 1);        // #E63B23
-  --clr-red-hover: hsla(7, 76%, 42%, 1);  // #DA361F
-  --clr-brick: hsla(7, 76%, 25%, 1);      // #6E1C11
-  --clr-ochre: hsla(8, 76%, 10%, 1);      // #2D0E0A
-  --clr-green: hsla(150, 78%, 25%, 1);    // #0E7339
-  --clr-green-hover: hsla(150, 78%, 15%, 1);    // #084523
-  --clr-forest: hsla(151, 76%, 10%, 1);   // #062D16
+  --wp--preset--color--black: #000000;
+  --wp--preset--color--cyan-bluish-gray: #abb8c3;
+  --wp--preset--color--white: #ffffff;
+  --wp--preset--color--pale-pink: #f78da7;
+  --wp--preset--color--vivid-red: #cf2e2e;
+  --wp--preset--color--luminous-vivid-orange: #ff6900;
+  --wp--preset--color--luminous-vivid-amber: #fcb900;
+  --wp--preset--color--light-green-cyan: #7bdcb5;
+  --wp--preset--color--vivid-green-cyan: #00d084;
+  --wp--preset--color--pale-cyan-blue: #8ed1fc;
+  --wp--preset--color--vivid-cyan-blue: #0693e3;
+  --wp--preset--color--vivid-purple: #9b51e0;
+  --wp--preset--color--base: #f7f2ec;
+  --wp--preset--color--base-2: #ffffff;
+  --wp--preset--color--contrast: #111111;
+  --wp--preset--color--contrast-2: #2b0a1a;
+  --wp--preset--color--contrast-3: #291b0f;
+  --wp--preset--color--accent: #0e7339;
+  --wp--preset--color--accent-2: #062d16;
+  --wp--preset--color--accent-3: #f44712;
+  --wp--preset--color--accent-4: #e63b23;
+  --wp--preset--color--accent-5: #6e1c11;
+  --wp--preset--color--custom-accent-six: #2d0e0a;
+  --wp--preset--color--custom-accent-seven: #f5a5c9;
+  --wp--preset--color--custom-accent-eight: #e4e54b;
+  --wp--preset--color--custom-contrast-dark-three: #140d07;
+  --wp--preset--color--custom-accent-dark-four: #da361f;
+  --wp--preset--color--custom-accent-dark: #084523;
   
   // Additional colors for refactored styles
   --clr-gray-light: #f8f9fa;

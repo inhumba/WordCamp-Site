@@ -4,7 +4,7 @@
 @use "colors";
 
 // Font Families
-$font-display: 'Luktao', 'Optic', sans-serif;
+$font-display: 'Prompt', sans-serif;
 $font-body: 'Noto Sans Thai Looped', sans-serif;
 $font-mono: 'Courier New', monospace;
 
@@ -69,6 +69,8 @@ a {
 }
 
 :root {
-  --font-display: 'Luktao', 'Optic', sans-serif;
-  --font-body: 'Noto Sans Thai Looped', sans-serif;
+  --wp--preset--font-family--prompt: Prompt, sans-serif;
+  --wp--preset--font-family--noto-sans-thai-looped: "Noto Sans Thai Looped", sans-serif;
+  --wp--preset--font-family--luktao: Luktao;
+  --wp--preset--font-family--optic: Optic;
 }

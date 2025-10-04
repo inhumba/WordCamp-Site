@@ -38,7 +38,7 @@
   gap: 20px;
 
   li {
-    background-color: var(--clr-snow);
+    background-color: var(--wp--preset--color--base);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -75,18 +75,18 @@
 
 // Post title
 .wp-block-latest-posts__post-title {
-  font-family: var(--font-display);
+  font-family: var(--wp--preset--font-family--prompt);
   font-size: 26px;
   line-height: 1.4;
   font-weight: bold;
-  color: var(--clr-black);
+  color: var(--wp--preset--color--contrast);
   text-decoration: none;
   margin: 15px 0 5px;
   padding-top: 10px;
   transition: color 0.3s ease;
 
   &:hover {
-    color: var(--clr-pink);
+    color: var(--wp--preset--color--custom-accent-seven);
   }
 }
 
@@ -164,7 +164,7 @@ select {
   }
   
   blockquote {
-    border-inline-start: 4px solid var(--clr-green);
+    border-inline-start: 4px solid var(--wp--preset--color--accent);
     padding-inline-start: 1.5rem;
     margin-block: 2rem;
     font-style: italic;

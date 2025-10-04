@@ -9,7 +9,7 @@
   width: 100%;
   border-collapse: collapse;
   margin-block: 25px;
-  font-family: var(--font-body);
+  font-family: var(--wp--preset--font-family--noto-sans-thai-looped);
   font-size: 1rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -18,8 +18,8 @@
 
 // Table Header
 .tix_tickets_table thead tr {
-  background-color: var(--clr-green);
-  color: var(--clr-white);
+  background-color: var(--wp--preset--color--accent);
+  color: var(--wp--preset--color--white);
   text-align: left;
   font-weight: bold;
 }
@@ -33,10 +33,10 @@
 // Table Body
 .tix_tickets_table tbody tr {
   border-bottom: 1px solid var(--clr-border-light);
-  background-color: var(--clr-snow);
+  background-color: var(--wp--preset--color--base);
 
   &:nth-of-type(even) {
-    background-color: var(--clr-white);
+    background-color: var(--wp--preset--color--white);
   }
 
   &:hover {
@@ -63,19 +63,19 @@
   font-size: 1rem;
   border: 1px solid var(--clr-border-medium);
   border-radius: 6px;
-  background-color: var(--clr-white);
-  color: var(--clr-black);
+  background-color: var(--wp--preset--color--white);
+  color: var(--wp--preset--color--contrast);
   cursor: pointer;
 
   &:focus {
     outline: none;
-    border-color: var(--clr-green);
+    border-color: var(--wp--preset--color--accent);
   }
 }
 
 // Ticket form
 table.tix-ticket-form {
-  background-color: var(--clr-white);
+  background-color: var(--wp--preset--color--white);
   border-radius: 15px;
   padding: 1rem 1.5rem;
   width: 100%;
@@ -95,10 +95,10 @@ table.tix-ticket-form {
 .tix-js input[type="submit"] {
   font-size: 15px;
   font-weight: 500;
-  font-family: var(--font-display);
+  font-family: var(--wp--preset--font-family--prompt);
   box-shadow: 0;
-  color: var(--clr-white);
-  background: var(--clr-green);
+  color: var(--wp--preset--color--white);
+  background: var(--wp--preset--color--accent);
   border: none;
   padding: 10px 16px;
   border-radius: 50px;
@@ -132,8 +132,8 @@ table.tix-ticket-form {
   }
   
   .tix_tickets_table tbody th.tix-column-description {
-    background-color: var(--clr-green);
-    color: var(--clr-white);
+    background-color: var(--wp--preset--color--accent);
+    color: var(--wp--preset--color--white);
     font-weight: bold;
     text-align: center;
     padding: 15px;
@@ -142,8 +142,8 @@ table.tix-ticket-form {
   }
   
   .tix_tickets_table tbody td.tix-column-description {
-    background-color: var(--clr-green);
-    color: var(--clr-white);
+    background-color: var(--wp--preset--color--accent);
+    color: var(--wp--preset--color--white);
     text-align: left;
     font-weight: bold;
     width: 100%;
@@ -168,7 +168,7 @@ table.tix-ticket-form {
       font-weight: bold;
       text-align: left;
       white-space: nowrap;
-      color: var(--clr-black);
+      color: var(--wp--preset--color--contrast);
     }
   }
   

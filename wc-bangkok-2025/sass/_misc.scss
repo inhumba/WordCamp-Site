@@ -238,7 +238,7 @@
 
 .contact-form-submission {
   border: none !important;
-  background-color: var(--clr-white);
+  background-color: var(--wp--preset--color--white);
   border-radius: 15px;
   padding: 1rem 1.5rem !important;
 }
@@ -282,18 +282,18 @@
   }
 
   &.btn-red {
-    background-color: var(--clr-red-hover);
+    background-color: var(--wp--preset--color--custom-accent-dark-four);
 
     .wp-block-button__link {
-      background-color: var(--clr-red);
+      background-color: var(--wp--preset--color--accent-4);
     }
   }
 
   &.btn-green {
-    background-color: var(--clr-green-hover);
+    background-color: var(--wp--preset--color--custom-accent-dark);
 
     .wp-block-button__link {
-      background-color: var(--clr-green);
+      background-color: var(--wp--preset--color--accent);
     }
   }
 }
