@@ -228,3 +228,80 @@
   outline-style: dotted;
   outline-offset: 2px;
 }
+
+// Contact form
+.contact-form :is([type=submit], button:not([type=reset])) {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact-form-submission {
+  border: none !important;
+  background-color: var(--clr-white);
+  border-radius: 15px;
+  padding: 1rem 1.5rem !important;
+}
+
+// 3D Button effects
+.btn-3d {
+  position: relative;
+  border: none;
+  border-radius: 0.5rem;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 6px;
+  transition: filter 250ms;
+
+  &:hover {
+    filter: brightness(110%);
+
+    .wp-block-button__link {
+      transform: translateY(-6px);
+      transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+      text-decoration: none;
+    }
+  }
+
+  &:active .wp-block-button__link {
+    transform: translateY(-2px);
+    transition: transform 35ms;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  .wp-block-button__link {
+    display: block;
+    border-radius: 0.5rem;
+    position: relative;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+
+  &.btn-red {
+    background-color: var(--clr-red-hover);
+
+    .wp-block-button__link {
+      background-color: var(--clr-red);
+    }
+  }
+
+  &.btn-green {
+    background-color: var(--clr-green-hover);
+
+    .wp-block-button__link {
+      background-color: var(--clr-green);
+    }
+  }
+}
+
+// CTA section
+.cta {
+  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-green.webp') left calc(10vw - 230px) bottom -1rem / 230px auto, 
+              url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-red.webp') right calc(10vw - 230px) bottom -1rem / 250px auto;
+  background-repeat: no-repeat;
+  margin-block-start: 0;
+}

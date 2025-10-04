@@ -4,52 +4,171 @@
 @use "colors";
 @use "typography";
 
-.site-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
+// Home page styles
+.page-slug-home {
+  .wp-block-post-title {
+    display: none;
+  }
 
-.content-area {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-  
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  main > div:first-child {
+    display: none;
+  }
+
+  .wp-block-latest-posts__list {
+    gap: 40px;
   }
 }
 
+// Home blog section
+.home--blog {
+  max-width: 768px;
+}
+
+// Featured image
+.wp-block-post-featured-image {
+  max-width: 1024px;
+}
+
+// Latest posts block
+.wp-block-latest-posts__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 20px;
+
+  li {
+    background-color: var(--clr-snow);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+// Featured image in posts
+.wp-block-latest-posts__featured-image {
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+// Content wrapper for padding
+.wp-block-latest-posts__list li > a,
+.wp-block-latest-posts__list li > time,
+.wp-block-latest-posts__list li > div:not(.wp-block-latest-posts__featured-image) {
+  padding-inline: 20px;
+}
+
+// Post title
+.wp-block-latest-posts__post-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  line-height: 1.4;
+  font-weight: bold;
+  color: var(--clr-black);
+  text-decoration: none;
+  margin: 15px 0 5px;
+  padding-top: 10px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--clr-pink);
+  }
+}
+
+// Post date
+.wp-block-latest-posts__post-date {
+  font-size: 0.9rem;
+  color: var(--clr-gray-medium);
+  margin-block-end: 15px;
+  display: block;
+}
+
+// Post excerpt
+.wp-block-latest-posts__post-excerpt {
+  font-size: 1rem;
+  color: var(--clr-gray-dark);
+  line-height: 1.6;
+  padding-block-end: 20px;
+}
+
+// Separator
+:root :where(.wp-block-separator) {
+  opacity: 0.25;
+  margin-block: 4rem;
+}
+
+// Map container
+.map-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 40.25%; // 16:9 Aspect Ratio
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+// Form inputs
+input[type="text"], 
+input[type="email"], 
+input[type="url"], 
+textarea, 
+select {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid var(--clr-border-medium);
+}
+
+// Entry content
 .entry-content {
   h1, h2, h3, h4, h5, h6 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-block: 2rem 1rem;
     
     &:first-child {
-      margin-top: 0;
+      margin-block-start: 0;
     }
   }
   
   p {
-    margin-bottom: 1.5rem;
+    margin-block-end: 1.5rem;
   }
   
   ul, ol {
-    margin-bottom: 1.5rem;
-    padding-left: 2rem;
+    margin-block-end: 1.5rem;
+    padding-inline-start: 2rem;
     
     li {
-      margin-bottom: 0.5rem;
+      margin-block-end: 0.5rem;
     }
   }
   
   blockquote {
-    border-left: 4px solid colors.$primary-color;
-    padding-left: 1.5rem;
-    margin: 2rem 0;
+    border-inline-start: 4px solid var(--clr-green);
+    padding-inline-start: 1.5rem;
+    margin-block: 2rem;
     font-style: italic;
-    color: colors.$text-secondary;
+    color: var(--clr-text-secondary);
   }
   
   img {
@@ -59,53 +178,13 @@
   }
   
   .wp-block-image {
-    margin: 2rem 0;
+    margin-block: 2rem;
     
     figcaption {
       text-align: center;
       font-size: typography.$font-size-sm;
-      color: colors.$text-secondary;
-      margin-top: 0.5rem;
-    }
-  }
-}
-
-// Sidebar
-.widget-area {
-  .widget {
-    background-color: colors.$bg-secondary;
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    
-    .widget-title {
-      font-size: typography.$font-size-lg;
-      font-weight: typography.$font-weight-semibold;
-      margin-bottom: 1rem;
-      color: colors.$primary-color;
-    }
-    
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      
-      li {
-        padding: 0.5rem 0;
-        border-bottom: 1px solid colors.$border-light;
-        
-        &:last-child {
-          border-bottom: none;
-        }
-        
-        a {
-          color: colors.$text-primary;
-          
-          &:hover {
-            color: colors.$primary-color;
-          }
-        }
-      }
+      color: var(--clr-text-secondary);
+      margin-block-start: 0.5rem;
     }
   }
 }

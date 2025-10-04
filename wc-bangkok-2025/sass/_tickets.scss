@@ -4,156 +4,220 @@
 @use "colors";
 @use "typography";
 
-.tickets-section {
-  padding: 3rem 0;
-  background-color: colors.$bg-secondary;
-  
-  .tickets-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+// General Table Styles
+.tix_tickets_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: 25px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+// Table Header
+.tix_tickets_table thead tr {
+  background-color: var(--clr-green);
+  color: var(--clr-white);
+  text-align: left;
+  font-weight: bold;
+}
+
+// Table Cells
+.tix_tickets_table th,
+.tix_tickets_table td {
+  padding: 12px 15px;
+}
+
+// Table Body
+.tix_tickets_table tbody tr {
+  border-bottom: 1px solid var(--clr-border-light);
+  background-color: var(--clr-snow);
+
+  &:nth-of-type(even) {
+    background-color: var(--clr-white);
   }
-  
-  .section-title {
-    text-align: center;
-    margin-bottom: 3rem;
-    
-    h2 {
-      font-size: typography.$font-size-3xl;
-      color: colors.$primary-color;
-      margin-bottom: 1rem;
-    }
-    
-    p {
-      font-size: typography.$font-size-lg;
-      color: colors.$text-secondary;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-  }
-  
-  .tickets-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .ticket-card {
-    background-color: colors.$white;
-    border-radius: 12px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(colors.$black, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid transparent;
-    
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 30px rgba(colors.$black, 0.15);
-    }
-    
-    &.featured {
-      border-color: colors.$primary-color;
-      position: relative;
-      
-      &::before {
-        content: "Most Popular";
-        position: absolute;
-        top: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: colors.$primary-color;
-        color: colors.$white;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        font-size: typography.$font-size-sm;
-        font-weight: typography.$font-weight-semibold;
-      }
-    }
-    
-    .ticket-type {
-      font-size: typography.$font-size-lg;
-      font-weight: typography.$font-weight-semibold;
-      color: colors.$primary-color;
-      margin-bottom: 1rem;
-    }
-    
-    .ticket-price {
-      font-size: typography.$font-size-4xl;
-      font-weight: typography.$font-weight-bold;
-      color: colors.$text-primary;
-      margin-bottom: 0.5rem;
-      
-      .currency {
-        font-size: typography.$font-size-lg;
-        vertical-align: top;
-      }
-    }
-    
-    .ticket-description {
-      color: colors.$text-secondary;
-      margin-bottom: 2rem;
-      line-height: typography.$line-height-relaxed;
-    }
-    
-    .ticket-features {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 2rem 0;
-      
-      li {
-        padding: 0.5rem 0;
-        color: colors.$text-primary;
-        
-        &::before {
-          content: "✓";
-          color: colors.$success;
-          font-weight: typography.$font-weight-bold;
-          margin-right: 0.5rem;
-        }
-      }
-    }
-    
-    .ticket-button {
-      display: inline-block;
-      background-color: colors.$primary-color;
-      color: colors.$white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: typography.$font-weight-semibold;
-      transition: background-color 0.3s ease;
-      
-      &:hover {
-        background-color: colors.$secondary-color;
-        color: colors.$white;
-      }
-      
-      &.sold-out {
-        background-color: colors.$gray-medium;
-        cursor: not-allowed;
-        
-        &:hover {
-          background-color: colors.$gray-medium;
-        }
-      }
-    }
+
+  &:hover {
+    background-color: #f1f1f1;
   }
 }
 
-// Responsive Tickets
-@media (max-width: 768px) {
-  .tickets-section {
-    padding: 2rem 0;
-    
-    .tickets-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+// Column Specific Styles
+.tix-column-description {
+  font-weight: bold !important;
+  text-align: left !important;
+}
+
+.tix-column-price,
+.tix-column-remaining,
+.tix-column-quantity {
+  text-align: center;
+}
+
+// Quantity Dropdown
+.tix-column-quantity select {
+  width: 100%;
+  padding: 12px 20px 12px 10px;
+  font-size: 1rem;
+  border: 1px solid var(--clr-border-medium);
+  border-radius: 6px;
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-color: var(--clr-green);
+  }
+}
+
+// Ticket form
+table.tix-ticket-form {
+  background-color: var(--clr-white);
+  border-radius: 15px;
+  padding: 1rem 1.5rem;
+  width: 100%;
+
+  th, 
+  td {
+    padding: 5px;
+  }
+}
+
+// Order summary
+.tix_tickets_table.tix-order-summary .tix-row-total td {
+  text-align: center;
+}
+
+// Tix JS submit button
+.tix-js input[type="submit"] {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--font-display);
+  box-shadow: 0;
+  color: var(--clr-white);
+  background: var(--clr-green);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 50px;
+}
+
+// Hide sold out tickets
+.tix-sold-out {
+  display: none !important;
+}
+
+// Responsive Design for Mobile
+@media (width < 769px) {
+  .tix_tickets_table {
+    box-shadow: none;
+    border-radius: 0;
+  }
+  
+  .tix_tickets_table thead {
+    display: none;
+  }
+  
+  .tix_tickets_table,
+  .tix_tickets_table tbody,
+  .tix_tickets_table tr {
+    display: block;
+    width: 100%;
+  }
+  
+  .tix-tickets-list [class^="tix-ticket"] {
+    margin-block-end: 1rem;
+  }
+  
+  .tix_tickets_table tbody th.tix-column-description {
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    display: block;
+  }
+  
+  .tix_tickets_table tbody td.tix-column-description {
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+  }
+  
+  .tix_tickets_table td {
+    display: block;
+    text-align: right;
+    padding: 12px 15px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+
+    &:last-child {
+      border-bottom: none;
+      overflow: hidden;
     }
-    
-    .ticket-card {
-      padding: 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 15px;
+      font-weight: bold;
+      text-align: left;
+      white-space: nowrap;
+      color: var(--clr-black);
     }
+  }
+  
+  .tix_tickets_table td.tix-column-price::before {
+    content: "Price:";
+  }
+  
+  .tix_tickets_table td.tix-column-per-ticket::before {
+    content: "Per Ticket:";
+  }
+  
+  .tix_tickets_table td.tix-column-remaining::before {
+    content: "Remaining:";
+  }
+  
+  .tix_tickets_table td.tix-column-quantity::before {
+    content: "Quantity:";
+  }
+  
+  .tix-column-quantity select {
+    float: right;
+    width: max-content;
+    padding-block: 7px;
+    text-align: center;
+  }
+  
+  .tix_tickets_table.tix-order-summary .tix-row-total td:nth-child(1) {
+    display: none;
+  }
+  
+  .tix_tickets_table.tix-order-summary .tix-row-total td:nth-child(2) {
+    text-align: right;
+  }
+  
+  .tix-attendee-form [class^="tix-row"] > .tix-left {
+    text-align: left;
+    width: calc(100% - 30px);
+  }
+  
+  .tix-attendee-form [class^="tix-row"] > .tix-right {
+    text-align: left;
+    width: calc(100% - 30px);
+  }
+  
+  .tix-attendee-form [class^="tix-row"] input[type="text"], 
+  .tix-attendee-form [class^="tix-row"] input[type="email"], 
+  .tix-attendee-form [class^="tix-row"] input[type="url"], 
+  .tix-attendee-form [class^="tix-row"] textarea, 
+  .tix-attendee-form [class^="tix-row"] select {
+    width: inherit;
   }
 }

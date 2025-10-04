@@ -41,11 +41,22 @@ $info: #17a2b8;
   --clr-black: hsla(0, 0%, 7%, 1);        // #111111
   --clr-dark: hsla(336, 69%, 10%, 1);     // #2B0A1A
   --clr-mahogany: hsla(34, 41%, 10%, 1);  // #291B0F
+  --clr-mahogany-hover: hsla(34, 41%, 5%, 1);  // #140D07
   --clr-yellow: hsla(57, 69%, 58%, 1);    // #E4E54B
   --clr-orange: hsla(14, 88%, 54%, 1);    // #F44712
   --clr-red: hsla(7, 76%, 52%, 1);        // #E63B23
+  --clr-red-hover: hsla(7, 76%, 42%, 1);  // #DA361F
   --clr-brick: hsla(7, 76%, 25%, 1);      // #6E1C11
   --clr-ochre: hsla(8, 76%, 10%, 1);      // #2D0E0A
   --clr-green: hsla(150, 78%, 25%, 1);    // #0E7339
+  --clr-green-hover: hsla(150, 78%, 15%, 1);    // #084523
   --clr-forest: hsla(151, 76%, 10%, 1);   // #062D16
+  
+  // Additional colors for refactored styles
+  --clr-gray-light: #f8f9fa;
+  --clr-gray-medium: #6c757d;
+  --clr-gray-dark: #343a40;
+  --clr-text-secondary: #6c757d;
+  --clr-border-light: #dee2e6;
+  --clr-border-medium: #adb5bd;
 }
