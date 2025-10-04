@@ -13,98 +13,7 @@
   main > .wp-block-group:has(.wp-block-post-title) {
     display: none;
   }
-
-  // .wp-block-latest-posts__list {
-  //   gap: 40px;
-  // }
 }
-
-// Home blog section
-// .home--blog {
-//   max-width: 768px;
-// }
-
-// Featured image
-// .wp-block-post-featured-image {
-//   max-width: 1024px;
-// }
-
-// Latest posts block
-// .wp-block-latest-posts__list {
-//   list-style: none;
-//   padding: 0;
-//   margin: 0;
-//   display: grid;
-//   gap: 20px;
-
-//   li {
-//     background-color: var(--wp--preset--color--base);
-//     border-radius: 8px;
-//     overflow: hidden;
-//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//     transition: transform 0.3s ease, box-shadow 0.3s ease;
-//     display: flex;
-//     flex-direction: column;
-
-//     &:hover {
-//       transform: translateY(-5px);
-//       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-//     }
-//   }
-// }
-
-// Featured image in posts
-// .wp-block-latest-posts__featured-image {
-//   width: 100%;
-//   overflow: hidden;
-
-//   img {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//     display: block;
-//   }
-// }
-
-// // Content wrapper for padding
-// .wp-block-latest-posts__list li > a,
-// .wp-block-latest-posts__list li > time,
-// .wp-block-latest-posts__list li > div:not(.wp-block-latest-posts__featured-image) {
-//   padding-inline: 20px;
-// }
-
-// Post title
-// .wp-block-latest-posts__post-title {
-//   font-family: var(--wp--preset--font-family--prompt);
-//   font-size: 26px;
-//   line-height: 1.4;
-//   font-weight: bold;
-//   color: var(--wp--preset--color--contrast);
-//   text-decoration: none;
-//   margin: 15px 0 5px;
-//   padding-top: 10px;
-//   transition: color 0.3s ease;
-
-//   &:hover {
-//     color: var(--wp--preset--color--custom-accent-seven);
-//   }
-// }
-
-// // Post date
-// .wp-block-latest-posts__post-date {
-//   font-size: 0.9rem;
-//   color: var(--clr-gray-medium);
-//   margin-block-end: 15px;
-//   display: block;
-// }
-
-// Post excerpt
-// .wp-block-latest-posts__post-excerpt {
-//   font-size: 1rem;
-//   color: var(--clr-gray-dark);
-//   line-height: 1.6;
-//   padding-block-end: 20px;
-// }
 
 // Separator
 :root :where(.wp-block-separator) {
@@ -194,17 +103,17 @@ select {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin-block: 3rem;
+  margin-inline: 3rem auto 2rem !important;
   padding-inline-start: 0;
-  transform: translateY(-4px);
-  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  width: min(100%, 1200px);
 
   li {
     background-color: var(--wp--preset--color--base);
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem 0;
+    gap: 0.5rem 0;
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
 
     &:hover {
       transform: translateY(-6px);
@@ -212,7 +121,6 @@ select {
     }
 
     // Content wrapper for padding
-    > *,
     > *:not(.wp-block-latest-posts__featured-image) {
       padding-inline: 0.75rem;
     }
@@ -221,9 +129,8 @@ select {
 
 // Featured image in posts
 .wp-block-latest-posts__featured-image {
-  border-radius: 0.5rem 0.5rem 0 0;
-  
   .wp-post-image {
+    border-radius: 0.45rem 0.45rem 0 0;
     display: block;
     object-fit: cover;
   }
