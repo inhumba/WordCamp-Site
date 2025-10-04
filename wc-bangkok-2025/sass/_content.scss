@@ -102,8 +102,8 @@ select {
 .latest-posts {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin-inline: 3rem auto 2rem !important;
+  gap: 1.5rem;
+  margin: 3rem auto 2rem !important;
   padding-inline-start: 0;
   width: min(100%, 1200px);
 
@@ -124,6 +124,18 @@ select {
     > *:not(.wp-block-latest-posts__featured-image) {
       padding-inline: 0.75rem;
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .latest-posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .latest-posts {
+    grid-template-columns: 1fr;
   }
 }
 
