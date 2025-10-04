@@ -12,7 +12,7 @@
 }
 
 // Navigation dropdown mobile
-@media (width < 600px) {
+@media screen and (max-width: 599px) {
   .wp-block-navigation .has-child:not(.open-on-click):hover > .wp-block-navigation__submenu-container {
     font-size: 1em;
     width: auto;
@@ -40,7 +40,7 @@
 }
 
 // Navigation responsive
-@media (width >= 600px) {
+@media screen and (min-width: 600px) {
   .main-navigation .is-content-justification-center {
     flex-direction: column;
   }
@@ -50,7 +50,7 @@
   }
 }
 
-@media (width >= 769px) {
+@media screen and (min-width: 769px) {
   .main-navigation {
     padding-block: 0;
 

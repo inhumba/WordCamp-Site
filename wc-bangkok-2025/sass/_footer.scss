@@ -6,7 +6,7 @@
 
 // Footer template part
 footer.wp-block-template-part {
-  margin-block-start: 8rem;
+  margin-block-start: 0;
 }
 
 .footer-site {
@@ -25,7 +25,7 @@ footer.wp-block-template-part {
   }
 }
 
-@media (width < 769px) {
+@media screen and (max-width: 768px) {
   .footer-site .footer-navigation {
     flex-direction: column;
 

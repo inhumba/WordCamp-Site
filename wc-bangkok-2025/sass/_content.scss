@@ -10,7 +10,7 @@
     display: none;
   }
 
-  main > div:first-child {
+  main > .wp-block-group:has(.wp-block-post-title) {
     display: none;
   }
 

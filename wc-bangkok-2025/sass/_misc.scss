@@ -187,11 +187,11 @@
 .hidden { display: none; }
 .visible { display: block; }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .hidden-mobile { display: none; }
 }
 
-@media (min-width: 769px) {
+@media screen and (min-width: 769px) {
   .hidden-desktop { display: none; }
 }
 
@@ -224,7 +224,7 @@
   margin: 0 auto 1rem;
 }
 
-:where(.wp-site-blocks *:focus) {
+*:focus {
   outline-style: dotted;
   outline-offset: 2px;
 }
@@ -304,4 +304,9 @@
               url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-red.webp') right calc(10vw - 230px) bottom -1rem / 250px auto;
   background-repeat: no-repeat;
   margin-block-start: 0;
+}
+
+.bg-bam {
+  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/bam.webp') top center / contain no-repeat;
+  padding-block-start: 100px;
 }

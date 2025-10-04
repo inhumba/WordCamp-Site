@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-@media (width < 600px) {
+@media screen and (max-width: 599px) {
   .sponsors-list .wp-container-core-post-template-is-layout-572542b5 {
     grid-template-columns: 1fr 1fr !important;
   }
@@ -54,7 +54,7 @@
   width: min(100%, 1200px);
 }
 
-@media (width < 769px) {
+@media screen and (max-width: 768px) {
   .sponsor-gold .wp-block-query ul .wp-block-post-featured-image, 
   .sponsor-silver .wp-block-query ul .wp-block-post-featured-image, 
   .sponsor-bronze .wp-block-query ul .wp-block-post-featured-image {

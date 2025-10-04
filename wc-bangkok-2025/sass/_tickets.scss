@@ -110,7 +110,7 @@ table.tix-ticket-form {
 }
 
 // Responsive Design for Mobile
-@media (width < 769px) {
+@media screen and (max-width: 768px) {
   .tix_tickets_table {
     box-shadow: none;
     border-radius: 0;

@@ -31,8 +31,14 @@ header.wp-block-template-part {
   }
 }
 
+// Header info wrapper
+.header-info-wrapper {
+	max-width: 100% !important;
+}
+
+
 // Header info wrapper responsive
-@media (width < 1024px) {
+@media screen and (max-width: 1023px) {
   .header-info-wrapper {
     flex-direction: column;
 
@@ -44,7 +50,7 @@ header.wp-block-template-part {
 }
 
 // The info responsive
-@media (width < 440px) {
+@media screen and (max-width: 439px) {
   .the-info {
     flex-direction: column;
     gap: 0;
