@@ -185,26 +185,101 @@ select {
 
 // CTA section
 .cta {
-  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-green.webp') left calc(10vw - 230px) bottom -1rem / 230px auto, 
-              url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-red.webp') right calc(10vw - 230px) bottom -1rem / 250px auto;
+  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-green.webp') left calc(10vw - 210px) bottom -1rem / 210px auto, 
+              url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-red.webp') right calc(10vw - 230px) bottom -1rem / 230px auto;
   background-repeat: no-repeat;
   margin-block-start: 0;
+  
+  // Animated background images using view timeline
+  animation: giantMove 1s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% exit 100%;
+}
+
+// Keyframes for background image animation
+@keyframes giantMove {
+  0% {
+    background-position: left calc(10vw - 330px) bottom -1rem, 
+                        right calc(10vw - 330px) bottom -1rem;
+    background-size: 210px auto, 230px auto;
+  }
+  
+  25% {
+    background-position: left calc(10vw - 280px) bottom -0.5rem, 
+                        right calc(10vw - 280px) bottom -0.5rem;
+    background-size: 220px auto, 240px auto;
+  }
+  
+  50% {
+    background-position: left calc(10vw - 230px) bottom -1rem, 
+                        right calc(10vw - 230px) bottom -1rem;
+    background-size: 210px auto, 230px auto;
+  }
+  
+  75% {
+    background-position: left calc(10vw - 180px) bottom -0.5rem, 
+                        right calc(10vw - 180px) bottom -0.5rem;
+    background-size: 220px auto, 240px auto;
+  }
+  
+  100% {
+    background-position: left calc(10vw - 230px) bottom -1rem, 
+                        right calc(10vw - 230px) bottom -1rem;
+    background-size: 210px auto, 230px auto;
+  }
 }
 
 // Featured section
 .featured-section {
-  background: linear-gradient(var(--wp--preset--color--base) 250px, rgba(255, 255, 255, 0) 250px),
+  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/circle.webp') left -100px top -1200px / 1000px auto,
               url('https://bangkok.wordcamp.org/2025/files/2025/10/circle.webp') left -700px bottom -600px / 1000px auto,
               url('https://bangkok.wordcamp.org/2025/files/2025/10/circle.webp') right -650px bottom 50px / 1000px auto;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   margin-block-start: 0;
+    position: relative;
+    isolation: isolate;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(var(--wp--preset--color--base) 220px, rgba(255, 255, 255, 0) 220px);
+    z-index: -1;
+  }
 }
 
 .featured-wrapper {
   margin-inline: auto;
   width: min(100%, 700px);
+  position: relative;
+  isolation: isolate;
 
   .wp-block-group > * {
     margin-block: 0;
+  }
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    z-index: 10;
+  }
+
+  &:before {
+    background: url('https://bangkok.wordcamp.org/2025/files/2025/10/book.webp') center center / contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 300 / 440;
+    width: 180px;
+    top: 370px;
+    left: -120px;
+  }
+
+  &:after {
+    background: url('https://bangkok.wordcamp.org/2025/files/2025/10/map.webp') center center / contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 300 / 263;
+    width: 210px;
+    top: 250px;
+    right: -150px;
   }
 }
