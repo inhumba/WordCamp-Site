@@ -189,42 +189,64 @@ select {
               url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-red.webp') right calc(10vw - 230px) bottom -1rem / 230px auto;
   background-repeat: no-repeat;
   margin-block-start: 0;
-  
-  // Animated background images using view timeline
-  animation: giantMove 1s linear forwards;
+  animation: giantMove 1s linear both;
   animation-timeline: view();
   animation-range: entry 30%;
 }
 
-// Keyframes for background image animation
+// Keyframes for background image animation - walking motion
 @keyframes giantMove {
   0% {
-    background-position: left calc(10vw - 330px) bottom -1rem, 
-                        right calc(10vw - 330px) bottom -1rem;
+    background-position: left calc(10vw - 350px) bottom -1rem, 
+                        right calc(10vw - 350px) bottom -1rem;
+    background-size: 210px auto, 230px auto;
+  }
+  
+  12.5% {
+    background-position: left calc(10vw - 300px) bottom -0.8rem, 
+                        right calc(10vw - 300px) bottom -1.2rem;
     background-size: 210px auto, 230px auto;
   }
   
   25% {
-    background-position: left calc(10vw - 280px) bottom -0.5rem, 
-                        right calc(10vw - 280px) bottom -0.5rem;
-    background-size: 220px auto, 240px auto;
+    background-position: left calc(10vw - 250px) bottom -1rem, 
+                        right calc(10vw - 250px) bottom -1rem;
+    background-size: 210px auto, 230px auto;
+  }
+  
+  37.5% {
+    background-position: left calc(10vw - 200px) bottom -1.2rem, 
+                        right calc(10vw - 200px) bottom -0.8rem;
+    background-size: 210px auto, 230px auto;
   }
   
   50% {
-    background-position: left calc(10vw - 230px) bottom -1rem, 
-                        right calc(10vw - 230px) bottom -1rem;
+    background-position: left calc(10vw - 150px) bottom -1rem, 
+                        right calc(10vw - 150px) bottom -1rem;
+    background-size: 210px auto, 230px auto;
+  }
+  
+  62.5% {
+    background-position: left calc(10vw - 200px) bottom -0.8rem, 
+                        right calc(10vw - 200px) bottom -1.2rem;
     background-size: 210px auto, 230px auto;
   }
   
   75% {
-    background-position: left calc(10vw - 180px) bottom -0.5rem, 
-                        right calc(10vw - 180px) bottom -0.5rem;
-    background-size: 220px auto, 240px auto;
+    background-position: left calc(10vw - 250px) bottom -1rem, 
+                        right calc(10vw - 250px) bottom -1rem;
+    background-size: 210px auto, 230px auto;
+  }
+  
+  87.5% {
+    background-position: left calc(10vw - 300px) bottom -1.2rem, 
+                        right calc(10vw - 300px) bottom -0.8rem;
+    background-size: 210px auto, 230px auto;
   }
   
   100% {
-    background-position: left calc(10vw - 230px) bottom -1rem, 
-                        right calc(10vw - 230px) bottom -1rem;
+    background-position: left calc(10vw - 350px) bottom -1rem, 
+                        right calc(10vw - 350px) bottom -1rem;
     background-size: 210px auto, 230px auto;
   }
 }
@@ -237,8 +259,8 @@ select {
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-block-start: 0;
-    position: relative;
-    isolation: isolate;
+  position: relative;
+  isolation: isolate;
   
   &::before {
     content: '';
@@ -288,10 +310,12 @@ select {
   @media screen and (max-width: 600px) {
     &:before {
       width: 112px; // 20% smaller than 140px
+      left: -80px;
     }
 
     &:after {
       width: 168px; // 20% smaller than 210px
+      right: -120px;
     }
   }
 }
