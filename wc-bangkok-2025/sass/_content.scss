@@ -193,7 +193,7 @@ select {
   // Animated background images using view timeline
   animation: giantMove 1s linear forwards;
   animation-timeline: view();
-  animation-range: entry 0% exit 100%;
+  animation-range: entry 30%;
 }
 
 // Keyframes for background image animation
@@ -231,7 +231,7 @@ select {
 
 // Featured section
 .featured-section {
-  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/circle.webp') left -100px top -1200px / 1000px auto,
+  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/circle.webp') left -300px top -700px / 1000px auto,
               url('https://bangkok.wordcamp.org/2025/files/2025/10/circle.webp') left -700px bottom -600px / 1000px auto,
               url('https://bangkok.wordcamp.org/2025/files/2025/10/circle.webp') right -650px bottom 50px / 1000px auto;
   background-repeat: no-repeat;
@@ -251,7 +251,7 @@ select {
 
 .featured-wrapper {
   margin-inline: auto;
-  width: min(100%, 700px);
+  width: min(95%, 700px);
   position: relative;
   isolation: isolate;
 
@@ -262,16 +262,17 @@ select {
   &:before, &:after {
     content: '';
     position: absolute;
-    z-index: 10;
   }
 
   &:before {
     background: url('https://bangkok.wordcamp.org/2025/files/2025/10/book.webp') center center / contain;
     background-repeat: no-repeat;
     aspect-ratio: 300 / 440;
-    width: 180px;
-    top: 370px;
-    left: -120px;
+    width: 140px;
+    top: 410px;
+    left: -100px;
+    transform: rotate(-15deg);
+    animation: floatBook 3s ease-in-out infinite;
   }
 
   &:after {
@@ -279,7 +280,37 @@ select {
     background-repeat: no-repeat;
     aspect-ratio: 300 / 263;
     width: 210px;
-    top: 250px;
-    right: -150px;
+    top: 210px;
+    right: -140px;
+    animation: floatMap 4s ease-in-out infinite;
+  }
+
+  @media screen and (max-width: 600px) {
+    &:before {
+      width: 112px; // 20% smaller than 140px
+    }
+
+    &:after {
+      width: 168px; // 20% smaller than 210px
+    }
+  }
+}
+
+// Keyframes for floating book and map animations
+@keyframes floatBook {
+  0%, 100% {
+    transform: rotate(-15deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-15deg) translateY(-20px);
+  }
+}
+
+@keyframes floatMap {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
   }
 }
