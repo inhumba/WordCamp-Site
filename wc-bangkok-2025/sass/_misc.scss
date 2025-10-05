@@ -306,32 +306,8 @@
   }
 }
 
-// CTA section
-.cta {
-  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-green.webp') left calc(10vw - 230px) bottom -1rem / 230px auto, 
-              url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-red.webp') right calc(10vw - 230px) bottom -1rem / 250px auto;
-  background-repeat: no-repeat;
-  margin-block-start: 0;
-}
-
-// Featured section
-.featured-section {
-  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/circle.webp') left calc(10vw - 230px) bottom -1rem / 230px auto, 
-              url('https://bangkok.wordcamp.org/2025/files/2025/10/circle.webp') right calc(10vw - 230px) bottom -1rem / 250px auto;
-  background-repeat: no-repeat;
-  margin-block-start: 0;
-}
-
-.featured-wrapper {
-  margin-inline: auto;
-  width: min(100%, 700px);
-
-  .wp-block-group > * {
-    margin-block: 0;
-  }
-}
-
 .bg-bam {
-  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/bam.webp') top center / 100px no-repeat;
+  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/bam.webp') top center / 100px auto;
+  background-repeat: no-repeat;
   padding-block-start: 70px;
 }

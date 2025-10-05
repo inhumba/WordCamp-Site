@@ -99,6 +99,10 @@ select {
 }
 
 // Latest posts
+.latest-posts-section {
+  margin-block-start: 0;
+}
+
 .latest-posts {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -176,4 +180,31 @@ select {
   font-size: 0.8rem;
   color: var(--wp--preset--color--contrast-2);
   line-height: 1.6;
+}
+
+
+// CTA section
+.cta {
+  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-green.webp') left calc(10vw - 230px) bottom -1rem / 230px auto, 
+              url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-red.webp') right calc(10vw - 230px) bottom -1rem / 250px auto;
+  background-repeat: no-repeat;
+  margin-block-start: 0;
+}
+
+// Featured section
+.featured-section {
+  background: linear-gradient(var(--wp--preset--color--base) 280px, rgba(255, 255, 255, 0) 280px),
+              url('https://bangkok.wordcamp.org/2025/files/2025/10/circle.webp') left -700px bottom -600px / 1000px auto,
+              url('https://bangkok.wordcamp.org/2025/files/2025/10/circle.webp') right -650px bottom 50px / 1000px auto;
+  background-repeat: no-repeat;
+  margin-block-start: 0;
+}
+
+.featured-wrapper {
+  margin-inline: auto;
+  width: min(100%, 700px);
+
+  .wp-block-group > * {
+    margin-block: 0;
+  }
 }
