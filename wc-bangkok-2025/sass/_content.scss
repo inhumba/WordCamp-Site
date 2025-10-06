@@ -101,6 +101,7 @@ select {
 // Latest posts
 .latest-posts-section {
   margin-block-start: 0;
+  padding-block: 3rem 4rem !important;
 }
 
 .latest-posts {
@@ -187,14 +188,18 @@ select {
 
 // CTA section
 .cta-section {
-  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/pagoda.webp') left calc(35vw - 400px) bottom 70px/300px auto, 
-              url('https://bangkok.wordcamp.org/2025/files/2025/10/temple.webp') right calc(35vw - 400px) bottom 65px/300px auto;
+  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/pagoda.webp') left calc(35vw - 400px) bottom 70px / 300px auto, 
+              url('https://bangkok.wordcamp.org/2025/files/2025/10/temple.webp') right calc(35vw - 400px) bottom 65px / 300px auto;
   background-repeat: no-repeat;
   margin-block-start: 0;
-  padding-block-end: 8rem !important;
+  padding-block: 5rem 8rem !important;
   position: relative;
   isolation: isolate;
   overflow: hidden;
+
+  p {
+    text-wrap: balance;
+  }
 
   &:before, &:after {
     content: '';
@@ -230,15 +235,15 @@ select {
     transform: translateX(0);
   }
   20% {
-    transform: translateX(-20vw) translateY(0) scaleX(1);
+    transform: translateX(-20vw) translateY(0);
   }
   30% {
-    transform: translateX(-22vw) translateY(-120px) scaleX(1);
+    transform: translateX(-30vw) translateY(-10px);
   }
-  42% {
-    transform: translateX(-40vw) translateY(-10px) scaleX(1);
+  45% {
+    transform: translateX(-40vw) translateY(-5px);
   }
-  55% {
+  47% {
     transform: translateX(-40vw) translateY(0) scaleX(-1);
   }
   62% {
@@ -297,6 +302,7 @@ select {
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin-block-start: 0;
+  padding-block: 0 4rem !important;
   position: relative;
   isolation: isolate;
   overflow: hidden;
