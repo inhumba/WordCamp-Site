@@ -191,6 +191,7 @@ select {
               url('https://bangkok.wordcamp.org/2025/files/2025/10/temple.webp') right calc(35vw - 400px) bottom 65px/300px auto;
   background-repeat: no-repeat;
   margin-block-start: 0;
+  padding-block-end: 8rem !important;
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -206,10 +207,10 @@ select {
     background-repeat: no-repeat;
     aspect-ratio: 300 / 576;
     height: 40vh;
-    bottom: -10px;
+    bottom: -20px;
     left: -210px;
     transform: rotate(-15deg);
-    animation: greenGiantWalk 12s ease-in-out 10s infinite;
+    animation: greenGiantWalk 20s ease-in-out 10s infinite;
   }
 
   &:after {
@@ -217,7 +218,7 @@ select {
     background-repeat: no-repeat;
     aspect-ratio: 300 / 549;
     height: 50vh;
-    bottom: -10px;
+    bottom: -20px;
     right: -230px;
     animation: redGiantWalk 12s ease-in-out infinite;
   }
@@ -225,19 +226,6 @@ select {
 
 // Keyframes for red giant jumping from right to center then running back
 @keyframes redGiantWalk {
-  // 0% {
-  //   transform: translateY(0) scale(1, 1);
-  // }
-  // 30% {
-  //   transform: translateY(10px) scale(1.1, 0.9);
-  // }
-  // 70% {
-  //   transform: translateY(-150px) scale(0.9, 1.1);
-  // }
-  // 100% {
-  //   transform: translateY(0) scale(1, 1);
-  // }
-
   0% {
     transform: translateX(0);
   }
@@ -245,7 +233,7 @@ select {
     transform: translateX(-200px) translateY(0) scaleX(1);
   }
   40% {
-    transform: translateX(-220px) translateY(-180px) scaleX(1);
+    transform: translateX(-220px) translateY(-120px) scaleX(1);
   }
   50% {
     transform: translateX(-40vw) translateY(-10px) scaleX(1);
@@ -254,10 +242,10 @@ select {
     transform: translateX(-40vw) translateY(0) scaleX(-1);
   }
   60% {
-    transform: translateX(-350px) translateY(0) scaleX(-1);
+    transform: translateX(-400px) translateY(0) scaleX(-1);
   }
   75% {
-    transform: translateX(-150px) translateY(-10px) scaleX(-1);
+    transform: translateX(-200px) translateY(-10px) scaleX(-1);
   }
   90% {
     transform: translateX(-50px) translateY(-5px) scaleX(-1);
@@ -276,22 +264,22 @@ select {
     transform: translateX(100px) translateY(-5px);
   }
   25% {
-    transform: translateX(200px) translateY(0);
+    transform: translateX(250px) translateY(0);
   }
   37.5% {
     transform: translateX(300px) translateY(-5px);
   }
   50% {
-    transform: translateX(400px) translateY(0);
+    transform: translateX(450px) translateY(0);
   }
   52% {
-    transform: translateX(400px) translateY(0) scaleX(-1);
+    transform: translateX(450px) translateY(0) scaleX(-1);
   }
   62.5% {
     transform: translateX(300px) translateY(-5px) scaleX(-1);
   }
   75% {
-    transform: translateX(200px) translateY(0) scaleX(-1);
+    transform: translateX(250px) translateY(0) scaleX(-1);
   }
   87.5% {
     transform: translateX(100px) translateY(-5px) scaleX(-1);
