@@ -185,100 +185,89 @@ select {
 
 // CTA section
 .cta-section {
-  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-green.webp') left calc(10vw - 210px) bottom -1rem / 210px auto, 
-              url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-red.webp') right calc(10vw - 230px) bottom -1rem / 230px auto;
-  background-repeat: no-repeat;
+  // background: url('https://bangkok.wordcamp.org/2025/files/2025/10/pagoda.webp') left -210px bottom -1rem / 210px auto, 
+  //             url('https://bangkok.wordcamp.org/2025/files/2025/10/temple.webp') right -230px bottom -1rem / 230px auto;
+  // background-repeat: no-repeat;
   margin-block-start: 0;
-  animation: redGiantWalk 12s linear infinite, greenGiantWalk 12s linear 10s infinite;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+
+  &:before {
+    background: url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-green.webp') center center / contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 300 / 576;
+    width: 210px;
+    bottom: -10px;
+    left: -210px;
+    transform: rotate(-15deg);
+    animation: greenGiantWalk 12s ease-in-out 10s infinite;
+  }
+
+  &:after {
+    background: url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-red.webp') center center / contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 300 / 549;
+    width: 230px;
+    bottom: -10px;
+    right: -230px;
+    animation: redGiantWalk 12s ease-in-out infinite;
+  }
 }
 
 // Keyframes for red giant walking from right to left
 @keyframes redGiantWalk {
   0% {
-    background-position: left calc(10vw - 210px) bottom -1rem, 
-                        right calc(10vw + 100px) bottom -1rem;
-    background-size: 210px auto, 230px auto;
+    transform: translateX(0);
   }
-  
   16.67% {
-    background-position: left calc(10vw - 210px) bottom -1rem, 
-                        right calc(10vw + 50px) bottom -0.8rem;
-    background-size: 210px auto, 230px auto;
+    transform: translateX(-100px) translateY(-5px);
   }
-  
   33.33% {
-    background-position: left calc(10vw - 210px) bottom -1rem, 
-                        right calc(10vw - 50px) bottom -1.2rem;
-    background-size: 210px auto, 230px auto;
+    transform: translateX(-200px) translateY(0);
   }
-  
   50% {
-    background-position: left calc(10vw - 210px) bottom -1rem, 
-                        right calc(10vw - 150px) bottom -1rem;
-    background-size: 210px auto, 230px auto;
+    transform: translateX(-300px) translateY(-5px);
   }
-  
   66.67% {
-    background-position: left calc(10vw - 210px) bottom -1rem, 
-                        right calc(10vw - 250px) bottom -0.8rem;
-    background-size: 210px auto, 230px auto;
+    transform: translateX(-400px) translateY(0);
   }
-  
   83.33% {
-    background-position: left calc(10vw - 210px) bottom -1rem, 
-                        right calc(10vw - 350px) bottom -1.2rem;
-    background-size: 210px auto, 230px auto;
+    transform: translateX(-500px) translateY(-5px);
   }
-  
   100% {
-    background-position: left calc(10vw - 210px) bottom -1rem, 
-                        right calc(10vw - 450px) bottom -1rem;
-    background-size: 210px auto, 230px auto;
+    transform: translateX(-600px) translateY(0);
   }
 }
 
 // Keyframes for green giant walking from left to right (starts after 10s delay)
 @keyframes greenGiantWalk {
   0% {
-    background-position: left calc(10vw - 450px) bottom -1rem, 
-                        right calc(10vw - 230px) bottom -1rem;
-    background-size: 210px auto, 230px auto;
+    transform: rotate(-15deg) translateX(0);
   }
-  
   16.67% {
-    background-position: left calc(10vw - 350px) bottom -1.2rem, 
-                        right calc(10vw - 230px) bottom -1rem;
-    background-size: 210px auto, 230px auto;
+    transform: rotate(-15deg) translateX(100px) translateY(-5px);
   }
-  
   33.33% {
-    background-position: left calc(10vw - 250px) bottom -1rem, 
-                        right calc(10vw - 230px) bottom -1rem;
-    background-size: 210px auto, 230px auto;
+    transform: rotate(-15deg) translateX(200px) translateY(0);
   }
-  
   50% {
-    background-position: left calc(10vw - 150px) bottom -0.8rem, 
-                        right calc(10vw - 230px) bottom -1rem;
-    background-size: 210px auto, 230px auto;
+    transform: rotate(-15deg) translateX(300px) translateY(-5px);
   }
-  
   66.67% {
-    background-position: left calc(10vw - 50px) bottom -1.2rem, 
-                        right calc(10vw - 230px) bottom -1rem;
-    background-size: 210px auto, 230px auto;
+    transform: rotate(-15deg) translateX(400px) translateY(0);
   }
-  
   83.33% {
-    background-position: left calc(10vw + 50px) bottom -1rem, 
-                        right calc(10vw - 230px) bottom -1rem;
-    background-size: 210px auto, 230px auto;
+    transform: rotate(-15deg) translateX(500px) translateY(-5px);
   }
-  
   100% {
-    background-position: left calc(10vw + 100px) bottom -1rem, 
-                        right calc(10vw - 230px) bottom -1rem;
-    background-size: 210px auto, 230px auto;
+    transform: rotate(-15deg) translateX(600px) translateY(0);
   }
 }
 
@@ -387,7 +376,8 @@ select {
     width: 120px;
     top: 0;
     left: calc(50% - 60px);
-    animation: rotateIn 1s ease-in-out 10s infinite;
+    z-index: -1;
+    animation: rotateIn 7s ease-in-out infinite;
   }
 }
 
@@ -395,9 +385,9 @@ select {
 	0% {
 		background-size: 0;
     opacity: 0;
-    transform: rotate(-355deg);
+    transform: rotate(-360deg);
 	}
-	50% {
+	10% {
 		background-size: 120px auto;
     opacity: 1;
     transform: rotate(0deg);
