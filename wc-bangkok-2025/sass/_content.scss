@@ -206,11 +206,11 @@ select {
     background: url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-green.webp') center center / contain;
     background-repeat: no-repeat;
     aspect-ratio: 300 / 576;
-    height: 40vh;
-    bottom: -20px;
+    height: 35vh;
+    bottom: 0;
     left: -210px;
     transform: rotate(-15deg);
-    animation: greenGiantWalk 20s ease-in-out 10s infinite;
+    animation: greenGiantWalk 20s ease-in-out 18s infinite;
   }
 
   &:after {
@@ -218,7 +218,7 @@ select {
     background-repeat: no-repeat;
     aspect-ratio: 300 / 549;
     height: 50vh;
-    bottom: -20px;
+    bottom: 0;
     right: -230px;
     animation: redGiantWalk 12s ease-in-out infinite;
   }
@@ -230,25 +230,25 @@ select {
     transform: translateX(0);
   }
   20% {
-    transform: translateX(-200px) translateY(0) scaleX(1);
+    transform: translateX(-20vw) translateY(0) scaleX(1);
   }
-  40% {
-    transform: translateX(-220px) translateY(-120px) scaleX(1);
+  30% {
+    transform: translateX(-22vw) translateY(-120px) scaleX(1);
   }
-  50% {
+  42% {
     transform: translateX(-40vw) translateY(-10px) scaleX(1);
   }
-  52% {
+  55% {
     transform: translateX(-40vw) translateY(0) scaleX(-1);
   }
-  60% {
-    transform: translateX(-400px) translateY(0) scaleX(-1);
+  62% {
+    transform: translateX(-30vw) translateY(0) scaleX(-1);
   }
   75% {
-    transform: translateX(-200px) translateY(-10px) scaleX(-1);
+    transform: translateX(-20vw) translateY(-10px) scaleX(-1);
   }
   90% {
-    transform: translateX(-50px) translateY(-5px) scaleX(-1);
+    transform: translateX(-10vw) translateY(-5px) scaleX(-1);
   }
   100% {
     transform: translateX(0) translateY(0) scaleX(-1);
@@ -260,29 +260,29 @@ select {
   0% {
     transform: translateX(0);
   }
-  12.5% {
-    transform: translateX(100px) translateY(-5px);
+  12% {
+    transform: translateX(10vw) translateY(-5px);
   }
   25% {
-    transform: translateX(250px) translateY(0);
+    transform: translateX(25vw) translateY(0);
   }
-  37.5% {
-    transform: translateX(300px) translateY(-5px);
+  37% {
+    transform: translateX(30vw) translateY(-5px);
   }
   50% {
-    transform: translateX(450px) translateY(0);
+    transform: translateX(40vw) translateY(0);
   }
   52% {
-    transform: translateX(450px) translateY(0) scaleX(-1);
+    transform: translateX(40vw) translateY(0) scaleX(-1);
   }
-  62.5% {
-    transform: translateX(300px) translateY(-5px) scaleX(-1);
+  62% {
+    transform: translateX(30vw) translateY(-5px) scaleX(-1);
   }
   75% {
-    transform: translateX(250px) translateY(0) scaleX(-1);
+    transform: translateX(25vw) translateY(0) scaleX(-1);
   }
-  87.5% {
-    transform: translateX(100px) translateY(-5px) scaleX(-1);
+  87% {
+    transform: translateX(10vw) translateY(-5px) scaleX(-1);
   }
   100% {
     transform: translateX(0) translateY(0) scaleX(-1);
