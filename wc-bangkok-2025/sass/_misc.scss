@@ -305,21 +305,3 @@
     }
   }
 }
-
-.bg-bam {
-  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/bam.webp') top center / 120px auto;
-  background-repeat: no-repeat;
-  padding-block-start: 70px;
-  animation: zoomIn 1s ease both;
-	animation-timeline: view();
-  animation-range: 30% 50%;
-}
-
-@keyframes zoomIn {
-	from {
-		background-size: 0;
-	}
-	to {
-		background-size: 120px auto;
-	}
-}

@@ -109,7 +109,7 @@ select {
   gap: 1.5rem;
   margin: 3rem auto !important;
   padding-inline-start: 0 !important;
-  width: min(100%, 1200px);
+  width: min(95%, 1200px);
 
   li {
     background-color: var(--wp--preset--color--base);
@@ -142,7 +142,7 @@ select {
 @media screen and (max-width: 600px) {
   .latest-posts {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    gap: 1rem;
   }
 }
 
@@ -184,69 +184,100 @@ select {
 
 
 // CTA section
-.cta {
+.cta-section {
   background: url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-green.webp') left calc(10vw - 210px) bottom -1rem / 210px auto, 
               url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-red.webp') right calc(10vw - 230px) bottom -1rem / 230px auto;
   background-repeat: no-repeat;
   margin-block-start: 0;
-  animation: giantMove 1s linear both;
-  animation-timeline: view();
-  animation-range: entry 30%;
+  animation: redGiantWalk 12s linear infinite, greenGiantWalk 12s linear 10s infinite;
 }
 
-// Keyframes for background image animation - walking motion
-@keyframes giantMove {
+// Keyframes for red giant walking from right to left
+@keyframes redGiantWalk {
   0% {
-    background-position: left calc(10vw - 350px) bottom -1rem, 
-                        right calc(10vw - 350px) bottom -1rem;
+    background-position: left calc(10vw - 210px) bottom -1rem, 
+                        right calc(10vw + 100px) bottom -1rem;
     background-size: 210px auto, 230px auto;
   }
   
-  12.5% {
-    background-position: left calc(10vw - 300px) bottom -0.8rem, 
-                        right calc(10vw - 300px) bottom -1.2rem;
+  16.67% {
+    background-position: left calc(10vw - 210px) bottom -1rem, 
+                        right calc(10vw + 50px) bottom -0.8rem;
     background-size: 210px auto, 230px auto;
   }
   
-  25% {
-    background-position: left calc(10vw - 250px) bottom -1rem, 
-                        right calc(10vw - 250px) bottom -1rem;
-    background-size: 210px auto, 230px auto;
-  }
-  
-  37.5% {
-    background-position: left calc(10vw - 200px) bottom -1.2rem, 
-                        right calc(10vw - 200px) bottom -0.8rem;
+  33.33% {
+    background-position: left calc(10vw - 210px) bottom -1rem, 
+                        right calc(10vw - 50px) bottom -1.2rem;
     background-size: 210px auto, 230px auto;
   }
   
   50% {
-    background-position: left calc(10vw - 150px) bottom -1rem, 
+    background-position: left calc(10vw - 210px) bottom -1rem, 
                         right calc(10vw - 150px) bottom -1rem;
     background-size: 210px auto, 230px auto;
   }
   
-  62.5% {
-    background-position: left calc(10vw - 200px) bottom -0.8rem, 
-                        right calc(10vw - 200px) bottom -1.2rem;
+  66.67% {
+    background-position: left calc(10vw - 210px) bottom -1rem, 
+                        right calc(10vw - 250px) bottom -0.8rem;
     background-size: 210px auto, 230px auto;
   }
   
-  75% {
-    background-position: left calc(10vw - 250px) bottom -1rem, 
-                        right calc(10vw - 250px) bottom -1rem;
-    background-size: 210px auto, 230px auto;
-  }
-  
-  87.5% {
-    background-position: left calc(10vw - 300px) bottom -1.2rem, 
-                        right calc(10vw - 300px) bottom -0.8rem;
+  83.33% {
+    background-position: left calc(10vw - 210px) bottom -1rem, 
+                        right calc(10vw - 350px) bottom -1.2rem;
     background-size: 210px auto, 230px auto;
   }
   
   100% {
-    background-position: left calc(10vw - 350px) bottom -1rem, 
-                        right calc(10vw - 350px) bottom -1rem;
+    background-position: left calc(10vw - 210px) bottom -1rem, 
+                        right calc(10vw - 450px) bottom -1rem;
+    background-size: 210px auto, 230px auto;
+  }
+}
+
+// Keyframes for green giant walking from left to right (starts after 10s delay)
+@keyframes greenGiantWalk {
+  0% {
+    background-position: left calc(10vw - 450px) bottom -1rem, 
+                        right calc(10vw - 230px) bottom -1rem;
+    background-size: 210px auto, 230px auto;
+  }
+  
+  16.67% {
+    background-position: left calc(10vw - 350px) bottom -1.2rem, 
+                        right calc(10vw - 230px) bottom -1rem;
+    background-size: 210px auto, 230px auto;
+  }
+  
+  33.33% {
+    background-position: left calc(10vw - 250px) bottom -1rem, 
+                        right calc(10vw - 230px) bottom -1rem;
+    background-size: 210px auto, 230px auto;
+  }
+  
+  50% {
+    background-position: left calc(10vw - 150px) bottom -0.8rem, 
+                        right calc(10vw - 230px) bottom -1rem;
+    background-size: 210px auto, 230px auto;
+  }
+  
+  66.67% {
+    background-position: left calc(10vw - 50px) bottom -1.2rem, 
+                        right calc(10vw - 230px) bottom -1rem;
+    background-size: 210px auto, 230px auto;
+  }
+  
+  83.33% {
+    background-position: left calc(10vw + 50px) bottom -1rem, 
+                        right calc(10vw - 230px) bottom -1rem;
+    background-size: 210px auto, 230px auto;
+  }
+  
+  100% {
+    background-position: left calc(10vw + 100px) bottom -1rem, 
+                        right calc(10vw - 230px) bottom -1rem;
     background-size: 210px auto, 230px auto;
   }
 }
@@ -261,6 +292,7 @@ select {
   margin-block-start: 0;
   position: relative;
   isolation: isolate;
+  overflow: hidden;
   
   &::before {
     content: '';
@@ -315,6 +347,7 @@ select {
 
     &:after {
       width: 168px; // 20% smaller than 210px
+      top: 250px;
       right: -120px;
     }
   }
@@ -337,4 +370,36 @@ select {
   50% {
     transform: translateY(-15px);
   }
+}
+
+// BAM!
+.bam {
+  padding-block-start: 70px;
+  position: relative;
+  isolation: isolate;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    background: url('https://bangkok.wordcamp.org/2025/files/2025/10/bam.webp') center center / 120px auto;
+    background-repeat: no-repeat;
+    aspect-ratio: 300 / 282;
+    width: 120px;
+    top: 0;
+    left: calc(50% - 60px);
+    animation: rotateIn 1s ease-in-out 10s infinite;
+  }
+}
+
+@keyframes rotateIn {
+	0% {
+		background-size: 0;
+    opacity: 0;
+    transform: rotate(-355deg);
+	}
+	50% {
+		background-size: 120px auto;
+    opacity: 1;
+    transform: rotate(0deg);
+	}
 }
