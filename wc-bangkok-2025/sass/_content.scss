@@ -221,53 +221,59 @@ select {
   }
 }
 
-// Keyframes for red giant walking from right to left
+// Keyframes for red giant jumping from right to center then running back
 @keyframes redGiantWalk {
   0% {
     transform: translateX(0);
   }
-  16.67% {
-    transform: translateX(-100px) translateY(-5px);
+  20% {
+    transform: translateX(-200px) translateY(-80px) scaleX(1);
   }
-  33.33% {
-    transform: translateX(-200px) translateY(0);
+  40% {
+    transform: translateX(-400px) translateY(-120px) scaleX(1);
   }
   50% {
-    transform: translateX(-300px) translateY(-5px);
+    transform: translateX(-40vw) translateY(-100px) scaleX(1);
   }
-  66.67% {
-    transform: translateX(-400px) translateY(0);
+  52% {
+    transform: translateX(-40vw) translateY(-100px) scaleX(-1);
   }
-  83.33% {
-    transform: translateX(-500px) translateY(-5px);
+  60% {
+    transform: translateX(-300px) translateY(-50px) scaleX(-1);
+  }
+  75% {
+    transform: translateX(-150px) translateY(-20px) scaleX(-1);
+  }
+  90% {
+    transform: translateX(-50px) translateY(-5px) scaleX(-1);
   }
   100% {
-    transform: translateX(-600px) translateY(0);
+    transform: translateX(0) translateY(0) scaleX(-1);
   }
 }
 
 // Keyframes for green giant walking from left to right (starts after 10s delay)
 @keyframes greenGiantWalk {
   0% {
-    transform: rotate(-15deg) translateX(0);
+    transform: translateX(0);
   }
   16.67% {
-    transform: rotate(-15deg) translateX(100px) translateY(-5px);
+    transform: translateX(100px) translateY(-5px);
   }
   33.33% {
-    transform: rotate(-15deg) translateX(200px) translateY(0);
+    transform: translateX(200px) translateY(0);
   }
   50% {
-    transform: rotate(-15deg) translateX(300px) translateY(-5px);
+    transform: translateX(300px) translateY(-5px);
   }
   66.67% {
-    transform: rotate(-15deg) translateX(400px) translateY(0);
+    transform: translateX(400px) translateY(0);
   }
   83.33% {
-    transform: rotate(-15deg) translateX(500px) translateY(-5px);
+    transform: translateX(500px) translateY(-5px);
   }
   100% {
-    transform: rotate(-15deg) translateX(600px) translateY(0);
+    transform: translateX(600px) translateY(0);
   }
 }
 
