@@ -215,7 +215,7 @@ select {
     bottom: 0;
     left: -210px;
     transform: rotate(-15deg);
-    animation: greenGiantWalk 10s ease-in-out 18s infinite;
+    animation: greenGiantWalk 13s ease-in-out 16s infinite;
   }
 
   &:after {
@@ -225,7 +225,7 @@ select {
     height: 45vh;
     bottom: 0;
     right: -230px;
-    animation: redGiantWalk 12s ease-in-out 20s infinite;
+    animation: redGiantWalk 17s ease-in-out infinite;
   }
 }
 
@@ -233,6 +233,7 @@ select {
   .cta-section {
     background: url('https://bangkok.wordcamp.org/2025/files/2025/10/pagoda.webp') left -100px bottom 40px / 280px auto, 
                 url('https://bangkok.wordcamp.org/2025/files/2025/10/temple.webp') right -50px bottom 100px / 200px auto;
+    background-repeat: no-repeat;
     padding-block-end: 20rem !important;
   }
 }
