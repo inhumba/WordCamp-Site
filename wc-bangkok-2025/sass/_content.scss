@@ -189,7 +189,7 @@ select {
 // CTA section
 .cta-section {
   background: url('https://bangkok.wordcamp.org/2025/files/2025/10/pagoda.webp') left calc(35vw - 400px) bottom 70px / 300px auto, 
-              url('https://bangkok.wordcamp.org/2025/files/2025/10/temple.webp') right calc(35vw - 400px) bottom 65px / 300px auto;
+              url('https://bangkok.wordcamp.org/2025/files/2025/10/temple.webp') right calc(35vw - 400px) bottom 65px / 280px auto;
   background-repeat: no-repeat;
   margin-block-start: 0;
   padding-block: 5rem 8rem !important;
@@ -215,44 +215,55 @@ select {
     bottom: 0;
     left: -210px;
     transform: rotate(-15deg);
-    animation: greenGiantWalk 20s ease-in-out 18s infinite;
+    animation: greenGiantWalk 10s ease-in-out 18s infinite;
   }
 
   &:after {
     background: url('https://bangkok.wordcamp.org/2025/files/2025/10/giant-red.webp') center center / contain;
     background-repeat: no-repeat;
     aspect-ratio: 300 / 549;
-    height: 50vh;
+    height: 45vh;
     bottom: 0;
     right: -230px;
-    animation: redGiantWalk 12s ease-in-out infinite;
+    animation: redGiantWalk 12s ease-in-out 20s infinite;
   }
 }
 
-// Keyframes for red giant jumping from right to center then running back
+@media screen and (max-width: 600px) {
+  .cta-section {
+    background: url('https://bangkok.wordcamp.org/2025/files/2025/10/pagoda.webp') left -100px bottom 40px / 280px auto, 
+                url('https://bangkok.wordcamp.org/2025/files/2025/10/temple.webp') right -50px bottom 100px / 200px auto;
+    padding-block-end: 20rem !important;
+  }
+}
+
+// Keyframes for red giant walking from right to left, then flip and walk back
 @keyframes redGiantWalk {
   0% {
     transform: translateX(0);
   }
-  20% {
-    transform: translateX(-20vw) translateY(0);
+  12% {
+    transform: translateX(-10vw) translateY(-5px);
   }
-  30% {
-    transform: translateX(-30vw) translateY(-10px);
+  25% {
+    transform: translateX(-25vw) translateY(0);
   }
-  45% {
-    transform: translateX(-40vw) translateY(-5px);
+  37% {
+    transform: translateX(-30vw) translateY(-5px);
   }
-  47% {
+  50% {
+    transform: translateX(-40vw) translateY(0);
+  }
+  52% {
     transform: translateX(-40vw) translateY(0) scaleX(-1);
   }
   62% {
-    transform: translateX(-30vw) translateY(0) scaleX(-1);
+    transform: translateX(-30vw) translateY(-5px) scaleX(-1);
   }
   75% {
-    transform: translateX(-20vw) translateY(-10px) scaleX(-1);
+    transform: translateX(-25vw) translateY(0) scaleX(-1);
   }
-  90% {
+  87% {
     transform: translateX(-10vw) translateY(-5px) scaleX(-1);
   }
   100% {
@@ -260,34 +271,40 @@ select {
   }
 }
 
-// Keyframes for green giant walking from left to right, then flip and walk back
+// Keyframes for green giant walking from left to right, then flip and walk back (extended)
 @keyframes greenGiantWalk {
   0% {
     transform: translateX(0);
   }
-  12% {
-    transform: translateX(10vw) translateY(-5px);
+  10% {
+    transform: translateX(8vw) translateY(-5px);
   }
-  25% {
-    transform: translateX(25vw) translateY(0);
+  20% {
+    transform: translateX(15vw) translateY(0);
   }
-  37% {
-    transform: translateX(30vw) translateY(-5px);
+  30% {
+    transform: translateX(22vw) translateY(-5px);
+  }
+  40% {
+    transform: translateX(28vw) translateY(0);
   }
   50% {
-    transform: translateX(40vw) translateY(0);
+    transform: translateX(35vw) translateY(-5px);
   }
   52% {
-    transform: translateX(40vw) translateY(0) scaleX(-1);
+    transform: translateX(35vw) translateY(-5px) scaleX(-1);
   }
   62% {
-    transform: translateX(30vw) translateY(-5px) scaleX(-1);
+    transform: translateX(28vw) translateY(0) scaleX(-1);
   }
-  75% {
-    transform: translateX(25vw) translateY(0) scaleX(-1);
+  72% {
+    transform: translateX(22vw) translateY(-5px) scaleX(-1);
   }
-  87% {
-    transform: translateX(10vw) translateY(-5px) scaleX(-1);
+  82% {
+    transform: translateX(15vw) translateY(0) scaleX(-1);
+  }
+  92% {
+    transform: translateX(8vw) translateY(-5px) scaleX(-1);
   }
   100% {
     transform: translateX(0) translateY(0) scaleX(-1);
