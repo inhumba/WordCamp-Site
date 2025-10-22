@@ -3,3 +3,25 @@
 
 @use "colors";
 @use "typography";
+
+.wp-block-wordcamp-session-speakers:has(+ .wp-block-wordcamp-session-date),
+.wp-block-wordcamp-session-date,
+p:has(.sft-feedback-link) {
+	display: none;
+}
+
+.single-wcb_session {
+	main {
+		.wp-block-group:last-child:has(.taxonomy-wcb_session_category) {
+			display: none;
+		}
+	}
+}
+
+.single-wcb_speaker {
+	main {
+		.wp-block-group:last-child:has(h3.wp-block-heading) {
+			display: none;
+		}
+	}
+}

@@ -10,6 +10,7 @@ footer.wp-block-template-part {
 }
 
 .footer-site {
+  margin-block-start: 4rem;
   padding-block-end: 3rem !important;
 
   h3 {
@@ -24,6 +25,10 @@ footer.wp-block-template-part {
       color: var(--wp--preset--color--custom-accent-seven);
     }
   }
+}
+
+.page-slug-home :where(.footer-site) {
+	margin-block-start: 0;
 }
 
 @media screen and (max-width: 768px) {

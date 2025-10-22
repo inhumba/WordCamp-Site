@@ -10,8 +10,16 @@
     display: none;
   }
 
+  .page-title-wrapper {
+    display: none;
+  }
+
   main > .wp-block-group:has(.wp-block-post-title) {
     display: none;
+  }
+
+  :where(.footer-site) {
+    margin-block-start: 0;
   }
 }
 
@@ -19,6 +27,14 @@
 :root :where(.wp-block-separator) {
   opacity: 0.25;
   margin-block: 4rem;
+}
+
+// Page Title
+.page-title-wrapper {
+  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/dash-1.webp') right 0px top -20px,
+              url('https://bangkok.wordcamp.org/2025/files/2025/10/dash-2.webp') left -30px top 160px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 // Map container
