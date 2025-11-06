@@ -506,3 +506,35 @@ select {
 		flex-direction: column;
 	}
 }
+
+.contributor-banner {
+  background: var(--wp--preset--color--custom-blue) url('https://bangkok.wordcamp.org/2025/files/2025/11/3-peoples.webp') right bottom / 300px auto;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  font-size: 1rem;
+  padding: 2rem;
+  margin-block: 4rem;
+
+  h4.wp-block-heading {
+    font-family: var(--wp--preset--font-family--optic);
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    margin-block-end: 0.75rem;
+    
+    a {
+      color: var(--wp--preset--color--accent);
+      text-decoration: none;
+    }
+  }
+
+  p {
+    margin-block-start: 0;
+    width: min(100%, 420px);
+  }
+}
+
+@media screen and (max-width: 890px) {
+	.contributor-banner  {
+		padding-bottom: 220px;
+	}
+}
