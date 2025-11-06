@@ -6,9 +6,19 @@
 
 .wordcamp-schedule {
 	.wordcamp-schedule__date {
-		font-size: 1.6rem;
+		font-family: var(--wp--preset--font-family--optic);
+		letter-spacing: 1px;
+		font-size: 2rem;
 		text-align: center;
 		text-transform: uppercase;
+
+		&:before {
+			content: "- "
+		}
+		
+		&:after {
+			content: " -"
+		}
 	}
 
 	.wordcamp-schedule__day {
