@@ -6,12 +6,12 @@
 
 // Home page styles
 .page-slug-home {
-  .wp-block-post-title {
+  .wp-block-post-title, .wp-block-post-featured-image, .page-title-wrapper {
     display: none;
   }
 
-  .page-title-wrapper {
-    display: none;
+  .entry-content .wp-block-post-featured-image {
+    display: inherit;
   }
 
   main > .wp-block-group:has(.wp-block-post-title) {
@@ -31,10 +31,17 @@
 
 // Page Title
 .page-title-wrapper {
-  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/dash-1.webp') right 0px top -20px,
+  background: url('https://bangkok.wordcamp.org/2025/files/2025/10/dash-1.webp') right 0 top -20px,
               url('https://bangkok.wordcamp.org/2025/files/2025/10/dash-2.webp') left -30px top 160px;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+@media screen and (max-width: 600px) {
+  .page-title-wrapper {
+    background: url('https://bangkok.wordcamp.org/2025/files/2025/10/dash-1.webp') right -150px top 20px,
+                url('https://bangkok.wordcamp.org/2025/files/2025/10/dash-2.webp') left -140px top 280px;
+  }
 }
 
 // Map container

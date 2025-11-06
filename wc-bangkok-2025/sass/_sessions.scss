@@ -40,9 +40,17 @@
 			&:nth-child(9):after {
 				left: 105px;
 			}
+
+			&:nth-child(11):after {
+				left: 105px;
+			}
+
+			&:nth-child(13):after {
+				left: 105px;
+			}
 		}
 
-		.wordcamp-schedule__session:nth-child(12) {
+		.wordcamp-schedule__session:nth-child(16) {
 			border-bottom: none !important;
 		}
 	}
@@ -53,7 +61,7 @@
 		border-bottom: 5px solid var(--wp--preset--color--base) !important;
 	}
 
-	.wordcamp-schedule__time-slot-header:nth-child(11) {
+	.wordcamp-schedule__time-slot-header:nth-child(15) {
 		border-bottom: none !important;
 	}
 
@@ -61,7 +69,7 @@
 		border-top-left-radius: 0.5rem;
 	}
 
-	.wordcamp-schedule__time-slot-header:nth-child(11) {
+	.wordcamp-schedule__time-slot-header:nth-child(15) {
 		border-bottom-left-radius: 0.5rem;
 	}
 

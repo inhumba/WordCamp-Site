@@ -305,3 +305,27 @@
     }
   }
 }
+
+.text-gradient > a {
+	color: transparent !important;
+	background-image: linear-gradient(
+    60deg,
+    var(--wp--preset--color--accent-3),
+    var(--wp--preset--color--custom-accent-seven),
+    var(--wp--preset--color--custom-accent-eight),
+    var(--wp--preset--color--custom-accent-seven),
+    var(--wp--preset--color--accent-3)
+  );
+	background-clip: text;
+	background-size: 400%;
+	animation: text-gradient 40s linear infinite;
+}
+
+@keyframes text-gradient {
+	from {
+		background-position: 400% center;
+	}
+  to {
+    background-position: 800% center;
+  }
+}
