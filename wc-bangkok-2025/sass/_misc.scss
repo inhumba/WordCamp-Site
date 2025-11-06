@@ -329,3 +329,37 @@
     background-position: 800% center;
   }
 }
+
+.has-dash:before {
+	content: "- "
+}
+
+.has-dash:after {
+	content: " -"
+}
+
+.wp-block-heading:is(.has-computor, .has-book) {
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-family: var(--wp--preset--font-family--luktao);
+	font-size: 1.2rem;
+	letter-spacing: 0.5px;
+	margin-block: 0.75rem;
+  
+  ~ * {
+	  margin-block-start: 0.25rem;
+  }
+}
+
+.wp-block-heading:is(.has-computor) {
+  background: url('https://bangkok.wordcamp.org/2025/files/2025/11/icon-computor.webp') left center / 30px auto;
+  background-repeat: no-repeat;
+  padding-inline-start: 40px;
+}
+
+.wp-block-heading:is(.has-book) {
+  background: url('https://bangkok.wordcamp.org/2025/files/2025/11/icon-book.webp') left center / 30px auto;
+  background-repeat: no-repeat;
+  padding-inline-start: 40px;
+}
