@@ -39,8 +39,7 @@
 
 @media screen and (max-width: 600px) {
   .page-title-wrapper {
-    background: url('https://bangkok.wordcamp.org/2025/files/2025/10/dash-1.webp') right -150px top 20px,
-                url('https://bangkok.wordcamp.org/2025/files/2025/10/dash-2.webp') left -140px top 280px;
+    background-position: right -150px top 20px, left -140px top 280px;
   }
 }
 
