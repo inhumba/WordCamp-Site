@@ -140,8 +140,8 @@
 	}
 
 	.wordcamp-schedule__session {
-		&.is-spanning-all-tracks {
-			background-color: rgba(245, 165, 201, 0.25);
+		&.is-spanning-all-tracks, &.has-slug-break-10-min-2 {
+			background-color: #f0f3f2;
 
 			.wordcamp-schedule__session-title {
 				justify-content: center;
@@ -160,7 +160,7 @@
 
 		.wordcamp-schedule__session-speakers {
 			font-style: italic;
-			font-size: 0.8rem;
+			font-size: 0.75rem;
 			margin-block: 0.25rem 0;
 			opacity: 0.75;
 			
