@@ -9,7 +9,7 @@
 		color: var(--wp--preset--color--accent-3);
 		font-family: var(--wp--preset--font-family--optic);
 		letter-spacing: 1px;
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 		text-align: center;
 		text-transform: uppercase;
 
@@ -85,8 +85,9 @@
 	}
 
 	.wordcamp-schedule__session-title {
-		font-size: 1.1rem;
+		font-size: 1rem;
 		margin-block-end: 0;
+		font-weight: 500;
 	}
 
 	.wordcamp-schedule__session p {
@@ -116,7 +117,61 @@
 	}
 }
 
-.wordcamp-schedule-conference {
+.wordcamp-schedule-conference.wordcamp-schedule {
+
+	.wordcamp-schedule__column-header {
+		background-color: var(--wp--preset--color--custom-accent-dark) !important;
+		color: var(--wp--preset--color--white);
+		font-family: var(--wp--preset--font-family--optic);
+		font-weight: 800;
+		font-size: 1rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		padding: 10px !important;
+		margin: 0 !important;
+
+		&.is-column-time {
+			border-top-left-radius: 0.5rem;
+		}
+
+		&.is-column-track-room-b-floor-3 {
+			border-top-right-radius: 0.5rem;
+		}
+	}
+
+	.wordcamp-schedule__session {
+		&.is-spanning-all-tracks {
+			background-color: rgba(245, 165, 201, 0.25);
+
+			.wordcamp-schedule__session-title {
+				justify-content: center;
+				opacity: 0.9;
+			}
+		}
+
+		.wordcamp-schedule__session-title {
+			line-height: 1.4;
+			font-size: 0.9rem;
+		}
+
+		p {
+			display: none;
+		}
+
+		.wordcamp-schedule__session-speakers {
+			font-style: italic;
+			font-size: 0.8rem;
+			margin-block: 0.25rem 0;
+			opacity: 0.75;
+			
+			a {
+				color: var(--wp--preset--color--contrast);
+			}
+		}
+	}
+}
+
+.wordcamp-schedule-conference-1 {
 	min-height: 100vh;
 
 	.schedule-table {
