@@ -69,7 +69,7 @@
 	.wordcamp-schedule__session,
 	.wordcamp-schedule__time-slot-header {
 		box-shadow: none !important;
-		border-bottom: none;
+		border-bottom: 2px solid var(--wp--preset--color--base) !important;
 	}
 
 	.wordcamp-schedule__time-slot-header:nth-child(15) {
@@ -171,7 +171,7 @@
 	}
 
 	.wordcamp-schedule__time-slot-header:nth-child(15) {
-		border-bottom: 5px solid var(--wp--preset--color--base) !important;
+		border-bottom: 2px solid var(--wp--preset--color--base) !important;
 		border-bottom-left-radius: 0;
 	}
 
@@ -180,14 +180,13 @@
 		border-bottom-left-radius: 0.5rem;
 	}
 
-	.wordcamp-schedule__time-slot-header:nth-child(51) {
-		border-bottom: none !important;
-		border-bottom-right-radius: 0.5rem;
-	}
-
 	.wordcamp-schedule__day {
 
 		.wordcamp-schedule__time-slot-header {
+			&:nth-child(10):after {
+				left: 105px;
+			}
+
 			&:nth-child(12):after {
 				left: 105px;
 			}
@@ -195,10 +194,23 @@
 			&:nth-child(25):after {
 				left: 90px;
 			}
+
+			&:nth-child(27):after {
+				left: 90px;
+			}
+
+			&:nth-child(40):after {
+				left: 90px;
+			}
 		}
 
 		.wordcamp-schedule__session:nth-child(16) {
-			border-bottom: 5px solid var(--wp--preset--color--base) !important;
+			border-bottom: 2px solid var(--wp--preset--color--base) !important;
+		}
+
+		.wordcamp-schedule__session:nth-child(51) {
+			border-bottom: none !important;
+			border-bottom-right-radius: 0.5rem;
 		}
 	}
 }
