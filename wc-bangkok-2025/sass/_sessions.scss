@@ -169,6 +169,16 @@
 			}
 		}
 	}
+
+	.wordcamp-schedule__time-slot-header:nth-child(15) {
+		border-bottom: inherit !important;
+		border-bottom-left-radius: 0;
+	}
+
+	.wordcamp-schedule__time-slot-header:nth-child(16) {
+		border-bottom: inherit !important;
+		border-bottom-right-radius: 0;
+	}
 }
 
 .wordcamp-schedule-conference-1 {
