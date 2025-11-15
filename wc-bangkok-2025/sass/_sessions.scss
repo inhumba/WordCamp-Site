@@ -220,17 +220,24 @@
 				.wordcamp-schedule__session-title {
 					justify-content: flex-start;
 				}
+
+				.wordcamp-schedule__session-tracks {
+					display: none;
+				}
 			}
 	
 			.wordcamp-schedule__session-title {
 				font-size: 1rem;
 			}
+		}
 
-			&.is-spanning-all-tracks {
-				.wordcamp-schedule__session-tracks {
-					display: none;
-				}
-			}
+		.wordcamp-schedule__session-tracks {
+			display: inline-block;
+			background-color: var(--wp--preset--color--custom-accent-seven);
+			border-radius: 0.25rem;
+			font-size: 0.75rem;
+			font-weight: 600;
+			padding: 0.25rem 0.5rem;
 		}
 
 		.wordcamp-schedule__time-slot-header:nth-child(4) {
