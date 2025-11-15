@@ -213,6 +213,41 @@
 			border-bottom-right-radius: 0.5rem;
 		}
 	}
+
+	@media screen and (max-width: 549px) {
+		.wordcamp-schedule__session {
+			&.is-spanning-all-tracks, &.has-slug-break-10-min-2 {
+				.wordcamp-schedule__session-title {
+					justify-content: flex-start;
+				}
+			}
+	
+			.wordcamp-schedule__session-title {
+				font-size: 1rem;
+			}
+
+			&.is-spanning-all-tracks {
+				.wordcamp-schedule__session-tracks {
+					display: none;
+				}
+			}
+		}
+
+		.wordcamp-schedule__time-slot-header:nth-child(4) {
+			border-top-left-radius: 0.5rem;
+			border-top-right-radius: 0.5rem;
+		}
+
+		.wordcamp-schedule__time-slot-header:nth-child(50) {
+			border-bottom-left-radius: 0;
+		}
+
+		.wordcamp-schedule__day {
+			.wordcamp-schedule__session:nth-child(51) {
+				border-bottom-left-radius: 0.5rem;
+			}
+		}
+	}
 }
 
 .wordcamp-schedule-conference-1 {
