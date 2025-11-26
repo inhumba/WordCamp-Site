@@ -31,34 +31,34 @@
 			background-color: var(--wp--preset--color--accent) !important;
 			color: var(--wp--preset--color--white);
 			text-transform: uppercase;
-			font-size: 1.2rem;
-			font-weight: 500;
+			font-size: 1rem;
+			font-weight: 600;
 			margin-block: 0 !important;
 
-			&:after {
-				content: "";
-				position: absolute;
-				background-color: var(--wp--preset--color--accent);
-				height: 3ch;
-				left: 95px;
-				right: 0;
-			}
+			// &:after {
+			// 	content: "";
+			// 	position: absolute;
+			// 	background-color: var(--wp--preset--color--accent);
+			// 	height: 3ch;
+			// 	left: 95px;
+			// 	right: 0;
+			// }
 
-			&:nth-child(5):after {
-				left: 100px;
-			}
+			// &:nth-child(5):after {
+			// 	left: 100px;
+			// }
 
-			&:nth-child(9):after {
-				left: 85px;
-			}
+			// &:nth-child(9):after {
+			// 	left: 85px;
+			// }
 
-			&:nth-child(11):after {
-				left: 90px;
-			}
+			// &:nth-child(11):after {
+			// 	left: 90px;
+			// }
 
-			&:nth-child(13):after {
-				left: 90px;
-			}
+			// &:nth-child(13):after {
+			// 	left: 90px;
+			// }
 		}
 
 		.wordcamp-schedule__session:nth-child(16) {
@@ -182,27 +182,27 @@
 
 	.wordcamp-schedule__day {
 
-		.wordcamp-schedule__time-slot-header {
-			&:nth-child(10):after {
-				left: 105px;
-			}
+		// .wordcamp-schedule__time-slot-header {
+		// 	&:nth-child(10):after {
+		// 		left: 105px;
+		// 	}
 
-			&:nth-child(12):after {
-				left: 105px;
-			}
+		// 	&:nth-child(12):after {
+		// 		left: 105px;
+		// 	}
 
-			&:nth-child(25):after {
-				left: 90px;
-			}
+		// 	&:nth-child(25):after {
+		// 		left: 90px;
+		// 	}
 
-			&:nth-child(27):after {
-				left: 90px;
-			}
+		// 	&:nth-child(27):after {
+		// 		left: 90px;
+		// 	}
 
-			&:nth-child(40):after {
-				left: 90px;
-			}
-		}
+		// 	&:nth-child(40):after {
+		// 		left: 90px;
+		// 	}
+		// }
 
 		.wordcamp-schedule__session:nth-child(16) {
 			border-bottom: 2px solid var(--wp--preset--color--base) !important;
@@ -254,216 +254,5 @@
 				border-bottom-left-radius: 0.5rem;
 			}
 		}
-	}
-}
-
-.wordcamp-schedule-conference-1 {
-	min-height: 100vh;
-
-	.schedule-table {
-		display: flex;
-		flex-direction: column;
-		max-width: 1200px;
-		margin: 0 auto;
-		border: 2px solid var(--wp--preset--color--accent);
-		border-radius: 8px;
-		overflow: hidden;
-		background-color: var(--wp--preset--color--white);
-	}
-
-	.schedule-row {
-		display: grid;
-		grid-template-columns: 180px 2fr 1.5fr;
-		gap: 0;
-	}
-
-	.schedule-header-row {
-		.schedule-cell {
-			background-color: var(--wp--preset--color--accent);
-			color: var(--wp--preset--color--white);
-			font-family: var(--wp--preset--font-family--optic);
-			font-weight: 800;
-			font-size: 1.2rem;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			padding: 1rem;
-			text-align: center;
-		}
-	}
-
-	// Apply alternating colors to all rows (excluding header which is styled separately)
-	// .schedule-row:not(.schedule-header-row) {
-	// 	&:nth-child(odd) .schedule-cell {
-	// 		background-color: #e8f5e9; // Light green
-	// 	}
-
-	// 	&:nth-child(even) .schedule-cell {
-	// 		background-color: #fce4ec; // Light pink
-	// 	}
-	// }
-
-	.schedule-row-break.schedule-row {
-		.schedule-cell {
-			background-color: rgba(245, 165, 201, 0.25);
-			font-weight: 600;
-		}
-	}
-
-	.schedule-cell {
-		padding: 1rem;
-		border-right: 1px solid rgba(14, 115, 57, 0.5);
-		border-bottom: 1px solid rgba(14, 115, 57, 0.5);
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		min-height: 60px;
-
-		&:last-child {
-			border-right: none;
-		}
-	}
-
-	.schedule-time {
-		background-color: #e8f5e9;
-		color: var(--wp--preset--color--accent);
-		font-family: var(--wp--preset--font-family--optic);
-		font-weight: 800;
-		font-size: 1rem;
-		white-space: nowrap;
-	}
-
-	.schedule-agenda {
-		background-color: var(--wp--preset--color--white);
-		color: var(--wp--preset--color--custom-accent-dark);
-		font-family: var(--wp--preset--font-family--prompt);
-		font-size: 1rem;
-		font-weight: 500;
-		line-height: 1.6;
-
-		.session-item {
-			margin-bottom: 0.75rem;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-
-			&:not(:last-child)::after {
-				content: "";
-				display: block;
-				height: 1px;
-				background-color: rgba(0, 0, 0, 0.1);
-				margin-top: 0.75rem;
-			}
-		}
-
-		.span-location-item {
-			display: none;
-		}
-	}
-
-	.schedule-location {
-		background-color: var(--wp--preset--color--white);
-		color: var(--wp--preset--color--custom-accent-dark);
-		font-family: var(--wp--preset--font-family--prompt);
-		font-size: 0.9rem;
-		font-style: italic;
-		opacity: 0.75;
-
-		.location-item {
-			margin-bottom: 0.75rem;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-
-			&:not(:last-child)::after {
-				content: "";
-				display: block;
-				height: 1px;
-				background-color: rgba(0, 0, 0, 0.1);
-				margin-top: 0.75rem;
-			}
-		}
-	}
-
-	// Responsive Design
-	@media screen and (max-width: 768px) {
-		.schedule-table {
-			background-color: transparent;
-			border: none;
-			border-radius: 0;
-		}
-
-		.schedule-row {
-			display: grid;
-			grid-template-columns: 1fr;
-			margin-bottom: 1rem;
-			border: 2px solid var(--wp--preset--color--accent);
-			border-radius: 8px;
-			overflow: hidden;
-		}
-
-		.schedule-header-row {
-			display: none;
-		}
-
-		.schedule-cell {
-			border-right: none;
-			border-bottom: 1px solid var(--wp--preset--color--accent);
-			padding: 0.75rem;
-			min-height: 40px;
-
-			&:last-child {
-				border-bottom: none;
-			}
-		}
-
-		.schedule-time {
-			font-size: 1rem;
-			text-align: center;
-		}
-
-		.schedule-agenda {
-			font-size: 1rem;
-		}
-
-		.schedule-agenda {
-			.span-location-item {
-				display: block;
-				color: var(--wp--preset--color--custom-accent-dark);
-				font-family: var(--wp--preset--font-family--prompt);
-				font-size: 0.9rem;
-				font-style: italic;
-				opacity: 0.75;
-			}
-		}
-
-		.schedule-location {
-			display: none;
-		}
-
-		// .schedule-row-regular {
-		// 	&:nth-child(odd) .schedule-cell {
-		// 		background-color: #e8f5e9;
-		// 	}
-
-		// 	&:nth-child(even) .schedule-cell {
-		// 		background-color: #fce4ec;
-		// 	}
-
-		// 	.schedule-time {
-		// 		background-color: var(--wp--preset--color--accent);
-		// 	}
-		// }
-
-		// .schedule-row-break {
-		// 	.schedule-cell {
-		// 		background-color: var(--wp--preset--color--white);
-		// 	}
-
-		// 	.schedule-time {
-		// 		background-color: var(--wp--preset--color--gray-medium, #6c757d);
-		// 	}
-		// }
 	}
 }
