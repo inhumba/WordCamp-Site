@@ -537,3 +537,65 @@ select {
 		padding-bottom: 220px;
 	}
 }
+
+// Quick Start
+.page-slug-quickstart .entry-content .wp-block-column {
+	border-radius: 20px;
+}
+
+.page-slug-quickstart .entry-content .wp-block-column .wp-block-wporg-link-wrapper {
+	display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+
+  &:hover, &:focus {
+    .wp-block-heading {
+      text-decoration: none;
+    }
+
+    .wp-block-image {
+      transform: scale(1.05);
+    }
+  }
+
+  &:focus-visible {
+    outline-style: dotted;
+    outline-offset: 2px;
+    outline-color: var(--wp--preset--color--custom-accent-seven);
+  }
+}
+
+.page-slug-quickstart .entry-content .wp-block-columns .wp-block-heading {
+	color: #fff;
+  font-family: var(--wp--preset--font-family--optic);
+	font-size: 28px;
+	font-weight: 700;
+	margin: 30px;
+}
+
+.page-slug-quickstart .entry-content .wp-block-image {
+	margin-block: 0;
+	text-align: right;
+  transition: scale 0.4s ease;
+}
+
+.qs--contributor-day {
+	background-color: #6B1438;
+}
+
+.qs--conference-day {
+	background-color: #3B7044;
+}
+
+.qs--after-party {
+	background-color: #0D1F73;
+}
+
+.qs--sponsors {
+	background-color: #2C5568;
+}
+
+.qs--floor {
+	background-color: #221C0F;
+}
