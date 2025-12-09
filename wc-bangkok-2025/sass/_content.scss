@@ -550,9 +550,9 @@ select {
   justify-content: space-between;
 
   &:hover, &:focus {
-    text-decoration: none;
+    text-decoration: none !important;
 
-    .wp-block-image {
+    .wp-block-image img {
       transform: scale(1.05);
     }
   }
@@ -573,14 +573,18 @@ select {
   font-family: var(--wp--preset--font-family--optic);
 	font-size: 28px;
 	margin: 30px;
+  letter-spacing: 1px;
 }
 
 .page-slug-quickstart .entry-content .wp-block-image {
 	margin-block: 0;
 	text-align: right;
-  transform: scale(1);
-  transition: scale 0.4s ease;
-  transform-origin: bottom right;
+
+  img {
+    transform: scale(1);
+    transition: scale 0.4s ease;
+    transform-origin: bottom right;
+  }
 }
 
 .qs--contributor-day {
