@@ -550,9 +550,7 @@ select {
   justify-content: space-between;
 
   &:hover, &:focus {
-    .wp-block-heading {
-      text-decoration: none;
-    }
+    text-decoration: none;
 
     .wp-block-image {
       transform: scale(1.05);
@@ -563,6 +561,10 @@ select {
     outline-style: dotted;
     outline-offset: 2px;
     outline-color: var(--wp--preset--color--custom-accent-seven);
+
+    &::after {
+      box-shadow: none;
+    }
   }
 }
 
@@ -570,14 +572,15 @@ select {
 	color: #fff;
   font-family: var(--wp--preset--font-family--optic);
 	font-size: 28px;
-	font-weight: 700;
 	margin: 30px;
 }
 
 .page-slug-quickstart .entry-content .wp-block-image {
 	margin-block: 0;
 	text-align: right;
+  transform: scale(1);
   transition: scale 0.4s ease;
+  transform-origin: bottom right;
 }
 
 .qs--contributor-day {
