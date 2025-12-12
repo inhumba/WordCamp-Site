@@ -68,12 +68,17 @@
   }
 }
 
-
 .single-wcb_sponsor main .wp-block-post-title {
 	text-align: center;
 }
 
 .single-wcb_sponsor main .wp-block-post-title+figure {
+	background-color: var(--wp--preset--color--white);
+	border-radius: 1rem;
+	padding: 1rem;
+}
+
+.page-slug-sponsors .wcb_sponsor figure {
 	background-color: var(--wp--preset--color--white);
 	border-radius: 1rem;
 	padding: 1rem;
