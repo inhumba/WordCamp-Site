@@ -78,8 +78,16 @@
 	padding: 1rem;
 }
 
+.page-slug-sponsors .entry-content .wp-block-post-template {
+  padding-inline-start: 0;
+}
+
 .page-slug-sponsors .wcb_sponsor figure {
 	background-color: var(--wp--preset--color--white);
 	border-radius: 1rem;
 	padding: 1rem;
+}
+
+.page-slug-sponsors .sharedaddy {
+  display: none;
 }
