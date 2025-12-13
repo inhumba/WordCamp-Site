@@ -619,14 +619,22 @@ select {
   background-color: #4a3579;
 }
 
+
+
 // Food
 .food-menu-card-container {
   overflow: hidden;
+  gap: 0;
+}
+
+.food-menu-card-container p {
+  margin: 0;
 }
 
 .food-menu-card-title {
   border-radius: 20px 20px 0 0;
   background-color: #241B0F;
+  padding: 1rem;
 }
 
 .food-menu-card-title.halal {
@@ -641,6 +649,7 @@ select {
   border-radius: 0 0 20px 20px;
   background: var(--wp--preset--color--base);
   color: #000000;
+  padding: 1rem;
 }
 
 .food-menu-card-order {
