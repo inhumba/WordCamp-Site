@@ -388,6 +388,10 @@
   }
 }
 
+.wp-block-query-pagination-next, .wp-block-query-pagination-previous {
+  color: var(--wp--preset--color--accent);
+}
+
 .hide {
 	display: none !important;
 }
