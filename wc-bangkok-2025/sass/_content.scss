@@ -539,6 +539,10 @@ select {
 }
 
 // Quick Start
+.page-slug-quickstart .wp-block-post-featured-image {
+  display: none;
+}
+
 .page-slug-quickstart .entry-content .wp-block-column {
 	border-radius: 20px;
 }
@@ -609,4 +613,60 @@ select {
 
 .qs--food {
   background-color: #D14D36;
+}
+
+.qs--photo {
+  background-color: #4a3579;
+}
+
+// Food
+.food-menu-card-container {
+  overflow: hidden;
+}
+
+.food-menu-card-title {
+  border-radius: 20px 20px 0 0;
+  background-color: #241B0F;
+}
+
+.food-menu-card-title.halal {
+  background-color: #050C2E;
+}
+
+.food-menu-card-title.vegetarian {
+  background-color: #05150D;
+}
+
+.food-menu-card-content {
+  border-radius: 0 0 20px 20px;
+  background: var(--wp--preset--color--base);
+  color: #000000;
+}
+
+.food-menu-card-order {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 0;
+  flex-shrink: 0;
+  color: #FFFFFF;
+}
+
+.food-menu-card-diet-icon {
+  width: 2.125rem;
+  height: 2.125rem;
+  flex-shrink: 0;
+}
+
+.food-menu-card-name-th {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+
+.food-menu-card-name-en {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #DCDCDC;
 }
