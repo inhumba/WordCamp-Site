@@ -368,4 +368,22 @@
   display: none;
 }
 
-.wp-block-query-pagination {}
+.wp-block-query-pagination-numbers {
+  .page-numbers {
+    color: var(--wp--preset--color--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 4px;
+    border: 2px solid var(--wp--preset--color--accent);
+
+    &.current {
+      background-color: var(--wp--preset--color--accent);
+      color: var(--wp--preset--color--white);
+    }
+  }
+}
