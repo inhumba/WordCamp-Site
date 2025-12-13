@@ -635,6 +635,10 @@ select {
   margin: 0;
 }
 
+.figure.wp-block-image.size-full.food-menu-card-diet-icon {
+  margin-block: 0;
+}
+
 .food-menu-card-title {
   border-radius: 20px 20px 0 0;
   background-color: #241B0F;
@@ -654,6 +658,7 @@ select {
   background: var(--wp--preset--color--base);
   color: #000000;
   padding: 1rem;
+  font-family: "Optic", sans-serif   
 }
 
 .food-menu-card-order {
@@ -663,6 +668,7 @@ select {
   letter-spacing: 0;
   flex-shrink: 0;
   color: #FFFFFF;
+  font-family: "Prompt", sans-serif
 }
 
 .food-menu-card-diet-icon {
@@ -676,10 +682,12 @@ select {
   font-weight: 700;
   line-height: 1.5;
   color: #FFFFFF;
+  font-family: "Prompt", sans-serif
 }
 
 .food-menu-card-name-en {
   font-size: 0.875rem;
   line-height: 1.6;
   color: #DCDCDC;
+  font-family: "Optic", sans-serif
 }
